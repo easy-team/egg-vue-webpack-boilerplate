@@ -51,9 +51,16 @@ npm run build-prod
     │   ├── mocks
     │   ├── proxy
     │   ├── router.js
-    │   └── web                                   // 前端工程目录
-    │       ├── asset                             // 存放公共js,css资源
-    │       ├── framework                         // 前端公共库和第三方库
+    │   ├── view
+    │   │   ├── about                         // 服务器编译的jsbundle文件
+    │   │   │   └── about.js
+    │   │   ├── home
+    │   │   │     └── home.js                 // 服务器编译的jsbundle文件
+    │   │   └── layout                        // 用于根据指定的layout生成对应的html页面, 用于服务器渲染失败时,采用客户端渲染
+    │   │       └── layout.html
+    │   └── web                               // 前端工程目录
+    │       ├── asset                         // 存放公共js,css资源
+    │       ├── framework                     // 前端公共库和第三方库
     │       │   ├── fastclick
     │       │   │   └── fastclick.js
     │       │   ├── sdk
@@ -87,13 +94,6 @@ npm run build-prod
     │       │   │   ├── mutation-type.js
     │       │   │   └── mutations.js
     │       │   └── store.js
-    │       ├── view
-    │       │   ├── about                         // 服务器编译的jsbundle文件
-    │       │   │   └── about.js
-    │       │   ├── home
-    │       │   │     └── home.js                 // 服务器编译的jsbundle文件
-    │       │   └── layout                        // 用于根据指定的layout生成对应的html页面, 用于服务器渲染失败时,采用客户端渲染
-    │       │       └── layout.html
     │       └── component                         // 公共业务组件, 比如loading, toast等, 遵循目录名, js文件名, scss文件名, vue文件名相同
     │           ├── loading
     │           │   ├── loading.scss
