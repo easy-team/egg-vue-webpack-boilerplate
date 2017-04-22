@@ -137,7 +137,11 @@ npm run build-prod
     │   └── vendor.js                         // 生成的公共打包库
 
 
-#### 多页面前端页面实现
+## 功能实现
+
+### 一.多页面服务器渲染同构实现
+
+#### 1.多页面前端页面实现
 
 在app/web/page 目录下面创建about目录, about.vue, about.js 文件.
 
@@ -183,7 +187,7 @@ export default App.init({
 
 ```
 
-#### 后端实现
+#### 2.多页面后端实现
 
 - 创建controller文件about.js
 
@@ -199,8 +203,9 @@ exports.index = function* (ctx) {
 app.get('/about', app.controller.about.about.index);
 ```
 
+### 二.单页面服务器渲染同构实现
 
-#### 单页面前端实现
+#### 1.单页面前端实现
 
 在app/web/page 目录下面创建app目录, app.vue, app.js 文件.
 
@@ -252,7 +257,7 @@ export default App.init({
 
 ```
 
-#### 后端实现
+#### 2.单页面后端实现
 
 - 创建controller文件app.js
 
