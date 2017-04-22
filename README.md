@@ -1,6 +1,6 @@
 # egg-vue-webpack-boilerplate
 
-基于egg-view-vue, egg-view-vue-ssr, egg-vue-webpack-dev插件的多页面和单页面服务器渲染同构工程骨架项目
+基于[egg-view-vue](https://github.com/hubcarl/egg-view-vue), [egg-view-vue-ssr](https://github.com/hubcarl/egg-view-vue-ssr), [egg-vue-webpack-dev](https://github.com/hubcarl/egg-vue-webpack-dev)插件的多页面和单页面服务器渲染同构工程骨架项目
 
 
 ## 使用
