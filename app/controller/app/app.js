@@ -1,7 +1,7 @@
 const Model = require('../../mocks/article/list');
 
-exports.index = function* () {
-  yield this.render('app/app.js', { url: this.url.replace(/\/app/, '') });
+exports.index = function* (ctx) {
+  yield ctx.render('app/app.js', { url: this.url.replace(/\/app/, '') });
 };
 
 exports.list = function* (ctx) {

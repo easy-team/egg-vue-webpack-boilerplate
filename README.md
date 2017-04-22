@@ -3,6 +3,13 @@
 基于[egg-view-vue](https://github.com/hubcarl/egg-view-vue), [egg-view-vue-ssr](https://github.com/hubcarl/egg-view-vue-ssr), [egg-vue-webpack-dev](https://github.com/hubcarl/egg-vue-webpack-dev)插件的多页面和单页面服务器渲染同构工程骨架项目
 
 
+## 特性
+
+- 基于vue + axios 多页面服务器客户端同构实现
+
+- 基于vue + vuex + vue-router + axios 单页面服务器客户端同构实现
+
+
 ## 使用
 
 - 启动项目
@@ -11,6 +18,8 @@
 npm install
 npm start
 ```
+
+![npm start启动](https://github.com/hubcarl/egg-vue-webpack-boilerplate/blob/master/doc/images/webpack.png)
 
 访问: http://127.0.0.1:7001
 
@@ -128,7 +137,7 @@ npm run build-prod
     │   └── vendor.js                         // 生成的公共打包库
 
 
-#### 前端页面实现
+#### 多页面前端页面实现
 
 在app/web/page 目录下面创建about目录, about.vue, about.js 文件.
 
@@ -190,17 +199,87 @@ exports.index = function* (ctx) {
 app.get('/about', app.controller.about.about.index);
 ```
 
+
+#### 单页面前端实现
+
+在app/web/page 目录下面创建app目录, app.vue, app.js 文件.
+
+- app.vue 编写界面逻辑, 根元素为layout(自定义组件, 全局注册, 统一的html, meta, header, body)
+
+```html
+<template>
+  <app-layout>
+    <transition name="fade" mode="out-in">
+      <router-view></router-view>
+    </transition>
+  </app-layout>
+</template>
+<style lang="sass">
+
+</style>
+<script type="text/babel">
+  export default {
+    computed: {
+
+    },
+    mounted(){
+
+    }
+  }
+</script>
+```
+
+- app.js 页面调用入口
+
+```javascript
+import { sync } from 'vuex-router-sync';
+import store from 'store/app';
+import router from 'component/app/router';
+import app from './app.vue';
+import App from 'app';
+import Layout from 'component/layout/app';
+
+App.component(Layout.name, Layout);
+
+sync(store, router);
+
+export default App.init({
+  base: '/app',
+  ...app,
+  router,
+  store
+});
+
+```
+
+#### 后端实现
+
+- 创建controller文件app.js
+
+```javascript
+exports.index = function* (ctx) {
+  yield ctx.render('app/app.js', { url: this.url.replace(/\/app/, '') });
+};
+```
+
+- 添加路由配置
+
+```javascript
+  app.get('/app(/.+)?', app.controller.app.app.index);
+```
+
+
 ## 工程实例
 
 
 - 基于vue + axios 多页面服务器客户端同构入口: http://127.0.0.1:7001
 
-![多页面服务器渲染](https://github.com/hubcarl/egg-vue-webpack-dev/blob/master/doc/images/vue-mutil-page.png)
+![多页面服务器渲染](https://github.com/hubcarl/egg-vue-webpack-boilerplate/blob/master/doc/images/vue-mutil-page.png)
+
 
 - 基于vue + vuex + vue-router + axios 单页面服务器客户端同构入口: http://127.0.0.1:7001/app
 
-
-![单页面服务器](https://github.com/hubcarl/egg-vue-webpack-dev/blob/master/doc/images/vue-single-page.png)
+![单页面服务器](https://github.com/hubcarl/egg-vue-webpack-boilerplate/blob/master/doc/images/vue-single-page.png)
 
 ## 依赖
 
