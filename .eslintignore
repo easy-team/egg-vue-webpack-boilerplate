@@ -1,0 +1,15 @@
+test/fixtures
+test/benchmark
+test/client
+
+coverage/
+private/
+run/
+
+public/
+node_modules/
+app/mocks
+app/web/store
+plugins/
+app/web/asset/
+app/view/

@@ -1,0 +1,68 @@
+@charset "utf-8";
+html {
+  font-size: 18px;
+}
+
+@media only screen and (min-width: 321px) {
+  html {
+    font-size: 20px !important;
+  }
+}
+
+@media only screen and (min-width: 428px) {
+  html {
+    font-size: 26.75px !important;
+  }
+}
+
+@media only screen and (min-width: 481px) {
+  html {
+    font-size: 30px !important;
+  }
+}
+
+@media only screen and (min-width: 569px) {
+  html {
+    font-size: 35px !important;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  html {
+    font-size: 40px !important;
+  }
+}
+
+body, html, div {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+h1, h2, h3, h4, h5, h6 p {
+  margin: 0;
+  padding: 0;
+}
+
+input, a, button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:focus, input:focus {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+ul, ol, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

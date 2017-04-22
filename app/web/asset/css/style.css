@@ -1,0 +1,12 @@
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+#jumbotron {
+    min-height: 360px;
+}
+
+#heding1, #heding2, #heding3 {
+    min-height: 200px;
+}
