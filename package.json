@@ -21,7 +21,7 @@
     "co": "^4.6.0",
     "co-wait": "^0.0.0",
     "core-js": "^2.4.0",
-    "egg": "^1.0.0-rc.3",
+    "egg": "^1.1.0",
     "egg-logger": "^1.5.0",
     "egg-logview": "^1.0.0",
     "egg-validate": "^1.0.0",
