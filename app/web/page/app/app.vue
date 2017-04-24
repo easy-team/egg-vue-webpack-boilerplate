@@ -5,7 +5,7 @@
     </transition>
   </app-layout>
 </template>
-<style lang="sass">
+<style lang="scss">
 
 </style>
 <script type="text/babel">

@@ -52,7 +52,7 @@
     "babel-preset-stage-2": "^6.17.0",
     "babel-runtime": "^6.9.2",
     "css-loader": "^0.27.3",
-    "egg-vue-webpack-dev": "^0.0.2",
+    "egg-vue-webpack-dev": "0.0.2",
     "eslint": "^3.18.0",
     "eslint-config-egg": "^3.2.0",
     "eslint-plugin-vue": "^2.0.1",
@@ -65,8 +65,7 @@
     "sass-loader": "^6.0.3",
     "url-loader": "^0.5.8",
     "vue-loader": "^11.1.4",
-    "vue-template-compiler": "^2.2.4",
-    "webpack": "^2.2.0",
+    "webpack": "^2.4.0",
     "webpack-hot-middleware": "^2.13.2",
     "webpack-manifest-plugin": "^1.1.0",
     "webpack-merge": "^2.4.0"

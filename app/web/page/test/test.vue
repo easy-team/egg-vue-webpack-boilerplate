@@ -4,7 +4,7 @@
       <ul><li key="id" v-for="item in model">{{item.name}}</li></ul>
   </layout>
 </template>
-<style lang="sass">
+<style lang="scss">
   @import "test.scss";
 </style>
 <script type="text/babel">

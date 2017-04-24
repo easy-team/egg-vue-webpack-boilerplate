@@ -12,6 +12,7 @@ module.exports = app => {
   };
 
   exports.vue = {
+    layout: path.join(app.baseDir, 'app/view/layout.html'),
     // useTemplate: false
   };
 

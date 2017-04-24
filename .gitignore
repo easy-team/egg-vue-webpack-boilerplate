@@ -16,4 +16,5 @@ logs
 .vscode
 config/buildConfig.json
 config/manifest.json
-app/view/*.js
+app/view/*
+!app/view/layout.html
