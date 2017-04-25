@@ -6,7 +6,7 @@ import './component';
 const App = {};
 
 App.data = () => {
-  return window.__INITIAL_STATE__ ? window.__INITIAL_STATE__.data || {} : {};
+  return window.__INITIAL_STATE__ || {};
 };
 
 App.init = options => {
@@ -30,8 +30,8 @@ App.client = options => {
 
 App.server = options => {
   if (options.store && options.router) {
-    return data => {
-      options.router.push(data.url);
+    return context => {
+      options.router.push(context.state.url);
       const matchedComponents = options.router.getMatchedComponents();
       if (!matchedComponents) {
         return Promise.reject({ code: '404' });
@@ -43,14 +43,14 @@ App.server = options => {
           }
         })
       ).then(() => {
-        Object.assign(data, options.store.state);
+        context.state = options.store.state;
         return new Vue(options);
       });
     };
   }
-  return data => {
+  return context => {
     const VueApp = Vue.extend(options);
-    const app = new VueApp({ data });
+    const app = new VueApp({ data: context.state});
     return new Promise(resolve => {
       resolve(app);
     });
