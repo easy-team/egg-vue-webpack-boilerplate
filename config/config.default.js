@@ -5,15 +5,15 @@ module.exports = app => {
 
   exports.view = {
     cache: false,
-    defaultViewEngine: 'vue',
-    mapping: {
-      '.js': 'vue',
-    },
   };
 
-  exports.vue = {
-    layout: path.join(app.baseDir, 'app/view/layout.html'),
-    // useTemplate: false
+  exports.vuessr = {
+    layout: path.join(app.baseDir, 'app/web/view/layout.html'),
+  };
+
+  exports.logger = {
+    consoleLevel: 'DEBUG',
+    dir: path.join(app.baseDir, 'logs')
   };
 
   exports.static = {

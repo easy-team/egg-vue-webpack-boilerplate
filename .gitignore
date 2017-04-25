@@ -18,3 +18,4 @@ config/buildConfig.json
 config/manifest.json
 app/view/*
 !app/view/layout.html
+!app/view/README.md

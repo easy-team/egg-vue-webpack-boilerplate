@@ -14,11 +14,6 @@ module.exports = app => {
     ignoreDirs: [ 'app/web', 'public', 'config' ] // 指定过滤的目录（包括子目录）
   };
 
-  exports.logger = {
-    consoleLevel: 'DEBUG',
-    dir: path.join(app.baseDir, 'logs')
-  };
-
   exports.logview = {
     dir: path.join(app.baseDir, 'logs')
   };

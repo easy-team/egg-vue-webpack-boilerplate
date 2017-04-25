@@ -1,13 +1,15 @@
-<html lang="en" server-rendered="true">
-<head><title>app_locals_render_ssr</title>
-  <meta name="keywords" content="ssr">
-  <meta name="description" content="vue server render error, client render">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{{title}}</title>
+  <meta name="keywords" :content="keywords">
+  <meta name="description" :content="description">
   <meta http-equiv="content-type" content="text/html;charset=utf-8">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-default/index.css">
 </head>
-<body>
-<div>
+<body :class="baseClass">
   <div id="app"><!--vue-ssr-outlet--></div>
-</div>
 </body>
 </html>
