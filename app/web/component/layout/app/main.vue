@@ -13,7 +13,6 @@
   a{
     text-decoration: none;
   }
-
 </style>
 <script type="text/babel">
   import 'asset/css/global.css';
