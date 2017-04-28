@@ -18,6 +18,11 @@ module.exports = app => {
     dir: path.join(app.baseDir, 'logs')
   };
 
+  exports.webpack = {
+    clientConfig: '',
+    serverConfig: '',
+  };
+
   exports.vuewebpackdev = {
     build: {
       port: 8090,
