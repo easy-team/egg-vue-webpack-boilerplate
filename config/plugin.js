@@ -11,7 +11,18 @@ exports.vuessr = {
 };
 
 exports.vuewebpackdev = {
+  enable: false,
   package: 'egg-vue-webpack-dev'
+};
+
+exports.webpack = {
+  enable: true,
+  package: 'egg-webpack'
+};
+
+exports.webpackvue = {
+  enable: true,
+  package: 'egg-webpack-vue'
 };
 
 exports.logview = {
