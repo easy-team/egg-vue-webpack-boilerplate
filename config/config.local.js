@@ -1,4 +1,6 @@
 const path = require('path');
+const webpackConfig = require('./webpackConfig');
+const env = process.env.BUILD_ENV || 'prod';
 
 module.exports = app => {
   const exports = {};
@@ -17,34 +19,12 @@ module.exports = app => {
   };
 
   exports.webpack = {
-    port:8090,
-    clientConfig: path.join(app.baseDir, 'build/webpack/webpack.client.dev.conf.js'),
-    serverConfig: path.join(app.baseDir, 'build/webpack/webpack.server.dev.conf.js'),
+    port: 8090,
+    clientConfig: require(path.join(app.baseDir, `build/webpack/webpack.client.${env}.conf.js`))(webpackConfig.webpackvue),
+    serverConfig: require(path.join(app.baseDir, `build/webpack/webpack.server.${env}.conf.js`))(webpackConfig.webpackvue)
   };
 
-  exports.webpackvue = {
-    baseDir: app.baseDir,
-    build: {
-      path: 'public',
-      publicPath: '/public/',
-      prefix: 'static',
-      entry: [path.join(app.baseDir, 'app/web/page')],
-      commonsChunk: ['vendor']
-    },
-    webpack: {
-      styleLoader: 'vue-style-loader',
-      loaderOption: {
-        sass: {
-          includePaths: [path.resolve(__dirname, 'app/web/asset/style')]
-        }
-      },
-      pluginOption: {
-        ExtractTextPlugin: {
-          extract: true
-        }
-      }
-    }
-  };
+  exports.webpackvue = webpackConfig.webpackvue;
 
   exports.vuewebpackdev = {
     build: {
