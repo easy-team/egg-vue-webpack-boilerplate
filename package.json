@@ -8,7 +8,7 @@
     "build-test": "BUILD_ENV=test node build/easy/build.js",
     "build-prod": "BUILD_ENV=prod node build/easy/build.js",
     "kill-port": "kill -9 $(lsof -i:8888 |grep 'node'|awk '{print $2}') ",
-    "start": "WORKERS=1 node index.js",
+    "start": "WORKERS=1 BUILD_ENV=dev node index.js",
     "start-test": "WORKERS=1 && EGG_SERVER_ENV=test node index.js",
     "start-prod": "WORKERS=1 && EGG_SERVER_ENV=prod node index.js",
     "restart": "npm run kill-port && npm run start",
