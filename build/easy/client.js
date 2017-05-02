@@ -1,8 +1,7 @@
-'use strict';
+const webpackConfig = require('../../config/webpackConfig');
 const BaseBuilder = require('./base');
 class ClientBuilder extends BaseBuilder {
-  constructor(config) {
-    super(config);
+  init() {
     this.setOption({
       devtool: 'source-map',
       performance: {
@@ -23,4 +22,4 @@ class ClientBuilder extends BaseBuilder {
   }
 }
 
-module.exports = ClientBuilder;
+module.exports = new ClientBuilder(webpackConfig).create();

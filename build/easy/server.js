@@ -1,10 +1,10 @@
-'use strict';
-process.env.BUILD_SERVER = true;
+const webpackConfig = require('../../config/webpackConfig');
 const BaseBuilder = require('./base');
 class ServerBuilder extends BaseBuilder {
   constructor(config) {
-    super(config);
-    this.useExtract(false);
+    super(config, { isServer: true });
+  }
+  init() {
     switch (this.env) {
       case BaseBuilder.DEV:
         break;
@@ -18,4 +18,4 @@ class ServerBuilder extends BaseBuilder {
   }
 }
 
-module.exports = ServerBuilder;
+module.exports = new ServerBuilder(webpackConfig).create();

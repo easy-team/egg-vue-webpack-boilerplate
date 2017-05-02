@@ -1,13 +1,12 @@
-'use strict';
 const path = require('path');
 const WebpackVue = require('egg-webpack-vue');
 
-class BaseBuilder extends WebpackVue.WebpackBuilder{
-  constructor(config){
-    super(config);
+class BaseBuilder extends WebpackVue.WebpackBuilder {
+  constructor(config, options) {
+    super(config, options);
     this.setOption({
       entry: {
-        vendor: [ 'vue' ]
+        vendor: ['vue']
       },
       resolve: {
         alias: {
@@ -17,9 +16,7 @@ class BaseBuilder extends WebpackVue.WebpackBuilder{
           framework: path.join(config.baseDir, 'app/web/framework'),
           store: path.join(config.baseDir, 'app/web/store')
         }
-      },
-      externals: {},
-      plugins: []
+      }
     });
   }
 }

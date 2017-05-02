@@ -41,6 +41,7 @@ App.server = options => {
           if (component.preFetch) {
             return component.preFetch(options.store);
           }
+          return null;
         })
       ).then(() => {
         context.state = options.store.state;
@@ -50,7 +51,7 @@ App.server = options => {
   }
   return context => {
     const VueApp = Vue.extend(options);
-    const app = new VueApp({ data: context.state});
+    const app = new VueApp({ data: context.state });
     return new Promise(resolve => {
       resolve(app);
     });

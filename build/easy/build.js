@@ -1,14 +1,10 @@
 const EasyWebpack = require('easywebpack');
 
-const ClientBuilder = require(`./client`);
-const ServerBuilder = require(`./server`);
-
-const webpackConfig = require('../../config/webpackConfig');
-const clientConfig = new ClientBuilder(webpackConfig.webpackvue).create();
-const serverConfig = new ServerBuilder(webpackConfig.webpackvue).create();
-
-console.log('clientConfig', clientConfig.plugins, serverConfig.module);
-
-console.log('serverConfig', serverConfig.plugins, serverConfig.module);
-
-EasyWebpack.build([clientConfig, serverConfig]);
+const clientConfig = require('./client');
+console.log(clientConfig);
+const serverConfig = require('./server');
+//const tmpServerConfig = Object.assign({},serverConfig);
+//delete tmpServerConfig.externals;
+//console.log(tmpServerConfig);
+//console.log(tmpServerConfig.module.rules[3]);
+EasyWebpack.build([ clientConfig, serverConfig ]);

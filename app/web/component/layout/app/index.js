@@ -4,7 +4,7 @@ const tpl = '<div id="app"><MainLayout><div slot="main"><slot></slot></div></Mai
 
 export default {
   name: 'AppLayout',
-  props: ['title', 'description', 'keywords'],
+  props: [ 'title', 'description', 'keywords' ],
   components: {
     MainLayout
   },

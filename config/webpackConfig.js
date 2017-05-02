@@ -1,9 +1,8 @@
-'use strict';
 const path = require('path');
 const baseDir = path.resolve(__dirname, '../');
 
-exports.webpackvue = {
-  baseDir: baseDir,
+module.exports = {
+  baseDir,
   build: {
     path: 'public',
     publicPath: '/public/',

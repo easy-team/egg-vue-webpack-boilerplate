@@ -5,15 +5,15 @@ module.exports = app => {
   const exports = {};
 
   exports.siteFile = {
-    '/favicon.ico': fs.readFileSync(path.join(app.baseDir, 'app/web/asset/images/favicon.ico')),
+    '/favicon.ico': fs.readFileSync(path.join(app.baseDir, 'app/web/asset/images/favicon.ico'))
   };
 
   exports.view = {
-    cache: false,
+    cache: false
   };
 
   exports.vuessr = {
-    layout: path.join(app.baseDir, 'app/web/view/layout.html'),
+    layout: path.join(app.baseDir, 'app/web/view/layout.html')
   };
 
   exports.logger = {
@@ -30,7 +30,7 @@ module.exports = app => {
   exports.keys = '123456';
 
   exports.middleware = [
-    'access',
+    'access'
   ];
 
   return exports;

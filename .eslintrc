@@ -6,6 +6,7 @@
     "sourceType": "module"
   },
   "rules": {
+    "array-bracket-spacing": "off",
     "comma-dangle": [
       "error",
       "never"
