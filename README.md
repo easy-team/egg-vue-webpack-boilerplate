@@ -10,6 +10,7 @@
 - [egg-webpack](https://github.com/hubcarl/egg-webpack) webpack dev server plugin for egg, support read file in memory and hot reload
 - [egg-webpack-vue](https://github.com/hubcarl/egg-webpack-vue) egg webpack building solution for vue
 
+说明:基于旧版[egg-vue-webpack-dev](https://github.com/hubcarl/egg-vue-webpack-dev)插件编译的请切换到该项目的[egg-vue-webpack-dev](https://github.com/hubcarl/egg-vue-webpack-boilerplate/tree/egg-vue-webpack-dev)分支
 
 ## 特性
 
