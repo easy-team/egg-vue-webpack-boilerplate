@@ -25,30 +25,5 @@ module.exports = app => {
 
   exports.webpackvue = webpackConfig.webpackvue;
 
-  exports.vuewebpackdev = {
-    build: {
-      port: 8090,
-      commonsChunk: ['vendor']
-    },
-    env: {
-      dev: {
-        uglifyJs: false
-      },
-      test: {
-        uglifyJs: false,
-        uglifyJsConfig: {
-          compress: {
-            drop_console: false,
-            drop_debugger: false
-          }
-        }
-      },
-      prod: {
-        uglifyJs: true,
-        serverBundleExclude: []
-      }
-    }
-  };
-
   return exports;
 };

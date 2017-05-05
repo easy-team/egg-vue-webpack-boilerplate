@@ -10,11 +10,6 @@ exports.vuessr = {
   package: 'egg-view-vue-ssr'
 };
 
-exports.vuewebpackdev = {
-  enable: false,
-  package: 'egg-vue-webpack-dev'
-};
-
 exports.webpack = {
   enable: true,
   package: 'egg-webpack'

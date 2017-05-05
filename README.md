@@ -1,6 +1,14 @@
 # egg-vue-webpack-boilerplate
 
-基于[egg-view-vue](https://github.com/hubcarl/egg-view-vue), [egg-view-vue-ssr](https://github.com/hubcarl/egg-view-vue-ssr), [egg-vue-webpack-dev](https://github.com/hubcarl/egg-vue-webpack-dev)插件的多页面和单页面服务器渲染同构工程骨架项目
+基于Vue多页面和单页面服务器渲染同构工程骨架项目
+
+
+## 依赖
+
+- [egg-view-vue](https://github.com/hubcarl/egg-view-vue) egg view plugin for vue
+- [egg-view-vue-ssr](https://github.com/hubcarl/egg-view-vue-ssr) vue server side render solution for egg-view-vue
+- [egg-webpack](https://github.com/hubcarl/egg-webpack) webpack dev server plugin for egg, support read file in memory and hot reload
+- [egg-webpack-vue](https://github.com/hubcarl/egg-webpack-vue) egg webpack building solution for vue
 
 
 ## 特性
@@ -27,13 +35,10 @@ npm start
 - 项目构建
 
 ```bash
-// 本地开发使用(dev.conf.js)
+// 本地开发使用(build/client.js)
 npm run build-dev
 
-// 测试环境使用 (test.conf.js)
-npm run build-test
-
-// 前端发布包构建(prod.conf.js) (代码压缩)
+// 发布包构建(build/server.js)
 npm run build-prod
 
 ```
@@ -286,8 +291,7 @@ exports.index = function* (ctx) {
 
 ![单页面服务器](https://github.com/hubcarl/egg-vue-webpack-boilerplate/blob/master/doc/images/vue-single-page.png)
 
-## 依赖
 
-- [egg-view-vue](https://github.com/hubcarl/egg-view-vue)
-- [egg-view-vue-ssr](https://github.com/hubcarl/egg-view-vue-ssr)
-- [egg-vue-webpack-dev](https://github.com/hubcarl/egg-vue-webpack-dev)
+## License
+
+[MIT](LICENSE)
