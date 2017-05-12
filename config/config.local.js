@@ -9,7 +9,7 @@ module.exports = app => {
   };
 
   exports.development = {
-    watchDirs: ['plugins'], // 指定监视的目录（包括子目录），当目录下的文件变化的时候自动重载应用，路径从项目根目录开始写
+    watchDirs: ['build'], // 指定监视的目录（包括子目录），当目录下的文件变化的时候自动重载应用，路径从项目根目录开始写
     ignoreDirs: ['app/web', 'public', 'config'] // 指定过滤的目录（包括子目录）
   };
 
@@ -19,11 +19,15 @@ module.exports = app => {
 
   exports.webpack = {
     port: 8090,
-    clientConfig: require(path.join(app.baseDir, 'build/client.js')),
-    serverConfig: require(path.join(app.baseDir, 'build/server.js'))
+    clientConfig: require(path.join(app.baseDir, 'build/client')),
+    serverConfig: require(path.join(app.baseDir, 'build/server'))
   };
 
   exports.webpackvue = webpackConfig.webpackvue;
+
+  exports.vuessr = {
+    injectCss: false
+  };
 
   return exports;
 };

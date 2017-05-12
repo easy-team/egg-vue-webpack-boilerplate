@@ -1,55 +1,77 @@
 <template>
   <Layout description="vue server side render" keywords="egg, vue, webpack, server side render">
     <!--<div v-for="item in list">-->
-    <!--{{item.title}}-->
+      <!--{{item.title}}-->
     <!--</div>-->
     <!--el-table有bug, 服务器渲染出来数据是空的,用简单的模板结果是可以出来-->
     <el-alert
-            title="el-table有bug, 服务器渲染出来数据是空的,用简单的模板结果是可以出来"
-            type="info">
+      title="el-table有bug, 服务器渲染出来数据是空的,用简单的模板结果是可以出来"
+      type="info">
     </el-alert>
     <p></p>
     <el-table :data="list " border style="width: 100%" @selection-change="handleSelectionChange">
       <el-table-column
-              prop="id"
-              label="ID"
-              width="100">
+        type="selection"
+        width="55">
       </el-table-column>
-      <el-table-column
-              prop="title"
-              label="标题"
-              width="180">
+      <el-table-column label="ID" width="80">
+        <template scope="scope">
+          <span style="margin-left: 10px" v-text="scope.row.id"></span>
+        </template>
       </el-table-column>
-      <el-table-column
-              prop="summary"
-              label="简介">
+      <el-table-column label="标题">
+        <template scope="scope">
+          <span style="margin-left: 10px"><a :href="scope.row.url" target="_blank">{{ scope.row.title }}</a></span>
+        </template>
+      </el-table-column>
+      <el-table-column label="简介">
+        <template scope="scope">
+          <el-popover trigger="hover" placement="top">
+
+            <p>{{ scope.row.summary }}</p>
+
+            <div slot="reference" class="name-wrapper">
+              <el-tag>{{ scope.row.title }}</el-tag>
+            </div>
+          </el-popover>
+        </template>
+      </el-table-column>
+      <el-table-column label="操作" width="160">
+        <template scope="scope">
+          <el-button size="small" @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
+          <el-button size="small" type="danger" @click="handleDelete(scope.$index, scope.row)">删除</el-button>
+        </template>
       </el-table-column>
     </el-table>
     <div class="block" style="text-align: right; margin-top: 16px">
       <el-pagination
-              @size-change="handleSizeChange"
-              @current-change="handleCurrentChange"
-              :current-page="pageIndex"
-              :page-sizes="[10, 15, 20, 50]"
-              :page-size="pageSize"
-              layout="total, sizes, prev, pager, next, jumper"
-              :total="total">
+        @size-change="handleSizeChange"
+        @current-change="handleCurrentChange"
+        :current-page="pageIndex"
+        :page-sizes="[10, 15, 20, 50]"
+        :page-size="pageSize"
+        layout="total, sizes, prev, pager, next, jumper"
+        :total="total">
       </el-pagination>
     </div>
   </Layout>
 </template>
 <style>
-  @import "element.css";
-
+  @import "front.css";
 </style>
 <script type="text/babel">
   export default {
-    components: {},
+    components: {
+
+    },
     data(){
       return {
         pageIndex: 1,
         pageSize: 10
       }
+    },
+    computed: {
+
     },
     methods: {
       fetch(){
@@ -80,7 +102,7 @@
       }
     },
     mounted() {
-      console.log(this.$data);
+      this.fetch();
     }
   }
 </script>

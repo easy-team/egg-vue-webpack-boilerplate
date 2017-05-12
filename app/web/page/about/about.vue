@@ -1,5 +1,6 @@
 <template>
   <layout>
+    <img src="../../asset/images/logo.png" />
   {{message}}
   </layout>
 </template>

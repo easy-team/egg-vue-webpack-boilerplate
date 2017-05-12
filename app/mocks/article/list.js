@@ -91,7 +91,7 @@ data.list.forEach(item => {
 const total = data.list.length;
 exports.getPage = (pageIndex = 1, pageSize = 10)=> {
   const start = (pageIndex - 1) * pageSize;
-  const end = start + pageSize;
+  const end = start + Number(pageSize);
   return { list: data.list.slice(start, end), total };
 };
 

@@ -1,5 +1,7 @@
 const path = require('path');
 
+exports.config = require('../../config/webpackConfig');
+
 exports.getOption = config => {
   return {
     entry: {
@@ -16,3 +18,4 @@ exports.getOption = config => {
     }
   };
 };
+

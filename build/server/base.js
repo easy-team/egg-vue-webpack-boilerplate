@@ -2,12 +2,11 @@ const path = require('path');
 const fs = require('fs');
 const EggWebpackVue = require('egg-webpack-vue');
 const StringReplacePlugin = require('string-replace-webpack-plugin');
-const webpackConfig = require('../config/webpackConfig');
-const baseConfig = require('./config');
+const base = require('../base');
 class ServerBuilder extends EggWebpackVue.WebpackServerBuilder {
-  constructor(config, options) {
-    super(config, options);
-    this.setOption(baseConfig.getOption(config));
+  constructor() {
+    super(base.config);
+    this.setOption(base.getOption(base.config));
     this.setLoader({
       test: /layout\/standard\/index\.js$/,
       loader: StringReplacePlugin.replace({
@@ -15,7 +14,7 @@ class ServerBuilder extends EggWebpackVue.WebpackServerBuilder {
           {
             pattern: /["|'](.*\.html)\?inline["|']/gi,
             replacement(match, p1, offset, string) {
-              const filePath = path.join(config.baseDir, p1);
+              const filePath = path.join(base.config.baseDir, p1);
               const content = fs.readFileSync(filePath, 'utf8').replace(/'/g, '"').replace(/[\r\n]/g, '');
               return "'" + content + "'";
             }
@@ -27,4 +26,4 @@ class ServerBuilder extends EggWebpackVue.WebpackServerBuilder {
   }
 }
 
-module.exports = new ServerBuilder(webpackConfig).create();
+module.exports = ServerBuilder;

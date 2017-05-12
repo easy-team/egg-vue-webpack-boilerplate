@@ -11,7 +11,6 @@ App.data = () => {
 
 App.init = options => {
   if (typeof window === 'object') {
-    Vue.prototype.$http = require('axios');
     return App.client(options);
   }
   return App.server(options);
@@ -19,6 +18,7 @@ App.init = options => {
 
 
 App.client = options => {
+  Vue.prototype.$http = require('axios');
   options.el = '#app';
   if (options.store) {
     options.store.replaceState(App.data());

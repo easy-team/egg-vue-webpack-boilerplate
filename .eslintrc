@@ -7,6 +7,7 @@
   },
   "rules": {
     "array-bracket-spacing": "off",
+    "eol-last": "off",
     "comma-dangle": [
       "error",
       "never"
