@@ -5,12 +5,17 @@
 
 ## 依赖
 
-- [egg-view-vue](https://github.com/hubcarl/egg-view-vue) egg view plugin for vue
-- [egg-view-vue-ssr](https://github.com/hubcarl/egg-view-vue-ssr) vue server side render solution for egg-view-vue
-- [egg-webpack](https://github.com/hubcarl/egg-webpack) webpack dev server plugin for egg, support read file in memory and hot reload
-- [egg-webpack-vue](https://github.com/hubcarl/egg-webpack-vue) egg webpack building solution for vue
+- [egg-view-vue](https://github.com/hubcarl/egg-view-vue) egg view plugin for vue.
+- [egg-view-vue-ssr](https://github.com/hubcarl/egg-view-vue-ssr) vue server side render solution for egg-view-vue.
+- [easywebpack](https://github.com/hubcarl/easywebpack) programming instead of configuration, webpack is no longer complex.
+- [egg-webpack](https://github.com/hubcarl/egg-webpack) webpack dev server plugin for egg, support read file in memory and hot reload.
+- [egg-webpack-vue](https://github.com/hubcarl/egg-webpack-vue) egg webpack building solution for vue.
 
-说明:基于旧版[egg-vue-webpack-dev](https://github.com/hubcarl/egg-vue-webpack-dev)插件编译的请切换到该项目的[egg-vue-webpack-dev](https://github.com/hubcarl/egg-vue-webpack-boilerplate/tree/egg-vue-webpack-dev)分支
+
+说明: easywebpack, egg-webpack, egg-webpack-vue 由 [egg-vue-webpack-dev](https://github.com/hubcarl/egg-vue-webpack-dev)分离而来, 保证功能单一, 可以扩展更多基于webpack的打包方案, 比如vue, react.
+
+基于旧版[egg-vue-webpack-dev](https://github.com/hubcarl/egg-vue-webpack-dev)插件编译的请切换到该项目的[egg-vue-webpack-dev](https://github.com/hubcarl/egg-vue-webpack-boilerplate/tree/egg-vue-webpack-dev)分支
+
 
 ## 特性
 
@@ -291,6 +296,13 @@ exports.index = function* (ctx) {
 - 基于vue + vuex + vue-router + axios 单页面服务器客户端同构入口: http://127.0.0.1:7001/app
 
 ![单页面服务器](https://github.com/hubcarl/egg-vue-webpack-boilerplate/blob/master/doc/images/vue-single-page.png)
+
+
+## 实现原理
+
+- [基于webpack的前端工程解决方案和egg+vue服务端渲染项目实践](http://hubcarl.github.io/blog/2017/04/15/webpack-project/)
+
+- [koa和egg项目webpack内存编译和热更新实现](http://hubcarl.github.io/blog/2017/04/15/egg-webpack/)
 
 
 ## License
