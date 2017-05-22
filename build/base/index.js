@@ -1,6 +1,8 @@
 const path = require('path');
 
-exports.config = require('../../config/webpackConfig');
+exports.config = {
+  baseDir: path.join(__dirname, '../../')
+};
 
 exports.getOption = config => {
   return {

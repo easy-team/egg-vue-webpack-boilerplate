@@ -1,5 +1,4 @@
 const path = require('path');
-const webpackConfig = require('./webpackConfig');
 
 module.exports = app => {
   const exports = {};
@@ -16,14 +15,6 @@ module.exports = app => {
   exports.logview = {
     dir: path.join(app.baseDir, 'logs')
   };
-
-  exports.webpack = {
-    port: 8090,
-    clientConfig: require(path.join(app.baseDir, 'build/client')),
-    serverConfig: require(path.join(app.baseDir, 'build/server'))
-  };
-
-  exports.webpackvue = webpackConfig.webpackvue;
 
   exports.vuessr = {
     injectCss: false
