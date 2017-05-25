@@ -7,15 +7,15 @@ class ClientDevBuilder extends ClientBaseBuilder {
     this.setDevTool(false);
     this.setCssExtract(false);
     // this.ignoreCSS();
-    this.setPlugin(new StatsPlugin('stats.json', {
-      chunkModules: true,
-      chunks: true,
-      assets: true,
-      modules: true,
-      children: true,
-      chunksSort: true,
-      assetsSort: true
-    }));
+    //this.setPlugin(new StatsPlugin('stats.json', {
+    //  chunkModules: true,
+    //  chunks: true,
+    //  assets: true,
+    //  modules: true,
+    //  children: true,
+    //  chunksSort: true,
+    //  assetsSort: true
+    //}));
   }
 }
 
