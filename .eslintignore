@@ -13,3 +13,4 @@ app/web/store
 plugins/
 app/web/asset/
 app/view/
+test.js

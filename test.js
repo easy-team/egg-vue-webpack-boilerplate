@@ -20,9 +20,8 @@ const manifest = {
 
 const normalizeManifest = {};
 Object.keys(manifest).forEach(key => {
-   const normalizekey = key.replace(/^\\/g, '').replace(/\\/g, '/');
+   const normalizeKey = key.replace(/^\\/g, '').replace(/\\/g, '/');
    const normalizeValue = manifest[key].replace(/\\/g, '/').replace(/\/\//g, '/');
-   normalizeManifest[normalizekey] = normalizeValue;
+   normalizeManifest[normalizeKey] = normalizeValue;
 });
 console.log(normalizeManifest);
-return normalizeManifest;
