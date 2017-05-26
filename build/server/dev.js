@@ -3,6 +3,7 @@ class ServerDevBuilder extends ServerBaseBuilder {
   constructor() {
     super();
     this.setEggWebpackPublicPath();
+    this.setStatToJson(true);
   }
 }
 
