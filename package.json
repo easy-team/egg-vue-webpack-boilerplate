@@ -14,7 +14,7 @@
     "fix": "eslint --fix ."
   },
   "dependencies": {
-    "@hubcarl/egg-view-vue": "^0.0.2",
+    "@hubcarl/egg-view-vue": "~0.0.2",
     "axios": "^0.15.3",
     "co": "^4.6.0",
     "co-wait": "^0.0.0",
@@ -23,7 +23,7 @@
     "egg-logger": "^1.5.0",
     "egg-logview": "^1.0.0",
     "egg-validate": "^1.0.0",
-    "egg-view-vue-ssr": "^0.1.1",
+    "egg-view-vue-ssr": "~0.1.1",
     "element-ui": "^1.2.5",
     "extend": "~3.0.0",
     "lodash": "^4.17.4",
@@ -45,8 +45,8 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "cross-env": "^5.0.0",
-    "egg-webpack": "^0.1.2",
-    "egg-webpack-vue": "^0.1.3",
+    "egg-webpack": "~0.1.2",
+    "egg-webpack-vue": "~0.1.3",
     "eslint": "^3.18.0",
     "eslint-config-egg": "^3.2.0",
     "eslint-plugin-vue": "^2.0.1",
