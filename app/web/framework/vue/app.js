@@ -31,6 +31,7 @@ App.client = options => {
 App.server = options => {
   if (options.store && options.router) {
     return context => {
+      console.log('context.state.url>>>', context.state.url);
       options.router.push(context.state.url);
       const matchedComponents = options.router.getMatchedComponents();
       if (!matchedComponents) {

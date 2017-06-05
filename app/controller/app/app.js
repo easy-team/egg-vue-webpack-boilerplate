@@ -1,7 +1,9 @@
 const Model = require('../../mocks/article/list');
+const serverBundle = require('../../view/vue-ssr-server-bundle.json');
 
 exports.index = function* (ctx) {
-  yield ctx.render('app/app.js', { url: this.url.replace(/\/app/, '') });
+  const url = ctx.url.replace(/\/app/, '') || '/';
+  yield ctx.app.vue.renderCode(serverBundle, { state: { url } });
 };
 
 exports.list = function* (ctx) {

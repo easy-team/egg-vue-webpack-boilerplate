@@ -9,7 +9,11 @@ module.exports = app => {
   };
 
   exports.view = {
-    cache: false
+    cache: false,
+    renderOptions: {
+      template: '<!DOCTYPE html><html lang="en"><body><!--vue-ssr-outlet--></body></html>',
+      clientManifest: require('../public/vue-ssr-client-manifest.json')
+    }
   };
 
   exports.vuessr = {
