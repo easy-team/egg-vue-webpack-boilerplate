@@ -8,7 +8,7 @@ module.exports = app => {
     '/favicon.ico': fs.readFileSync(path.join(app.baseDir, 'app/web/asset/images/favicon.ico'))
   };
 
-  exports.view = {
+  exports.vue = {
     cache: false,
     renderOptions: {
       template: '<!DOCTYPE html><html lang="en"><body><!--vue-ssr-outlet--></body></html>',

@@ -3,7 +3,7 @@ const serverBundle = require('../../view/vue-ssr-server-bundle.json');
 
 exports.index = function* (ctx) {
   const url = ctx.url.replace(/\/app/, '') || '/';
-  yield ctx.app.vue.renderCode(serverBundle, { state: { url } });
+  this.body = yield ctx.app.vue.renderCode(serverBundle, { state: { url } });
 };
 
 exports.list = function* (ctx) {

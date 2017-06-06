@@ -31,22 +31,22 @@ App.client = options => {
 App.server = options => {
   if (options.store && options.router) {
     return context => {
-      console.log('context.state.url>>>', context.state.url);
-      options.router.push(context.state.url);
-      const matchedComponents = options.router.getMatchedComponents();
-      if (!matchedComponents) {
-        return Promise.reject({ code: '404' });
-      }
-      return Promise.all(
-        matchedComponents.map(component => {
-          if (component.preFetch) {
-            return component.preFetch(options.store);
+      return new Promise((resolve, reject) => {
+        options.router.push(context.state.url);
+        options.router.onReady(() => {
+          const matchedComponents = options.router.getMatchedComponents();
+          if (!matchedComponents.length) {
+            return reject({ code: '404' });
           }
-          return null;
-        })
-      ).then(() => {
-        context.state = options.store.state;
-        return new Vue(options);
+          Promise.all(
+            matchedComponents.map(component => {
+              return component.preFetch && component.preFetch(options.store);
+            })
+          ).then(() => {
+            context.state = options.store.state;
+            resolve(new Vue(options));
+          }).catch(reject);
+        }, reject);
       });
     };
   }
