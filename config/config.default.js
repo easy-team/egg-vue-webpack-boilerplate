@@ -13,8 +13,7 @@ module.exports = app => {
   };
 
   exports.vuessr = {
-    layout: path.join(app.baseDir, 'app/web/view/layout.html'),
-    manifest: webpackConfig.build.manifest
+    layout: path.join(app.baseDir, 'app/web/view/layout.html')
   };
 
   exports.webpackvue = webpackConfig;

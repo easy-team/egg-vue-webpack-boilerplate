@@ -5,11 +5,7 @@ const webpackConfig = require('../../config/webpackConfig');
 const WebpackBaseBuilder = WebpackBuilder => class extends WebpackBuilder {
   constructor(config) {
     super(merge(webpackConfig, config));
-    this.setOption({
-      entry: {
-        vendor: ['vue']
-      }
-    });
+    this.setEntry('vendor', ['vue']);
     this.setAlias('asset', path.join(this.config.baseDir, 'app/web/asset'));
     this.setAlias('app', path.join(this.config.baseDir, 'app/web/framework/vue/app'));
     this.setAlias('component', path.join(this.config.baseDir, 'app/web/component'));
