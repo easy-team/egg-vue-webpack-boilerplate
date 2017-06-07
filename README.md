@@ -2,26 +2,32 @@
 
 基于Vue多页面和单页面服务器渲染同构工程骨架项目
 
-
-## 依赖
-
-- [egg-view-vue](https://github.com/hubcarl/egg-view-vue) egg view plugin for vue.
-- [egg-view-vue-ssr](https://github.com/hubcarl/egg-view-vue-ssr) vue server side render solution for egg-view-vue.
-- [easywebpack](https://github.com/hubcarl/easywebpack) programming instead of configuration, webpack is no longer complex.
-- [egg-webpack](https://github.com/hubcarl/egg-webpack) webpack dev server plugin for egg, support read file in memory and hot reload.
-- [egg-webpack-vue](https://github.com/hubcarl/egg-webpack-vue) egg webpack building solution for vue.
-
-
-说明: easywebpack, egg-webpack, egg-webpack-vue 由 [egg-vue-webpack-dev](https://github.com/hubcarl/egg-vue-webpack-dev)分离而来, 保证功能单一, 可以扩展更多基于webpack的打包方案, 比如vue, react.
-
-基于旧版[egg-vue-webpack-dev](https://github.com/hubcarl/egg-vue-webpack-dev)插件编译的请切换到该项目的[egg-vue-webpack-dev](https://github.com/hubcarl/egg-vue-webpack-boilerplate/tree/egg-vue-webpack-dev)分支
-
-
 ## 特性
 
 - 基于vue + axios 多页面服务器客户端同构实现
 
 - 基于vue + vuex + vue-router + axios 单页面服务器客户端同构实现
+
+- 基于easywebpack基础配置, 使用es6 class 继承方式编写webpack配置
+
+- 支持server和client端代码修改, webpack时时编译和热更新, `npm start` 一键启动应用
+
+- 支持vue 2.3 官方VueSSRPlugin实现方案,代码分支[feature/VueSSRPlugin](https://github.com/hubcarl/egg-vue-webpack-boilerplate/tree/feature/VueSSRPlugin) 
+
+
+## 依赖
+
+- [easywebpack](https://github.com/hubcarl/easywebpack) programming instead of configuration, webpack is no longer complex.
+- [egg-view-vue](https://github.com/hubcarl/egg-view-vue) egg view plugin for vue.
+- [egg-view-vue-ssr](https://github.com/hubcarl/egg-view-vue-ssr) vue server side render solution for egg-view-vue.
+- [egg-webpack](https://github.com/hubcarl/egg-webpack) webpack dev server plugin for egg, support read file in memory and hot reload.
+- [egg-webpack-vue](https://github.com/hubcarl/egg-webpack-vue) egg webpack building solution for vue.
+
+![工程化](https://github.com/hubcarl/egg-vue-webpack-boilerplate/blob/master/doc/images/egg-webpack.png)
+
+说明: easywebpack, egg-webpack, egg-webpack-vue 由 [egg-vue-webpack-dev](https://github.com/hubcarl/egg-vue-webpack-dev)分离而来, 保证功能单一, 可以扩展更多基于webpack的打包方案, 比如vue, react.
+
+基于旧版[egg-vue-webpack-dev](https://github.com/hubcarl/egg-vue-webpack-dev)插件编译的请切换到该项目的[egg-vue-webpack-dev](https://github.com/hubcarl/egg-vue-webpack-boilerplate/tree/egg-vue-webpack-dev)分支
 
 
 ## 使用
@@ -116,14 +122,17 @@ npm run build-prod
     │               ├── toast.scss
     │               └── toast.vue
     ├── build                                   //  webpack 自定义配置入口, 会与默认配置进行合并(看似这么多,其实这里只是占个位说明一下)
-    │   ├── build.js                            //  webpack 本地执行打包入口
-    │   ├── webpack.base.conf.js                //  webpack 自定义配置公共配置
-    │   ├── webpack.client.dev.conf.js          //  webpack 自定义前端渲染开发配置
-    │   ├── webpack.client.prod.conf.js         //  webpack 自定义前端渲染测试配置
-    │   ├── webpack.client.test.conf.js         //  webpack 自定义前端渲染生产配置
-    │   ├── webpack.server.dev.conf.js          //  webpack 自定义后端渲染开发配置
-    │   ├── webpack.server.prod.conf.js         //  webpack 自定义后端渲染测试配置
-    │   └── webpack.server.test.conf.js         //  webpack 自定义后端渲染生产配置
+    │   ├── base
+    │   │   └── index.js                        // 公共配置        
+    │   ├──  client                             // 客户端webpack编译配置
+    │   │   ├── dev.js
+    │   │   ├── prod.js
+    │   │   └── index.js
+    │   ├──  server                             // 服务端webpack编译配置
+    │   │    ├── dev.js
+    │   │    ├── prod.js
+    │   │    └── index.js
+    │   └── index.js
     ├── config
     │   ├── config.default.js
     │   ├── config.local.js
