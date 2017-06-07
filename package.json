@@ -14,7 +14,7 @@
     "fix": "eslint --fix ."
   },
   "dependencies": {
-    "@hubcarl/egg-view-vue": "~0.0.2",
+    "@hubcarl/egg-view-vue": "^1.0.0",
     "axios": "^0.15.3",
     "co": "^4.6.0",
     "co-wait": "^0.0.0",
@@ -23,7 +23,6 @@
     "egg-logger": "^1.6.0",
     "egg-logview": "^1.0.0",
     "egg-validate": "^1.0.0",
-    "egg-view-vue-ssr": "^0.1.1",
     "element-ui": "^1.2.5",
     "extend": "~3.0.0",
     "lodash": "^4.17.4",

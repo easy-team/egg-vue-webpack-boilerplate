@@ -5,11 +5,6 @@ exports.vue = {
   package: '@hubcarl/egg-view-vue'
 };
 
-exports.vuessr = {
-  enable: false,
-  package: 'egg-view-vue-ssr'
-};
-
 exports.webpack = {
   enable: true,
   package: 'egg-webpack'

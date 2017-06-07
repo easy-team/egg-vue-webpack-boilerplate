@@ -1,9 +1,10 @@
 const Model = require('../../mocks/article/list');
-const serverBundle = require('../../view/vue-ssr-server-bundle.json');
+// const serverBundle = require('../../view/vue-ssr-server-bundle.json');
 
 exports.index = function* (ctx) {
   const url = ctx.url.replace(/\/app/, '') || '/';
-  this.body = yield ctx.app.vue.renderCode(serverBundle, { state: { url } });
+  // this.body = yield ctx.app.vue.renderBundle(serverBundle, { state: { url } });
+  yield ctx.render('vue-ssr-server-bundle.json', { url });
 };
 
 exports.list = function* (ctx) {
