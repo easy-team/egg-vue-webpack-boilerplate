@@ -1,12 +1,10 @@
 const path = require('path');
 const EggWebpackVue = require('egg-webpack-vue');
 const merge = EggWebpackVue.merge;
-const defaultConfig = {
-  baseDir: path.join(__dirname, '../../')
-};
+const webpackConfig = require('../../config/webpackConfig');
 const WebpackBaseBuilder = WebpackBuilder => class extends WebpackBuilder {
   constructor(config) {
-    super(merge(defaultConfig, config));
+    super(merge(webpackConfig, config));
     this.setOption({
       entry: {
         vendor: ['vue']

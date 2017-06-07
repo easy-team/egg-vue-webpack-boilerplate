@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-
+const webpackConfig = require('./webpackConfig');
 module.exports = app => {
   const exports = {};
 
@@ -13,8 +13,11 @@ module.exports = app => {
   };
 
   exports.vuessr = {
-    layout: path.join(app.baseDir, 'app/web/view/layout.html')
+    layout: path.join(app.baseDir, 'app/web/view/layout.html'),
+    manifest: webpackConfig.build.manifest
   };
+
+  exports.webpackvue = webpackConfig;
 
   exports.logger = {
     consoleLevel: 'DEBUG',
@@ -22,9 +25,9 @@ module.exports = app => {
   };
 
   exports.static = {
-    router: '/public', // 请求进来的前缀，避免和应用的 router 冲突，默认是 `/public`
+    router: '/public/res', // 请求进来的前缀，避免和应用的 router 冲突，默认是 `/public`
     // maxAge: 3600 * 24 * 180, // maxAge 缓存，默认 1 年
-    dir: path.join(app.baseDir, 'public') // 静态文件目录，默认是 `${baseDir}/app/pulbic`
+    dir: path.join(app.baseDir, 'public/res') // 静态文件目录，默认是 `${baseDir}/app/pulbic`
   };
 
   exports.keys = '123456';
