@@ -1,10 +1,11 @@
-const EggWebpackVue = require('egg-webpack-vue');
+const VueWebpack = require('easywebpack-vue');
 const WebpackBaseBuilder = require('../base');
-class ServerDevBuilder extends WebpackBaseBuilder(EggWebpackVue.WebpackServerBuilder) {
+class ServerDevBuilder extends WebpackBaseBuilder(VueWebpack.WebpackServerBuilder) {
   constructor(config) {
     super(config);
     this.setEggWebpackPublicPath();
-    this.setStatToJson(true);
+    this.setPrefix('');
+    this.setBuildPath('app/view');
   }
 }
 

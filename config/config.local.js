@@ -20,5 +20,12 @@ module.exports = app => {
     injectCss: false
   };
 
+  exports.webpack = {
+    webpackConfigList: [
+      require(path.join(app.baseDir, 'build/client')),
+      require(path.join(app.baseDir, 'build/server'))
+    ]
+  };
+
   return exports;
 };

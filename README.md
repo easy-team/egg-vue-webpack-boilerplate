@@ -18,7 +18,7 @@
 ## 依赖
 
 - [easywebpack](https://github.com/hubcarl/easywebpack) programming instead of configuration, webpack is no longer complex.
-- [egg-view-vue](https://github.com/hubcarl/egg-view-vue) egg view plugin for vue.
+- [egg-view-vue](https://github.com/eggjs/egg-view-vue) egg view plugin for vue.
 - [egg-view-vue-ssr](https://github.com/hubcarl/egg-view-vue-ssr) vue server side render solution for egg-view-vue.
 - [egg-webpack](https://github.com/hubcarl/egg-webpack) webpack dev server plugin for egg, support read file in memory and hot reload.
 - [egg-webpack-vue](https://github.com/hubcarl/egg-webpack-vue) egg webpack building solution for vue.

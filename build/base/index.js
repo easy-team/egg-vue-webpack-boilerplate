@@ -1,6 +1,6 @@
 const path = require('path');
-const EggWebpackVue = require('egg-webpack-vue');
-const merge = EggWebpackVue.merge;
+const VueWebpack = require('easywebpack-vue');
+const merge = VueWebpack.merge;
 const webpackConfig = require('../../config/webpackConfig');
 const WebpackBaseBuilder = WebpackBuilder => class extends WebpackBuilder {
   constructor(config) {

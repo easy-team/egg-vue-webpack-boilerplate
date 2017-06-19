@@ -1,9 +1,11 @@
-const EggWebpackVue = require('egg-webpack-vue');
+const VueWebpack = require('easywebpack-vue');
 const WebpackBaseBuilder = require('../base');
-class ClientProdBuilder extends WebpackBaseBuilder(EggWebpackVue.WebpackClientBuilder) {
+class ClientProdBuilder extends WebpackBaseBuilder(VueWebpack.WebpackClientBuilder) {
   constructor(config) {
     super(config);
     this.setCssExtract(true);
+    this.setManifest(true);
+    this.setBuildConfig(true);
   }
 }
 
