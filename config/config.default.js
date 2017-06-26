@@ -1,6 +1,5 @@
 const path = require('path');
 const fs = require('fs');
-const webpackConfig = require('./webpackConfig');
 module.exports = app => {
   const exports = {};
 
@@ -15,8 +14,6 @@ module.exports = app => {
   exports.vuessr = {
     layout: path.join(app.baseDir, 'app/web/view/layout.html')
   };
-
-  exports.webpackvue = webpackConfig;
 
   exports.logger = {
     consoleLevel: 'DEBUG',

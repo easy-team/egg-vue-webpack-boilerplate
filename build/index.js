@@ -1,11 +1,9 @@
-const VueWebpack = require('easywebpack-vue');
+const EasyWebpack = require('easywebpack');
 const clientConfig = require('./client');
 const serverConfig = require('./server');
-const config = {
-  webpackConfig: [clientConfig, serverConfig]
-};
+const config = [clientConfig, serverConfig];
 if (process.env.BUILD_ENV === 'view') {
-  VueWebpack.server(config);
+  EasyWebpack.server(config);
 } else {
-  VueWebpack.build(config);
+  EasyWebpack.build(config);
 }

@@ -1,10 +1,10 @@
 const path = require('path');
 const VueWebpack = require('easywebpack-vue');
 const merge = VueWebpack.merge;
-const webpackConfig = require('../../config/webpackConfig');
+const webpackConfig = require('../../config/config.webpack');
 const WebpackBaseBuilder = WebpackBuilder => class extends WebpackBuilder {
   constructor(config) {
-    super(merge(webpackConfig, config));
+    super(merge(config, webpackConfig));
     this.setEntry('vendor', ['vue']);
     this.setAlias('asset', path.join(this.config.baseDir, 'app/web/asset'));
     this.setAlias('app', path.join(this.config.baseDir, 'app/web/framework/vue/app'));

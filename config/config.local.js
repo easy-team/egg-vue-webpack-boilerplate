@@ -1,5 +1,4 @@
 const path = require('path');
-
 module.exports = app => {
   const exports = {};
 
@@ -26,6 +25,5 @@ module.exports = app => {
       require(path.join(app.baseDir, 'build/server'))
     ]
   };
-
   return exports;
 };

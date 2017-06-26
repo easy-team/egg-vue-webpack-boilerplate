@@ -10,5 +10,4 @@ class ClientDevBuilder extends WebpackBaseBuilder(VueWebpack.WebpackClientBuilde
     this.setBuildConfig(true);
   }
 }
-// console.log(new ClientDevBuilder().create());
 module.exports = new ClientDevBuilder().create();
