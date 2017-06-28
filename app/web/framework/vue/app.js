@@ -22,7 +22,7 @@ App.client = options => {
   options.el = '#app';
   if (options.store) {
     options.store.replaceState(App.data());
-  } else {
+  } else if (window.__INITIAL_STATE__) {
     options.data = App.data();
   }
   return new Vue(options);

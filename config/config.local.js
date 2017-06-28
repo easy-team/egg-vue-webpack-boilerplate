@@ -1,4 +1,5 @@
 const path = require('path');
+const ip = require('ip');
 module.exports = app => {
   const exports = {};
 
@@ -22,8 +23,20 @@ module.exports = app => {
   exports.webpack = {
     webpackConfigList: [
       require(path.join(app.baseDir, 'build/client')),
-      require(path.join(app.baseDir, 'build/server'))
+      require(path.join(app.baseDir, 'build/server')),
+      require(path.join(app.baseDir, 'build/html'))
     ]
   };
+
+  const localIP = ip.address();
+  const domainWhiteList = [];
+  [9000, 9001, 9002, 9003, 9004].forEach(port => {
+    domainWhiteList.push(`http://localhost:${port}`);
+    domainWhiteList.push(`http://127.0.0.1:${port}`);
+    domainWhiteList.push(`http://${localIP}:${port}`);
+  });
+
+  exports.security = { domainWhiteList };
+
   return exports;
 };

@@ -6,6 +6,7 @@
         <li class="nav-item"><a href="/" :class="{'active' : selectedMenu === '/'}">Home</a></li>
         <li class="nav-item"><a href="/element" :class="{'active' : selectedMenu === '/element'}">Element</a></li>
         <li class="nav-item"><a href="/app" :class="{'active' : selectedMenu === '/app'}">Single</a></li>
+        <li class="nav-item"><a href="http://127.0.0.1:9003/public/html/index/index.html" :class="{'active' : selectedMenu === '/public/html/index/index.html'}">Client-Render</a></li>
         <li class="nav-item"><a href="/about" :class="{'active' : selectedMenu === '/about'}">About</a></li>
       </ul>
     </div>

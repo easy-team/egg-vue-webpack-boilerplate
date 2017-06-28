@@ -32,25 +32,52 @@
 
 ## 使用
 
-- 启动项目
+#### 启动项目
 
 ```bash
 npm install
 npm start
 ```
 
+
+应用访问: http://127.0.0.1:7001
+
+
 ![npm start启动](https://github.com/hubcarl/egg-vue-webpack-boilerplate/blob/master/doc/images/webpack.png)
 
-访问: http://127.0.0.1:7001
+### 配置说明
 
 
-- 项目构建
+```js
+`config/config.local.js` 
+exports.webpack = {
+    webpackConfigList: [
+      require(path.join(app.baseDir, 'build/client')), // http://127.0.0.1:9001
+      require(path.join(app.baseDir, 'build/server')), // http://127.0.0.1:9002
+      require(path.join(app.baseDir, 'build/html'))    // http://127.0.0.1:9003
+    ]
+  };
+```
+
+构建会同时启动三个webpack构建服务, 客户端js构建(build/client), 服务端构建(build/server), html前端渲染构建(build/html). 默认端口9000(单独使用),  webpackConfigList 端口依次递增. 
+
+
+#### 项目构建
 
 ```bash
-// 本地开发使用(build/client.js)
+// 直接运行(编译文件全部在内存里面,本地开发使用)
+npm start
+
+// client 和 server 单独编译(不会在egg里面启动, 纯粹的webpack编译)
+npm run view 
+
+// html单独编译(不会在egg里面启动, 纯粹的webpack编译)
+npm run html
+
+// 编译文件到磁盘打包使用(发布测试环境)
 npm run build-dev
 
-// 发布包构建(build/server.js)
+// 编译文件到磁盘打包使用(发布正式环境)
 npm run build-prod
 
 ```

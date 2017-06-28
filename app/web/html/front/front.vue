@@ -1,9 +1,10 @@
 <template>
-  <Layout description="vue server side render" keywords="egg, vue, webpack, server side render">
+  <HtmlLayout description="vue server side render" keywords="egg, vue, webpack, server side render">
     <!--<div v-for="item in list">-->
       <!--{{item.title}}-->
     <!--</div>-->
-    <!--el-table有bug, 服务器渲染出来数据是空的,用上去结果是可以出来de-->
+    <!--el-table有bug, 服务器渲染出来数据是空的,用简单的模板结果是可以出来-->
+    <p></p>
     <el-table :data="list " border style="width: 100%" @selection-change="handleSelectionChange">
       <el-table-column
         type="selection"
@@ -49,10 +50,10 @@
         :total="total">
       </el-pagination>
     </div>
-  </Layout>
+  </HtmlLayout>
 </template>
 <style>
-  @import "home.css";
+  @import "front.css";
 </style>
 <script type="text/babel">
   export default {
@@ -61,6 +62,8 @@
     },
     data(){
       return {
+        total: 0,
+        list:[],
         pageIndex: 1,
         pageSize: 10
       }
@@ -70,7 +73,7 @@
     },
     methods: {
       fetch(){
-        this.$http.get(`/pager?pageIndex=${this.pageIndex}&pageSize=${this.pageSize}`).then(res=> {
+        this.$http.get(`http://127.0.0.1:7001/pager?pageIndex=${this.pageIndex}&pageSize=${this.pageSize}`).then(res=> {
           console.log('res', res);
           this.total = res.data.total;
           this.list = res.data.list;
@@ -97,7 +100,7 @@
       }
     },
     mounted() {
-      console.log(this.$data);
+      this.fetch();
     }
   }
 </script>
