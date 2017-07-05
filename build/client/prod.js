@@ -6,6 +6,7 @@ class ClientProdBuilder extends WebpackBaseBuilder(VueWebpack.WebpackClientBuild
     this.setCssExtract(true);
     this.setManifest(true);
     this.setBuildConfig(true);
+    this.addDefinePlugin({ PROD: true });
   }
 }
 

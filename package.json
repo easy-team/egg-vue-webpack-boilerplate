@@ -5,12 +5,11 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production node build",
     "view": "cross-env NODE_ENV=development NODE_SERVER=true node build",
-    "build-dev": "cross-env NODE_ENV=development node build",
     "build-prod": "cross-env NODE_ENV=production node build",
     "kill-port": "kill -9 $(lsof -i:8888 |grep 'node'|awk '{print $2}') ",
     "html": "cross-env BUILD_ENV=html NODE_SERVER=true NODE_ENV=development node build",
     "start": "node index.js",
-    "start-prod": "cross-env NODE_ENV=production node index.js",
+    "start-prod": "cross-env npm run build-prod && NODE_ENV=production node index.js",
     "restart": "npm run kill-port && npm run start",
     "lint": "eslint .",
     "fix": "eslint --fix ."

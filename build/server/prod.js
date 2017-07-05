@@ -5,6 +5,7 @@ class ServerProdBuilder extends WebpackBaseBuilder(VueWebpack.WebpackServerBuild
     super(config);
     this.setPrefix('');
     this.setBuildPath('app/view');
+    this.addDefinePlugin({ PROD: true });
   }
 }
 

@@ -3,7 +3,7 @@ const WebpackBaseBuilder = require('../base');
 class ServerDevBuilder extends WebpackBaseBuilder(VueWebpack.WebpackServerBuilder) {
   constructor(config) {
     super(config);
-    this.setEggWebpackPublicPath();
+    this.setDevMode();
     this.setPrefix('');
     this.setBuildPath('app/view');
   }

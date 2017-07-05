@@ -4,6 +4,7 @@ class ClientProdBuilder extends WebpackHtmlBaseBuilder {
     super(config);
     this.setHtml(true);
     this.setCssExtract(true);
+    this.addDefinePlugin({ PROD: true });
   }
 }
 
