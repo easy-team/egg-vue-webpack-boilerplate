@@ -1,6 +1,6 @@
 {
   "name": "egg-vue-webpack-boilerplate",
-  "version": "2.0.0",
+  "version": "0.7.0",
   "description": "基于egg-vue-webpack-dev和egg-view-vue(ssr)插件的工程骨架项目",
   "scripts": {
     "build": "cross-env BUILD_ENV=prod NODE_ENV=production node build",
@@ -36,6 +36,7 @@
   },
   "devDependencies": {
     "autod-egg": "^1.0.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-transform-object-assign": "^6.22.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
