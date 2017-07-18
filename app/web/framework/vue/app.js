@@ -44,6 +44,7 @@ App.server = options => {
           return null;
         })
       ).then(() => {
+        console.log('>>>FETCH_ARTICLE_LIST', options.store.state);
         context.state = options.store.state;
         return new Vue(options);
       });

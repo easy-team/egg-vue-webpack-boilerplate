@@ -21,10 +21,12 @@ module.exports = app => {
   };
 
   exports.webpack = {
+    proxyMapping: {
+      html: 'text/html; charset=UTF-8'
+    },
     webpackConfigList: [
-      require(path.join(app.baseDir, 'build/client')),
-      require(path.join(app.baseDir, 'build/server')),
-      require(path.join(app.baseDir, 'build/html'))
+      require(path.join(app.baseDir, 'build/web/client')),
+      require(path.join(app.baseDir, 'build/web/server'))
     ]
   };
 

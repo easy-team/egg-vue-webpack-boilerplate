@@ -50,6 +50,7 @@
       }
     },
     preFetch ({ state, dispatch, commit }) {
+      console.log('>>>>>>>>',state, dispatch, commit);
       return Promise.all([
         dispatch('FETCH_ARTICLE_LIST')
       ])

@@ -59,7 +59,7 @@
     },
     methods: {
       fetch(){
-        this.$http.get(`/pager?pageIndex=${this.pageIndex}&pageSize=${this.pageSize}`).then(res=> {
+        this.$http.get(`${location.origin}/pager?pageIndex=${this.pageIndex}&pageSize=${this.pageSize}`).then(res=> {
           console.log('res', res);
           if(res.data.list && res.data.list.length){
             this.total = res.data.total;

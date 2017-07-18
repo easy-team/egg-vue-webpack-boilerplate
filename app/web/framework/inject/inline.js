@@ -1,0 +1,1 @@
+console.log('-------------inject file inline-------------');

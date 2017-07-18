@@ -1,5 +1,5 @@
 <template>
-  <HtmlLayout description="vue server side render" keywords="egg, vue, webpack, server side render">
+  <Layout description="vue server side render" keywords="egg, vue, webpack, server side render">
     <div class="container smart-container">
       <div class="row row-offcanvas row-offcanvas-right">
         <div class="col-xs-12 col-sm-9">
@@ -29,12 +29,12 @@
             </li>
           </ul>
           <div id="pagerBottom" class="smart-pager" v-if="isLoading">
-            <img src="../../asset/images/loading.gif">
+            <img src="../../../asset/images/loading.gif">
           </div>
         </div>
       </div>
     </div>
-  </HtmlLayout>
+  </Layout>
 </template>
 <style>
   @import "index.css";
@@ -58,7 +58,7 @@
     },
     methods: {
       fetch(){
-        this.$http.get(`http://127.0.0.1:7001/pager?pageIndex=${this.pageIndex}&pageSize=${this.pageSize}`).then(res=> {
+        this.$http.get(`${location.origin}/pager?pageIndex=${this.pageIndex}&pageSize=${this.pageSize}`).then(res=> {
           if (res.data.list && res.data.list.length) {
             this.total = res.data.total;
             this.list = this.list.concat(res.data.list);

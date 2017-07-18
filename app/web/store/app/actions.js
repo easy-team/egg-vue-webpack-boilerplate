@@ -12,6 +12,7 @@ const host = 'http://127.0.0.1:7001';
 const actions = {
 
   FETCH_ARTICLE_LIST: ({ commit, dispatch, state }) => {
+    console.log('>>>>actions', actions);
     if (!state.articleList.length) {
       return axios.get(`${host}/app/api/article/list`)
         .then(response => {

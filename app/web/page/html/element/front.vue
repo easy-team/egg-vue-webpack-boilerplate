@@ -1,5 +1,5 @@
 <template>
-  <HtmlLayout description="vue server side render" keywords="egg, vue, webpack, server side render">
+  <Layout description="vue server side render" keywords="egg, vue, webpack, server side render">
     <!--<div v-for="item in list">-->
       <!--{{item.title}}-->
     <!--</div>-->
@@ -50,7 +50,7 @@
         :total="total">
       </el-pagination>
     </div>
-  </HtmlLayout>
+  </Layout>
 </template>
 <style>
   @import "front.css";
@@ -73,7 +73,7 @@
     },
     methods: {
       fetch(){
-        this.$http.get(`http://127.0.0.1:7001/pager?pageIndex=${this.pageIndex}&pageSize=${this.pageSize}`).then(res=> {
+        this.$http.get(`${location.origin}/pager?pageIndex=${this.pageIndex}&pageSize=${this.pageSize}`).then(res=> {
           console.log('res', res);
           this.total = res.data.total;
           this.list = res.data.list;

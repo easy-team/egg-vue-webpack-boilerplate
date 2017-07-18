@@ -4,8 +4,8 @@
       <a href="/" class="router-link-active">client-render</a></h1>
       <ul class="nav">
         <li class="nav-item"><a :href="htmlLink" :class="{'active' : selectedMenu === '/'}">Home</a></li>
-        <li class="nav-item"><a href="/public/html/index/index.html" :class="{'active' : selectedMenu === '/public/html/index/index.html'}">Client-Render</a></li>
-        <li class="nav-item"><a href="/public/html/front/front.html" :class="{'active' : selectedMenu === '/public/html/front/front.html'}">Client-Render-Element</a></li>
+        <li class="nav-item"><a href="/public/html/home/index.html" :class="{'active' : selectedMenu === '/public/html/home/index.html'}">Client-Render</a></li>
+        <li class="nav-item"><a href="/public/html/element/front.html" :class="{'active' : selectedMenu === '/public/html/element/front.html'}">Client-Render-Element</a></li>
       </ul>
     </div>
   </header>

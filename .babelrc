@@ -1,11 +1,5 @@
 {
     "presets": ["es2015", "stage-2"],
-    "plugins": [
-        'add-module-exports',
-        ["transform-runtime", {
-            "polyfill": true,
-            "regenerator": true
-        }]
-    ],
+    "plugins": ['transform-object-assign'],
     "comments": false
 }
