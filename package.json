@@ -7,7 +7,7 @@
     "build-dev": "cross-env easywebpack build dev",
     "build-test": "cross-env easywebpack build test",
     "start": "node index.js",
-    "start-prod": "cross-env npm run build && npm start",
+    "start-prod": "cross-env NODE_ENV=production npm run build && npm start",
     "kill-port": "kill -9 $(lsof -i:8888 |grep 'node'|awk '{print $2}') ",
     "restart": "npm run kill-port && npm run start",
     "lint": "eslint .",

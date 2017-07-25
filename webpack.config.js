@@ -25,7 +25,7 @@ module.exports = {
     'pack/inline': ['app/web/framework/inject/pack-inline.js']
   },
   create() {
-    if (this.config.type === 'client') {
+    if (this.type === 'client') {
       this.addEntry('vendor', ['vue', 'axios']);
     }
   }
