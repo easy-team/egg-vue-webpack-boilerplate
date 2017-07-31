@@ -19,13 +19,13 @@ App.init = options => {
 
 App.client = options => {
   Vue.prototype.$http = require('axios');
-  options.el = '#app';
   if (options.store) {
     options.store.replaceState(App.data());
   } else if (window.__INITIAL_STATE__) {
-    options.data = App.data();
+    options.data = Object.assign(window.__INITIAL_STATE__, options.data && options.data());
   }
-  return new Vue(options);
+  const app = new Vue(options);
+  app.$mount('#app');
 };
 
 App.server = options => {

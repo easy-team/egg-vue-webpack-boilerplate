@@ -1,21 +1,25 @@
 # egg-vue-webpack-boilerplate
 
-基于Vue多页面和单页面服务器渲染同构工程骨架项目
+基于 Egg + Vue 多页面和单页面服务器渲染同构工程骨架项目
 
-## 特性
+## 1.特性
 
-- 基于vue + axios 多页面服务器客户端同构实现
+- 支持服务端渲染, 前端渲染, 静态页面渲染三种方式
 
-- 基于vue + vuex + vue-router + axios 单页面服务器客户端同构实现
+- 支持 server 和 client 端代码修改, Webpack 时时编译和热更新, `npm start` 一键启动应用
 
-- 基于easywebpack基础配置, 使用es6 class 继承方式编写webpack配置
+- 基于 vue + axios 多页面服务端渲染, 客户端渲染同构实现
 
-- 支持server和client端代码修改, webpack时时编译和热更新, `npm start` 一键启动应用
+- 基于 vue + vuex + vue-router + axios 单页面服务器客户端同构实现
 
-- 支持vue 2.3 官方VueSSRPlugin实现方案,代码分支[feature/VueSSRPlugin](https://github.com/hubcarl/egg-vue-webpack-boilerplate/tree/feature/VueSSRPlugin) 
+- 基于easywebpack基础配置, 使用es6 class 继承方式编写webpack配置 和 cli 构建
 
+- 支持Js/Css/Image资源依赖, 内置支持CDN特性
 
-## 依赖
+- 支持vue 2.3 官方VueSSRPlugin实现方案,代码分支[feature/VueSSRPlugin](https://github.com/hubcarl/egg-vue-webpack-boilerplate/tree/feature/VueSSRPlugin)
+ 
+
+## 2.依赖
 
 - [easywebpack](https://github.com/hubcarl/easywebpack) programming instead of configuration, webpack is no longer complex.
 - [egg-view-vue](https://github.com/eggjs/egg-view-vue) egg view plugin for vue.
@@ -30,15 +34,15 @@
 基于旧版[egg-vue-webpack-dev](https://github.com/hubcarl/egg-vue-webpack-dev)插件编译的请切换到该项目的[egg-vue-webpack-dev](https://github.com/hubcarl/egg-vue-webpack-boilerplate/tree/egg-vue-webpack-dev)分支
 
 
-## 使用
+## 3. 使用
 
-#### 安装cli
+#### 3.1 安装cli
 
 ```bash
 npm install easywebpack-cli -g
 ```
 
-#### 安装依赖
+#### 3.2 安装依赖
 
 ```bash
 npm install
@@ -46,7 +50,7 @@ npm start
 ```
 
 
-#### 启动应用
+#### 3.3 启动应用
 
 ```bash
 npm start
@@ -56,36 +60,8 @@ npm start
 
 ![npm start启动](https://github.com/hubcarl/egg-vue-webpack-boilerplate/blob/master/doc/images/webpack.png)
 
-### 配置说明
 
-
-#### 方式一:自己编写Webpack配置
-
-```js
-`config/config.local.js` 
-exports.webpack = {
-    webpackConfigList: [
-      require(path.join(app.baseDir, 'build/client')), // http://127.0.0.1:9000
-      require(path.join(app.baseDir, 'build/server')), // http://127.0.0.1:9001
-    ]
-  };
-```
-
-#### 方式二:easywebpack根据  `webpack.config.js` 自动创建Webpack Config 
-
-```js
-`config/config.local.js` 
-const EasyWebpack = require('easywebpack-vue');
-exports.webpack = {
-    webpackConfigList:EasyWebpack.getWebpackConfig()
-  };
-```
-
-
-构建会同时启动两个webpack构建服务, 客户端js构建(build/client), 服务端构建(build/server), 默认端口9000,  webpackConfigList 端口依次递增. 
-
-
-#### 项目构建
+#### 3.4 项目构建
 
 ```bash
 // 直接运行(编译文件全部在内存里面,本地开发使用)
@@ -99,8 +75,38 @@ npm run build 或者 easywebpack build prod
 
 ```
 
+## 4. 配置说明(支持两种方式)
 
-## 项目结构和基本规范
+#### 4.1 方式一: `easywebpack-cli` 根据  `webpack.config.js` 自动创建Webpack Config 
+
+```js
+`config/config.local.js` 
+const EasyWebpack = require('easywebpack-vue');
+exports.webpack = {
+    webpackConfigList:EasyWebpack.getWebpackConfig()
+  };
+```
+
+#### 4.2 方式二: 自己编写Webpack配置
+
+编写配置请见 tag `1.0.0`  build目录代码实现
+
+```js
+`config/config.local.js` 
+exports.webpack = {
+    webpackConfigList: [
+      require(path.join(app.baseDir, 'build/client')), // http://127.0.0.1:9000
+      require(path.join(app.baseDir, 'build/server')), // http://127.0.0.1:9001
+    ]
+  };
+```
+
+
+构建会同时启动两个webpack构建服务, 客户端js构建(build/client), 服务端构建(build/server), 默认端口9000,  webpackConfigList 端口依次递增. 
+
+
+
+## 5. 项目结构和基本规范
 
     ├── app
     │   ├── controller
@@ -201,15 +207,18 @@ npm run build 或者 easywebpack build prod
     │   └── vendor.js                         // 生成的公共打包库
 
 
-## 功能实现
+## 6. 功能实现
 
-### 一.多页面服务器渲染同构实现
+支持多页面/单页面服务端渲染, 前端渲染, 静态页面三种方式.
 
-#### 1.多页面前端页面实现
 
-在app/web/page 目录下面创建about目录, about.vue, about.js 文件.
+### 6.1 多页面服务端渲染/前端渲染同构实现
 
-- about.vue 编写界面逻辑, 根元素为layout(自定义组件, 全局注册, 统一的html, meta, header, body)
+#### 6.1.1 多页面前端页面实现
+
+在app/web/page 目录下面创建home目录, home.vue, home.js 文件.
+
+- home.vue 编写界面逻辑, 根元素为layout(自定义组件, 全局注册, 统一的html, meta, header, body)
 
 ```html
 <template>
@@ -218,7 +227,7 @@ npm run build 或者 easywebpack build prod
   </layout>
 </template>
 <style>
-  @import "about.css";
+  @import "home.css";
 </style>
 <script type="text/babel">
 
@@ -239,37 +248,60 @@ npm run build 或者 easywebpack build prod
 </script>
 ```
 
-- about.js 页面调用入口
+- home.js 页面调用入口
 
 ```javascript
 import Vue from 'vue';
-import About from './about.vue';
+import Home from './home.vue';
 import App from 'app';
 export default App.init({
-  ...About
+  ...Home
 });
 
 ```
 
-#### 2.多页面后端实现
-
-- 创建controller文件about.js
+#### 6.1.2 多页面后端渲染实现, 通过 `egg-view-vue-ssr` 插件 `render` 方法实现
+  
+- 创建controller文件home.js
 
 ```javascript
 exports.index = function* (ctx) {
-  yield ctx.render('about/about.js', { message: 'vue server side render!' });
+  yield ctx.render('home/home.js', { message: 'vue server side render!' });
 };
 ```
 
 - 添加路由配置
 
 ```javascript
-app.get('/about', app.controller.about.about.index);
+app.get('/home', app.controller.home.home.index);
 ```
 
-### 二.单页面服务器渲染同构实现
+#### 6.1.3 多页面走前端渲染(后端路由)实现, 通过 `egg-view-vue-ssr` 插件 `renderClient` 方法实现  
 
-#### 1.单页面前端实现
+- 创建controller文件home.js
+
+```javascript
+exports.client = function* (ctx) {
+  yield ctx.renderClient('home/home.js', { message: 'vue server side render!' });
+};
+```
+
+- 添加路由配置
+
+```javascript
+app.get('/client', app.controller.home.home.client);
+```
+
+#### 6.1.4 HTML静态页面前端渲染
+
+- 直接有easywebpack构建出静态HTML文件, 请见 `webpack.config.js` 配置和 `app/web/page/html`代码实现
+
+- 通过 `egg-static` 静态文件访问HTML文件
+
+
+### 6.2 单页面服务器渲染同构实现
+
+#### 6.2.1 单页面前端实现
 
 在app/web/page 目录下面创建app目录, app.vue, app.js 文件.
 
@@ -321,7 +353,7 @@ export default App.init({
 
 ```
 
-#### 2.单页面后端实现
+#### 6.2.2 单页面后端实现
 
 - 创建controller文件app.js
 
@@ -338,7 +370,7 @@ exports.index = function* (ctx) {
 ```
 
 
-## 工程实例
+## 7. 工程实例
 
 
 - 基于vue + axios 多页面服务器客户端同构入口: http://127.0.0.1:7001
@@ -351,7 +383,20 @@ exports.index = function* (ctx) {
 ![单页面服务器](https://github.com/hubcarl/egg-vue-webpack-boilerplate/blob/master/doc/images/vue-single-page.png)
 
 
-## 实现原理
+## 8. 实现原理
+
+### 8.1 本地`npm start`启动流程
+
+![本地启动流程](http://hubcarl.github.io/img/webpack/npm-start.png)
+
+### 8.2 服务端渲染页面访问流程
+
+![服务端渲染页面访问流程](http://hubcarl.github.io/img/webpack/egg-webpack-vue-ssr.png)
+
+
+### 8.3 详细资料
+
+- [Egg+Vue解决方案开发流程](http://hubcarl.github.io/easywebpack/vue/dev/)
 
 - [基于webpack的前端工程解决方案和egg+vue服务端渲染项目实践](http://hubcarl.github.io/blog/2017/04/15/webpack-project/)
 
