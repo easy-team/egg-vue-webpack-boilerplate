@@ -1,4 +1,4 @@
-@base: #f938ab;
+@base-one: red;
 
 .box-shadow(@style, @c) when (iscolor(@c)) {
   -webkit-box-shadow: @style @c;
@@ -8,10 +8,10 @@
   .box-shadow(@style, rgba(0, 0, 0, @alpha));
 }
 
-.message {
+.message-one {
   text-align: center;
   font-size: 36px;
-  color: saturate(@base, 5%);
-  border-color: lighten(@base, 30%);
+  color: saturate(@base-one, 5%);
+  border-color: lighten(@base-one, 30%);
   div { .box-shadow(0 0 5px, 30%) }
 }

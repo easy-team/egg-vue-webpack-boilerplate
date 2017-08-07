@@ -16,6 +16,8 @@
 
 - 支持Js/Css/Image资源依赖, 内置支持CDN特性
 
+- 支持css/sass/less样式编写
+
 - 支持vue 2.3 官方VueSSRPlugin实现方案,代码分支[feature/VueSSRPlugin](https://github.com/hubcarl/egg-vue-webpack-boilerplate/tree/feature/VueSSRPlugin)
  
 

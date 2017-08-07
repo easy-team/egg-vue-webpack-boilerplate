@@ -1,0 +1,9 @@
+$blue: blue;
+$side : right;
+.message-one {
+  font-size: 24px;
+  text-align: center;
+  border: 1px solid #cecece;
+  border-#{$side}-radius: 5px;
+  color: $blue;
+}

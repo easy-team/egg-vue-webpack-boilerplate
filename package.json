@@ -8,7 +8,7 @@
     "build-test": "cross-env easywebpack build test",
     "start": "node index.js",
     "start-test": "EGG_SERVER_ENV=test node index.js",
-    "start-prod": "cross-env NODE_ENV=production npm run build && npm start",
+    "start-prod": "cross-env EGG_SERVER_ENV=prod NODE_ENV=production npm start",
     "kill-port": "kill -9 $(lsof -i:8888 |grep 'node'|awk '{print $2}') ",
     "restart": "npm run kill-port && npm run start",
     "lint": "eslint .",
