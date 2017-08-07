@@ -29,7 +29,7 @@
 - [egg-webpack](https://github.com/hubcarl/egg-webpack) webpack dev server plugin for egg, support read file in memory and hot reload.
 - [egg-webpack-vue](https://github.com/hubcarl/egg-webpack-vue) egg webpack building solution for vue.
 
-![工程化](https://github.com/hubcarl/egg-vue-webpack-boilerplate/blob/master/doc/images/egg-webpack.png)
+![工程化](https://github.com/hubcarl/egg-vue-webpack-boilerplate/blob/master/doc/images/webpack.png)
 
 说明: easywebpack, egg-webpack, egg-webpack-vue 由 [egg-vue-webpack-dev](https://github.com/hubcarl/egg-vue-webpack-dev)分离而来, 保证功能单一, 可以扩展更多基于webpack的打包方案, 比如vue, react.
 
@@ -60,7 +60,7 @@ npm start
 
 应用访问: http://127.0.0.1:7001
 
-![npm start启动](https://github.com/hubcarl/egg-vue-webpack-boilerplate/blob/master/doc/images/webpack.png)
+![npm start启动](https://github.com/hubcarl/egg-vue-webpack-boilerplate/blob/master/doc/images/webpack-build.png)
 
 
 #### 3.4 项目构建
