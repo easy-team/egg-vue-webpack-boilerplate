@@ -4,6 +4,7 @@ class ClientDevBuilder extends WebpackBaseBuilder(VueWebpack.WebpackClientBuilde
   constructor(config) {
     super(config);
     this.setDevMode();
+    this.setHotLoad(true);
     this.setDevTool(false);
     this.setCssExtract(false);
     this.setManifest(true);

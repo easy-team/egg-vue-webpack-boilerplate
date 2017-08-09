@@ -21,6 +21,7 @@ module.exports = app => {
   };
 
   exports.webpack = {
+    port: 9001,
     webpackConfigList: [
       require(path.join(app.baseDir, 'build/client')),
       require(path.join(app.baseDir, 'build/server')),
