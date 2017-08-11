@@ -5,6 +5,7 @@ class ServerDevBuilder extends WebpackBaseBuilder(VueWebpack.WebpackServerBuilde
     super(config);
     this.setDevMode();
     this.setPrefix('');
+    this.setPublicPath('client', false);
     this.setBuildPath('app/view');
   }
 }
