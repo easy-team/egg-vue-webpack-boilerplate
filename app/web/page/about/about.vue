@@ -1,24 +1,28 @@
 <template>
   <layout>
-    <img src="../../asset/images/logo.png" />
-  {{message}}
+    <img src="../../asset/images/logo.png"/>
+    <div> {{message}} </div>
+    <div class="fontawesome"> {{message}} </div>
   </layout>
 </template>
 <style>
-  @import "about.css";
+@font-face {
+ font-family: "fontawesome";
+ src: url("./font/fontawesome-webfont.ttf");
+}
+.fontawesome
+{
+  font-family:fontawesome;
+}
+@import "about.css";
+
 </style>
 <script type="text/babel">
 
   export default {
-    components: {
-
-    },
-    computed: {
-
-    },
-    methods: {
-
-    },
+    components: {},
+    computed: {},
+    methods: {},
     mounted() {
 
     }
