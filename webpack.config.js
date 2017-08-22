@@ -6,7 +6,7 @@ module.exports = {
   commonsChunk: ['vendor'],
   entry: {
     include: 'app/web/page',
-    exclude: ['app/web/page/test', 'app/web/page/html', 'app/web/page/app'],
+    exclude: ['app/web/page/[a-z]+/component', 'app/web/page/test', 'app/web/page/html', 'app/web/page/app'],
     extMatch: '.vue',
     loader: {
       client: 'app/web/framework/vue/entry/client-loader.js',

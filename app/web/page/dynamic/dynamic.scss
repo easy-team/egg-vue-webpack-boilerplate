@@ -1,0 +1,27 @@
+$blue: blue;
+$side : right;
+.message-one {
+  font-size: 24px;
+  text-align: center;
+  border: 1px solid #cecece;
+  border-#{$side}-radius: 5px;
+  color: $blue;
+}
+
+.first{
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  font-size: 20px;
+  border: 1px solid #cecece;
+}
+
+.btnTrigger{
+  text-align: center;
+  margin: 12px auto;
+}
+
+.second{
+  min-height: 400px;
+  border: 1px solid #cecece;
+}
