@@ -20,7 +20,7 @@
 
 - 支持css/sass/less样式编写
 
-- 支持跟进.vue文件自动创建entry入口文件
+- 支持根据.vue文件自动创建entry入口文件
 
 - 支持vue 2.3 官方VueSSRPlugin实现方案,代码分支[feature/VueSSRPlugin](https://github.com/hubcarl/egg-vue-webpack-boilerplate/tree/feature/VueSSRPlugin)
  
