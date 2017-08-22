@@ -4,7 +4,9 @@
 
 ## 1.特性
 
-- 支持服务端渲染, 前端渲染, 静态页面渲染三种方式
+- 支持服务端渲染, 前端渲染, 静态页面渲染三种方式,
+
+- 支持单页面, 多页面服务端渲染,前端渲染模式
 
 - 支持 server 和 client 端代码修改, Webpack 时时编译和热更新, `npm start` 一键启动应用
 
@@ -17,6 +19,8 @@
 - 支持Js/Css/Image资源依赖, 内置支持CDN特性
 
 - 支持css/sass/less样式编写
+
+- 支持跟进.vue文件自动创建entry入口文件
 
 - 支持vue 2.3 官方VueSSRPlugin实现方案,代码分支[feature/VueSSRPlugin](https://github.com/hubcarl/egg-vue-webpack-boilerplate/tree/feature/VueSSRPlugin)
  
@@ -144,7 +148,6 @@ exports.webpack = {
     │       │       └── filter.js                 // filter引用入口
     │       ├── page                              // 前端页面和webpack构建目录, 也就是webpack打包配置entryDir
     │       │   ├── home                          // 每个页面遵循目录名, js文件名, scss文件名, vue文件名相同
-    │       │   │   ├── home.js                   // 服务器render渲染时, 传入 render('home/home.js', data)
     │       │   │   ├── home.scss
     │       │   │   ├── home.vue
     │       │   │   ├── images                    // 页面自有图片,公共图片和css放到asset下面
@@ -153,7 +156,6 @@ exports.webpack = {
     │       │   │       ├── w-week.scss
     │       │   │       └── w-week.vue
     │       │   └── test                          // 每个页面遵循目录名, js文件名, scss文件名, vue文件名相同
-    │       │       ├── test.js                   // 服务器render渲染时, 传入 render('test/test.js', data)
     │       │       └── test.vue
     │       ├── store                             // 引入vuex 的基本规范, 可以分模块
     │       │   ├── app
@@ -218,7 +220,7 @@ exports.webpack = {
 
 #### 6.1.1 多页面前端页面实现
 
-在app/web/page 目录下面创建home目录, home.vue, home.js 文件.
+在app/web/page 目录下面创建home目录, home.vue 文件, Webpack自动根据.vue文件创建entry入口, 具体实现请见[webpack.config.js](webpack.config.js)
 
 - home.vue 编写界面逻辑, 根元素为layout(自定义组件, 全局注册, 统一的html, meta, header, body)
 
@@ -250,17 +252,6 @@ exports.webpack = {
 </script>
 ```
 
-- home.js 页面调用入口
-
-```javascript
-import Vue from 'vue';
-import Home from './home.vue';
-import App from 'app';
-export default App.init({
-  ...Home
-});
-
-```
 
 #### 6.1.2 多页面后端渲染实现, 通过 `egg-view-vue-ssr` 插件 `render` 方法实现
   
