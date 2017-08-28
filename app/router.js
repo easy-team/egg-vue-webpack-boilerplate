@@ -4,6 +4,12 @@ module.exports = app => {
   app.get('/client', app.controller.home.home.client);
   app.get('/element', app.controller.home.home.element);
   app.get('/pager', app.controller.home.home.pager);
+
+  app.get('/await', app.controller.await.await.index);
+  app.get('/await/client', app.controller.await.await.client);
+  app.get('/await/element', app.controller.await.await.element);
+  app.get('/await/pager', app.controller.await.await.pager);
+
   app.get('/about', app.controller.about.about.index);
   app.get('/router', app.controller.router.router.index);
   app.get('/dynamic', app.controller.dynamic.dynamic.index);
