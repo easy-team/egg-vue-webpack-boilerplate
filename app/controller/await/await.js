@@ -1,18 +1,18 @@
 const Model = require('../../mocks/article/list');
 
 const Controller = require('egg').Controller;
-
+// Node 8 async/await, please see feature/node8 or upgrade node 8, and * to async, yield to await
 class AwaitController extends Controller {
-  async index() {
-    await this.ctx.render('index/index.js', Model.getPage(1, 10));
+  * index() {
+    yield this.ctx.render('index/index.js', Model.getPage(1, 10));
   }
 
-  async client() {
-    await this.ctx.render('index/index.js', Model.getPage(1, 10));
+  * client() {
+    yield this.ctx.renderClient('index/index.js', Model.getPage(1, 10));
   }
 
-  async element() {
-    await this.ctx.render('element/element.js', Model.getPage(1, 10));
+  * element() {
+    yield this.ctx.render('element/element.js', Model.getPage(1, 10));
   }
 
   pager() {
