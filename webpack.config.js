@@ -2,6 +2,7 @@
 const path = require('path');
 module.exports = {
   egg: true,
+  type: 'client',
   framework: 'vue',
   commonsChunk: ['vendor'],
   entry: {
@@ -30,6 +31,22 @@ module.exports = {
   },
   packs: {
     'pack/inline': ['app/web/framework/inject/pack-inline.js']
+  },
+  loader: {
+    sass: {
+      options: {}
+    },
+    loaders: []
+  },
+  plugin: {
+    uglifyJs: {
+      args: {
+        compress: {
+          warnings: true
+        }
+      }
+    },
+    plugins: []
   },
   create() {
     if (this.type === 'client') {
