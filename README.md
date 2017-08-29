@@ -25,6 +25,8 @@
 - 支持Vue组件异步加载, 具体实例请看[app/web/page/dynamic](app/web/page/dynamic)
 
 - 支持vue 2.3 官方VueSSRPlugin实现方案,代码分支[feature/VueSSRPlugin](https://github.com/hubcarl/egg-vue-webpack-boilerplate/tree/feature/VueSSRPlugin)
+
+- 支持Node 4+ 以上版本, 包括Node 8 版本的async和await特性
  
 
 ## 2.依赖
