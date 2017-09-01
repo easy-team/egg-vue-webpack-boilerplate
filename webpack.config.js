@@ -2,23 +2,22 @@
 const path = require('path');
 module.exports = {
   egg: true,
-  type: 'client',
   framework: 'vue',
   commonsChunk: ['vendor'],
   entry: {
-    include: 'app/web/page',
+    include: ['app/web/page', { 'app/app': 'app/web/page/app/app.js?loader=false' }],
     exclude: ['app/web/page/[a-z]+/component', 'app/web/page/test', 'app/web/page/html', 'app/web/page/app'],
     extMatch: '.vue',
     loader: {
       client: 'app/web/framework/vue/entry/client-loader.js',
-      server: 'app/web/framework/vue/entry/server-loader.js'
+      server: 'app/web/framework/vue/entry/server-loader.js',
+    },
+    html: {
+      include: 'app/web/page/html',
+      template: 'app/web/view/layout.html',
+      buildDir: 'html',
+      options: {}
     }
-  },
-  html: {
-    include: 'app/web/page/html',
-    template: 'app/web/view/layout.html',
-    buildDir: 'html',
-    options: {}
   },
   alias: {
     server: 'app/web/framework/vue/entry/server.js',
@@ -33,9 +32,10 @@ module.exports = {
     'pack/inline': ['app/web/framework/inject/pack-inline.js']
   },
   loader: {
-    sass: {
-      options: {}
-    },
+    sass: false,
+    less: false,
+    scss: false,
+    stylus: false,
     loaders: []
   },
   plugin: {
@@ -46,13 +46,9 @@ module.exports = {
         }
       }
     },
+    commonsChunk: {
+      vendor: ['vue', 'axios']
+    },
     plugins: []
-  },
-  create() {
-    if (this.type === 'client') {
-      this.addEntry('vendor', ['vue', 'axios']);
-    }
-    // 不使用loader模板, 自定义入口
-    this.addEntry('app/app', [path.join(this.config.baseDir, 'app/web/page/app/app.js')]);
   }
 };
