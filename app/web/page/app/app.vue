@@ -5,9 +5,6 @@
     </transition>
   </app-layout>
 </template>
-<style lang="scss">
-
-</style>
 <script type="text/babel">
   export default {
     computed: {

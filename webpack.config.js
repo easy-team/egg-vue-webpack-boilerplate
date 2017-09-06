@@ -3,11 +3,9 @@ const path = require('path');
 module.exports = {
   egg: true,
   framework: 'vue',
-  commonsChunk: ['vendor'],
   entry: {
     include: ['app/web/page', { 'app/app': 'app/web/page/app/app.js?loader=false' }],
     exclude: ['app/web/page/[a-z]+/component', 'app/web/page/test', 'app/web/page/html', 'app/web/page/app'],
-    extMatch: '.vue',
     loader: {
       client: 'app/web/framework/vue/entry/client-loader.js',
       server: 'app/web/framework/vue/entry/server-loader.js',
@@ -31,24 +29,25 @@ module.exports = {
   packs: {
     'pack/inline': ['app/web/framework/inject/pack-inline.js']
   },
-  loader: {
-    sass: false,
-    less: false,
-    scss: false,
-    stylus: false,
-    loaders: []
-  },
-  plugin: {
-    uglifyJs: {
+  loaders: {},
+  plugins: {
+    provide: false,
+    define: {
       args: {
-        compress: {
-          warnings: true
-        }
+        isBrowser: false
       }
     },
     commonsChunk: {
-      vendor: ['vue', 'axios']
+      args: {
+        minChunks: 5
+      }
     },
-    plugins: []
+    uglifyJs: {
+      args: {
+        compress: {
+          warnings: false
+        }
+      }
+    }
   }
 };
