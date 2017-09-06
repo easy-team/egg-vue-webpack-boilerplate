@@ -2,6 +2,10 @@
 
 基于 Egg + Vue 多页面和单页面服务端客户端渲染同构工程骨架项目, 文档请见: [Egg+Vue解决方案](http://hubcarl.github.io/easywebpack/vue/dev/)
 
+- master 分支为 Webpack2 稳定版本, 支持Mac/Windows, 建议线上使用.
+
+- [feature/webpack3](https://github.com/hubcarl/egg-vue-webpack-boilerplate/tree/feature/webpack3) 分支为 Webpack3 开发分支, 目前已可运行.
+
 ## 1.特性
 
 - 支持服务端渲染, 前端渲染, 静态页面渲染三种方式,
