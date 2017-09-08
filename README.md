@@ -8,7 +8,7 @@
 
 - 如果你需要了解Egg+Vue+Webpack项目更多信息，请扫以下二维码加好友，请备注：code
 
-![hubcarl](https://avatars0.githubusercontent.com/u/4983042?v=4&s=460)
+![hubcarl](https://avatars0.githubusercontent.com/u/4983042?v=4&s=250)
 
 ## 1.特性
 
