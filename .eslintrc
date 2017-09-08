@@ -1,7 +1,6 @@
 {
   "extends": "eslint-config-egg",
   "parserOptions": {
-    "parser": "babel-eslint",
     "ecmaVersion": 6,
     "sourceType": "module"
   },
@@ -40,5 +39,6 @@
   },
   "plugins": [
     "vue"
-  ]
+  ],
+  "parser": "babel-eslint"
 }

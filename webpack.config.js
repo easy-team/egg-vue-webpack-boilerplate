@@ -32,6 +32,11 @@ module.exports = {
   loaders: {},
   plugins: {
     provide: false,
+    eslint: {
+      options: {
+        fix: true
+      }
+    },
     define: {
       args: {
         isBrowser: false
