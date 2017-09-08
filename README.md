@@ -6,6 +6,10 @@
 
 - [feature/webpack3](https://github.com/hubcarl/egg-vue-webpack-boilerplate/tree/feature/webpack3) 分支为 Webpack3 开发分支, 目前已可运行.
 
+- 如果你需要了解Egg+Vue+Webpack项目更多信息，请扫以下二维码加好友，请备注：code
+
+[hubcarl](https://avatars0.githubusercontent.com/u/4983042?v=4&s=460)
+
 ## 1.特性
 
 - 支持服务端渲染, 前端渲染, 静态页面渲染三种方式,
