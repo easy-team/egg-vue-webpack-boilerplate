@@ -1,5 +1,9 @@
 {
-    "presets": ["es2015", "stage-2"],
-    "plugins": ['transform-object-assign', 'add-module-exports'],
-    "comments": false
+  "presets": ["es2015", "stage-2"],
+  "plugins": [
+    'add-module-exports',
+    'syntax-dynamic-import',
+    'transform-object-assign'
+  ],
+  "comments": false
 }

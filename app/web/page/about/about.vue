@@ -3,6 +3,7 @@
     <img src="../../asset/images/logo.png"/>
     <div> {{message}} </div>
     <div class="fontawesome"> {{message}} </div>
+    <img src="../../asset/images/egg-vue-webpack-dev.png"/>
   </layout>
 </template>
 <style>

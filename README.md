@@ -1,10 +1,10 @@
 # egg-vue-webpack-boilerplate
 
-基于 Egg + Vue 多页面和单页面服务端客户端渲染同构工程骨架项目, 文档请见: [Egg+Vue解决方案](http://hubcarl.github.io/easywebpack/vue/dev/)
+基于 Egg + Vue + Webpack3/Webpack2 多页面和单页面服务端客户端渲染同构工程骨架项目.
 
-- master 分支为 Webpack2 稳定版本, 支持Mac/Windows, 建议线上使用.
-
-- [feature/webpack3](https://github.com/hubcarl/egg-vue-webpack-boilerplate/tree/feature/webpack3) 分支为 Webpack3 开发分支, 目前已可运行.
+- Node 版本: Node 4.x.x+,  服务端支持 Node.js 8 await 和 async 特性, 客户端请修改.babelrc配置
+- Webpack 版本: ^3.5.5, 对应 `easywebpack-vue` 版本为 3.0.0,  Webpack2 版本项目骨架请见 `feature/webpack2` 分支, 对应 `easywebpack-vue` 版本为 1.x.x
+- Vue 版本: ^2.4.2
 
 - 如果你需要了解Egg+Vue+Webpack项目更多信息，请扫以下二维码加好友，请备注：code
 
@@ -46,10 +46,6 @@
 - [egg-webpack-vue](https://github.com/hubcarl/egg-webpack-vue) egg webpack building solution for vue.
 
 ![工程化](https://github.com/hubcarl/egg-vue-webpack-boilerplate/blob/master/doc/images/webpack.png)
-
-说明: easywebpack, egg-webpack, egg-webpack-vue 由 [egg-vue-webpack-dev](https://github.com/hubcarl/egg-vue-webpack-dev)分离而来, 保证功能单一, 可以扩展更多基于webpack的打包方案, 比如vue, react.
-
-基于旧版[egg-vue-webpack-dev](https://github.com/hubcarl/egg-vue-webpack-dev)插件编译的请切换到该项目的[egg-vue-webpack-dev](https://github.com/hubcarl/egg-vue-webpack-boilerplate/tree/egg-vue-webpack-dev)分支
 
 
 ## 3. 使用

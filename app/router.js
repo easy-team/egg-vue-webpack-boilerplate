@@ -17,6 +17,7 @@ module.exports = app => {
   app.get('/app/api/article/:id', app.controller.app.app.detail);
   app.get('/app(/.+)?', app.controller.app.app.index);
   app.get('/less', app.controller.css.css.less);
+  app.get('/css/module', app.controller.css.css.module);
   app.get('/sass', app.controller.css.css.sass);
   app.get('/test', app.controller.test.test.index);
 };

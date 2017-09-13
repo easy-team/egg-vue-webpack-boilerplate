@@ -3,21 +3,19 @@ const path = require('path');
 module.exports = {
   egg: true,
   framework: 'vue',
-  commonsChunk: ['vendor'],
   entry: {
-    include: 'app/web/page',
+    include: ['app/web/page', { 'app/app': 'app/web/page/app/app.js?loader=false' }],
     exclude: ['app/web/page/[a-z]+/component', 'app/web/page/test', 'app/web/page/html', 'app/web/page/app'],
-    extMatch: '.vue',
     loader: {
       client: 'app/web/framework/vue/entry/client-loader.js',
-      server: 'app/web/framework/vue/entry/server-loader.js'
+      server: 'app/web/framework/vue/entry/server-loader.js',
+    },
+    html: {
+      include: 'app/web/page/html',
+      template: 'app/web/view/layout.html',
+      buildDir: 'html',
+      options: {}
     }
-  },
-  html: {
-    include: 'app/web/page/html',
-    template: 'app/web/view/layout.html',
-    buildDir: 'html',
-    options: {}
   },
   alias: {
     server: 'app/web/framework/vue/entry/server.js',
@@ -31,11 +29,30 @@ module.exports = {
   packs: {
     'pack/inline': ['app/web/framework/inject/pack-inline.js']
   },
-  create() {
-    if (this.type === 'client') {
-      this.addEntry('vendor', ['vue', 'axios']);
+  loaders: {},
+  plugins: {
+    provide: false,
+    eslint: {
+      options: {
+        fix: true
+      }
+    },
+    define: {
+      args: {
+        isBrowser: false
+      }
+    },
+    commonsChunk: {
+      args: {
+        minChunks: 5
+      }
+    },
+    uglifyJs: {
+      args: {
+        compress: {
+          warnings: false
+        }
+      }
     }
-    // 不使用loader模板, 自定义入口
-    this.addEntry('app/app', [path.join(this.config.baseDir, 'app/web/page/app/app.js')]);
   }
 };
