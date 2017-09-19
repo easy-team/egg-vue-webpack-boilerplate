@@ -29,14 +29,14 @@ module.exports = {
   packs: {
     'pack/inline': ['app/web/framework/inject/pack-inline.js']
   },
-  loaders: {},
+  loaders: {
+    eslint: false,
+    css: {
+      exclude: [] // 开启node_modules 目录, 解决mint-ui css in module
+    }
+  },
   plugins: {
     provide: false,
-    eslint: {
-      options: {
-        fix: true
-      }
-    },
     define: {
       args: {
         isBrowser: false
