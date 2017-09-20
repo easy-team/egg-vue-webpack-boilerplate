@@ -9,7 +9,9 @@
     "start": "node index.js",
     "start-test": "cross-env EGG_SERVER_ENV=test node index.js",
     "start-prod": "cross-env EGG_SERVER_ENV=prod NODE_ENV=production npm start",
-    "kill-port": "kill -9 $(lsof -i:7001 |grep 'node'|awk '{print $2}')",
+    "kill": "pkill --signal SIGINT egg-vue-webpack-boilerplate",
+    "kill-mac": "kill -9 $(lsof -i:7001 |grep 'node'|awk '{print $2}')",
+    "kill-win": "taskkill -PID $(netstat -ano | findstr 7001|awk '{print $5}') -F",
     "restart": "npm run kill-port && npm run start",
     "lint": "eslint .",
     "fix": "eslint --fix ."
