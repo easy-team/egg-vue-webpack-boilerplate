@@ -38,8 +38,10 @@ module.exports = {
   plugins: {
     provide: false,
     define: {
-      args: {
-        isBrowser: false
+      args() { // 支持函数, 这里仅做演示测试,isNode无实际作用
+        return {
+          isNode: this.ssr
+        };
       }
     },
     commonsChunk: {
