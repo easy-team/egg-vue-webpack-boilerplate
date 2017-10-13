@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue</title>
+  <script src="./vue.js"></script>
+
+</head>
+<body>
+<div id="app1">{{message}}</div>
+
+<div id="app2">{{message}}</div>
+<div id="app3">
+  <my-global-panel :message="message"></my-global-panel>
+</div>
+<div id="app4">
+  <my-panel :message="message"></my-panel>
+</div>
+<script>
+  Vue.component('my-global-panel', {
+    props: ['message'],
+    template: '<div>A custom panel component, {{message}}!</div>'
+  });
+
+  new Vue({
+    el: '#app1',
+    data: {
+      message: 'app 1'
+    }
+  });
+
+  const app = new Vue({
+    data: {
+      message: 'app 2'
+    }
+  });
+  app.$mount('#app2');
+
+  new Vue({
+    el: '#app3',
+    data: {
+      message: 'app 3'
+    }
+  });
+
+  const panel = {
+    props: ['message'],
+    template: '<div>A custom component, {{message}}!</div>'
+  };
+
+  new Vue({
+    el: '#app4',
+    data: {
+      message: 'app 4'
+    },
+    components: {
+      'my-panel': panel
+    }
+  })
+</script>
+</body>
+</html>
