@@ -11,17 +11,17 @@
         width="55">
       </el-table-column>
       <el-table-column label="ID" width="80">
-        <template scope="scope">
+        <template slot-scope="scope">
           <span style="margin-left: 10px" v-text="scope.row.id"></span>
         </template>
       </el-table-column>
       <el-table-column label="标题">
-        <template scope="scope">
+        <template slot-scope="scope">
           <span style="margin-left: 10px"><a :href="scope.row.url" target="_blank">{{ scope.row.title }}</a></span>
         </template>
       </el-table-column>
       <el-table-column label="简介">
-        <template scope="scope">
+        <template slot-scope="scope">
           <el-popover trigger="hover" placement="top">
 
             <p>{{ scope.row.summary }}</p>
@@ -33,7 +33,7 @@
         </template>
       </el-table-column>
       <el-table-column label="操作" width="160">
-        <template scope="scope">
+        <template slot-scope="scope">
           <el-button size="small" @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
           <el-button size="small" type="danger" @click="handleDelete(scope.$index, scope.row)">删除</el-button>
         </template>
