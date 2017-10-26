@@ -1,6 +1,6 @@
 {
   "name": "egg-vue-webpack-boilerplate",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "基于easywebpack-vue和egg-view-vue(ssr)插件的工程骨架项目",
   "scripts": {
     "build": "cross-env easywebpack build prod",
