@@ -3,10 +3,10 @@
 基于 Egg + Vue + Webpack3/Webpack2 多页面和单页面服务端客户端渲染同构工程骨架项目.
 
 - Node 版本: Node 4.x.x+,  服务端支持 Node.js 8 await 和 async 特性, 客户端请修改.babelrc配置
-- Webpack 版本: ^3.5.5, 对应 `easywebpack-vue` 版本为 3.0.0,  Webpack2 版本项目骨架请见 `feature/webpack2` 分支, 对应 `easywebpack-vue` 版本为 1.x.x
-- Vue 版本: ^2.4.2
-
-- 如果你需要了解Egg+Vue+Webpack项目更多信息，请扫以下二维码加好友，请备注：code
+- Webpack 版本: ^3.8.1, 对应 `easywebpack-vue` 版本为 3.0.0,  Webpack2 版本项目骨架请见 `feature/webpack2` 分支, 对应 `easywebpack-vue` 版本为 1.x.x
+- Vue 版本: ^2.5.0
+- 项目开发之前, 请阅读[Egg + Vue 服务端渲染开发指南](https://zhuanlan.zhihu.com/p/30445536) 和 [Egg + Vue 服务端渲染工程化实现](https://zhuanlan.zhihu.com/p/29838551)
+- 如果你需要了解 Egg+Vue+Webpack 项目更多信息，请扫以下二维码加好友，请备注：Node.js
 
 ![hubcarl](https://avatars3.githubusercontent.com/u/4983042?v=4&u=0befb64a57a7911c630b7f97df5632385b08da2a&s=250)
 
