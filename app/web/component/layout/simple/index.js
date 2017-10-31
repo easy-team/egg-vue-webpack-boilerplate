@@ -5,7 +5,7 @@ export default {
   components: {},
   computed: {
     vTitle() {
-      return this.$root.title || this.title || 'egg-vue-webpack';
+      return this.$root.title || this.title || 'Egg + Vue';
     },
     vKeywords() {
       return this.$root.keywords || this.keywords || 'egg-vue-webpack';

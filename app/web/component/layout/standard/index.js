@@ -13,7 +13,7 @@ const template = `<!DOCTYPE html>
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-default/index.css">
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
 </head>
 <body :class="baseClass">
   <div id="app">${content}</div>
@@ -28,7 +28,7 @@ export default {
   },
   computed: {
     vTitle() {
-      return this.$root.title || this.title || 'egg-vue-webpack';
+      return this.$root.title || this.title || 'Egg + Vue';
     },
     vKeywords() {
       return this.$root.keywords || this.keywords || 'egg, vue, webpack, server side render';
