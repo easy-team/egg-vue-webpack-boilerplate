@@ -38,25 +38,8 @@ module.exports = {
     stylus: false // 没有使用, 禁用可以减少npm install安装时间
   },
   plugins: {
-    provide: false,
-    define: {
-      args() { // 支持函数, 这里仅做演示测试,isNode无实际作用
-        return {
-          isNode: this.ssr
-        };
-      }
-    },
-    commonsChunk: {
-      args: {
-        minChunks: 5
-      }
-    },
-    uglifyJs: {
-      args: {
-        compress: {
-          warnings: false
-        }
-      }
-    }
-  }
+    buildfile: false,
+    manifest: false,  // old manifest feature
+    manifestDeps: true // new manifest feature, not need buildfile
+  },
 };
