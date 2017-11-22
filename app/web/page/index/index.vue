@@ -40,6 +40,7 @@
   @import "index.css";
 </style>
 <script type="text/babel">
+  import { formatDate } from 'framework/utils/utils.js';
   export default {
     components: {
 
@@ -81,6 +82,7 @@
       }
     },
     mounted() {
+      formatDate(new Date());
       window.addEventListener('scroll', ()=>{
         this.loadPage();
       }, false);

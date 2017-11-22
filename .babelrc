@@ -1,7 +1,6 @@
 {
-  "presets": ["env"],
+  "presets": [["env",{ "modules": false }]],
   "plugins": [
-    "add-module-exports",
     "transform-object-rest-spread",
     "syntax-dynamic-import",
     "transform-object-assign"
