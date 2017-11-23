@@ -46,7 +46,7 @@
 - [egg-webpack](https://github.com/hubcarl/egg-webpack) webpack dev server plugin for egg, support read file in memory and hot reload.
 - [egg-webpack-vue](https://github.com/hubcarl/egg-webpack-vue) egg webpack building solution for vue.
 
-![工程化](https://github.com/hubcarl/egg-vue-webpack-boilerplate/blob/master/doc/images/webpack.png)
+![工程化](https://github.com/hubcarl/egg-vue-webpack-boilerplate/blob/master/docs/images/webpack.png)
 
 
 ## 3. 使用
@@ -73,7 +73,7 @@ npm start
 
 应用访问: http://127.0.0.1:7001
 
-![npm start启动](https://github.com/hubcarl/egg-vue-webpack-boilerplate/blob/master/doc/images/webpack-build.png)
+![npm start启动](https://github.com/hubcarl/egg-vue-webpack-boilerplate/blob/master/docs/images/webpack-build.png)
 
 
 #### 3.4 项目构建
@@ -377,12 +377,12 @@ exports.index = function* (ctx) {
 
 - 基于vue + axios 多页面服务器客户端同构入口: http://127.0.0.1:7001
 
-![多页面服务器渲染](https://github.com/hubcarl/egg-vue-webpack-boilerplate/blob/master/doc/images/vue-mutil-page.png)
+![多页面服务器渲染](https://github.com/hubcarl/egg-vue-webpack-boilerplate/blob/master/docs/images/vue-mutil-page.png)
 
 
 - 基于vue + vuex + vue-router + axios 单页面服务器客户端同构入口: http://127.0.0.1:7001/app
 
-![单页面服务器](https://github.com/hubcarl/egg-vue-webpack-boilerplate/blob/master/doc/images/vue-single-page.png)
+![单页面服务器](https://github.com/hubcarl/egg-vue-webpack-boilerplate/blob/master/docs/images/vue-single-page.png)
 
 
 ## 8. 实现原理
