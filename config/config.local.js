@@ -18,13 +18,7 @@ module.exports = app => {
   };
 
   exports.vuessr = {
-    injectCss: false,
-    injectRes: [
-      {
-        url: 'pack/inline.js',
-        location: 'bodyBefore'
-      }
-    ]
+    injectCss: false
   };
 
   exports.webpack = {

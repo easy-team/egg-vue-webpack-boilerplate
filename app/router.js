@@ -2,7 +2,8 @@
 module.exports = app => {
   app.get('/', app.controller.home.home.index);
   app.get('/client', app.controller.home.home.client);
-  app.get('/element', app.controller.home.home.element);
+  app.get('/element', app.controller.element.element.element);
+  app.get('/elementjs', app.controller.element.element.elementjs);
   app.get('/pager', app.controller.home.home.pager);
   app.get('/await/es6', app.controller.await.es6.index);
   app.get('/await', app.controller.await.await.index);

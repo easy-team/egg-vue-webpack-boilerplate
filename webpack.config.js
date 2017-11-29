@@ -4,8 +4,11 @@ module.exports = {
   egg: true,
   framework: 'vue',
   entry: {
-    include: ['app/web/page', { 'app/app': 'app/web/page/app/app.js?loader=false' }],
-    exclude: ['app/web/page/[a-z]+/component', 'app/web/page/test', 'app/web/page/html', 'app/web/page/app'],
+    include: ['app/web/page',
+      { 'app/app': 'app/web/page/app/app.js?loader=false' },
+      { 'elementjs/elementjs': 'app/web/page/elementjs/elementjs.js?loader=false' }
+    ],
+    exclude: ['app/web/page/[a-z]+/component', 'app/web/page/html', 'app/web/page/elementjs'],
     loader: {
       client: 'app/web/framework/vue/entry/client-loader.js',
       server: 'app/web/framework/vue/entry/server-loader.js',
@@ -26,17 +29,18 @@ module.exports = {
     framework: 'app/web/framework',
     store: 'app/web/store'
   },
-  packs: {
-    'pack/inline': ['app/web/framework/inject/pack-inline.js']
-  },
   loaders: {
     eslint: false,
     less: false, // 没有使用, 禁用可以减少npm install安装时间
     stylus: false // 没有使用, 禁用可以减少npm install安装时间
   },
   plugins: {
+    imagemini: false,
     buildfile: false,
     manifest: false, // old manifest feature
     manifestDeps: true // new manifest feature, not need buildfile
   },
+  done(){
+
+  }
 };

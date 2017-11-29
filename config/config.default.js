@@ -12,18 +12,7 @@ module.exports = app => {
   };
 
   exports.vuessr = {
-    layout: path.join(app.baseDir, 'app/web/view/layout.html'),
-    injectRes: [
-      // {
-      //  inline: true,
-      //  url: path.join(app.baseDir, 'app/web/framework/inject/inline.js')
-      // },
-      // {
-      //  inline: true,
-      //  manifest: true,
-      //  url: 'pack/inline.js'
-      // }
-    ]
+    layout: path.join(app.baseDir, 'app/web/view/layout.html')
   };
 
   exports.logger = {
