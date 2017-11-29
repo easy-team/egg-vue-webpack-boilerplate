@@ -1,4 +1,17 @@
 
+3.2.2 / 2017-11-29
+==================
+
+  * feat: support import css in js file
+  * docs: add issue template
+  * feat:support tree shaking
+  * doc:add pubilsh version description
+  * deps: upgrade egg-view-vue-ssr,support mult view engine and Vue Version
+  * deps: egg-view-vue-ssr, support project set Vue
+  * refactor:no dependence egg-view-vue
+  * fix: element ui css link url
+  * doc: add guild doc
+
 3.0.0 / 2017-09-13
 ==================
 
