@@ -1,7 +1,10 @@
 'use strict';
 const path = require('path');
+const EasyWebpack = require('easywebpack');
+const webpack = EasyWebpack.webpack;
 module.exports = {
   egg: true,
+  type:'client',
   framework: 'vue',
   entry: {
     include: ['app/web/page',
@@ -35,6 +38,7 @@ module.exports = {
     stylus: false // 没有使用, 禁用可以减少npm install安装时间
   },
   plugins: {
+    commonsChunk: false,
     imagemini: false,
     buildfile: false,
     manifest: false, // old manifest feature
