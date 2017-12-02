@@ -4,7 +4,7 @@ const EasyWebpack = require('easywebpack');
 const webpack = EasyWebpack.webpack;
 module.exports = {
   egg: true,
-  type:'client',
+  type: 'client',
   framework: 'vue',
   entry: {
     include: ['app/web/page',
@@ -38,6 +38,9 @@ module.exports = {
     stylus: false // 没有使用, 禁用可以减少npm install安装时间
   },
   plugins: {
+    dll: {
+      vendor: ['vue', 'axios', 'element-ui']
+    },
     commonsChunk: false,
     imagemini: false,
     buildfile: false,
