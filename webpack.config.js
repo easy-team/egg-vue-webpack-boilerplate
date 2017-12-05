@@ -4,15 +4,20 @@ module.exports = {
   egg: true,
   framework: 'vue',
   entry: {
-    include: [
-      'app/web/page',
+    include: ['app/web/page',
       { 'app/app': 'app/web/page/app/app.js?loader=false' },
       { 'elementjs/elementjs': 'app/web/page/elementjs/elementjs.js?loader=false' }
     ],
-    exclude: ['app/web/page/[a-z]+/component', 'app/web/page/elementjs'],
+    exclude: ['app/web/page/[a-z]+/component', 'app/web/page/html', 'app/web/page/elementjs'],
     loader: {
       client: 'app/web/framework/vue/entry/client-loader.js',
-      server: 'app/web/framework/vue/entry/server-loader.js',
+      server: 'app/web/framework/vue/entry/server-loader.js'
+    },
+    html: {
+      include: ['app/web/page/html', { 'element/front': 'app/web/page/html/element/front.js?loader=false' }],
+      template: 'app/web/view/layout.ejs',
+      buildDir: 'html',
+      options: {}
     }
   },
   alias: {
@@ -29,8 +34,12 @@ module.exports = {
   },
   loaders: {
     eslint: false,
-    less: false, // 没有使用, 禁用可以减少npm install安装时间
-    stylus: false // 没有使用, 禁用可以减少npm install安装时间
+    less: false,
+    stylus: false,
+    ejs:{
+      test: /\.ejs/,
+      use: ['ejs-loader']
+    }
   },
   plugins: {
     dll: {
