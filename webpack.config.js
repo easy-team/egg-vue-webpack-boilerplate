@@ -1,26 +1,18 @@
 'use strict';
 const path = require('path');
-const EasyWebpack = require('easywebpack');
-const webpack = EasyWebpack.webpack;
 module.exports = {
   egg: true,
-  type: 'client',
   framework: 'vue',
   entry: {
-    include: ['app/web/page',
+    include: [
+      'app/web/page',
       { 'app/app': 'app/web/page/app/app.js?loader=false' },
       { 'elementjs/elementjs': 'app/web/page/elementjs/elementjs.js?loader=false' }
     ],
-    exclude: ['app/web/page/[a-z]+/component', 'app/web/page/html', 'app/web/page/elementjs'],
+    exclude: ['app/web/page/[a-z]+/component', 'app/web/page/elementjs'],
     loader: {
       client: 'app/web/framework/vue/entry/client-loader.js',
       server: 'app/web/framework/vue/entry/server-loader.js',
-    },
-    html: {
-      include: ['app/web/page/html', { 'element/front': 'app/web/page/html/element/front.js?loader=false' }],
-      template: 'app/web/view/layout.html',
-      buildDir: 'html',
-      options: {}
     }
   },
   alias: {
@@ -32,6 +24,9 @@ module.exports = {
     framework: 'app/web/framework',
     store: 'app/web/store'
   },
+  install: {
+    check: false
+  },
   loaders: {
     eslint: false,
     less: false, // 没有使用, 禁用可以减少npm install安装时间
@@ -41,7 +36,6 @@ module.exports = {
     dll: {
       vendor: ['vue', 'axios', 'element-ui']
     },
-    commonsChunk: false,
     imagemini: false,
     buildfile: false,
     manifest: false, // old manifest feature

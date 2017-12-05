@@ -16,6 +16,7 @@ logs
 .vscode
 config/buildConfig.json
 config/manifest.json
+config/manifest-dll.json
 app/view/*
 !app/view/layout.html
 !app/view/README.md
