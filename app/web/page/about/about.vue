@@ -1,7 +1,7 @@
 <template>
   <layout>
     <img src="../../asset/images/logo.png"/>
-    <div> {{message}} </div>
+    <div> {{message}}</div>
     <div class="fontawesome"> {{message}} </div>
     <img src="../../asset/images/egg-vue-webpack-dev.png"/>
   </layout>
@@ -19,6 +19,7 @@
 
 </style>
 <script type="text/babel">
+
   import { Toast } from 'mint-ui';
   //import 'mint-ui/lib/style.css';
   export default {

@@ -38,5 +38,5 @@ export default {
       return this.$root.baseClass;
     }
   },
-  template: typeof window === 'object' ? content : template
+  template: EASY_IS_NODE ?  template :content
 };

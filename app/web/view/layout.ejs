@@ -8,14 +8,15 @@
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
-  <% htmlWebpackPlugin.options.dllCss.forEach(function(href){ %>
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <% htmlWebpackPlugin.options.css.forEach(function(href){ %>
      <link rel="stylesheet" href="<%= href %>">
   <% }) %>
 </head>
 
 <body>
   <div id="app"><!--vue-ssr-outlet--></div>
-   <% htmlWebpackPlugin.options.dllScript.forEach(function(src){ %>
+   <% htmlWebpackPlugin.options.js.forEach(function(src){ %>
      <script type="text/javascript" src="<%= src %>"></script>
    <% }) %>
 </body>

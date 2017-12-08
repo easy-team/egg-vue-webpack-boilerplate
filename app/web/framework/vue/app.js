@@ -10,10 +10,10 @@ App.data = () => {
 };
 
 App.init = options => {
-  if (typeof window === 'object') {
-    return App.client(options);
+  if (EASY_IS_NODE) {
+    return App.server(options);
   }
-  return App.server(options);
+  return App.client(options);
 };
 
 
