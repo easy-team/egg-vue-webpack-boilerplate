@@ -7,6 +7,6 @@ export function formatDate(input) {
   return input;
 }
 
-export function getUrlParameter(url){
+export function getUrlParameter(url) {
   return url;
 }

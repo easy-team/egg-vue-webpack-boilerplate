@@ -34,8 +34,8 @@
     "es6": true
   },
   "globals": {
-    "PROD": true,
-    "isBrowser": true
+    "EASY_IS_PROD": true,
+    "EASY_IS_NODE": true
   },
   "plugins": [
     "vue"

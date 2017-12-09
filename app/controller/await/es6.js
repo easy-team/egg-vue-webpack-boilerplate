@@ -9,5 +9,5 @@ module.exports = app => {
       yield ctx.renderClient('index/index.js', Model.getPage(1, 10));
     }
 
-  }
+  };
 };

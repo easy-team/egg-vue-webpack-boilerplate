@@ -19,16 +19,10 @@ module.exports = {
     lib: ['vue/dist/vue.common.js', 'axios', 'vue-router', 'vuex', 'vuex-router-sync', 'element-ui'],
   },
   loaders: {
-    eslint: false,
-    less: false,
-    stylus: false
   },
   plugins: {
-    buildfile: false,
-    manifest: false, // old manifest feature
-    manifestDeps: true // new manifest feature, not need buildfile
   },
-  done(){
+  done() {
 
   }
 };
