@@ -17,7 +17,7 @@ export default {
       return this.$root.baseClass;
     }
   },
-  template: isBrowser ? '<div id="app"><slot></slot></div>' : `<!DOCTYPE html>
+  template: EASY_ENV_IS_BROWSER ? '<div id="app"><slot></slot></div>' : `<!DOCTYPE html>
                 <html lang="en">
                   <head>
                     <title>{{vTitle}}</title>

@@ -10,7 +10,7 @@ App.data = () => {
 };
 
 App.init = options => {
-  if (EASY_IS_NODE) {
+  if (EASY_ENV_IS_NODE) {
     return App.server(options);
   }
   return App.client(options);

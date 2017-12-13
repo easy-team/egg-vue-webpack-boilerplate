@@ -22,7 +22,7 @@ export default {
       return this.$root.baseClass;
     }
   },
-  template: typeof window === 'object' ? tpl : `<!DOCTYPE html>
+  template: EASY_ENV_IS_BROWSER ? tpl : `<!DOCTYPE html>
                 <html lang="en">
                   <head>
                     <title>{{vTitle}}</title>

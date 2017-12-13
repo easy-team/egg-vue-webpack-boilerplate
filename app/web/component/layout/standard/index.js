@@ -38,5 +38,5 @@ export default {
       return this.$root.baseClass;
     }
   },
-  template: EASY_IS_NODE ? template : content
+  template: EASY_ENV_IS_NODE ? template : content
 };

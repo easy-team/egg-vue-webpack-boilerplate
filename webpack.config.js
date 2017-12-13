@@ -14,14 +14,9 @@ module.exports = {
     framework: 'app/web/framework',
     store: 'app/web/store'
   },
-  dll: {
-    name: 'vendor',
-    lib: ['vue/dist/vue.common.js', 'axios', 'vue-router', 'vuex', 'vuex-router-sync', 'element-ui'],
-  },
-  loaders: {
-  },
-  plugins: {
-  },
+  dll: ['vue/dist/vue.common.js', 'axios', 'vue-router', 'vuex', 'vuex-router-sync', 'element-ui'],
+  loaders: {},
+  plugins: {},
   done() {
 
   }
