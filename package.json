@@ -35,7 +35,6 @@
     "vue-hot-reload-api": "^2.1.0",
     "vue-router": "^3.0.1",
     "vue-server-renderer": "^2.5.3",
-    "vue-template-compiler": "^2.5.3",
     "vuex": "^3.0.1",
     "vuex-router-sync": "^5.0.0"
   },
@@ -67,8 +66,10 @@
     "postcss-loader": "^2.0.6",
     "progress-bar-webpack-plugin": "^1.10.0",
     "sass-loader": "^6.0.6",
+    "uglifyjs-webpack-plugin": "^1.1.2",
     "vconsole": "^2.5.2",
-    "webpack-manifest-resource-plugin": "^2.0.0"
+    "vue-template-compiler": "^2.4.4",
+    "webpack-manifest-resource-plugin": "^2.0.2"
   },
   "engines": {
     "node": ">=6.0.0"
