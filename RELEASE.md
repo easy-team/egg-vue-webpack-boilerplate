@@ -1,5 +1,27 @@
 # 版本发布
 
+## next(3.5.0) 即将发布正式版本，尝鲜请看 next 分支, 依赖说明
+
+-  easywebpack-cli ^1.3.0-rc.x
+-  easywebpack-vue ^3.3.0-rc.x
+-  egg-webpack ^3.2.4
+-  easywebpack ^3.5.0-rc.x
+-  webpack-manifest-resource-plugin ^2.0.2 
+
+## 变更说明
+
+- 支持 webpack dll 配置和自动化构建
+- 简化 commonsChunk lib 配置， 无需在 onClient 调用 addEntry 设置
+- plugins 和 loaders 增加数组的配置的兼容，也就是支持原生配置
+- 去掉options节点配置，改为 webpack.config.js 支持原生 Webpack 配置
+- 支持多进程 Webpack 编译, 结合dll功能编译速度显著提示，初步测试编译时间减少2/3
+- manifest和buildfie合并为新的manifest， 无需 manifest 和 manifestDeps 兼容配置， 同时去掉 buildfie 配置， 
+- 默认禁用 npm start 启动检查 webpack loader 和 plugin 是否安装的功能， 提高编译速度。
+- stylus 和 less loader 默认有开启改为禁用， 减少不必要的安装
+- 新增内置插件 webpack-bundle-analyzer 和 stats-webpack-plugin
+- 解决 NODE_ENV=production 导致动态安装 npm 依赖失败
+- 修复 easywebpack 配置合并覆盖问题
+
 
 ## 3.2.0
 
