@@ -12,7 +12,6 @@ const template = `<!DOCTYPE html>
   <meta http-equiv="content-type" content="text/html;charset=utf-8">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body :class="baseClass">
   <div id="app">${content}</div>
@@ -39,5 +38,5 @@ export default {
       return this.$root.baseClass;
     }
   },
-  template: typeof window === 'object' ? content : template
+  template: EASY_ENV_IS_NODE ? template : content
 };

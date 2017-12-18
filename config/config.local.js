@@ -1,6 +1,5 @@
 const path = require('path');
 const ip = require('ip');
-const EasyWebpack = require('easywebpack-vue');
 module.exports = app => {
   const exports = {};
 
@@ -19,10 +18,6 @@ module.exports = app => {
 
   exports.vuessr = {
     injectCss: false
-  };
-
-  exports.webpack = {
-    webpackConfigList: EasyWebpack.getWebpackConfig()
   };
 
   const localIP = ip.address();

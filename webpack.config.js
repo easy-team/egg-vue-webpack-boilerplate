@@ -12,12 +12,6 @@ module.exports = {
     loader: {
       client: 'app/web/framework/vue/entry/client-loader.js',
       server: 'app/web/framework/vue/entry/server-loader.js',
-    },
-    html: {
-      include: ['app/web/page/html', { 'element/front': 'app/web/page/html/element/front.js?loader=false' }],
-      template: 'app/web/view/layout.html',
-      buildDir: 'html',
-      options: {}
     }
   },
   alias: {
@@ -29,18 +23,10 @@ module.exports = {
     framework: 'app/web/framework',
     store: 'app/web/store'
   },
-  loaders: {
-    eslint: false,
-    less: false, // 没有使用, 禁用可以减少npm install安装时间
-    stylus: false // 没有使用, 禁用可以减少npm install安装时间
-  },
-  plugins: {
-    imagemini: false,
-    buildfile: false,
-    manifest: false, // old manifest feature
-    manifestDeps: true // new manifest feature, not need buildfile
-  },
-  done(){
+  dll: ['vue/dist/vue.common.js', 'axios', 'vue-router', 'vuex', 'vuex-router-sync', 'element-ui'],
+  loaders: {},
+  plugins: {},
+  done() {
 
   }
 };

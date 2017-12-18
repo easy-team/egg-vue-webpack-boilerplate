@@ -31,4 +31,4 @@ export default function render(options) {
       resolve(app);
     });
   };
-};
+}

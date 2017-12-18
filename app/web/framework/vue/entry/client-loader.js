@@ -1,8 +1,9 @@
 'use strict';
 module.exports = function(source) {
+  this.cacheable();
   return `
-    import Client from 'client';
+    import render from 'client';
     import Page from '${this.resourcePath.replace(/\\/g, '\\\\')}';
-    export default Client.render({ ...Page });
+    export default render({ ...Page });
   `;
 };
