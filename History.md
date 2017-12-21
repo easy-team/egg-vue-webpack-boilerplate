@@ -1,3 +1,11 @@
+3.5.0 / 2017-12-21
+==================
+  * feat: webpack dll auto build for easywebpack 3.5.0
+  * feat: mult process webpack build for egg-webpack
+  * commonsChunk configuration is simplified for easywebpack 3.5.0
+  * entry inlcude support regex for easywebpack 3.5.0
+  * js compress support mult process for easywebpack 3.5.0
+  * add js bundle size analysis webpack plugin
 
 3.2.2 / 2017-11-29
 ==================

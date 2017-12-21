@@ -1,6 +1,6 @@
 {
   "name": "egg-vue-webpack-boilerplate",
-  "version": "3.3.0",
+  "version": "3.5.0",
   "description": "基于easywebpack-vue和egg-view-vue-ssr插件的 egg + vue 工程骨架项目",
   "scripts": {
     "build": "cross-env easywebpack build prod",
@@ -51,8 +51,8 @@
     "babel-preset-env": "^1.6.0",
     "cross-env": "^5.0.0",
     "directory-named-webpack-plugin": "^2.2.3",
-    "easywebpack-cli": "^1.3.0-rc.1",
-    "easywebpack-vue": "^3.3.0-rc.1",
+    "easywebpack-cli": "^3.5.0",
+    "easywebpack-vue": "^3.5.0",
     "egg-cors": "^1.1.0",
     "egg-logview": "^1.0.0",
     "egg-webpack": "^3.2.4",

@@ -26,11 +26,15 @@
 
 - 基于easywebpack基础配置, 使用es6 class 继承方式编写webpack配置 和 cli 构建
 
-- 支持Js/Css/Image资源依赖, 内置支持CDN特性
+- 支持 js/css/image 资源依赖, 内置支持CDN特性
 
-- 支持css/sass/less样式编写
+- 支持 css/sass/less 样式编写
 
-- 支持根据.vue文件自动创建entry入口文件
+- 支持根据 .vue 文件自动创建 webpack entry入口文件
+
+- egg-webpack ^3.2.4 版本开始支持多进程编译
+
+- easywebpack ^3.5.0 版本开始支持 webpack dll 自动化构建, 与多进程编译结合，构建速度减少 2/3
 
 - 支持Vue组件异步加载, 具体实例请看[app/web/page/dynamic](app/web/page/dynamic)
 
@@ -50,11 +54,13 @@
 
 ## 3. 使用
 
-#### 3.1 安装cli
+#### 3.1 安装cli(非必需)
 
 ```bash
 npm install easywebpack-cli -g
 ```
+
+^3.5.0 开始， `easywebpack-cli` 已内置 `devDependencies` 中, 无需安装。如果你需要在命令行使用 `easy` 命令, 可以单独全局安装。
 
 #### 3.2 安装依赖
 
@@ -82,14 +88,14 @@ npm start
 npm start
 
 // 编译文件到磁盘打包使用(发布测试环境)
-npm run build-dev 或者 easywebpack build dev
+npm run build:dev 或者 easywebpack build dev
 
 // 编译文件到磁盘打包使用(发布正式环境)
 npm run build 或者 easywebpack build prod
 
 ```
 
-## 4. 配置说明(支持两种方式)
+## 4. 配置说明(支持三种方式)
 
 #### 4.1 方式一: `easywebpack-cli` 根据  `webpack.config.js` 自动创建Webpack Config 
 
@@ -115,9 +121,12 @@ exports.webpack = {
   };
 ```
 
+#### 4.3 方式三: 开启多进程编译
 
-构建会同时启动两个webpack构建服务, 客户端js构建(build/client), 服务端构建(build/server), 默认端口9000,  webpackConfigList 端口依次递增. 
+[egg npm start 启动开启多进程编译](http://hubcarl.github.io/easywebpack/vue/version/)
 
+
+构建会同时启动两个 webpack 构建服务, 客户端js构建(build/client), 服务端构建(build/server), 默认端口9000,  webpackConfigList 端口依次递增. 
 
 
 ## 5. 项目结构和基本规范
