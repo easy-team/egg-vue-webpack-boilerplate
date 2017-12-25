@@ -9,8 +9,8 @@
 - Webpack 版本: ^3.8.1, 对应 `easywebpack-vue` 版本为 ^3.5.0
 - Vue 版本: ^2.5.0
 - 项目开发之前, 请阅读[Egg + Vue 服务端渲染开发指南](https://zhuanlan.zhihu.com/p/30445536) 和 [Egg + Vue 服务端渲染工程化实现](https://zhuanlan.zhihu.com/p/29838551)
-- 如果你需要了解 Egg+Vue+Webpack 项目更多信息，请扫以下二维码加好友，请备注：Node.js
 - 最新特性尝鲜，请看 `next` 分支, 具体内容以及版本变更情况请看发布版本说明[RELEASE](RELEASE.md) 
+- 如果你需要了解 Egg+Vue+Webpack 项目更多信息，请扫以下二维码加好友，请备注：Node.js
 
 ![hubcarl](https://avatars3.githubusercontent.com/u/4983042?v=4&u=0befb64a57a7911c630b7f97df5632385b08da2a&s=250)
 
@@ -56,10 +56,10 @@
 
 ## 2.依赖
 
-- [easywebpack](https://github.com/hubcarl/easywebpack) ^3.4.2
-- [easywebpack-vue](https://github.com/hubcarl/easywebpack) ^3.2.0
-- [egg-view-vue-ssr](https://github.com/hubcarl/egg-view-vue-ssr) 
-- [egg-webpack](https://github.com/hubcarl/egg-webpack) ^3.2.4
+- [easywebpack](https://github.com/hubcarl/easywebpack) ^3.5.2
+- [easywebpack-vue](https://github.com/hubcarl/easywebpack) ^3.5.0
+- [egg-view-vue-ssr](https://github.com/hubcarl/egg-view-vue-ssr) ^3.0.2
+- [egg-webpack](https://github.com/hubcarl/egg-webpack) ^3.2.6
 - [egg-webpack-vue](https://github.com/hubcarl/egg-webpack-vue) ^2.0.0
 
 
@@ -114,7 +114,7 @@ npm run build 或者 easywebpack build prod
 `config/config.local.js` 
 const EasyWebpack = require('easywebpack-vue');
 exports.webpack = {
-    webpackConfigList:EasyWebpack.getWebpackConfig()
+    webpackConfigList:EasyWebpack.getWebpackConfig() 
   };
 ```
 

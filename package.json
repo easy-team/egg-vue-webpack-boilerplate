@@ -55,7 +55,7 @@
     "easywebpack-cli": "^3.5.0",
     "easywebpack-vue": "^3.5.0",
     "egg-logview": "^1.0.0",
-    "egg-webpack": "^3.2.4",
+    "egg-webpack": "^3.2.6",
     "egg-webpack-vue": "^2.0.0",
     "eslint": "^4.3.0",
     "eslint-config-egg": "^5.0.0",
