@@ -2,8 +2,11 @@
 
 基于 Egg + Vue + Webpack3/Webpack2 多页面和单页面服务端客户端渲染同构工程骨架项目.
 
-- Node 版本: Node 4.x.x+,  服务端支持 Node.js 8 await 和 async 特性, 客户端请修改.babelrc配置
-- Webpack 版本: ^3.8.1, 对应 `easywebpack-vue` 版本为 3.0.0,  Webpack2 版本项目骨架请见 `feature/webpack2` 分支, 对应 `easywebpack-vue` 版本为 1.x.x
+## 版本
+
+- Egg 版本： ^2.x.x
+- Node 版本: Node ^8.x.x+,  Node 6.x.x 版本请见 [Egg 1.0 + Node6分支](https://github.com/hubcarl/egg-vue-webpack-boilerplate/tree/node6)
+- Webpack 版本: ^3.8.1, 对应 `easywebpack-vue` 版本为 ^3.5.0
 - Vue 版本: ^2.5.0
 - 项目开发之前, 请阅读[Egg + Vue 服务端渲染开发指南](https://zhuanlan.zhihu.com/p/30445536) 和 [Egg + Vue 服务端渲染工程化实现](https://zhuanlan.zhihu.com/p/29838551)
 - 如果你需要了解 Egg+Vue+Webpack 项目更多信息，请扫以下二维码加好友，请备注：Node.js
@@ -11,26 +14,33 @@
 
 ![hubcarl](https://avatars3.githubusercontent.com/u/4983042?v=4&u=0befb64a57a7911c630b7f97df5632385b08da2a&s=250)
 
+## 文档
+
+- http://hubcarl.github.io/easywebpack/vue/rule
+- https://zhuanlan.zhihu.com/easywebpack
+
 
 ## 1.特性
 
 - 支持服务端渲染, 前端渲染, 静态页面渲染三种方式,
 
-- 支持单页面, 多页面服务端渲染,前端渲染模式
+- 支持单页面, 多页面服务端渲染, 前端渲染模式
 
-- 支持 server 和 client 端代码修改, Webpack 时时编译和热更新, `npm start` 一键启动应用
+- 支持 server 和 client 端代码修改, webpack 时时编译和热更新, `npm start` 一键启动应用
 
 - 基于 vue + axios 多页面服务端渲染, 客户端渲染同构实现
 
 - 基于 vue + vuex + vue-router + axios 单页面服务器客户端同构实现
 
-- 基于easywebpack基础配置, 使用es6 class 继承方式编写webpack配置 和 cli 构建
+- 基于 easywebpack 基础配置, 使用 es6 class 继承方式编写webpack配置 和 cli 构建
+
+- 支持开发环境, 测试环境，正式环境 webpack 编译
 
 - 支持 js/css/image 资源依赖, 内置支持CDN特性
 
 - 支持 css/sass/less 样式编写
 
-- 支持根据 .vue 文件自动创建 webpack entry入口文件
+- 支持根据 .vue 文件自动创建 webpack entry 入口文件
 
 - egg-webpack ^3.2.4 版本开始支持多进程编译
 
@@ -38,9 +48,10 @@
 
 - 支持Vue组件异步加载, 具体实例请看[app/web/page/dynamic](app/web/page/dynamic)
 
+- Node 8 版本的async和await特性, Controller 采用 class 方式编写
+
 - 支持vue 2.3 官方VueSSRPlugin实现方案,代码分支[feature/VueSSRPlugin](https://github.com/hubcarl/egg-vue-webpack-boilerplate/tree/feature/VueSSRPlugin)
 
-- 支持Node 4+ 以上版本, 包括Node 8 版本的async和await特性
  
 
 ## 2.依赖

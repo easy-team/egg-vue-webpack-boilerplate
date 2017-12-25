@@ -1,7 +1,7 @@
 {
   "name": "egg-vue-webpack-boilerplate",
-  "version": "3.5.0",
-  "description": "基于easywebpack-vue和egg-view-vue-ssr插件的 egg + vue 工程骨架项目",
+  "version": "3.6.0",
+  "description": "基于 easywebpack-vue 和 egg-view-vue-ssr插件的 egg + vue 服务端渲染同构工程骨架项目",
   "scripts": {
     "build": "cross-env easywebpack build prod",
     "build:dev": "cross-env easywebpack build dev",
@@ -19,12 +19,13 @@
     "fix": "eslint --fix ."
   },
   "dependencies": {
-    "axios": "^0.16.2",
-    "egg": "^1.4.0",
+    "axios": "^0.17.1",
+    "egg": "^2.1.0",
+    "egg-cors": "^2.0.0",
     "egg-logger": "^1.5.0",
     "egg-validate": "^1.0.0",
     "egg-view-vue-ssr": "^3.0.2",
-    "element-ui": "^2.0.5",
+    "element-ui": "^2.0.8",
     "extend": "~3.0.0",
     "lodash": "^4.17.4",
     "mint-ui": "^2.2.9",
@@ -53,7 +54,6 @@
     "directory-named-webpack-plugin": "^2.2.3",
     "easywebpack-cli": "^3.5.0",
     "easywebpack-vue": "^3.5.0",
-    "egg-cors": "^1.1.0",
     "egg-logview": "^1.0.0",
     "egg-webpack": "^3.2.4",
     "egg-webpack-vue": "^2.0.0",
@@ -71,7 +71,7 @@
     "progress-bar-webpack-plugin": "^1.10.0",
     "sass-loader": "^6.0.6",
     "uglifyjs-webpack-plugin": "^1.1.2",
-    "vconsole": "^2.5.2",
+    "vconsole": "^3.0.0",
     "vue-template-compiler": "^2.4.4",
     "webpack-manifest-resource-plugin": "^2.0.2"
   },

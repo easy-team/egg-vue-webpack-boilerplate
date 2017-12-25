@@ -4,9 +4,9 @@ module.exports = app => {
 
   return class ES6Controller extends app.Controller {
 
-    * index() {
+    async index() {
       const { ctx } = this;
-      yield ctx.renderClient('index/index.js', Model.getPage(1, 10));
+      await ctx.renderClient('index/index.js', Model.getPage(1, 10));
     }
 
   };

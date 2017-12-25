@@ -1,15 +1,25 @@
 const Model = require('../../mocks/article/list');
 
-exports.index = function* (ctx) {
-  yield ctx.render('index/index.js', Model.getPage(1, 10));
-};
+module.exports = app => {
 
-exports.client = function* (ctx) {
-  yield ctx.renderClient('index/index.js', Model.getPage(1, 10));
-};
+  return class HomeController extends app.Controller {
 
-exports.pager = function* (ctx) {
-  const pageIndex = ctx.query.pageIndex;
-  const pageSize = ctx.query.pageSize;
-  ctx.body = Model.getPage(pageIndex, pageSize);
+    async index() {
+      const { ctx } = this;
+      await ctx.render('index/index.js', Model.getPage(1, 10));
+    }
+
+    async client() {
+      const { ctx } = this;
+      await ctx.renderClient('index/index.js', Model.getPage(1, 10));
+    }
+
+    async pager() {
+      const { ctx } = this;
+      const pageIndex = ctx.query.pageIndex;
+      const pageSize = ctx.query.pageSize;
+      ctx.body = Model.getPage(pageIndex, pageSize);
+    }
+
+  };
 };

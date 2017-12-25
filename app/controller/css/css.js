@@ -1,12 +1,20 @@
-exports.less = function* () {
-  yield this.render('less/less.js', { message: 'vue server side render, support less' });
-};
+module.exports = app => {
 
-exports.sass = function* () {
-  yield this.render('sass/sass.js', { message: 'vue server side render, support sass' });
-};
+  return class CssController extends app.Controller {
 
+    async less() {
+      const { ctx } = this;
+      await ctx.render('less/less.js', { message: 'vue server side render, support less' });
+    }
 
-exports.module = function* () {
-  yield this.render('css/module/module.js', { message: 'vue server side render, support css module' });
+    async sass() {
+      const { ctx } = this;
+      await ctx.render('sass/sass.js', { message: 'vue server side render, support sass' });
+    }
+
+    async module() {
+      const { ctx } = this;
+      await ctx.render('css/module/module.js', { message: 'vue server side render, support css module' });
+    }
+  };
 };
