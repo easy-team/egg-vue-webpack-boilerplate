@@ -12,6 +12,7 @@
     "no-unused-vars": "off",
     "no-else-return": "off",
     "strict": "off",
+    "linebreak-style": "off",
     "no-irregular-whitespace": [
       "error",
       {
