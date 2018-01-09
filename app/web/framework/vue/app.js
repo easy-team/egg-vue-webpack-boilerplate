@@ -20,7 +20,7 @@ App.init = options => {
 App.client = options => {
   Vue.prototype.$http = require('axios');
   if (options.store) {
-    options.store.replaceState(App.data());
+    options.store.replaceState(Object.assign(options.store.state, App.data()));
   } else if (window.__INITIAL_STATE__) {
     options.data = Object.assign(window.__INITIAL_STATE__, options.data && options.data());
   }
@@ -44,7 +44,7 @@ App.server = options => {
           return null;
         })
       ).then(() => {
-        context.state = options.store.state;
+        context.state = Object.assign(options.store.state, context.state);
         return new Vue(options);
       });
     };
