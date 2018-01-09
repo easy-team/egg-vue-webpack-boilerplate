@@ -3,7 +3,6 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 import ListView from './list';
-import DetailView from './detail';
 
 Vue.use(VueRouter);
 
@@ -21,7 +20,7 @@ const router = new VueRouter({
     },
     {
       path: '/detail/:id',
-      component: DetailView
+      component: () => import('./detail')
     }
   ]
 });
