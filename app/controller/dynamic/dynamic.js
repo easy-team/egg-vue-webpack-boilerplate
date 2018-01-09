@@ -4,7 +4,7 @@ module.exports = app => {
 
     async index() {
       const { ctx } = this;
-      await ctx.render('dynamic/dynamic.js', { message: 'vue server side render for dynamic component' });
+      await ctx.render('dynamic/dynamic.js', { name: 'async', message: 'vue server side render for dynamic component' });
     }
 
   };

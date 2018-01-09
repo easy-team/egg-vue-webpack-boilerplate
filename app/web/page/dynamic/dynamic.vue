@@ -1,10 +1,10 @@
 <template>
   <layout>
     <div>
-      <div class="first">动态组件第一屏内容</div>
-      <div class="btnTrigger" @click="show = true">点击我, 异步加载第二屏内容</div>
+      <div class="first">动态动态渲染</div>
       <div class="second">
-        <async v-if="show"></async>
+        <!-- <component :is="name"></component> -->
+        <async></async>
       </div>
     </div>
   </layout>
@@ -13,28 +13,24 @@
 @import "./dynamic.scss";
 </style>
 <script type="text/babel">
-  import loading from './component/loading.vue'
-  import error from './component/error.vue'
-  const async = () => ({
-    component: new Promise(resolve => {
-      setTimeout(()=> {
-        resolve(import('./component/async.vue'));
-      }, 1000);
-    }),
-    loading,
-    error,
-    delay: 100,
-    timeout: 5000
-  });
+  // import loading from './component/loading.vue'
+  // import error from './component/error.vue'
+  // const async = () => ({
+  //   component:  () => import('./component/async.vue'),
+  //   loading,
+  //   error,
+  //   delay: 100,
+  //   timeout: 1000
+  // });
   export default {
     name: 'dynamic',
     data () {
       return {
-        show: false
+        show: true
       }
     },
     components: {
-      async
+      async : () => import('./component/async.vue')
     }
   }
 </script>
