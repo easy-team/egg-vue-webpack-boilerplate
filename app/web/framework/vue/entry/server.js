@@ -19,7 +19,7 @@ export default function render(options) {
           return null;
         })
       ).then(() => {
-        context.state = options.store.state;
+        context.state = Object.assign(options.store.state, context.state);
         return new Vue(options);
       });
     };
