@@ -1,11 +1,11 @@
 # 版本发布
 
-## next(3.5.0) 即将发布正式版本，尝鲜请看 next 分支, 依赖说明
+## 3.5.0/3.6.0
 
--  easywebpack-cli ^1.3.0-rc.x
--  easywebpack-vue ^3.3.0-rc.x
+-  easywebpack-cli ^3.5.0
+-  easywebpack-vue ^3.5.0
 -  egg-webpack ^3.2.4
--  easywebpack ^3.5.0-rc.x
+-  easywebpack ^3.5.0
 -  webpack-manifest-resource-plugin ^2.0.2 
 
 ## 变更说明

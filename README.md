@@ -11,7 +11,7 @@
 
 ## 说明 
 
-- Egg + TypeScript 已初步支持， 包括 Node 端 typescript 编写 和 前端 TypeScript编写, 具体请见 [typescript] 分支(https://github.com/hubcarl/egg-vue-webpack-boilerplate/tree/typescript) 分支
+- Egg + TypeScript 已初步支持， 包括 Node 端 typescript 编写 和 前端 TypeScript编写, 具体请见(https://github.com/hubcarl/egg-vue-typescript-boilerplate)项目
 - 项目开发之前, 请阅读[Egg + Vue 服务端渲染开发指南](https://zhuanlan.zhihu.com/p/30445536) 和 [Egg + Vue 服务端渲染工程化实现](https://zhuanlan.zhihu.com/p/29838551)
 - 版本变更情况请看发布版本说明[RELEASE](RELEASE.md) 
 - 如果你需要了解 Egg+Vue+Webpack 项目更多信息，请扫以下二维码加好友，请备注：Node.js
