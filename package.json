@@ -3,6 +3,7 @@
   "version": "3.6.2",
   "description": "基于 easywebpack-vue 和 egg-view-vue-ssr插件的 egg + vue 服务端渲染同构工程骨架项目",
   "scripts": {
+    "debug": "egg-bin debug",
     "build": "cross-env easywebpack build prod",
     "build:dev": "cross-env easywebpack build dev",
     "build:test": "cross-env easywebpack build test",
@@ -21,6 +22,7 @@
   "dependencies": {
     "axios": "^0.17.1",
     "egg": "^2.1.0",
+    "egg-bin": "^4.3.7",
     "egg-cors": "^2.0.0",
     "egg-logger": "^1.5.0",
     "egg-validate": "^1.0.0",
@@ -54,9 +56,9 @@
     "cross-env": "^5.0.0",
     "directory-named-webpack-plugin": "^2.2.3",
     "easywebpack-cli": "^3.5.2",
-    "easywebpack-vue": "next",
+    "easywebpack-vue": "^3.6.0",
     "egg-logview": "^1.0.0",
-    "egg-webpack": "^3.2.8",
+    "egg-webpack": "^3.3.0",
     "egg-webpack-vue": "^2.0.0",
     "eslint": "^4.3.0",
     "eslint-config-egg": "^5.0.0",
