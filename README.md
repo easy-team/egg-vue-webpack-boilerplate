@@ -2,6 +2,14 @@
 
 基于 Egg + Vue + Webpack3/Webpack2 多页面和单页面服务端客户端渲染同构工程骨架项目.
 
+## 纯净版
+
+因该项目包含了多种实现, 提供多种例子实现，为防干扰, 特提供了两个纯净版本分支用于实际项目开发, 请自行选用。
+
+- Egg2 + Vue2 + Axios 多页面服务端渲染分支 [feature/green/multi](https://github.com/hubcarl/egg-vue-webpack-boilerplate/tree/feature/green/multi)
+- Egg2 + Vue2 + vue-router + vuex + axios 单页面服务端渲染分支 [feature/green/spa](https://github.com/hubcarl/egg-vue-webpack-boilerplate/tree/feature/green/spa)
+
+
 ## 版本
 
 - Egg 版本： ^2.x.x
@@ -109,6 +117,8 @@ npm run build:dev 或者 easywebpack build dev
 npm run build 或者 easywebpack build prod
 
 ```
+
+详细打包部署请见： http://hubcarl.github.io/easywebpack/vue/dev/
 
 ## 4. 配置说明(支持三种方式)
 

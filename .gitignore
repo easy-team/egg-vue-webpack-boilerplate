@@ -22,3 +22,4 @@ app/view/*
 !app/view/README.md
 !app/view/.gitkeep
 package-lock.json
+yarn.lock
