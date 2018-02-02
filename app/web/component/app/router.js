@@ -8,7 +8,7 @@ Vue.use(VueRouter);
 
 const router = new VueRouter({
   mode: 'history',
-  base: '/app',
+  base: '/',
   routes: [
     {
       path: '/',

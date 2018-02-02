@@ -1,7 +1,6 @@
 <template>
   <div style="font-size: 24px; text-align: center">
     vue-server-render detail
-    <img src="../../asset/images/egg-vue-webpack-dev.png"/>
   </div>
 </template>
 <style>

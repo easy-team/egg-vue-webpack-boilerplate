@@ -3,8 +3,7 @@
     <div class="container"><h1>
       <a href="" class="router-link-active">Egg + Vue</a></h1>
       <ul class="nav">
-        <li class="nav-item"><a href="/app" :class="{'active' : selectedMenu === '/app'}">Single-Page</a></li>
-        <li class="nav-item"><a href="/" :class="{'active' : selectedMenu === '/'}">Multi-Page</a></li>
+        <li class="nav-item"><a href="/" :class="{'active' : selectedMenu === '/'}">Single-Page</a></li>
       </ul>
     </div>
   </header>

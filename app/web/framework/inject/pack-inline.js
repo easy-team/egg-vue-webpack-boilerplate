@@ -1,1 +1,0 @@
-console.log('-------------pack inject file inline-------------');

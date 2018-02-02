@@ -4,7 +4,7 @@
       <div class="row row-offcanvas row-offcanvas-right">
         <div class="col-xs-12 col-sm-9">
           <ul class="smart-artiles" id="articleList">
-            <li v-for="item in articleList">
+            <li v-for="item in articleList" :key="item.id">
               <div class="point">+{{item.hits}}</div>
               <div class="card">
                 <h2><router-link :to="'/detail/'+item.id" class="nav-item-a">{{item.title}}</router-link></h2>

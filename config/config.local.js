@@ -16,10 +16,6 @@ module.exports = app => {
     dir: path.join(app.baseDir, 'logs')
   };
 
-  exports.vuessr = {
-    injectCss: false
-  };
-
   const localIP = ip.address();
   const domainWhiteList = [];
   [7001, 9000, 9001].forEach(port => {
