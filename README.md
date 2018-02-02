@@ -1,6 +1,7 @@
 # egg-vue-webpack-boilerplate
 
-基于 Egg + Vue + Webpack3/Webpack2 多页面和单页面服务端客户端渲染同构工程骨架项目.
+基于 Egg + Vue + Webpack3 多页面服务端渲染项目开发模板
+
 
 ## 版本
 

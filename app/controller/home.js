@@ -1,17 +1,17 @@
-const Model = require('../../mocks/article/list');
+const Model = require('../mocks/article/list');
 
 module.exports = app => {
 
-  return class ElementController extends app.Controller {
+  return class HomeController extends app.Controller {
 
-    async element() {
+    async index() {
       const { ctx } = this;
-      await ctx.render('element/element.js', Model.getPage(1, 10));
+      await ctx.render('home/index.js', Model.getPage(1, 10));
     }
 
-    async elementjs() {
+    async client() {
       const { ctx } = this;
-      await ctx.render('elementjs/elementjs.js', Model.getPage(1, 10));
+      await ctx.renderClient('home/index.js', Model.getPage(1, 10));
     }
 
     async pager() {

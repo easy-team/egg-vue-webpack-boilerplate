@@ -4,18 +4,14 @@
   "description": "基于 easywebpack-vue 和 egg-view-vue-ssr插件的 egg + vue 服务端渲染同构工程骨架项目",
   "scripts": {
     "debug": "egg-bin debug",
-    "build": "cross-env easywebpack build prod",
-    "build:dev": "cross-env easywebpack build dev",
-    "build:test": "cross-env easywebpack build test",
-    "build:prod": "cross-env easywebpack build prod",
-    "dll": "cross-env easywebpack build dev -f webpack.dll.js",
+    "build": "cross-env easy clean && easy build prod",
+    "build:dev": "cross-env easy clean && easy build dev",
+    "build:test": "cross-env easy clean && easy build test",
+    "build:prod": "cross-env easy clean && easy build prod",
     "start": "node index.js",
+    "dev": "node index.js",
     "start:test": "cross-env EGG_SERVER_ENV=test node index.js",
     "start:prod": "cross-env EGG_SERVER_ENV=prod NODE_ENV=production npm start",
-    "kill": "pkill --signal SIGINT egg-vue-webpack-boilerplate",
-    "kill-mac": "kill -9 $(lsof -i:7001 |grep 'node'|awk '{print $2}')",
-    "kill-win": "taskkill -PID $(netstat -ano | findstr 7001|awk '{print $5}') -F",
-    "restart": "npm run kill-port && npm run start",
     "lint": "eslint .",
     "fix": "eslint --fix ."
   },
@@ -33,7 +29,6 @@
     "mint-ui": "^2.2.9",
     "mockjs": "^1.0.1-beta3",
     "moment": "^2.17.1",
-    "server-side-render-resource": "^1.0.0",
     "vue": "^2.5.0",
     "vue-hot-reload-api": "^2.1.0",
     "vue-router": "^3.0.1",
@@ -82,7 +77,7 @@
     "node": ">=6.0.0"
   },
   "ci": {
-    "version": "6, 7, 8"
+    "version": "6, 7, 8, 9"
   },
   "repository": {
     "type": "git",

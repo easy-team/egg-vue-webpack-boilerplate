@@ -12,10 +12,7 @@ module.exports = app => {
   };
 
   exports.vuessr = {
-    layout: path.join(app.baseDir, 'app/web/view/layout.html'),
-    renderOptions: {
-      basedir: path.join(app.baseDir, 'app/view')
-    }
+    layout: path.join(app.baseDir, 'app/web/view/layout.html')
   };
 
   exports.logger = {
