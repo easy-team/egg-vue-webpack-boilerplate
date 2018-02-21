@@ -21,12 +21,11 @@ module.exports = {
     asset: 'app/web/asset',
     component: 'app/web/component',
     framework: 'app/web/framework',
-    store: 'app/web/store'
+    store: 'app/web/store',
+    vue: 'vue/dist/vue.js'
   },
-  dll: ['vue/dist/vue.common.js', 'axios', 'vue-router', 'vuex', 'vuex-router-sync'],
+  dll: ['vue', 'axios', 'vue-router', 'vuex', 'vuex-router-sync'],
   loaders: {},
   plugins: {},
-  done() {
-
-  }
+  done() {}
 };
