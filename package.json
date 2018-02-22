@@ -53,7 +53,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.15.0",
     "babel-preset-env": "^1.6.0",
-    "easywebpack-vue": "next",
+    "easywebpack-vue": "^4.0.0-beta.1",
     "egg-logview": "^1.0.0",
     "egg-webpack": "^3.3.0",
     "egg-webpack-vue": "^2.0.0",
