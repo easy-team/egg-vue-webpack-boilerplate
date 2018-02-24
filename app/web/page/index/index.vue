@@ -79,10 +79,16 @@
             this.fetch();
           }, 1500);
         }
+      },
+      registerServiceWorker(){
+        import('service-worker-register').then(sw =>{
+          sw.default.register('service-worker.js');
+        });
       }
     },
     mounted() {
       formatDate(new Date());
+      this.registerServiceWorker();
       window.addEventListener('scroll', ()=>{
         this.loadPage();
       }, false);

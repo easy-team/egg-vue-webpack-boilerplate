@@ -25,7 +25,9 @@ module.exports = {
   },
   dll: ['vue/dist/vue.common.js', 'axios', 'vue-router', 'vuex', 'vuex-router-sync'],
   loaders: {},
-  plugins: {},
+  plugins: {
+    serviceworker: true
+  },
   done() {
 
   }
