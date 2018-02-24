@@ -9,12 +9,13 @@
 - Egg2 + Vue2 + Axios 多页面服务端渲染分支 [feature/green/multi](https://github.com/hubcarl/egg-vue-webpack-boilerplate/tree/feature/green/multi)
 - Egg2 + Vue2 + vue-router + vuex + axios 单页面服务端渲染分支 [feature/green/spa](https://github.com/hubcarl/egg-vue-webpack-boilerplate/tree/feature/green/spa)
 
+可以通过 [easywebpack-cli](https://github.com/hubcarl/easywebpack-cli) 命令行初始化对应类型项目。 
 
 ## 版本
 
 - Egg 版本： ^2.x.x
 - Node 版本: Node ^8.x.x+,  Node 6.x.x 版本请见 [Egg 1.0 + Node6分支](https://github.com/hubcarl/egg-vue-webpack-boilerplate/tree/node6)
-- Webpack 版本: ^3.8.1, 对应 `easywebpack-vue` 版本为 ^3.5.0
+- Webpack 版本: ^3.8.1, 对应 `easywebpack-vue` 版本为 ^3.6.0
 - Vue 版本: ^2.5.0
 
 ## 说明 
@@ -68,11 +69,11 @@
 
 ## 2.依赖
 
-- [easywebpack](https://github.com/hubcarl/easywebpack) ^3.5.2
-- [easywebpack-vue](https://github.com/hubcarl/easywebpack) ^3.5.0
-- [egg-view-vue-ssr](https://github.com/hubcarl/egg-view-vue-ssr) ^3.0.2
-- [egg-webpack](https://github.com/hubcarl/egg-webpack) ^3.2.6
-- [egg-webpack-vue](https://github.com/hubcarl/egg-webpack-vue) ^2.0.0
+- [easywebpack](https://github.com/hubcarl/easywebpack) ^3.7.0
+- [easywebpack-vue](https://github.com/hubcarl/easywebpack) ^3.6.0
+- [egg-view-vue-ssr](https://github.com/hubcarl/egg-view-vue-ssr) ^3.x.x
+- [egg-webpack](https://github.com/hubcarl/egg-webpack) ^3.x.x
+- [egg-webpack-vue](https://github.com/hubcarl/egg-webpack-vue) ^2.x.x
 
 
 ## 3. 使用
@@ -431,11 +432,11 @@ exports.index = function* (ctx) {
 
 ### 8.3 详细资料
 
-- [Egg+Vue解决方案开发流程](http://hubcarl.github.io/easywebpack/vue/dev/)
+- [Egg + Vue解决方案开发流程](http://hubcarl.github.io/easywebpack/vue/dev/)
 
-- [基于webpack的前端工程解决方案和egg+vue服务端渲染项目实践](http://hubcarl.github.io/blog/2017/04/15/webpack-project/)
+- [基于 Webpack 的前端工程解决方案和 Egg + Vue 服务端渲染项目实践](http://hubcarl.github.io/blog/2017/04/15/webpack-project/)
 
-- [koa和egg项目webpack内存编译和热更新实现](http://hubcarl.github.io/blog/2017/04/15/egg-webpack/)
+- [ Koa 和 Egg 项目 Webpack 内存编译和热更新实现](http://hubcarl.github.io/blog/2017/04/15/egg-webpack/)
 
 
 ## License
