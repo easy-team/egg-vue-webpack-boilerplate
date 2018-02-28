@@ -20,19 +20,12 @@
 </style>
 <script type="text/babel">
 
-  import { Toast } from 'mint-ui';
   //import 'mint-ui/lib/style.css';
   export default {
     components: {},
     computed: {},
     methods: {},
-    mounted() {
-      Toast({
-        message: 'Upload Complete',
-        position: 'bottom',
-        duration: 5000
-      });
-    }
+    mounted() {}
   }
 </script>
 

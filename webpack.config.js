@@ -24,6 +24,9 @@ module.exports = {
     store: 'app/web/store',
     vue: 'vue/dist/vue.js'
   },
+  resolveLoader: {
+    modules: [ path.join(__dirname, 'node_modules/easywebpack-vue/node_modules') ]
+  },
   dll: ['vue', 'axios', 'vue-router', 'vuex', 'vuex-router-sync'],
   loaders: {},
   plugins: {},

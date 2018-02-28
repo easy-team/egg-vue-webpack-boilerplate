@@ -1,6 +1,6 @@
 # egg-vue-webpack-boilerplate
 
-基于 Egg + Vue + Webpack3/Webpack2 多页面和单页面服务端客户端渲染同构工程骨架项目.
+基于 Egg + Vue + Webpack4 多页面和单页面服务端客户端渲染同构工程骨架项目.
 
 ## 纯净版
 
@@ -14,7 +14,7 @@
 
 - Egg 版本： ^2.x.x
 - Node 版本: Node ^8.x.x+,  Node 6.x.x 版本请见 [Egg 1.0 + Node6分支](https://github.com/hubcarl/egg-vue-webpack-boilerplate/tree/node6)
-- Webpack 版本: ^3.8.1, 对应 `easywebpack-vue` 版本为 ^3.5.0
+- Webpack 版本: ^4.x.x, 对应 `easywebpack-vue` 版本为 ^4.x.x
 - Vue 版本: ^2.5.0
 
 ## 说明 

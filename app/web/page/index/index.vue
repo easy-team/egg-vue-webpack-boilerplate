@@ -16,7 +16,7 @@
                     <li class="tauthor">
                       <a href="#" target="_blank" class="get">Sky</a>
                     </li>
-                    <li><a>+收藏</a></li>
+                    <li><a>+收藏1111</a></li>
                     <li>
                       <span class="timeago">{{item.summary}}</span>
                     </li>
