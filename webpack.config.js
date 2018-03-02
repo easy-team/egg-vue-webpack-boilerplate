@@ -4,10 +4,7 @@ module.exports = {
   egg: true,
   framework: 'vue',
   entry: {
-    include: ['app/web/page',
-      { 'app/app': 'app/web/page/app/app.js?loader=false' },
-      { 'elementjs/elementjs': 'app/web/page/elementjs/elementjs.js?loader=false' }
-    ],
+    include: ['app/web/page'],
     exclude: ['app/web/page/[a-z]+/component', 'app/web/page/html', 'app/web/page/elementjs'],
     loader: {
       client: 'app/web/framework/vue/entry/client-loader.js',

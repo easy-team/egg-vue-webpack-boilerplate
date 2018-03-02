@@ -1,17 +1,23 @@
 <template>
-  <app-layout>
+  <layout>
     <transition name="fade" mode="out-in">
       <router-view></router-view>
     </transition>
-  </app-layout>
+  </layout>
 </template>
 <script type="text/babel">
-  export default {
-    computed: {
+import Vue from "vue";
+import { sync } from "vuex-router-sync";
+import store from "store/app";
+import router from "./component/router";
+import Layout from "component/layout/app";
 
-    },
-    mounted(){
+sync(store, router);
 
-    }
-  }
+export default {
+  router,
+  store,
+  computed: {},
+  mounted() {}
+};
 </script>
