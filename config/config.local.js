@@ -21,8 +21,7 @@ module.exports = app => {
   };
 
   exports.webpack = {
-    browser: 'http://localhost:7001',
-    webpackConfigList: require('easywebpack-vue').getWebpackConfig()
+    browser: 'http://localhost:7001'
   };
 
   const localIP = ip.address();
