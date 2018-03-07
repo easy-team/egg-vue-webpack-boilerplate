@@ -1,7 +1,7 @@
 {
   "name": "egg-vue-webpack-boilerplate",
-  "version": "4.0.0-beta.1",
-  "description": "基于 easywebpack-vue 和 egg-view-vue-ssr插件的 egg + vue 服务端渲染同构工程骨架项目",
+  "version": "4.0.0",
+  "description": "基于 easywebpack-vue 和 egg-view-vue-ssr 插件的 egg + vue 服务端渲染同构工程骨架项目",
   "scripts": {
     "postinstall": "node ./script/postinstall.js",
     "debug": "egg-bin debug",
@@ -24,7 +24,6 @@
   "dependencies": {
     "axios": "^0.17.1",
     "cross-env": "^5.0.0",
-    "easywebpack": "^4.0.0-beta.7",
     "egg": "^2.1.0",
     "egg-cors": "^2.0.0",
     "egg-logger": "^1.5.0",
@@ -43,23 +42,22 @@
     "vue-server-renderer": "^2.5.3",
     "vue-template-compiler": "^2.5.13",
     "vuex": "^3.0.1",
-    "vuex-router-sync": "^5.0.0",
-    "webpack-hot-middleware": "^2.21.2"
+    "vuex-router-sync": "^5.0.0"
   },
   "devDependencies": {
     "autod-egg": "^1.0.0",
     "autoprefixer": "^7.1.4",
-    "babel-eslint": "^8.1.2",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-plugin-transform-object-assign": "^6.22.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.15.0",
     "babel-preset-env": "^1.6.0",
-    "easywebpack-vue": "next",
+    "easywebpack-cli": "^3.8.0",
+    "easywebpack-vue": "^4.0.0",
     "egg-bin": "^4.3.7",
     "egg-logview": "^1.0.0",
-    "egg-webpack": "next",
+    "egg-webpack": "^4.0.1",
     "egg-webpack-vue": "^2.0.0",
     "eslint-config-egg": "^5.0.0",
     "eslint-plugin-vue": "^2.0.1",
