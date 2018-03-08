@@ -1,6 +1,6 @@
 # egg-vue-webpack-boilerplate
 
-基于 Egg + Vue + Webpack3/Webpack2 多页面和单页面服务端客户端渲染同构工程骨架项目.
+基于 Egg + Vue + Webpack3 多页面和单页面服务端客户端渲染同构工程骨架项目.
 
 ## 纯净版
 
@@ -92,14 +92,13 @@ npm install easywebpack-cli -g
 
 ```bash
 npm install
-npm start
 ```
 
 
-#### 3.3 启动应用
+#### 3.3 启动应用(开发模式)
 
 ```bash
-npm start
+npm run dev
 ```
 
 应用访问: http://127.0.0.1:7001
@@ -107,21 +106,16 @@ npm start
 ![npm start启动](https://github.com/hubcarl/egg-vue-webpack-boilerplate/blob/master/docs/images/webpack-build.png)
 
 
-#### 3.4 项目构建
+#### 3.4 启动应用(发布模式)
+
+发布模式，需要先进行 webpack 构建， 然后后再启动应用
 
 ```bash
-// 直接运行(编译文件全部在内存里面,本地开发使用)
+npm run build
 npm start
-
-// 编译文件到磁盘打包使用(发布测试环境)
-npm run build:dev 或者 easywebpack build dev
-
-// 编译文件到磁盘打包使用(发布正式环境)
-npm run build 或者 easywebpack build prod
-
 ```
 
-详细打包部署请见： http://hubcarl.github.io/easywebpack/vue/dev/
+详细打包部署请见： http://hubcarl.github.io/easywebpack/vue/build/
 
 ## 4. 配置说明(支持三种方式)
 
