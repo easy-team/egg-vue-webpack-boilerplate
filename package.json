@@ -3,7 +3,6 @@
   "version": "4.0.0",
   "description": "基于 easywebpack-vue 和 egg-view-vue-ssr 插件的 egg + vue 服务端渲染同构工程骨架项目",
   "scripts": {
-    "postinstall": "node ./script/postinstall.js",
     "debug": "egg-bin debug",
     "build": "cross-env easywebpack build prod",
     "build:dev": "cross-env easywebpack build dev",
@@ -35,7 +34,7 @@
     "lodash": "^4.17.4",
     "moment": "^2.17.1",
     "server-side-render-resource": "^1.0.0",
-    "service-worker-precache-webpack-plugin": "^1.3.0",
+    "service-worker-precache-webpack-plugin": "^1.3.3",
     "service-worker-register": "^1.2.2",
     "vue": "^2.5.0",
     "vue-router": "^3.0.1",
