@@ -1,13 +1,13 @@
 # egg-vue-webpack-boilerplate
 
-基于 Egg + Vue + Webpack3 多页面服务端渲染项目开发模板
+基于 Egg + Vue + Webpack4 多页面服务端渲染项目开发模板
 
 
 ## 版本
 
 - Egg 版本： ^2.x.x
 - Node 版本: Node ^8.x.x+,  Node 6.x.x 版本请见 [Egg 1.0 + Node6分支](https://github.com/hubcarl/egg-vue-webpack-boilerplate/tree/node6)
-- Webpack 版本: ^3.8.1, 对应 `easywebpack-vue` 版本为 ^3.5.0
+- Webpack 版本: ^4.x.x, 对应 `easywebpack-vue` 版本为 ^4.x.x
 - Vue 版本: ^2.5.0
 
 ## 说明 
@@ -61,11 +61,11 @@
 
 ## 2.依赖
 
-- [easywebpack](https://github.com/hubcarl/easywebpack) ^3.5.2
-- [easywebpack-vue](https://github.com/hubcarl/easywebpack) ^3.5.0
-- [egg-view-vue-ssr](https://github.com/hubcarl/egg-view-vue-ssr) ^3.0.2
-- [egg-webpack](https://github.com/hubcarl/egg-webpack) ^3.2.6
-- [egg-webpack-vue](https://github.com/hubcarl/egg-webpack-vue) ^2.0.0
+- [easywebpack](https://github.com/hubcarl/easywebpack) 
+- [easywebpack-vue](https://github.com/hubcarl/easywebpack) 
+- [egg-view-vue-ssr](https://github.com/hubcarl/egg-view-vue-ssr)
+- [egg-webpack](https://github.com/hubcarl/egg-webpack) 
+- [egg-webpack-vue](https://github.com/hubcarl/egg-webpack-vue)
 
 
 ## 3. 使用
@@ -86,10 +86,10 @@ npm start
 ```
 
 
-#### 3.3 启动应用
+#### 3.3 本地开发启动应用
 
 ```bash
-npm start
+npm run dev
 ```
 
 应用访问: http://127.0.0.1:7001
@@ -97,18 +97,18 @@ npm start
 ![npm start启动](https://github.com/hubcarl/egg-vue-webpack-boilerplate/blob/master/docs/images/webpack-build.png)
 
 
-#### 3.4 项目构建
+#### 3.4 发布模式启动应用
+
+- 首先在本地或者ci构建好jsbundle文件
 
 ```bash
-// 直接运行(编译文件全部在内存里面,本地开发使用)
-npm start
+npm run build 
+```
 
-// 编译文件到磁盘打包使用(发布测试环境)
-npm run build:dev 或者 easywebpack build dev
+- 然后,启动应用
 
-// 编译文件到磁盘打包使用(发布正式环境)
-npm run build 或者 easywebpack build prod
-
+```bash
+npm start 
 ```
 
 ## 4. 配置说明(支持三种方式)
