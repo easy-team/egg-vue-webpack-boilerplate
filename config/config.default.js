@@ -12,7 +12,11 @@ module.exports = app => {
   };
 
   exports.vuessr = {
-    layout: path.join(app.baseDir, 'app/web/view/layout.html')
+    layout: path.join(app.baseDir, 'app/web/view/layout.html'),
+    renderOptions: {
+      // 告诉 vue-server-renderer 去 app/view 查找异步 chunk 文件
+      basedir: path.join(app.baseDir, 'app/view')
+    }
   };
 
   exports.logger = {
