@@ -54,25 +54,24 @@
 
 - 支持根据 .vue 文件自动创建 webpack entry 入口文件
 
-- egg-webpack ^3.2.4 版本开始支持多进程编译
+- 开始支持多进程编译
 
-- easywebpack ^3.5.0 版本开始支持 webpack dll 自动化构建, 与多进程编译结合，构建速度减少 2/3
+- 支持 webpack dll 自动化构建, 与多进程编译结合，构建速度减少 2/3
 
 - 支持Vue组件异步加载, 具体实例请看[app/web/page/dynamic](app/web/page/dynamic)
 
 - Node 8 版本的async和await特性, Controller 采用 class 方式编写
 
-- 支持vue 2.3 官方VueSSRPlugin实现方案,代码分支[feature/VueSSRPlugin](https://github.com/hubcarl/egg-vue-webpack-boilerplate/tree/feature/VueSSRPlugin)
+- 支持 service worker 构建和使用
 
- 
 
 ## 2.依赖
 
-- [easywebpack](https://github.com/hubcarl/easywebpack) ^3.5.2
-- [easywebpack-vue](https://github.com/hubcarl/easywebpack) ^3.5.0
-- [egg-view-vue-ssr](https://github.com/hubcarl/egg-view-vue-ssr) ^3.0.2
-- [egg-webpack](https://github.com/hubcarl/egg-webpack) ^3.2.6
-- [egg-webpack-vue](https://github.com/hubcarl/egg-webpack-vue) ^2.0.0
+- [easywebpack](https://github.com/hubcarl/easywebpack) ^4.x.x
+- [easywebpack-vue](https://github.com/hubcarl/easywebpack) ^4.x.x
+- [egg-view-vue-ssr](https://github.com/hubcarl/egg-view-vue-ssr) ^3.x.x
+- [egg-webpack](https://github.com/hubcarl/egg-webpack) ^3.x.x
+- [egg-webpack-vue](https://github.com/hubcarl/egg-webpack-vue) ^2.x.x
 
 
 ## 3. 使用
@@ -89,14 +88,13 @@ npm install easywebpack-cli -g
 
 ```bash
 npm install
-npm start
 ```
 
 
-#### 3.3 启动应用
+#### 3.3 本地开发启动应用
 
 ```bash
-npm start
+npm run dev
 ```
 
 应用访问: http://127.0.0.1:7001
@@ -104,19 +102,20 @@ npm start
 ![npm start启动](https://github.com/hubcarl/egg-vue-webpack-boilerplate/blob/master/docs/images/webpack-build.png)
 
 
-#### 3.4 项目构建
+#### 3.4 发布模式启动应用
+
+- 首先在本地或者ci构建好jsbundle文件
 
 ```bash
-// 直接运行(编译文件全部在内存里面,本地开发使用)
-npm start
-
-// 编译文件到磁盘打包使用(发布测试环境)
-npm run build:dev 或者 easywebpack build dev
-
-// 编译文件到磁盘打包使用(发布正式环境)
-npm run build 或者 easywebpack build prod
-
+npm run build 
 ```
+
+- 然后,启动应用
+
+```bash
+npm start 
+```
+
 
 详细打包部署请见： http://hubcarl.github.io/easywebpack/vue/dev/
 
