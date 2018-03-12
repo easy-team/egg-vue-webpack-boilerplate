@@ -1,6 +1,6 @@
 {
   "name": "egg-vue-webpack-spa-boilerplate",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "基于 easywebpack-vue 和 egg-view-vue-ssr插件的 egg + vue 服务端渲染同构工程骨架项目",
   "scripts": {
     "debug": "egg-bin debug",
@@ -8,14 +8,15 @@
     "build:dev": "cross-env easy clean && easy build dev",
     "build:test": "cross-env easy clean && easy build test",
     "build:prod": "cross-env easy clean && easy build prod",
-    "start": "node index.js",
-    "start:test": "cross-env EGG_SERVER_ENV=test node index.js",
-    "start:prod": "cross-env EGG_SERVER_ENV=prod NODE_ENV=production npm start",
+    "dev": "cross-env WORKERS=1 node index.js",
+    "start": "cross-env EGG_SERVER_ENV=prod NODE_ENV=production node index.js",
     "lint": "eslint .",
-    "fix": "eslint --fix ."
+    "fix": "eslint --fix .",
+    "ii": "npm install --registry https://registry.npm.taobao.org"
   },
   "dependencies": {
     "axios": "^0.17.1",
+    "cross-env": "^5.0.0",
     "egg": "^2.1.0",
     "egg-bin": "^4.3.7",
     "egg-cors": "^2.0.0",
@@ -31,32 +32,25 @@
     "vue": "^2.5.0",
     "vue-hot-reload-api": "^2.1.0",
     "vue-router": "^3.0.1",
-    "vue-server-renderer": "^2.5.3",
     "vuex": "^3.0.1",
     "vuex-router-sync": "^5.0.0"
   },
   "devDependencies": {
     "autod-egg": "^1.0.0",
     "autoprefixer": "^7.1.4",
-    "babel-core": "^6.26.0",
-    "babel-eslint": "^8.1.2",
-    "babel-loader": "^7.1.2",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-plugin-transform-object-assign": "^6.22.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.15.0",
     "babel-preset-env": "^1.6.0",
-    "cross-env": "^5.0.0",
-    "directory-named-webpack-plugin": "^2.2.3",
     "easywebpack-cli": "^3.5.2",
-    "easywebpack-vue": "^3.6.0",
+    "easywebpack-vue": "^4.0.0",
     "egg-logview": "^1.0.0",
-    "egg-webpack": "^3.3.0",
+    "egg-webpack": "^4.0.0",
     "egg-webpack-vue": "^2.0.0",
     "eslint": "^4.3.0",
     "eslint-config-egg": "^5.0.0",
-    "eslint-loader": "^1.9.0",
     "eslint-plugin-vue": "^2.0.1",
     "imagemin-webpack-plugin": "^1.5.2",
     "install": "^0.10.2",
@@ -64,13 +58,9 @@
     "less": "^2.7.2",
     "less-loader": "^4.0.5",
     "node-sass": "^4.5.3",
-    "postcss-loader": "^2.0.6",
-    "progress-bar-webpack-plugin": "^1.10.0",
     "sass-loader": "^6.0.6",
     "uglifyjs-webpack-plugin": "^1.1.2",
-    "vconsole": "^3.0.0",
-    "vue-template-compiler": "^2.4.4",
-    "webpack-manifest-resource-plugin": "^2.0.2"
+    "vconsole": "^3.0.0"
   },
   "engines": {
     "node": ">=6.0.0"
