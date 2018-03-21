@@ -1,6 +1,6 @@
 {
   "name": "egg-vue-webpack-boilerplate",
-  "version": "3.6.4",
+  "version": "3.6.7",
   "description": "基于 easywebpack-vue 和 egg-view-vue-ssr插件的 egg + vue 服务端渲染同构工程骨架项目",
   "scripts": {
     "debug": "egg-bin debug",
@@ -34,11 +34,9 @@
     "mint-ui": "^2.2.9",
     "mockjs": "^1.0.1-beta3",
     "moment": "^2.17.1",
-    "server-side-render-resource": "^1.0.0",
     "vue": "^2.5.0",
     "vue-hot-reload-api": "^2.1.0",
     "vue-router": "^3.0.1",
-    "vue-server-renderer": "^2.5.3",
     "vuex": "^3.0.1",
     "vuex-router-sync": "^5.0.0"
   },
@@ -56,8 +54,8 @@
     "babel-preset-env": "^1.6.0",
     "cross-env": "^5.0.0",
     "directory-named-webpack-plugin": "^2.2.3",
-    "easywebpack-cli": "^3.5.2",
-    "easywebpack-vue": "^3.6.0",
+    "easywebpack-cli": "^3.9.0",
+    "easywebpack-vue": "^3.7.1",
     "egg-logview": "^1.0.0",
     "egg-webpack": "^3.3.0",
     "egg-webpack-vue": "^2.0.0",
@@ -66,7 +64,6 @@
     "eslint-loader": "^1.9.0",
     "eslint-plugin-vue": "^2.0.1",
     "imagemin-webpack-plugin": "^1.5.2",
-    "install": "^0.10.2",
     "ip": "^1.1.5",
     "less": "^2.7.2",
     "less-loader": "^4.0.5",
@@ -84,11 +81,14 @@
     "node": ">=6.0.0"
   },
   "ci": {
-    "version": "6, 7, 8"
+    "version": "6, 8, 9"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hubcarl/egg-vue-webpack-boilerplate.git"
+  },
+  "publishConfig": {
+    "tag": "3.x"
   },
   "author": "hubcarl@126.com",
   "license": "MIT",
