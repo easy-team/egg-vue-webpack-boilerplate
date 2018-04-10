@@ -5,7 +5,7 @@ module.exports = {
   framework: 'vue',
   entry: {
     include: ['app/web/page'],
-    exclude: ['app/web/page/[a-z]+/component', 'app/web/page/elementjs'],
+    exclude: ['app/web/page/[a-z]+/(component|store)', 'app/web/page/elementjs'],
     loader: {
       client: 'app/web/framework/vue/entry/client-loader.js',
       server: 'app/web/framework/vue/entry/server-loader.js',
@@ -17,9 +17,7 @@ module.exports = {
     app: 'app/web/framework/vue/app.js',
     asset: 'app/web/asset',
     component: 'app/web/component',
-    framework: 'app/web/framework',
-    store: 'app/web/store',
-    vue: 'vue/dist/vue.js'
+    framework: 'app/web/framework'
   },
   dll: ['vue', 'axios', 'vue-router', 'vuex', 'vuex-router-sync'],
   loaders: {},

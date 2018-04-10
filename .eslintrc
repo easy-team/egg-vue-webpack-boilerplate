@@ -39,8 +39,5 @@
     "EASY_ENV_IS_NODE": true,
     "EASY_ENV_IS_BROWSER": true
   },
-  "plugins": [
-    "vue"
-  ],
   "parser": "babel-eslint"
 }

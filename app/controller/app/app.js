@@ -14,7 +14,7 @@ class AppController extends Controller {
   }
 
   async detail() {
-    const id = this.ctx.query.id;
+    const id = this.ctx.params.id;
     this.ctx.body = Model.getDetail(id);
   }
 }
