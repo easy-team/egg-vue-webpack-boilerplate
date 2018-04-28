@@ -5,6 +5,8 @@
       <div class="second">
         <!-- <component :is="name"></component> -->
         <async></async>
+        <client v-if="isBrowser"></client>
+        <client2></client2>
       </div>
     </div>
   </layout>
@@ -22,16 +24,21 @@
   //   delay: 100,
   //   timeout: 1000
   // });
+  import client from './component/client.vue'
   export default {
     name: 'dynamic',
     data () {
       return {
-        show: true
+        isBrowser: EASY_ENV_IS_BROWSER
       }
     },
     components: {
-      async : () => import('./component/async.vue')
-    }
+      async : () => import('./component/async.vue'),
+      client : () => import('./component/client.vue')
+    },
+    beforeMount() {
+      this.$options.components.client2 = () => import('./component/client.vue');
+    },
   }
 </script>
 
