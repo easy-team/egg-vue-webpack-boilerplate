@@ -22,6 +22,7 @@ module.exports = {
   dll: ['vue', 'axios', 'vue-router', 'vuex', 'vuex-router-sync'],
   loaders: {},
   plugins: {
+    imagemini: false,
     serviceworker: true
   },
   node: {
