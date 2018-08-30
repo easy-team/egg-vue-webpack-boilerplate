@@ -1,9 +1,13 @@
 export default {
   menu: {
-    server: 'Server-Render',
-    client: 'Client-Render',
-    dynamic: 'Vue-Component-Dynamic',
+    server: 'Server',
+    client: 'Client',
+    dynamic: 'Dynamic',
     element: 'Element',
-    single: 'Single-Page',
+    single: 'SPA',
   },
+  lang: {
+    href: '/?locale=cn',
+    text: 'Switch Chinese'
+  }
 };

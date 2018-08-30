@@ -39,7 +39,7 @@
 
 - 支持单页面, 多页面服务端渲染, 前端渲染模式
 
-- 支持 server 和 client 端代码修改, webpack 时时编译和热更新, `npm start` 一键启动应用
+- 支持 server 和 client 端代码修改, webpack 时时编译和热更新, `npm run dev` 一键启动应用
 
 - 基于 vue + axios 多页面服务端渲染, 客户端渲染同构实现
 
@@ -47,23 +47,19 @@
 
 - 基于 easywebpack 基础配置, 使用 es6 class 继承方式编写webpack配置 和 cli 构建
 
-- 支持开发环境, 测试环境，正式环境 webpack 编译
-
-- 支持 js/css/image 资源依赖, 内置支持CDN特性
-
-- 支持 css/sass/less 样式编写
+- 支持 js/css/image 资源依赖, 内置支持CDN特性, 支持 css/sass/less 样式编写
 
 - 支持根据 .vue 文件自动创建 webpack entry 入口文件
 
-- 开始支持多进程编译
-
-- 支持 webpack dll 自动化构建, 与多进程编译结合，构建速度减少 2/3
+- 开始支持多进程编译， 支持 webpack dll 自动化构建, 与多进程编译结合，构建速度减少 2/3
 
 - 支持Vue组件异步加载, 具体实例请看[app/web/page/dynamic](app/web/page/dynamic)
 
 - Node 8 版本的async和await特性, Controller 采用 class 方式编写
 
 - 支持 service worker 构建和使用
+
+- 提供 i18n 多语言示例
 
 
 ## 2.依赖

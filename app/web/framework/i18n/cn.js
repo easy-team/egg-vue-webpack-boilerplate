@@ -6,4 +6,8 @@ export default {
     element: 'Element',
     single: '单页面',
   },
+  lang: {
+    href: '/?locale=en',
+    text: '切换英文版'
+  }
 };

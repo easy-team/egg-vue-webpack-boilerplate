@@ -81,6 +81,11 @@
   margin-left: 20px
 }
 
+/* .header .nav-item:last-child {
+  float: right;
+  margin-left: 100px !important
+} */
+
 .header .nav-item a {
   text-decoration: none;
   color: #fff;
@@ -110,7 +115,8 @@
 
 .header .nav-item:last-child {
   cursor: default;
-  margin-left: 34px
+  margin-left: 100px;
+  font-weight: 200 !important
 }
 
 .header .nav-item:last-child span {
