@@ -82,7 +82,6 @@
     },
     mounted() {
       import('service-worker-register').then(sw =>{
-        console.log(sw);
         sw.default.register('service-worker.js');
       });
       window.addEventListener('scroll', ()=>{
