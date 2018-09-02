@@ -87,6 +87,8 @@
       window.addEventListener('scroll', ()=>{
         this.loadPage();
       }, false);
+      const info = Object.assign({}, {a: 1});
+      console.log(info);
     }
   }
 </script>
