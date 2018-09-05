@@ -82,7 +82,6 @@ npm install easywebpack-cli -g
 
 ```bash
 npm install
-npm start
 ```
 
 
