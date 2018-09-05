@@ -1,15 +1,13 @@
 {
   "name": "egg-vue-webpack-spa-boilerplate",
-  "version": "4.0.1",
+  "version": "4.1.0",
   "description": "基于 easywebpack-vue 和 egg-view-vue-ssr 插件的 egg + vue 服务端渲染单页面同构工程骨架项目",
   "scripts": {
     "debug": "egg-bin debug",
-    "build": "cross-env easy clean && easy build prod",
-    "build:dev": "cross-env easy clean && easy build dev",
-    "build:test": "cross-env easy clean && easy build test",
-    "build:prod": "cross-env easy clean && easy build prod",
-    "dev": "cross-env WORKERS=1 node index.js",
-    "start": "cross-env EGG_SERVER_ENV=prod NODE_ENV=production node index.js",
+    "clean": "easy clean",
+    "build": "easy build prod",
+    "start": "egg-scripts start",
+    "dev": "egg-bin dev",
     "lint": "eslint .",
     "fix": "eslint --fix .",
     "ii": "npm install --registry https://registry.npm.taobao.org"
@@ -21,6 +19,7 @@
     "egg-bin": "^4.3.7",
     "egg-cors": "^2.0.0",
     "egg-logger": "^1.5.0",
+    "egg-scripts": "^2.9.1",
     "egg-validate": "^1.0.0",
     "egg-view-vue-ssr": "^3.0.2",
     "element-ui": "^2.0.8",
@@ -58,14 +57,13 @@
     "less-loader": "^4.0.5",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6",
-    "uglifyjs-webpack-plugin": "^1.1.2",
     "vconsole": "^3.0.0"
   },
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=8.0.0"
   },
   "ci": {
-    "version": "6, 7, 8, 9"
+    "version": "8, 9"
   },
   "repository": {
     "type": "git",
