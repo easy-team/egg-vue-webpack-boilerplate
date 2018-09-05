@@ -37,7 +37,8 @@
   "globals": {
     "EASY_ENV_IS_PROD": true,
     "EASY_ENV_IS_NODE": true,
-    "EASY_ENV_IS_BROWSER": true
+    "EASY_ENV_IS_BROWSER": true,
+    "EASY_ENV_IS_DEV": true
   },
   "parser": "babel-eslint"
 }

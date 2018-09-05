@@ -7,11 +7,12 @@ import axios from 'axios';
 
 Vue.use(Vuex);
 
+const host = EASY_ENV_IS_DEV ? 'http://127.0.0.1:7001' : '';
 const actions = {
 
   FETCH_ARTICLE_LIST: ({ commit, dispatch, state }) => {
     if (!state.articleList.length) {
-      return axios.get('/app/api/article/list')
+      return axios.get(`${host}/app/api/article/list`)
         .then(response => {
           const data = response.data.list;
           commit(Type.SET_ARTICLE_LIST, data);
@@ -23,7 +24,7 @@ const actions = {
 
   FETCH_ARTICLE_DETAIL: ({ commit, dispatch, state }, { id }) => {
     if (state.article.id !== id) {
-      return axios.get(`/app/api/article/${id}`)
+      return axios.get(`${host}/app/api/article/${id}`)
         .then(response => {
           const data = response.data;
           commit(Type.SET_ARTICLE_DETAIL, data);

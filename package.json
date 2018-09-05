@@ -1,6 +1,6 @@
 {
   "name": "egg-vue-webpack-boilerplate",
-  "version": "4.1.1",
+  "version": "4.2.0",
   "description": "基于 easywebpack-vue 和 egg-view-vue-ssr 插件的 egg + vue 服务端渲染同构工程骨架项目",
   "scripts": {
     "dev": "egg-bin dev",
@@ -41,7 +41,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.15.0",
     "babel-preset-env": "^1.6.0",
-    "easywebpack-cli": "^3.8.0",
+    "easywebpack-cli": "^3.11.2",
     "easywebpack-vue": "^4.0.0",
     "egg-bin": "^4.3.7",
     "egg-logview": "^1.0.0",
