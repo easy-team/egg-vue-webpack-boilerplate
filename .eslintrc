@@ -13,6 +13,7 @@
     "no-else-return": "off",
     "strict": "off",
     "linebreak-style": "off",
+    "newline-per-chained-call": "off",
     "no-irregular-whitespace": [
       "error",
       {

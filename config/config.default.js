@@ -1,3 +1,4 @@
+'use strict';
 const path = require('path');
 const fs = require('fs');
 module.exports = app => {
@@ -34,6 +35,18 @@ module.exports = app => {
     'locals',
     'access'
   ];
+
+  exports.security = {
+    csrf: {
+      ignoreJSON: false,
+      cookieName: 'csrfToken',
+      sessionName: 'csrfToken',
+      headerName: 'x-csrf-token'
+    },
+    xframe: {
+      enable: false,
+    },
+  };
 
   return exports;
 };

@@ -1,23 +1,13 @@
-
+'use strict';
 module.exports = app => {
-  app.get('/', app.controller.home.home.index);
-  app.get('/client', app.controller.home.home.client);
-  app.get('/element', app.controller.element.element.element);
-  app.get('/pager', app.controller.home.home.pager);
-  app.get('/await/es6', app.controller.await.es6.index);
-  app.get('/await', app.controller.await.await.index);
-  app.get('/await/client', app.controller.await.await.client);
-  app.get('/await/element', app.controller.await.await.element);
-  app.get('/await/pager', app.controller.await.await.pager);
-
-  app.get('/about', app.controller.about.about.index);
-  app.get('/router', app.controller.router.router.index);
-  app.get('/dynamic', app.controller.dynamic.dynamic.index);
-  app.get('/app/api/article/list', app.controller.app.app.list);
-  app.get('/app/api/article/:id', app.controller.app.app.detail);
-  app.get('/app(/.+)?', app.controller.app.app.index);
-  app.get('/less', app.controller.css.css.less);
-  app.get('/css/module', app.controller.css.css.module);
-  app.get('/sass', app.controller.css.css.sass);
-  app.get('/test', app.controller.test.test.index);
+  const { router, controller } = app;
+  router.get('/', controller.index.index.index);
+  router.get('/client', controller.index.index.client);
+  router.get('/list', controller.index.index.list);
+  router.get('/category', controller.category.category.index);
+  router.get('/login', controller.admin.admin.login);
+  router.post('/admin/api/article/list', controller.admin.admin.list);
+  router.post('/admin/api/article/add', controller.admin.admin.add);
+  router.get('/admin/api/article/:id', controller.admin.admin.detail);
+  router.get('/admin(/.+)?', controller.admin.admin.home);
 };

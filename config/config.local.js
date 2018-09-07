@@ -16,10 +16,6 @@ module.exports = app => {
     dir: path.join(app.baseDir, 'logs')
   };
 
-  exports.vuessr = {
-    injectCss: false
-  };
-
   exports.webpack = {
     browser: 'http://localhost:7001'
   };

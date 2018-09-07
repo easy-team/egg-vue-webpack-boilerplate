@@ -1,45 +1,30 @@
 <template>
-  <Layout description="vue server side render" keywords="egg, vue, webpack, server side render">
-    <div class="container smart-container">
-      <div class="row row-offcanvas row-offcanvas-right">
-        <div class="col-xs-12 col-sm-9">
-          <ul class="smart-artiles" id="articleList">
-            <li v-for="item in lists">
-              <div class="point">+{{item.hits}}</div>
-              <div class="card">
-                <h2><a :href="item.url" target="_blank">{{item.title}}</a></h2>
-                <div>
-                  <ul class="actions">
-                    <li>
-                      <time class="timeago">{{item.moduleName}}</time>
-                    </li>
-                    <li class="tauthor">
-                      <a href="#" target="_blank" class="get">Sky</a>
-                    </li>
-                    <li><a>+收藏1111</a></li>
-                    <li>
-                      <span class="timeago">{{item.summary}}</span>
-                    </li>
-                    <li>
-                      <span class="timeago"></span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-          </ul>
-          <div id="pagerBottom" class="smart-pager" v-if="isLoading">
-            <img src="../../asset/images/loading.gif">
+  <layout description="vue server side render" keywords="egg, vue, webpack, server side render">
+    <div class="container">
+      <div class="row" v-for="item in lists" :key="item.id">
+        <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+          <div class="post-preview">
+              <a :href="item.url">
+                  <h2 class="post-title">            
+                      <a :href="item.url" target="_blank" style="font-size: 26px;">{{item.title}}</a>
+                  </h2>
+                  <div class="post-content-preview">{{item.summary}}</div>
+              </a>
+              <p class="post-meta">Posted by hubcarl on 17-09-24</p>
           </div>
+          <hr>
         </div>
       </div>
     </div>
-  </Layout>
+    <div style="text-align:center" v-if="isLoading">
+       <img src="../../asset/images/loading.gif">
+    </div>
+  </layout>
 </template>
 <style>
   @import "index.css";
 </style>
-<script type="text/babel">
+<script type="babel">
   export default {
     components: {
 
@@ -59,7 +44,7 @@
     },
     methods: {
       fetch(){
-        this.$http.get(`${location.origin}/pager?pageIndex=${this.pageIndex}&pageSize=${this.pageSize}`).then(res=> {
+        this.$http.get(`${location.origin}/list?pageIndex=${this.pageIndex}&pageSize=${this.pageSize}`).then(res=> {
           console.log('res', res);
           if(res.data.list && res.data.list.length){
             this.total = res.data.total;
@@ -81,14 +66,9 @@
       }
     },
     mounted() {
-      import('service-worker-register').then(sw =>{
-        sw.default.register('service-worker.js');
-      });
       window.addEventListener('scroll', ()=>{
         this.loadPage();
       }, false);
-      const info = Object.assign({}, {a: 1});
-      console.log(info);
     }
   }
 </script>
