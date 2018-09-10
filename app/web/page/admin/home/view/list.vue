@@ -98,6 +98,7 @@
 
 </style>
 <script type="babel">
+import { SET_ARTICLE_LIST } from '../store/app/mutation-type';
 export default {
   components: {},
   data() {
@@ -116,12 +117,11 @@ export default {
     };
   },
   methods: {
+    fetchApi(store, json) {
+      return store.dispatch(SET_ARTICLE_LIST, json);
+    },
     write() {
       this.$router.push("/article/add");
-    },
-    //刷新
-    fetch() {
-      this.$store.dispatch("FETCH_ARTICLE_LIST", this.q);
     },
     handleSelectionChange(val) {
       console.log("handleSelectionChange", val);
@@ -129,12 +129,12 @@ export default {
     handleSizeChange(val) {
       console.log(`每页 ${val} 条`);
       this.q.pageSize = val;
-      this.fetch();
+      this.fetchApi(this.$store, this.q);
     },
     handleCurrentChange(val) {
       console.log(`当前页: ${val}`);
       this.q.pageIndex = val;
-      this.fetch();
+      this.fetchApi(this.$store, this.q);
     },
     handleEdit(index, row) {
       this.$message(`你点击了编辑操作 index:${index}, id:${row.id}`);
@@ -182,13 +182,9 @@ export default {
       return this.$store.state.articleList;
     }
   },
-  fetchApi(ctx, { state, dispatch, commit }) {
-    return dispatch("FETCH_ARTICLE_LIST", { ctx, pageIndex: 1, pageSize: 10 });
-  },
   beforeMount() {
-    console.log();
     if (!(this.articleList && this.articleList.length > 0)) {
-      this.fetch();
+      // this.fetchApi(this.$store, this.q);
     }
   }
 };

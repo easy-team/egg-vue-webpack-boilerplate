@@ -3,16 +3,18 @@ import axios from 'axios';
 axios.defaults.timeout = 15000;
 axios.defaults.xsrfHeaderName = 'x-csrf-token';
 axios.defaults.xsrfCookieName = 'csrfToken';
-axios.defaults.timeout = 15000;
-export default class Request {
-  constructor(config, store) {
-    this.config = config;
-    this.store = store;
+export default {
+  post(url, json, store) {
+    const { state } = store;
+    return axios.post(`${state.origin}${url}`, json, {
+      headers: {
+        'x-csrf-token': state.csrf,
+        Cookie: `csrfToken=${state.csrf}`
+      }
+    });
+  },
+  get(url, store) {
+    const { state } = store;
+    return axios.get(`${state.origin}${url}`);
   }
-  get(url, headers = {}) {
-    return axios.get(url, headers);
-  }
-  post(url, json = {}, headers = {}) {
-    return axios.post(url, json, headers);
-  }
-}
+};

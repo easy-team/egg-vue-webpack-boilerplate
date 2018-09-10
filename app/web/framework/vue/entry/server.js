@@ -14,8 +14,8 @@ export default function render(options) {
       }
       return Promise.all(
         matchedComponents.map((component) => {
-          if (component.fetch) {
-            return component.fetchApi(context.ctx, options.store);
+          if (component.methods && component.methods.fetchApi) {
+            return component.methods.fetchApi(options.store);
           }
           return null;
         })
