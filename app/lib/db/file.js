@@ -29,7 +29,7 @@ module.exports = class FileDB extends Base {
     return this.get(collectionName).find(where).assign(json).write();
   }
   delete(collectionName, field) {
-    return this.get(collectionName).write();
+    return this.get(collectionName).remove(field).write();
   }
   getPager(collectionName, json) {
     const {

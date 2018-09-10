@@ -14,6 +14,10 @@ module.exports = class AdminController extends egg.Controller {
   async add(ctx) {
     ctx.body = this.service.article.saveArticle(ctx.request.body);
   }
+  async del(ctx) {
+    const { id } = ctx.params;
+    ctx.body = this.service.article.deleteArticle(id);
+  }
   async detail(ctx) {
     const id = ctx.query.id;
     ctx.body = {};

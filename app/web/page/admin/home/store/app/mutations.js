@@ -3,7 +3,8 @@
 import {
   SET_ARTICLE_LIST,
   SET_ARTICLE_DETAIL,
-  SET_SAVE_ARTICLE
+  SET_SAVE_ARTICLE,
+  DELETE_ARTICLE
 } from './mutation-type';
 
 const mutations = {
@@ -17,6 +18,12 @@ const mutations = {
   [SET_SAVE_ARTICLE](state, data) {
     state.articleTotal += 1;
     state.articleList = [data].concat(state.articleList);
+  },
+  [DELETE_ARTICLE](state, { id }) {
+    state.articleTotal -= 1;
+    state.articleList = state.articleList.filter(item => {
+      return item.id !== id;
+    });
   }
 };
 export default mutations;

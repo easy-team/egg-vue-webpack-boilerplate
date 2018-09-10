@@ -23,6 +23,10 @@ module.exports = class ArticeService extends egg.Service {
       return this.colllection.update({ id: json.id }, json);
     }
     json.id = this.ctx.db.getUniqueId();
-    return this.colllection.add(json);
+    this.colllection.add(json);
+    return json.id;
+  }
+  deleteArticle(id) {
+    return this.colllection.delete({ id });
   }
 };

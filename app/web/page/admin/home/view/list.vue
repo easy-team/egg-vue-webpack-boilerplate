@@ -93,7 +93,7 @@
 
 </style>
 <script type="babel">
-import { SET_ARTICLE_LIST } from '../store/app/mutation-type';
+import { SET_ARTICLE_LIST, DELETE_ARTICLE } from '../store/app/mutation-type';
 export default {
   components: {},
   data() {
@@ -135,7 +135,8 @@ export default {
       this.$message(`你点击了编辑操作 index:${index}, id:${row.id}`);
     },
     handleDelete(index, row) {
-      this.$message(`你点击了删除操作 index:${index}, id:${row.id}`);
+      this.$store.dispatch(DELETE_ARTICLE, { id: row.id });
+      this.$message(`删除[${row.title}]成功!`);
     },
     //批量选择
     batchSelect(val) {

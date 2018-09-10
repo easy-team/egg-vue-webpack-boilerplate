@@ -21,6 +21,7 @@
 }
 </style>
 <script type="babel">
+import { SET_SAVE_ARTICLE } from '../../store/app/mutation-type';
 export default {
   components: {
     MarkdownEditor: () => import("component/MarkdownEditor/index.vue")
@@ -46,7 +47,8 @@ export default {
     },
     submit(status) {
        this.article.status = status;
-       this.$store.dispatch("SAVE_ARTICLE", this.article);
+       this.$store.dispatch(SET_SAVE_ARTICLE, this.article);
+       this.$message(`添加成功`);
     }
   },
   mounted() {

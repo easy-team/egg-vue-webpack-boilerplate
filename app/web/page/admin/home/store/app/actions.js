@@ -14,24 +14,27 @@ const actions = {
       store.commit(Type.SET_ARTICLE_LIST, response.data);
     });
   },
-
-  SET_ARTICLE_DETAIL: ({ commit, dispatch, state }, { id }) => {
-    return request.get(`${state.origin}/admin/api/article/${id}`)
+  SET_ARTICLE_DETAIL: (store, { id }) => {
+    const { commit, dispatch, state } = store;
+    return request.get(`/admin/api/article/${id}`, store)
       .then(response => {
         commit(Type.SET_ARTICLE_DETAIL, response.data);
       });
   },
-
-  SET_SAVE_ARTICLE: ({ commit, dispatch, state }, data) => {
-    return request.post(`${state.origin}/admin/api/article/add`, data, {
-      // headers: {
-      //   'x-csrf-token': state.csrf,
-      // }
-    }).then(response => {
-      commit(Type.SET_ARTICLE_LIST, data);
+  SET_SAVE_ARTICLE: (store, json) => {
+    const { commit, dispatch, state } = store;
+    return request.post('/admin/api/article/add', json, store).then(response => {
+      commit(Type.SET_SAVE_ARTICLE, json);
     });
   },
-
+  DELETE_ARTICLE: (store, { id }) => {
+    // 鉴权 TODO
+    const { commit, dispatch, state } = store;
+    return request.get(`/admin/api/article/del/${id}`, store)
+      .then(response => {
+        commit(Type.DELETE_ARTICLE, { id });
+      });
+  },
 };
 
 export default actions;
