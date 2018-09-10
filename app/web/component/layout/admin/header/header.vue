@@ -6,15 +6,28 @@
           <span class="min">{{ site.description }}</span>
         </div>
         <span class="header-btn" @click="sidebarToggle"><i class="el-icon-menu"></i></span>
+       
         <div class="right">
-                  <span class="header-btn">
-                      <el-badge :value="3" class="badge">
-                          <i class="el-icon-message"></i>
-                      </el-badge>
-                  </span>
           <span class="header-btn">
-                      <i class="el-icon-bell"></i>
-                  </span>
+            <a v-bind:href="$t('lang.href')"><i class="el-icon-message"></i></a>
+          </span>
+          <el-dropdown>
+              <span class="header-btn">
+                  {{$t('lang.text')}}<i class="el-icon-arrow-down el-icon--right"></i>
+              </span>
+            <el-dropdown-menu slot="dropdown">
+              <el-dropdown-item @click.native="switchLang('en')">英文</el-dropdown-item>
+              <el-dropdown-item @click.native="switchLang('cn')">中文</el-dropdown-item>
+            </el-dropdown-menu>
+          </el-dropdown>
+          <span class="header-btn">
+              <el-badge :value="2" class="badge">
+                  <i class="el-icon-message"></i>
+              </el-badge>
+          </span>
+          <span class="header-btn">
+            <i class="el-icon-bell"></i>
+          </span>
           <el-dropdown>
                       <span class="header-btn">
                           Admin<i class="el-icon-arrow-down el-icon--right"></i>
@@ -49,8 +62,8 @@
   }
 </style>
 <script type="babel">
-import "./header.scss";
-import LeftMenu from '../aside/aside';
+import './header.scss';
+import LeftMenu from '../menu/index.vue';
 export default {
   components: {
     LeftMenu
@@ -59,8 +72,8 @@ export default {
     return {
       collapse: false,
       site: {
-        name: "Egg + TypeScript + Webpack",
-        description: "Egg"
+        name: 'We-Blog',
+        description: 'IBlog'
       }
     };
   },
@@ -70,7 +83,7 @@ export default {
       e.preventDefault();
       if (this.collapse) {
         document.body.classList.remove("sidebar-hidden");
-        this.siteName = "Egg";
+        this.siteName = 'IBlog';
         this.collapse = false;
       } else {
         document.body.classList.add("sidebar-hidden");
@@ -79,14 +92,17 @@ export default {
     },
     logout() {
       window.location.replace('/login');
+    },
+    switchLang(lang) {
+      window.location.href= `/admin?locale=${lang}`;
     }
   },
   mounted: function() {
     if (!this.collapse) {
-      document.body.classList.remove("sidebar-hidden");
-      this.siteName = "Egg + TypeScript + Webpack";
+      document.body.classList.remove('sidebar-hidden');
+      this.siteName = 'IBlog';
     } else {
-      document.body.classList.add("sidebar-hidden");
+      document.body.classList.add('sidebar-hidden');
     }
   }
 };

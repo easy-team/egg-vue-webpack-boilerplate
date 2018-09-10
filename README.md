@@ -1,6 +1,32 @@
 # egg-vue-webpack-boilerplate
 
-基于 Egg + Vue + Webpack4 多页面和单页面服务端客户端渲染同构工程骨架项目.
+基于 Egg + Vue + Webpack4 Server Side Render 工程项目，包括前台系统和后台管理系统
+
+## 系统功能
+
+### 前台博客系统 http://localhost:7001
+
+**采用 Egg + Vue 服务端渲染**
+
+![](https://github.com/hubcarl/egg-typescript-element-kit/blob/master/docs/images/home.png)
+
+- 博客首页
+- 博客文章列表展示
+- 博客文章详情页面
+- 博客分类浏览
+
+### 后台管理系统 http://localhost:7001/admin
+
+**采用 Egg + Vue + Vue-Router + Element 单页面服务端同构渲染**
+
+![](https://github.com/hubcarl/egg-typescript-element-kit/blob/master/docs/images/admin.png)
+
+- 用户登陆
+- 用户注册
+- Dashboard
+- 文章管理
+- Markdown添加文章 
+- 权限管理
 
 ## 纯净版
 

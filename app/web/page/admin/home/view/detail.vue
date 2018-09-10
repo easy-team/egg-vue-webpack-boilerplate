@@ -7,19 +7,17 @@
 <style>
 
 </style>
-<script type="babel">
+<script type="text/babel">
   export default {
-    preFetch({ state, dispatch, commit }) {
-      let { id } = state.route.params;
-      return Promise.all([
-        dispatch('FETCH_ARTICLE_DETAIL', { id })
-      ]);
+    methods: {
+      fetchApi({ state, dispatch, commit }) {
+        const { id } = state.route.params;
+        return dispatch('FETCH_ARTICLE_DETAIL', { id })
+      },
     },
     beforeMount() {
-      let { id } = this.$store.state.route.params;
-      return Promise.all([
-        this.$store.dispatch('FETCH_ARTICLE_DETAIL', { id })
-      ]);
+      const { id } = state.route.params;
+      this.fetchApi(this.$sotre, { id });
     }
   }
 </script>

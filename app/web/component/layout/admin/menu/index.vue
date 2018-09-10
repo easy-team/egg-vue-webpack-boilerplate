@@ -9,30 +9,28 @@
             <el-submenu v-if='menu_v.children' :index='menu_k' :key='menu_k'>
               <template slot='title'>
                 <i :class='menu_v.icon'></i>
-                <span slot='title'>{{ menu_v.name }}</span>
+                <span slot='title'>{{$t(menu_v.name)}}</span>
               </template>
               <el-menu-item v-for='(menuChildren_v,menuChildren_k) in menu_v.children' :key='menuChildren_k'
                             :index='menuChildren_v.path'>
-                <i class='is-children fa fa-circle-o'></i>
-                <span slot='title'>{{ menuChildren_v.name }}</span>
+                <i class='is-children'></i>
+                <span slot='title'>{{ $t(menuChildren_v.name) }}</span>
               </el-menu-item>
             </el-submenu>
             <el-menu-item v-else :index='menu_v.path' :key='menu_k'>
               <i :class='menu_v.icon'></i>
-              <span slot='title'>{{ menu_v.name }}</span>
+              <span slot='title'>{{$t(menu_v.name)}}</span>
             </el-menu-item>
           </template>
       </el-menu>  
   </div>
 </template>
-<script type='babel'>
-  import menu from '../menu';
+<script type='text/babel'>
+  import menu from './index.js';
   export default {
     props: ['collapse'],
     data(){
-      return {
-        menu
-      };
+      return { menu };
     },
     methods: {
       handleOpen(key, keyPath) {

@@ -1,7 +1,7 @@
 <template>
   <layout description='vue server side render' keywords='egg, vue, webpack, server side render'>
      <div class='container'>
-        <h2>Egg + TypeScript: About</h2>
+        <h2>IBlog: About</h2>
      </div>
   </layout>
 </template>

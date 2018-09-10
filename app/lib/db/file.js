@@ -42,7 +42,6 @@ module.exports = class FileDB extends Base {
     } = json;
     const start = (pageIndex - 1) * pageSize;
     const end = pageIndex * pageSize;
-    console.log(json, start, end);
     const result = this.get(collectionName)
       .filter(where)
       .filter(item => {
@@ -53,7 +52,6 @@ module.exports = class FileDB extends Base {
       .orderBy(orderByField, orderBy);
     const total = result.size().value();
     const list = result.slice(start, end).value();
-    console.log(start, end, total);
     return {
       total,
       list

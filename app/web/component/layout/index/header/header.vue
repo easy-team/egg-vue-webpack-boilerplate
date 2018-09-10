@@ -9,21 +9,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">I-Learning</a>
+                <a class="navbar-brand" href="/">IBlog</a>
             </div>
             <div class="collapse navbar-collapse" :class="{ 'collapse in': collapsed }" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="/">首页</a>
+                        <a href="/">{{$t('menu.home')}}</a>
                     </li>
                     <li>
-                        <a href="/category">分类</a>
-                    </li>
-                    <!-- <li>
-                        <a href="/hot">热点</a>
-                    </li> -->
-                    <li>
-                        <a href="/about/">关于</a>
+                        <a href="/category">{{$t('menu.category')}}</a>
                     </li>
                 </ul>
             </div>
@@ -39,7 +33,7 @@
                         </div>
                         <h1>博客</h1>
                         <hr class="large">
-                        <span class="subheading">Egg + TypeScript + Vue + Webpack 技术学习</span>
+                        <span class="subheading">IBlog</span>
                     </div>
                 </div>
             </div>

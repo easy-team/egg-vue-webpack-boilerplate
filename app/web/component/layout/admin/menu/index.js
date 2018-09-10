@@ -1,42 +1,22 @@
 const menu = {
   home: {
-    name: '首页',
+    name: 'menu.home',
     path: '/',
-    icon: 'fa fa-home',
+    icon: 'el-icon-menu',
   },
   content: {
-    name: '内容管理',
-    icon: 'fa fa-file',
+    name: 'menu.articlemanage',
+    icon: 'el-icon-document',
     children: {
       list: {
-        name: '文章管理',
+        name: 'menu.articlequery',
+        icon: 'el-icon-edit-outline',
         path: '/article/list'
       },
       add: {
-        name: '添加文章',
+        name: 'menu.articleadd',
+        icon: 'el-icon-edit-outline',
         path: '/article/add'
-      }
-    }
-  },
-  learn: {
-    name: '学习资料',
-    icon: 'fa fa-file',
-    children: {
-      Egg: {
-        name: 'Egg学习',
-        path: '/'
-      },
-      Vue: {
-        name: 'Vue学习',
-        path: '/'
-      },
-      TypeScript: {
-        name: 'TypeScript',
-        path: '/'
-      },
-      EasyWebpack: {
-        name: 'easywebpack',
-        path: '/'
       }
     }
   }

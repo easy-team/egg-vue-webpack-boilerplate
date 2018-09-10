@@ -4,7 +4,7 @@
     <div class="login-form">
       <div class="login-header">
         <img src="../../../asset/images/logo.png" height="100" alt="">
-        <p>Egg + TypeScript + Webpack</p>
+        <p>IBlog</p>
       </div>
       <el-input
           placeholder="请输入用户名"
@@ -52,7 +52,7 @@
         setTimeout(() => {
           this.$notify({
             title: '登录成功',
-            message: '欢迎 Egg + TypeScript + Webpack 学习系统',
+            message: '欢迎 IBlog 学习系统',
             type: 'success'
           });
           window.location.replace('/admin');

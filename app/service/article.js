@@ -9,11 +9,13 @@ module.exports = class ArticeService extends egg.Service {
     this.colllection = new Collection(ctx.db, 'article');
   }
   getArtilceList(json = {}) {
-    const { title, categoryId, status } = json;
+    const { title, categoryId, status, pageIndex, pageSize } = json;
     const query = new Query();
     query.where.categoryId = categoryId;
     query.where.status = status;
     query.like.title = title;
+    query.pageIndex = pageIndex;
+    query.pageSize = pageSize;
     return this.colllection.getPager(query);
   }
   saveArticle(json) {

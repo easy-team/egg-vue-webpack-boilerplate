@@ -6,12 +6,11 @@ axios.defaults.xsrfCookieName = 'csrfToken';
 export default {
   post(url, json, store) {
     const { state } = store;
-    return axios.post(`${state.origin}${url}`, json, {
-      headers: {
-        'x-csrf-token': state.csrf,
-        Cookie: `csrfToken=${state.csrf}`
-      }
-    });
+    const headers = { 'x-csrf-token': state.csrf };
+    if (EASY_ENV_IS_NODE) {
+      headers.Cookie = `csrfToken=${state.csrf}`;
+    }
+    return axios.post(`${state.origin}${url}`, json, { headers });
   },
   get(url, store) {
     const { state } = store;

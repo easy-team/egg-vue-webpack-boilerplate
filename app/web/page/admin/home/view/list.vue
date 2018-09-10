@@ -33,11 +33,6 @@
           width="55">
         </el-table-column>
         <el-table-column
-          prop="id"
-          label="id"
-          width="80">
-        </el-table-column>
-        <el-table-column
           prop="title"
           label="标题">
           <template slot-scope="props">
@@ -61,7 +56,7 @@
           label="操作"
           width="180">
           <template slot-scope="props">
-            <router-link :to="{name: 'tableUpdate', params: {id: props.row.id}}" tag="span">
+            <router-link :to="{params: {id: props.row.id}}" tag="span">
               <el-button type="info" size="small" icon="edit" @click="handleEdit(props.$index, props.row)">修改</el-button>
             </router-link>
             <el-button type="danger" size="small" icon="delete" @click="handleDelete(props.$index, props.row)">删除</el-button>
@@ -104,9 +99,9 @@ export default {
   data() {
     return {
       q: {
-        title: "",
-        categoryId: 0,
-        statusId: 0,
+        title: undefined,
+        categoryId: undefined,
+        statusId: undefined,
         pageIndex: 1,
         pageSize: 10
       },
@@ -162,7 +157,7 @@ export default {
   computed: {
     status() {
       return [
-        { status: 0, name: "--请选择--" },
+        { status: undefined, name: "--请选择--" },
         { status: 1, name: "已发布" },
         { status: 2, name: "草稿" }
       ];
@@ -184,7 +179,7 @@ export default {
   },
   beforeMount() {
     if (!(this.articleList && this.articleList.length > 0)) {
-      // this.fetchApi(this.$store, this.q);
+      this.fetchApi(this.$store, this.q);
     }
   }
 };
