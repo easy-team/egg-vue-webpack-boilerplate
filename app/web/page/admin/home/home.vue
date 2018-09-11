@@ -12,19 +12,22 @@ import VueI18n from 'vue-i18n';
 import { sync } from 'vuex-router-sync';
 import 'element-ui/lib/theme-chalk/index.css';
 import createI18n from 'framework/i18n/admin';
-import Layout from 'component/layout/admin';
-import store from './store/app';
-import router from './router';
+import createStore from './store/app';
+import createRouter from './router';
+import AdminLayout from 'component/layout/admin';
 
 Vue.use(VueI18n);
 Vue.use(ElementUI);
+
+const store = createStore();
+const router = createRouter();
 sync(store, router);
 
 export default {
   router,
   store,
   components: {
-    AdminLayout: Layout,
+    AdminLayout,
   },
   computed: {},
   mounted() {},

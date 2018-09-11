@@ -17,7 +17,7 @@
                           :value="item.status">
                 </el-option>
               </el-select>
-              <el-button class="search-button" type="primary" @click="fetch()">查询</el-button>
+              <el-button class="search-button" type="primary" @click="query()">查询</el-button>
               <el-button class="add-button" type="success" @click="write()">写文章</el-button>
         </el-row>
       </div>
@@ -114,6 +114,9 @@ export default {
   methods: {
     fetchApi(store, json) {
       return store.dispatch(SET_ARTICLE_LIST, json);
+    },
+    query() {
+      this.fetchApi(this.$store, this.q);
     },
     write() {
       this.$router.push("/article/add");

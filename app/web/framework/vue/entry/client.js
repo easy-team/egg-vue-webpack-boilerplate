@@ -3,15 +3,13 @@ import plugin from '../plugin';
 import '../filter';
 import '../directive';
 import '../component';
-import axios from 'axios';
-Vue.prototype.$http = axios;
 Vue.use(plugin);
 export default function(options) {
   const state = window.__INITIAL_STATE__ || {};
   if (options.store) {
     options.store.replaceState(state);
   } else {
-    options.data = state;
+    options.data = { ...state, ...options.data };
   }
   const hookRender = options.hookRender || Vue.hookRender;
   if (hookRender) {

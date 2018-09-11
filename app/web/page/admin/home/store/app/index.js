@@ -8,15 +8,16 @@ import mutations from './mutations';
 
 Vue.use(Vuex);
 
-const state = {
-  articleTotal: 0,
-  articleList: [],
-  article: {}
-};
-
-export default new Vuex.Store({
-  state,
-  actions,
-  getters,
-  mutations
-});
+export default function createStore() {
+  const state = {
+    articleTotal: 0,
+    articleList: [],
+    article: {}
+  };
+  return new Vuex.Store({
+    state,
+    actions,
+    getters,
+    mutations
+  });
+}
