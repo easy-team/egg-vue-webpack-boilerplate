@@ -1,6 +1,6 @@
 'use strict';
 module.exports = {
-  framework: 'vue',
+  port: 9100,
   dll: ['vue', 'axios', 'vue-router', 'vuex', 'vuex-router-sync'],
   loaders: {
     scss: true

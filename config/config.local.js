@@ -21,7 +21,8 @@ module.exports = app => {
   };
 
   exports.webpack = {
-    browser: 'http://localhost:7001'
+    browser: 'http://localhost:7001',
+    port: 9100,
   };
 
   const localIP = ip.address();
