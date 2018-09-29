@@ -1,5 +1,5 @@
 import Layout from 'component/layout/index';
-import plugin from 'framework/vue/plugin';
+import plugin from 'framework/plugin';
 
 export default function(Vue) {
   Vue.use(plugin);
