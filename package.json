@@ -65,7 +65,7 @@
   },
   "webpack": {
     "framework": "vue",
-    "dll": ["vue", "axios", "vue-router", "vuex"],
+    "lib": ["vue", "axios", "vue-router", "vuex"],
     "loaders": {
       "scss": true
     },
