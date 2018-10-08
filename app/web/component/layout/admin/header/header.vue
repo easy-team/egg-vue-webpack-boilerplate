@@ -42,28 +42,22 @@
     <LeftMenu :collapse="collapse"></LeftMenu>
   </div>
 </template>
-<style lang="scss">
-.sidebar-hidden {
-    .header {
-      .logo {
-        .big {
-          display: none;
-        }
-        .min {
-          display: block;
-        }
-        width: 64px;
-      }
-    }
-
-    .app-body {
-      margin-left: 80px,
-    }
-  }
+<style>
+.logo .big {
+  display: none;
+  width: 64px;
+}
+.logo .min {
+  display: block;
+  width: 64px;
+}
+.app-body {
+  margin-left: 80px;
+}
 </style>
 <script type="babel">
-import './header.scss';
-import LeftMenu from '../menu/index.vue';
+import "./header.css";
+import LeftMenu from "../menu/index.vue";
 export default {
   components: {
     LeftMenu
@@ -72,8 +66,8 @@ export default {
     return {
       collapse: false,
       site: {
-        name: 'We-Blog',
-        description: 'IBlog'
+        name: "We-Blog",
+        description: "IBlog"
       }
     };
   },
@@ -83,7 +77,7 @@ export default {
       e.preventDefault();
       if (this.collapse) {
         document.body.classList.remove("sidebar-hidden");
-        this.siteName = 'IBlog';
+        this.siteName = "IBlog";
         this.collapse = false;
       } else {
         document.body.classList.add("sidebar-hidden");
@@ -91,18 +85,18 @@ export default {
       }
     },
     logout() {
-      window.location.replace('/login');
+      window.location.replace("/login");
     },
     switchLang(lang) {
-      window.location.href= `/admin?locale=${lang}`;
+      window.location.href = `/admin?locale=${lang}`;
     }
   },
   mounted: function() {
     if (!this.collapse) {
-      document.body.classList.remove('sidebar-hidden');
-      this.siteName = 'IBlog';
+      document.body.classList.remove("sidebar-hidden");
+      this.siteName = "IBlog";
     } else {
-      document.body.classList.add('sidebar-hidden');
+      document.body.classList.add("sidebar-hidden");
     }
   }
 };

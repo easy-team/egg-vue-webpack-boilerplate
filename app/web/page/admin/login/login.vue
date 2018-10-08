@@ -36,8 +36,8 @@
 </div>
 </template>
 
-<style lang="scss">
-@import "login.scss";
+<style>
+@import "login.css";
 </style>
 
 <script type="text/babel">

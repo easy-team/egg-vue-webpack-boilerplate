@@ -42,7 +42,7 @@
 </div>
 </template>
 <script type="babel">
-import "./header.scss";
+import "./header.css";
 export default {
   components: {},
   data() {

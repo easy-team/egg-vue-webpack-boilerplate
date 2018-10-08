@@ -43,13 +43,13 @@
   }
 </script>    
 
-<style lang='less'>
-  .aside {
-      position: fixed;
-      margin-top: 50px;
-      min-height: calc(~'100vh - 50px');
-      z-index: 10;
-      background-color: #222d32;
-      height:100%
-    }
+<style>
+.aside {
+  position: fixed;
+  margin-top: 50px;
+  min-height: calc(100vh - 50px);
+  z-index: 10;
+  background-color: #222d32;
+  height: 100%;
+}
 </style>

@@ -6,7 +6,7 @@
      </LayoutContent>
    </div>
 </template>
-<style lang='less'>
+<style>
 </style>
 <script type='babel'>
   import LayoutHeader from './header/header';
