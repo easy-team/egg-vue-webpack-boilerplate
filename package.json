@@ -1,6 +1,6 @@
 {
   "name": "egg-vue-webpack-spa-boilerplate",
-  "version": "4.1.0",
+  "version": "4.2.0",
   "description": "基于 easywebpack-vue 和 egg-view-vue-ssr 插件的 egg + vue 服务端渲染单页面同构工程骨架项目",
   "scripts": {
     "debug": "egg-bin debug",
@@ -36,14 +36,8 @@
   },
   "devDependencies": {
     "autod-egg": "^1.0.0",
-    "autoprefixer": "^7.1.4",
-    "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-plugin-syntax-dynamic-import": "^6.18.0",
-    "babel-plugin-transform-object-assign": "^6.22.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-plugin-transform-runtime": "^6.15.0",
     "babel-preset-env": "^1.6.0",
-    "easywebpack-cli": "^3.5.2",
+    "easywebpack-cli": "^4.0.0",
     "easywebpack-vue": "^4.0.0",
     "egg-logview": "^1.0.0",
     "egg-webpack": "^4.0.0",
@@ -53,10 +47,6 @@
     "eslint-plugin-vue": "^2.0.1",
     "imagemin-webpack-plugin": "^1.5.2",
     "ip": "^1.1.5",
-    "less": "^2.7.2",
-    "less-loader": "^4.0.5",
-    "node-sass": "^4.5.3",
-    "sass-loader": "^6.0.6",
     "vconsole": "^3.0.0"
   },
   "engines": {

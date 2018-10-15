@@ -1,14 +1,15 @@
 <template>
-  <app-layout>
+  <Layout>
     <transition name="fade" mode="out-in">
       <router-view></router-view>
     </transition>
-  </app-layout>
+  </Layout>
 </template>
 <script type="text/babel">
+  import Layout from 'component/layout/app/index.vue';
   export default {
     computed: {
-
+      Layout
     },
     mounted(){
 
