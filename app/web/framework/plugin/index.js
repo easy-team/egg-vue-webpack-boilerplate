@@ -9,11 +9,13 @@ export default {
     if (!Vue.prototype.hasOwnProperty('$request')) {
       Vue.prototype.$request = request;
     }
-    if (!Vue.hookRender) {
+    if (!Vue.hook) {
       Vue.use(VueI18n);
-      Vue.hookRender = (context, options) => {
-        const i18n = createI18n(context.state.locale);
-        options.i18n = i18n;
+      Vue.hook = {
+        render(context, options) {
+          const i18n = createI18n(context.state.locale);
+          options.i18n = i18n;
+        }
       };
     }
   }
