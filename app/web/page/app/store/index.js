@@ -8,7 +8,7 @@ import mutations from './mutations';
 
 Vue.use(Vuex);
 
-export default function createStore(initState) {
+export default function createStore(initState = {}) {
 
   const state = {
     articleList: [],

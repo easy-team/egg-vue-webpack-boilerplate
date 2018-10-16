@@ -1,14 +1,12 @@
 body {
     font-family: "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Georgia, tahoma, arial, simsun, "宋体";
+    margin: 0 0px;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Georgia, tahoma, arial, simsun, "宋体";
 }
 
-.main{
-  padding-bottom: 0px;
-}
 .smart-pager {
     font-size: 20px;
     color: lightgray;

@@ -24,7 +24,7 @@ const actions = {
   },
 
   FETCH_ARTICLE_DETAIL: ({ commit, dispatch, state }, { id }) => {
-    if (state.article.id !== id) {
+    if (state.article.id !== Number(id)) {
       return axios.get(`${host}/api/article/${id}`)
         .then(response => {
           const data = response.data;

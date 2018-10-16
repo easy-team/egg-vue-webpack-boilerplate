@@ -3,10 +3,9 @@ module.exports = {
   egg: true,
   framework: 'vue',
   entry: {
-    app: 'app/web/page/app/app.js'
+    app: 'app/web/page/app/index.js'
   },
   alias: {
-    app: 'app/web/framework/vue/app.js',
     component: 'app/web/component',
     framework: 'app/web/framework',
     store: 'app/web/store',
@@ -14,7 +13,12 @@ module.exports = {
   },
   dll: ['vue', 'axios', 'vue-router', 'vuex', 'vuex-router-sync'],
   loaders: {},
-  plugins: {},
+  plugins: {
+    copy: [{
+      from: 'app/web/asset/css/bootstrap.min.css',
+      to: 'asset/css/bootstrap.min.css'
+    }]
+  },
   done() {
 
   }

@@ -2,9 +2,7 @@ const Model = require('../mocks/article/list');
 const Controller = require('egg').Controller;
 class AppController extends Controller {
   async index() {
-    await this.ctx.render('app.js', {
-      url: this.ctx.url.replace(/\/app/, '')
-    });
+    await this.ctx.render('app.js', { url: this.ctx.url });
   }
 
   async list() {
@@ -14,7 +12,7 @@ class AppController extends Controller {
   }
 
   async detail() {
-    const id = this.ctx.query.id;
+    const id = Number(this.ctx.params.id);
     this.ctx.body = Model.getDetail(id);
   }
 }

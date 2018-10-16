@@ -25,8 +25,6 @@
     "element-ui": "^2.0.8",
     "extend": "~3.0.0",
     "lodash": "^4.17.4",
-    "mint-ui": "^2.2.9",
-    "mockjs": "^1.0.1-beta3",
     "moment": "^2.17.1",
     "vue": "^2.5.0",
     "vue-hot-reload-api": "^2.1.0",
@@ -36,7 +34,6 @@
   },
   "devDependencies": {
     "autod-egg": "^1.0.0",
-    "babel-preset-env": "^1.6.0",
     "easywebpack-cli": "^4.0.0",
     "easywebpack-vue": "^4.0.0",
     "egg-logview": "^1.0.0",
@@ -57,9 +54,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hubcarl/egg-vue-webpack-boilerplate.git"
+    "url": "git+https://github.com/easy-team/egg-vue-webpack-boilerplate.git"
   },
   "author": "hubcarl@126.com",
   "license": "MIT",
-  "homepage": "https://github.com/hubcarl/egg-vue-webpack-boilerplate"
+  "homepage": "https://github.com/easy-team/egg-vue-webpack-boilerplate"
 }

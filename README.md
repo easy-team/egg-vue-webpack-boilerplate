@@ -1,17 +1,11 @@
 # egg-vue-webpack-boilerplate
 
-基于 Egg + Vue + Webpack4 单页面服务端渲染同构工程骨架项目.
-
-## 版本
-
-- Egg 版本： ^2.x.x
-- Node 版本: Node ^8.x.x+,  Node 6.x.x 版本请见 [Egg 1.0 + Node6分支](https://github.com/hubcarl/egg-vue-webpack-boilerplate/tree/node6)
-- Webpack 版本: ^4.x.x, 对应 `easywebpack-vue` 版本为 ^4.x.x
-- Vue 版本: ^2.5.0
+基于 Egg + Vue + Webpack4 单页面服务端渲染同构工程骨架项目
 
 ## 文档
 
-- http://hubcarl.github.io/easywebpack/vue/rule
+- https://github.com/easy-team
+- https://www.yuque.com/easy-team
 - https://zhuanlan.zhihu.com/easywebpack
 
 
@@ -26,11 +20,11 @@
 
 ## 2.依赖
 
-- [easywebpack](https://github.com/hubcarl/easywebpack) ^4.x.x
-- [easywebpack-vue](https://github.com/hubcarl/easywebpack) ^4.x.x
-- [egg-view-vue-ssr](https://github.com/hubcarl/egg-view-vue-ssr) ^3.0.2
-- [egg-webpack](https://github.com/hubcarl/egg-webpack) ^4.x.x
-- [egg-webpack-vue](https://github.com/hubcarl/egg-webpack-vue) ^2.0.0
+- [easywebpack](https://github.com/easy-team/easywebpack) ^4.x.x
+- [easywebpack-vue](https://github.com/easy-team/easywebpack) ^4.x.x
+- [egg-view-vue-ssr](https://github.com/easy-team/egg-view-vue-ssr) ^3.0.2
+- [egg-webpack](https://github.com/easy-team/egg-webpack) ^4.x.x
+- [egg-webpack-vue](https://github.com/easy-team/egg-webpack-vue) ^2.0.0
 
 
 ## 3. 使用
@@ -60,7 +54,7 @@ npm run dev
 
 应用访问: http://127.0.0.1:7001
 
-![npm start启动](https://github.com/hubcarl/egg-vue-webpack-boilerplate/blob/feature/green/spa/docs/images/webpack-build.png)
+![npm start启动](https://github.com/easy-team/egg-vue-webpack-boilerplate/blob/feature/green/spa/docs/images/webpack-build.png)
 
 
 ##### 发布模式启动应用

@@ -8,7 +8,7 @@
 <script type="text/babel">
   import Layout from 'component/layout/app/index.vue';
   export default {
-    computed: {
+    components: {
       Layout
     },
     mounted(){
