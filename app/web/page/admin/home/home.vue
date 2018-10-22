@@ -7,16 +7,13 @@
 </template>
 <script type="text/babel">
 import Vue from 'vue';
-import ElementUI from 'element-ui';
 import VueI18n from 'vue-i18n';
-import 'element-ui/lib/theme-chalk/index.css';
 import createI18n from 'framework/i18n/admin';
 import store from './store/app';
 import router from './router';
 import AdminLayout from 'component/layout/admin';
 
 Vue.use(VueI18n);
-Vue.use(ElementUI);
 
 export default {
   router,

@@ -46,7 +46,7 @@ import {
   Input,
   Button,
   Checkbox
-} from 'element-ui';
+} from 'vux';
 Vue.component(Input.name, Input);
 Vue.component(Button.name, Button);
 Vue.component(Checkbox.name, Checkbox);
