@@ -24,8 +24,6 @@
     "egg-view-vue-ssr": "^3.0.5",
     "extend": "~3.0.0",
     "font-awesome": "^4.7.0",
-    "less": "^2.7.3",
-    "less-loader": "^4.1.0",
     "lodash": "^4.17.4",
     "lodash-id": "^0.14.0",
     "lowdb": "^1.0.0",
@@ -41,9 +39,7 @@
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1",
     "vuex-router-sync": "^5.0.0",
-    "vux": "^2.9.2",
-    "vux-loader": "^1.2.9",
-    "yaml-loader": "^0.5.0"
+    "vux": "^2.9.2"
   },
   "devDependencies": {
     "autod-egg": "^1.0.0",
@@ -56,7 +52,11 @@
     "eslint-config-egg": "^5.0.0",
     "eslint-plugin-vue": "^4.4.0",
     "ip": "^1.1.5",
-    "vue-loader": "14.2.2"
+    "less": "2.7.3",
+    "less-loader": "^4.1.0",
+    "vue-loader": "14.2.2",
+    "vux-loader": "^1.2.9",
+    "yaml-loader": "^0.5.0"
   },
   "engines": {
     "node": ">=8.0.0"
