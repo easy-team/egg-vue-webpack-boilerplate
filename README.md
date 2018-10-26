@@ -55,7 +55,7 @@
 
 ## 文档
 
-- https://www.yuque.com/easy-team/ves
+- https://www.yuque.com/easy-team/egg-vue
 - https://zhuanlan.zhihu.com/easywebpack
 
 
