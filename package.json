@@ -1,6 +1,6 @@
 {
   "name": "egg-vue-webpack-spa-boilerplate",
-  "version": "4.2.0",
+  "version": "4.2.1",
   "description": "基于 easywebpack-vue 和 egg-view-vue-ssr 插件的 egg + vue 服务端渲染单页面同构工程骨架项目",
   "scripts": {
     "debug": "egg-bin debug",
@@ -40,7 +40,6 @@
     "egg-webpack": "^4.0.0",
     "egg-webpack-vue": "^2.0.0",
     "eslint": "^4.3.0",
-    "eslint-config-egg": "^5.0.0",
     "eslint-plugin-vue": "^2.0.1",
     "imagemin-webpack-plugin": "^1.5.2",
     "ip": "^1.1.5",
