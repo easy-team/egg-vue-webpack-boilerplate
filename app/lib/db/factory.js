@@ -1,6 +1,6 @@
 'use strict';
 const File = require('./file');
-const MySQL = require('./msyql');
+const MySQL = require('./mysql');
 const MongoDB = require('./mongo');
 module.exports = type => {
   switch (type) {
