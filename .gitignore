@@ -23,4 +23,3 @@ app/view/*
 !app/view/.gitkeep
 package-lock.json
 yarn.lock
-.gitkeep

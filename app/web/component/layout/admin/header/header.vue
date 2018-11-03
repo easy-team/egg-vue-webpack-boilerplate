@@ -2,8 +2,8 @@
   <div style="height:100%">
      <header class="header">
       <div class="logo">
-          <span class="big">{{ site.name }}</span>
-          <span class="min">{{ site.description }}</span>
+          <span class="big" v-if="this.collapse">{{ site.name }}</span>
+          <span class="min" v-else-if="!this.collapse">{{ site.description }}</span>
         </div>
         <span class="header-btn" @click="sidebarToggle"><i class="el-icon-menu"></i></span>
        
@@ -44,7 +44,6 @@
 </template>
 <style>
 .logo .big {
-  display: none;
   width: 64px;
 }
 .logo .min {
@@ -66,8 +65,8 @@ export default {
     return {
       collapse: false,
       site: {
-        name: "We-Blog",
-        description: "IBlog"
+        name: "Admin",
+        description: "Admin"
       }
     };
   },
@@ -77,7 +76,6 @@ export default {
       e.preventDefault();
       if (this.collapse) {
         document.body.classList.remove("sidebar-hidden");
-        this.siteName = "IBlog";
         this.collapse = false;
       } else {
         document.body.classList.add("sidebar-hidden");
@@ -94,7 +92,6 @@ export default {
   mounted: function() {
     if (!this.collapse) {
       document.body.classList.remove("sidebar-hidden");
-      this.siteName = "IBlog";
     } else {
       document.body.classList.add("sidebar-hidden");
     }
