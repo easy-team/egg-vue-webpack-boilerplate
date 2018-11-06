@@ -8,7 +8,7 @@
 - 统一 fetchApi 请求，内置国际化支持
 
 
-![截图](https://github.com/hubcarl/egg-vue-webpack-boilerplate/blob/element-admin/docs/images/egg-element-admin.png)
+![截图](https://github.com/easy-team/egg-vue-webpack-boilerplate/blob/element-admin/docs/egg-element-admin.png?raw=true)
 
 ## 使用
 
