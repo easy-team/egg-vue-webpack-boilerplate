@@ -9,12 +9,12 @@
 <style>
 </style>
 <script type='babel'>
-  import LayoutHeader from './header/header';
-  import LayoutContent from './content/content';
-  export default {
-    components: {
-      LayoutHeader,
-      LayoutContent
-    }
-  };
+import LayoutHeader from "./header/header";
+import LayoutContent from "./content/content";
+export default {
+  components: {
+    LayoutHeader,
+    LayoutContent
+  }
+};
 </script>
