@@ -31,7 +31,7 @@
 - Egg + Vue + Axios 多页面服务端渲染分支 [feature/green/multi](https://github.com/easy-team/egg-vue-webpack-boilerplate/tree/feature/green/multi)
 - Egg + Vue + vue-router + vuex + axios 单页面服务端渲染分支 [feature/green/spa](https://github.com/easy-team/egg-vue-webpack-boilerplate/tree/feature/green/spa)
 - Egg + Vue + vue-router + vuex + axios 单页面前端渲染分支 [element-admin](https://github.com/easy-team/egg-vue-webpack-boilerplate/tree/element-admin)
-- Egg + Vue + TypeScript 项目，请见项目 [ves-admin](https://github.com/easy-team) 
+- Egg + Vue + TypeScript 项目，请见项目 [ves-admin](https://github.com/easy-team/ves-admin) 
 
 以上项目，你可以通过 [easywebpack-cli](https://github.com/easy-team/easywebpack-cli) 初始化
 
@@ -421,19 +421,6 @@ exports.index = function* (ctx) {
 ```javascript
   app.get('/app(/.+)?', app.controller.app.app.index);
 ```
-
-
-## 7. 工程实例
-
-
-- 基于vue + axios 多页面服务器客户端同构入口: http://127.0.0.1:7001
-
-![多页面服务器渲染](https://github.com/easy-team/egg-vue-webpack-boilerplate/blob/master/docs/images/vue-mutil-page.png)
-
-
-- 基于vue + vuex + vue-router + axios 单页面服务器客户端同构入口: http://127.0.0.1:7001/app
-
-![单页面服务器](https://github.com/easy-team/egg-vue-webpack-boilerplate/blob/master/docs/images/vue-single-page.png)
 
 
 ## License
