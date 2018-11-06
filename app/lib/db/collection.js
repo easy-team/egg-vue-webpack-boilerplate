@@ -10,6 +10,9 @@ module.exports = class Collection {
   add(json) {
     return this.db.add(this.name, json);
   }
+  query(json) {
+    return this.db.query(this.name, json);
+  }
   update(where, json) {
     return this.db.update(this.name, where, json);
   }

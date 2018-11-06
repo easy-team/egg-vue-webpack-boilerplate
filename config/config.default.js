@@ -33,8 +33,8 @@ module.exports = app => {
     csrf: {
       ignoreJSON: false,
       cookieName: 'csrfToken',
-      sessionName: 'csrfToken',
-      headerName: 'x-csrf-token'
+      // sessionName: 'csrfToken',
+      // headerName: 'x-csrf-token'
     },
     xframe: {
       enable: false,

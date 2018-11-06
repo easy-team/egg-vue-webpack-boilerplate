@@ -1,9 +1,8 @@
 <template>
   <div style="height:100%">
      <header class="header">
-      <div class="logo">
-        <span class="big" v-if="this.collapse">{{ site.name }}</span>
-        <span class="min" v-else-if="!this.collapse">{{ site.description }}</span>
+      <div class="top-left-bar" :class="{ 'top-left-bar-hidden': collapse, 'top-left-bar-show': !collapse }">
+          <span>{{ collapse ? site.name : site.description }}</span>
       </div>
       <span class="header-btn" @click="sidebarToggle"><i class="el-icon-menu"></i></span>
       <div class="right">
@@ -41,15 +40,7 @@
     <LeftMenu :collapse="collapse"></LeftMenu>
   </div>
 </template>
-<style>
-.logo .big {
-  width: 64px;
-}
-.logo .min {
-  display: block;
-  width: 64px;
-}
-</style>
+<style></style>
 <script type="babel">
 import "./header.css";
 import LeftMenu from "../menu/index.vue";
@@ -62,7 +53,7 @@ export default {
       collapse: false,
       site: {
         name: "Admin",
-        description: "Admin"
+        description: "Egg-Element-Admin"
       }
     };
   },

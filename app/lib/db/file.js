@@ -25,6 +25,11 @@ module.exports = class FileDB extends Base {
       .push(json)
       .write();
   }
+  query(collectionName, json) {
+    return this.get(collectionName)
+      .find(json)
+      .write();
+  }
   update(collectionName, where, json) {
     return this.get(collectionName).find(where).assign(json).write();
   }

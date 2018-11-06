@@ -6,7 +6,7 @@
   background-color: #3c8dbc;
   z-index: 10;
 }
-.header .logo {
+.header .top-left-bar {
   width: 230px;
   height: 50px;
   text-align: center;
@@ -15,11 +15,15 @@
   background-color: #367fa9;
   -webkit-transition: width 0.35s;
   transition: width 0.35s;
+  font-size: 14px;
+}
+.header .top-left-bar-show {
+  width: 230px !important;
+}
+.header .top-left-bar-hidden {
+  width: 60px !important;
 }
 
-.header .logo .min {
-  display: none;
-}
 .header .right {
   position: absolute;
   right: 0;

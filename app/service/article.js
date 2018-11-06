@@ -8,7 +8,7 @@ module.exports = class ArticeService extends egg.Service {
     this.ctx = ctx;
     this.colllection = new Collection(ctx.db, 'article');
   }
-  getArtilceList(json = {}) {
+  async getArtilceList(json = {}) {
     const { title, categoryId, status, pageIndex, pageSize } = json;
     const query = new Query();
     query.where.categoryId = categoryId;
@@ -18,7 +18,7 @@ module.exports = class ArticeService extends egg.Service {
     query.pageSize = pageSize;
     return this.colllection.getPager(query);
   }
-  saveArticle(json) {
+  async saveArticle(json) {
     if (json.id) {
       return this.colllection.update({ id: json.id }, json);
     }
@@ -26,7 +26,10 @@ module.exports = class ArticeService extends egg.Service {
     this.colllection.add(json);
     return json.id;
   }
-  deleteArticle(id) {
+  async deleteArticle(id) {
     return this.colllection.delete({ id });
+  }
+  async query(json) {
+    return this.colllection.query(json);
   }
 };

@@ -16,7 +16,7 @@ const actions = {
   },
   SET_ARTICLE_DETAIL: (store, { id }) => {
     const { commit, dispatch, state } = store;
-    return request.get(`/admin/api/article/${id}`, store)
+    return request.get(`/admin/api/article/${id}`)
       .then(response => {
         commit(Type.SET_ARTICLE_DETAIL, response.data);
       });
