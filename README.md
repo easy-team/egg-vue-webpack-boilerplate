@@ -1,6 +1,6 @@
 # egg-vue-webpack-boilerplate
 
-基于 Egg + Vue + Webpack4 Server Side Render 工程项目，包括前台系统和后台管理系统
+基于 Egg + Vue + Webpack 工程项目，包括前台系统和后台管理系统
 
 ## 系统功能
 
@@ -8,7 +8,7 @@
 
 **采用 Egg + Vue 服务端渲染**
 
-![](https://github.com/easy-team/egg-typescript-element-kit/blob/master/docs/images/home.png)
+![](https://github.com/easy-team/egg-vue-webpack-boilerplate/blob/master/docs/images/iblog.png?raw=true)
 
 - 博客首页
 - 博客文章列表展示
@@ -19,7 +19,7 @@
 
 **采用 Egg + Vue + Vue-Router + Element 单页面服务端同构渲染**
 
-![](https://github.com/hubcarl/egg-typescript-element-kit/blob/master/docs/images/admin.png)
+![](https://github.com/hubcarl/egg-vue-webpack-boilerplate/blob/master/docs/images/admin.png?raw=true)
 
 - 用户登陆
 - 用户注册
@@ -32,9 +32,9 @@
 
 因该项目包含了多种实现, 提供多种例子实现，为防干扰, 特提供了两个纯净版本分支用于实际项目开发, 请自行选用。
 
-- Egg2 + Vue2 + Axios 多页面服务端渲染分支 [feature/green/multi](https://github.com/easy-team/egg-vue-webpack-boilerplate/tree/feature/green/multi)
-- Egg2 + Vue2 + vue-router + vuex + axios 单页面服务端渲染分支 [feature/green/spa](https://github.com/easy-team/egg-vue-webpack-boilerplate/tree/feature/green/spa)
-
+- Egg + Vue + Axios 多页面服务端渲染分支 [feature/green/multi](https://github.com/easy-team/egg-vue-webpack-boilerplate/tree/feature/green/multi)
+- Egg + Vue + vue-router + vuex + axios 单页面服务端渲染分支 [feature/green/spa](https://github.com/easy-team/egg-vue-webpack-boilerplate/tree/feature/green/spa)
+- Egg + Vue + vue-router + vuex + axios 单页面前端渲染分支 [element-admin](https://github.com/easy-team/egg-vue-webpack-boilerplate/tree/element-admin)
 
 ## 版本
 
