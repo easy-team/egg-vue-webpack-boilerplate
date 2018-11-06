@@ -8,5 +8,9 @@ export default {
   lang: {
     href: '/admin?locale=cn',
     text: 'English'
+  },
+  header: {
+    profile: 'Profile',
+    logout: 'Logout'
   }
 };

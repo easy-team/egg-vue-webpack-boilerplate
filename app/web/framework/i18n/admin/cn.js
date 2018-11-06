@@ -9,5 +9,9 @@ export default {
   lang: {
     href: '/admin?locale=en',
     text: '中文'
+  },
+  header: {
+    profile: '个人中心',
+    logout: '退出系统'
   }
 };

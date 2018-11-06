@@ -17,9 +17,9 @@ export default class App {
 
   create(initState) {
     const { index, options, createI18n, createStore, createRouter } = this.config;
-    const i18n = createI18n();
     const store = createStore(initState);
     const router = createRouter();
+    const i18n = createI18n(store.state.locale);
     sync(store, router);
     return {
       ...index,
