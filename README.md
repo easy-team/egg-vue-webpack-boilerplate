@@ -11,9 +11,8 @@
 ![](https://github.com/easy-team/egg-vue-webpack-boilerplate/blob/master/docs/images/iblog.png?raw=true)
 
 - 博客首页
-- 博客文章列表展示
-- 博客文章详情页面
-- 博客分类浏览
+- 文章列表
+- 文章详情
 
 ### 后台管理系统 http://localhost:7001/admin
 
@@ -21,12 +20,9 @@
 
 ![](https://github.com/hubcarl/egg-vue-webpack-boilerplate/blob/master/docs/images/admin.png?raw=true)
 
-- 用户登陆
-- 用户注册
 - Dashboard
+- Markdown
 - 文章管理
-- Markdown添加文章 
-- 权限管理
 
 ## 纯净版
 
@@ -35,21 +31,21 @@
 - Egg + Vue + Axios 多页面服务端渲染分支 [feature/green/multi](https://github.com/easy-team/egg-vue-webpack-boilerplate/tree/feature/green/multi)
 - Egg + Vue + vue-router + vuex + axios 单页面服务端渲染分支 [feature/green/spa](https://github.com/easy-team/egg-vue-webpack-boilerplate/tree/feature/green/spa)
 - Egg + Vue + vue-router + vuex + axios 单页面前端渲染分支 [element-admin](https://github.com/easy-team/egg-vue-webpack-boilerplate/tree/element-admin)
+- Egg + Vue + TypeScript 项目，请见项目 [ves-admin](https://github.com/easy-team) 
+
+以上项目，你可以通过 [easywebpack-cli](https://github.com/easy-team/easywebpack-cli) 初始化
 
 ## 版本
 
 - Egg 版本： ^2.x.x
-- Node 版本: Node ^8.x.x+,  Node 6.x.x 版本请见 [Egg 1.0 + Node6分支](https://github.com/easy-team/egg-vue-webpack-boilerplate/tree/node6)
-- Webpack 版本: ^4.x.x, 对应 `easywebpack-vue` 版本为 ^4.x.x; Webpack3 版本项目骨架请见 `webpack3` 分支, 对应 `easywebpack-react` 版本为 3.x.x
+- Node 版本: ^8.x.x+
 - Vue 版本: ^2.5.0
+- Webpack 版本: ^4.x.x, 对应 `easywebpack-vue` 版本为 ^4.x.x; Webpack3 版本项目骨架请见 `webpack3` 分支, 对应 `easywebpack-react` 版本为 3.x.x
 
 ## 说明 
 
-- Egg + TypeScript 已初步支持， 包括 Node 端 typescript 编写 和 前端 TypeScript编写, 具体请见(https://github.com/easy-team/egg-vue-typescript-boilerplate)项目
-- 项目开发之前, 请阅读[Egg + Vue 服务端渲染开发指南](https://zhuanlan.zhihu.com/p/30445536) 和 [Egg + Vue 服务端渲染工程化实现](https://zhuanlan.zhihu.com/p/29838551)
-- 版本变更情况请看发布版本说明[RELEASE](RELEASE.md) 
-- 如果你需要了解 Egg+Vue+Webpack 项目更多信息，请扫以下二维码加好友，请备注：Node.js
-- 骨架功能性需求或者Bug问题, 欢迎大家 PR 完善
+- 项目开发之前, 请阅读[Egg + Vue 解决方案](https://www.yuque.com/easy-team/egg-vue)
+- 如果你需要了解 Egg+ Vue + Webpack 项目更多信息，请扫以下二维码加好友，请备注：Node.js。 骨架功能性需求或者 Bug 问题, 欢迎大家 PR 完善。
 
 ![hubcarl](https://avatars3.githubusercontent.com/u/4983042?v=4&u=0befb64a57a7911c630b7f97df5632385b08da2a&s=250)
 
@@ -71,17 +67,17 @@
 
 - 基于 vue + vuex + vue-router + axios 单页面服务器客户端同构实现
 
-- 基于 easywebpack 基础配置, 使用 es6 class 继承方式编写webpack配置 和 cli 构建
+- 基于 easywebpack 基础配置, 使用 es6 class 继承方式编写 webpack 配置 和 cli 构建
 
 - 支持 js/css/image 资源依赖, 内置支持CDN特性, 支持 css/sass/less 样式编写
 
-- 支持根据 .vue 文件自动创建 webpack entry 入口文件
+- 支持根据 .vue 文件自动创建 Webpack Entry 入口文件
 
 - 开始支持多进程编译， 支持 webpack dll 自动化构建, 与多进程编译结合，构建速度减少 2/3
 
 - 支持Vue组件异步加载, 具体实例请看[app/web/page/dynamic](app/web/page/dynamic)
 
-- Node 8 版本的async和await特性, Controller 采用 class 方式编写
+- Node 8 版本的 async 和 await 特性, Controller 采用 class 方式编写
 
 - 支持 service worker 构建和使用
 
