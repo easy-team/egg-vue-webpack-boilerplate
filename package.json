@@ -21,7 +21,7 @@
     "egg-logger": "^1.5.0",
     "egg-scripts": "^2.5.1",
     "egg-validate": "^1.0.0",
-    "egg-view-vue-ssr": "^3.0.5",
+    "egg-view-vue-ssr": "^3.2.0",
     "element-ui": "^2.0.8",
     "extend": "~3.0.0",
     "font-awesome": "^4.7.0",

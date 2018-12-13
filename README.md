@@ -30,8 +30,9 @@
 
 - Egg + Vue + Axios 多页面服务端渲染分支 [feature/green/multi](https://github.com/easy-team/egg-vue-webpack-boilerplate/tree/feature/green/multi)
 - Egg + Vue + vue-router + vuex + axios 单页面服务端渲染分支 [feature/green/spa](https://github.com/easy-team/egg-vue-webpack-boilerplate/tree/feature/green/spa)
-- Egg + Vue + vue-router + vuex + axios 单页面前端渲染分支 [element-admin](https://github.com/easy-team/egg-vue-webpack-boilerplate/tree/element-admin)
-- Egg + Vue + TypeScript 项目，请见项目 [ves-admin](https://github.com/easy-team/ves-admin) 
+- Egg + Vue + vue-router + vuex + axios 前端渲染 asset 方案 [feature/green/asset](https://github.com/easy-team/egg-vue-webpack-boilerplate/tree/feature/green/asset)
+- Egg + Vue + vue-router + vuex + axios 前端渲染一体化方案 [element-admin](https://github.com/easy-team/egg-vue-webpack-boilerplate/tree/element-admin)
+- Egg + Vue + TypeScript 项目，请见项目 [egg-vue-typescript-boilerplate](https://github.com/easy-team/egg-vue-typescript-boilerplate) 和 [ves-admin](https://github.com/easy-team/ves-admin) 
 
 以上项目，你可以通过 [easywebpack-cli](https://github.com/easy-team/easywebpack-cli) 初始化
 
