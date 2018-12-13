@@ -29,4 +29,7 @@ module.exports = class ArticeService extends egg.Service {
   deleteArticle(id) {
     return this.colllection.delete({ id });
   }
+  query(json) {
+    return this.colllection.query(json);
+  }
 };

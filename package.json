@@ -1,13 +1,13 @@
 {
-  "name": "egg-vue-webpack-boilerplate",
-  "version": "4.4.6",
-  "description": "基于 easywebpack-vue 和 egg-view-vue-ssr 插件的 egg + vue 服务端渲染同构工程骨架项目",
+  "name": "egg-vue-asset-boilerplate",
+  "version": "1.0.0",
+  "description": "egg + vue asset 前端渲染骨架项目",
   "scripts": {
     "dev": "egg-bin dev",
     "start": "egg-scripts start",
     "debug": "egg-bin debug",
     "clean": "easy clean all",
-    "build": "easywebpack build prod",
+    "build": "easy build",
     "lint": "eslint .",
     "fix": "eslint --fix .",
     "ii": "npm install --registry https://registry.npm.taobao.org"
@@ -21,6 +21,7 @@
     "egg-logger": "^1.5.0",
     "egg-scripts": "^2.5.1",
     "egg-validate": "^1.0.0",
+    "egg-view-nunjucks": "^2.2.0",
     "egg-view-vue-ssr": "^3.0.5",
     "element-ui": "^2.0.8",
     "extend": "~3.0.0",

@@ -1,12 +1,8 @@
 'use strict';
 const egg = require('egg');
 module.exports = class AdminController extends egg.Controller {
-  async login(ctx) {
-    await ctx.renderClient('admin/login/login.js', {});
-  }
   async home(ctx) {
-    const url = ctx.url.replace(/\/admin/, '');
-    await ctx.render('admin/home/home.js', { ctx, url });
+    await ctx.renderAsset('admin.js', { title: 'egg-vue-asset', url: ctx.path });
   }
   async list(ctx) {
     this.ctx.body = ctx.service.article.getArtilceList(ctx.request.body);
@@ -19,7 +15,7 @@ module.exports = class AdminController extends egg.Controller {
     ctx.body = this.service.article.deleteArticle(id);
   }
   async detail(ctx) {
-    const id = ctx.query.id;
-    ctx.body = {};
+    const { id } = ctx.params;
+    ctx.body = await ctx.service.article.query({ id: Number(id) });
   }
 };

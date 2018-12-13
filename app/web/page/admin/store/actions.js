@@ -10,20 +10,20 @@ Vue.use(Vuex);
 const actions = {
 
   SET_ARTICLE_LIST: (store, json) => {
-    return request.post('/admin/api/article/list', json, store).then(response => {
+    return request.post('/api/article/list', json, store).then(response => {
       store.commit(Type.SET_ARTICLE_LIST, response.data);
     });
   },
   SET_ARTICLE_DETAIL: (store, { id }) => {
     const { commit, dispatch, state } = store;
-    return request.get(`/admin/api/article/${id}`, store)
+    return request.get(`/api/article/${id}`, store)
       .then(response => {
         commit(Type.SET_ARTICLE_DETAIL, response.data);
       });
   },
   SET_SAVE_ARTICLE: (store, json) => {
     const { commit, dispatch, state } = store;
-    return request.post('/admin/api/article/add', json, store).then(response => {
+    return request.post('/api/article/add', json, store).then(response => {
       commit(Type.SET_SAVE_ARTICLE, json);
     });
   },

@@ -9,7 +9,7 @@ Vue.use(VueRouter);
 export default function createRouter() {
   return new VueRouter({
     mode: 'history',
-    base: '/admin/',
+    base: '/',
     routes: [
       {
         path: '/',

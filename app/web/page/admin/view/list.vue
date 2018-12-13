@@ -80,7 +80,7 @@
               @size-change="handleSizeChange"
               @current-change="handleCurrentChange"
               :current-page="q.pageIndex"
-              :page-sizes="[10, 15, 20, 50]"
+              :page-sizes="[8, 15, 20, 50]"
               :page-size="q.pageSize"
               layout="total, sizes, prev, pager, next, jumper"
               :total="total">
@@ -93,7 +93,7 @@
 
 </style>
 <script type="babel">
-import { SET_ARTICLE_LIST, DELETE_ARTICLE } from '../store/app/mutation-type';
+import { SET_ARTICLE_LIST, DELETE_ARTICLE } from '../store/mutation-type';
 export default {
   components: {},
   data() {
@@ -103,7 +103,7 @@ export default {
         categoryId: undefined,
         statusId: undefined,
         pageIndex: 1,
-        pageSize: 10
+        pageSize: 8
       },
       //请求时的loading效果
       loading: false,
@@ -179,11 +179,6 @@ export default {
     },
     articleList() {
       return this.$store.state.articleList;
-    }
-  },
-  beforeMount() {
-    if (!(this.articleList && this.articleList.length > 0)) {
-      this.fetchApi(this.$store, this.q);
     }
   }
 };

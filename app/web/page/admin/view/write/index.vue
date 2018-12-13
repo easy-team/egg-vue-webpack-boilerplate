@@ -21,7 +21,7 @@
 }
 </style>
 <script type="babel">
-import { SET_SAVE_ARTICLE } from '../../store/app/mutation-type';
+import { SET_SAVE_ARTICLE } from '../../store/mutation-type';
 export default {
   components: {
     MarkdownEditor: () => import("component/MarkdownEditor/index.vue")
