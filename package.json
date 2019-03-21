@@ -1,5 +1,5 @@
 {
-  "name": "egg-vue-element-admin-boilerplate",
+  "name": "easy-element-admin",
   "version": "1.0.0",
   "description": "基于 Egg + Vue + Webpack ＋ Element 单页面管理系统骨架",
   "scripts": {

@@ -1,4 +1,4 @@
-# egg-vue-element-admin-boilerplate
+# easy-element-admin
 
 基于 Egg + Vue + Webpack ＋ Element 单页面管理系统骨架
 
