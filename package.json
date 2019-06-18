@@ -1,6 +1,6 @@
 {
   "name": "egg-vue-webpack-spa-boilerplate",
-  "version": "4.2.1",
+  "version": "4.2.2",
   "description": "基于 easywebpack-vue 和 egg-view-vue-ssr 插件的 egg + vue 服务端渲染单页面同构工程骨架项目",
   "scripts": {
     "debug": "egg-bin debug",
@@ -13,7 +13,7 @@
     "ii": "npm install --registry https://registry.npm.taobao.org"
   },
   "dependencies": {
-    "axios": "^0.17.1",
+    "axios": "^0.18.1",
     "cross-env": "^5.0.0",
     "egg": "^2.1.0",
     "egg-bin": "^4.3.7",
