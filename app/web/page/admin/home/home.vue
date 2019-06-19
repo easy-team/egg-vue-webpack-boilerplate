@@ -1,5 +1,5 @@
 <template>
-  <AdminLayout>
+  <AdminLayout :title="title">
     <transition name="fade" mode="out-in">
       <router-view></router-view>
     </transition>
@@ -24,7 +24,16 @@ export default {
   components: {
     AdminLayout,
   },
-  computed: {},
+  // data() {
+  //   return {
+  //     title: this.$store.state.title
+  //   }
+  // },
+  computed: {
+    title() {
+      return this.$store.state.title;
+    }
+  },
   hook :{
     render(context, options) {
       const i18n = createI18n(context.state.locale);

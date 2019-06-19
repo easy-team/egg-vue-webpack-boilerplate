@@ -6,7 +6,7 @@ module.exports = class AdminController extends egg.Controller {
   }
   async home(ctx) {
     const url = ctx.url.replace(/\/admin/, '');
-    await ctx.render('admin/home/home.js', { ctx, url });
+    await ctx.render('admin/home/home.js', { ctx, url, title: 'easy-admin' });
   }
   async list(ctx) {
     this.ctx.body = ctx.service.article.getArtilceList(ctx.request.body);
