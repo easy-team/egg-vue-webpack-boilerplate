@@ -58,9 +58,9 @@
 
 ## 1.特性
 
-- 支持服务端渲染, 前端渲染, 静态页面渲染三种方式,
+- 支持服务端渲染(Server Side Render), 前端渲染, 静态页面渲染三种方式,
 
-- 支持单页面, 多页面服务端渲染, 前端渲染模式
+- 支持单页面(SPA), 多页面服务端渲染, 前端渲染模式
 
 - 支持 server 和 client 端代码修改, webpack 时时编译和热更新, `npm run dev` 一键启动应用
 
@@ -68,21 +68,17 @@
 
 - 基于 vue + vuex + vue-router + axios 单页面服务器客户端同构实现
 
-- 基于 easywebpack 基础配置, 使用 es6 class 继承方式编写 webpack 配置 和 cli 构建
-
-- 支持 js/css/image 资源依赖, 内置支持CDN特性, 支持 css/sass/less 样式编写
+- 支持 js/css/image 资源依赖, 内置支持 CDN 特性, 支持 css/sass/less 样式编写
 
 - 支持根据 .vue 文件自动创建 Webpack Entry 入口文件
 
-- 开始支持多进程编译， 支持 webpack dll 自动化构建, 与多进程编译结合，构建速度减少 2/3
+- 开始支持多进程和缓存编译， 支持 webpack dll 自动化构建, 与多进程编译结合，构建速度减少 2/3
 
-- 支持Vue组件异步加载, 具体实例请看[app/web/page/dynamic](app/web/page/dynamic)
+- 支持 Vue 组件 import 异步加载, 具体实例请看[app/web/page/dynamic](app/web/page/dynamic)
 
-- Node 8 版本的 async 和 await 特性, Controller 采用 class 方式编写
+- 支持服务端渲染失败时，自动降级为前端渲染模式
 
-- 支持 service worker 构建和使用
-
-- 提供 i18n 多语言示例
+- 提供 i18n 多语言支持方案
 
 
 ## 2.依赖
@@ -160,7 +156,6 @@ exports.webpack = {
 exports.webpack = {
   webpackConfigList: [
     require(path.join(app.baseDir, 'build/client')), // http://127.0.0.1:9000
-    require(path.join(app.baseDir, 'build/server')), // http://127.0.0.1:9001
   ]
 };
 ```
