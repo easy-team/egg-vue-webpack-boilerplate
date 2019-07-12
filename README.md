@@ -1,6 +1,6 @@
 # egg-vue-webpack-boilerplate
 
-基于 Egg + Vue + Webpack 工程项目，包括前台系统和后台管理系统
+基于 Egg + Vue + Webpack 服务端渲染工程骨架项目，包括前台系统(SSR)和后台管理系统(SPA)
 
 ## 系统功能
 
