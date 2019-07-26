@@ -39,7 +39,7 @@ export default function createLayout(name, components, tpl) {
                       <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
                     </head>
                     <body :class="baseClass">
-                      ${tpl}
+                      <div id="app"></div>
                     </body>
                   </html>`,
     install(vue, options) {
