@@ -18,7 +18,7 @@ export default function createLayout(name, components, tpl) {
         return this.$root.baseClass;
       }
     },
-    template: EASY_ENV_IS_BROWSER ? tpl : `<!DOCTYPE html>
+    template: EASY_ENV_IS_BROWSER ?  tpl : `<!DOCTYPE html>
                   <html lang="en">
                     <head>
                       <title>{{vTitle}}</title>
@@ -39,7 +39,7 @@ export default function createLayout(name, components, tpl) {
                       <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
                     </head>
                     <body :class="baseClass">
-                      <div id="app"></div>
+                      <div id="app">${tpl}</div>
                     </body>
                   </html>`,
     install(vue, options) {
