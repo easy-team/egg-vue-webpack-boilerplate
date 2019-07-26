@@ -1,7 +1,7 @@
 
 import MainLayout from './main';
 
-const content = '<div id="app"><MainLayout><div slot="main"><slot></slot></div></MainLayout></div>';
+const content = '<div><MainLayout><div slot="main"><slot></slot></div></MainLayout></div>';
 
 const template = `<!DOCTYPE html>
 <html lang="en">
