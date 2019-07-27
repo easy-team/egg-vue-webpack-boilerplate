@@ -37,17 +37,6 @@
       "createTime": 1515671348290
     },
     {
-      "id": 4,
-      "title": "axios-基于 Promise 的 HTTP 请求客户端",
-      "summary": "基于 Promise 的 HTTP 请求客户端，可同时在浏览器和 node.js 中使用",
-      "hits": 998,
-      "url": "https://www.awesomes.cn/repo/mzabriskie/axios",
-      "tag": "egg,vue,webpack",
-      "categoryId": 1,
-      "authorId": 1,
-      "createTime": 1515671348293
-    },
-    {
       "id": 5,
       "title": "Centralized State Management for Vue.js",
       "summary": "Vuex 是一个专为Vue.js 应用程序开发的状态管理模式",
@@ -202,17 +191,6 @@
       "categoryId": 1,
       "authorId": 1,
       "createTime": 1515671348322
-    },
-    {
-      "id": 19,
-      "title": "axios-基于 Promise 的 HTTP 请求客户端",
-      "summary": "基于 Promise 的 HTTP 请求客户端，可同时在浏览器和 node.js 中使用",
-      "hits": 998,
-      "url": "https://www.awesomes.cn/repo/mzabriskie/axios",
-      "tag": "egg,vue,webpack",
-      "categoryId": 1,
-      "authorId": 1,
-      "createTime": 1515671348324
     },
     {
       "id": 20,
@@ -371,17 +349,6 @@
       "createTime": 1515671348338
     },
     {
-      "id": 34,
-      "title": "axios-基于 Promise 的 HTTP 请求客户端",
-      "summary": "基于 Promise 的 HTTP 请求客户端，可同时在浏览器和 node.js 中使用",
-      "hits": 998,
-      "url": "https://www.awesomes.cn/repo/mzabriskie/axios",
-      "tag": "egg,vue,webpack",
-      "categoryId": 1,
-      "authorId": 1,
-      "createTime": 1515671348339
-    },
-    {
       "id": 35,
       "title": "Centralized State Management for Vue.js",
       "summary": "Vuex 是一个专为Vue.js 应用程序开发的状态管理模式",
@@ -536,17 +503,6 @@
       "categoryId": 1,
       "authorId": 1,
       "createTime": 1515671348346
-    },
-    {
-      "id": 49,
-      "title": "axios-基于 Promise 的 HTTP 请求客户端",
-      "summary": "基于 Promise 的 HTTP 请求客户端，可同时在浏览器和 node.js 中使用",
-      "hits": 998,
-      "url": "https://www.awesomes.cn/repo/mzabriskie/axios",
-      "tag": "egg,vue,webpack",
-      "categoryId": 1,
-      "authorId": 1,
-      "createTime": 1515671348347
     },
     {
       "id": 50,

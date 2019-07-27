@@ -4,13 +4,13 @@
       <div class="row" v-for="item in lists" :key="item.id">
         <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
           <div class="post-preview">
-              <a :href="item.url">
+              <div :href="item.url">
                   <h2 class="post-title">            
                       <a :href="item.url" target="_blank" style="font-size: 26px;">{{item.title}}</a>
                   </h2>
                   <div class="post-content-preview">{{item.summary}}</div>
-              </a>
-              <p class="post-meta">Posted by hubcarl on 17-09-24</p>
+              </div>
+              <div class="post-meta">Posted by hubcarl on 17-09-24</div>
           </div>
           <hr>
         </div>
