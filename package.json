@@ -1,13 +1,13 @@
 {
   "name": "egg-vue-webpack-boilerplate",
-  "version": "4.4.8",
+  "version": "4.5.0",
   "description": "基于 easywebpack-vue 和 egg-view-vue-ssr 插件的 egg + vue 服务端渲染同构工程骨架项目",
   "scripts": {
     "dev": "egg-bin dev",
     "start": "egg-scripts start",
     "debug": "egg-bin debug",
     "clean": "easy clean all",
-    "build": "easywebpack build prod",
+    "build": "easy build prod",
     "lint": "eslint .",
     "fix": "eslint --fix .",
     "ii": "npm install --registry https://registry.npm.taobao.org"
@@ -42,6 +42,14 @@
     "vuex-router-sync": "^5.0.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "babel-loader": "^8.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-transform-object-assign": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
     "autod-egg": "^1.0.0",
     "easywebpack-cli": "^4.0.0",
     "easywebpack-vue": "^4.2.0",
