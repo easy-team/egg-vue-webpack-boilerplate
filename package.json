@@ -25,6 +25,7 @@
     "element-ui": "^2.0.8",
     "extend": "~3.0.0",
     "font-awesome": "^4.7.0",
+    "iview": "^3.4.2",
     "lodash": "^4.17.4",
     "lodash-id": "^0.14.0",
     "lowdb": "^1.0.0",
@@ -43,7 +44,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
-    "babel-loader": "^8.0.0",
     "@babel/plugin-proposal-class-properties": "^7.0.0",
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
@@ -51,6 +51,7 @@
     "@babel/plugin-transform-runtime": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "autod-egg": "^1.0.0",
+    "babel-loader": "^8.0.0",
     "easywebpack-cli": "^4.0.0",
     "easywebpack-vue": "^4.2.0",
     "egg-logview": "^1.0.0",
@@ -59,7 +60,8 @@
     "eslint": "^4.19.1",
     "eslint-config-egg": "^5.0.0",
     "eslint-plugin-vue": "^4.4.0",
-    "ip": "^1.1.5"
+    "ip": "^1.1.5",
+    "iview-loader": "^1.2.2"
   },
   "engines": {
     "node": ">=8.0.0"

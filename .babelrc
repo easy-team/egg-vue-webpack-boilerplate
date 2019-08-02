@@ -14,7 +14,11 @@
       ],
       "plugins": [
         "@babel/plugin-proposal-object-rest-spread",
-        "@babel/plugin-syntax-dynamic-import"
+        "@babel/plugin-syntax-dynamic-import",
+        ["import", {
+          "libraryName": "iview",
+          "libraryDirectory": "src/components"
+        }]
       ]
     },
     "web": {
@@ -35,7 +39,11 @@
       "plugins": [
         "@babel/plugin-proposal-object-rest-spread",
         "@babel/plugin-syntax-dynamic-import",
-        "@babel/plugin-transform-object-assign"
+        "@babel/plugin-transform-object-assign",
+        ["import", {
+          "libraryName": "iview",
+          "libraryDirectory": "src/components"
+        }]
       ]
     }
   },
