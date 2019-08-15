@@ -1,5 +1,8 @@
 # egg-vue-webpack-boilerplate
 
+> 功能性需求或者Bug问题, 欢迎大家 PR 完善, 如果你需要了解更多信息，请加QQ群: 433207205(备注：Node.js).
+
+
 基于 Egg + Vue + Webpack 服务端渲染工程骨架项目，包括前台系统(SSR)和后台管理系统(SPA)。 如果要深入了解，建议请先阅读 https://www.yuque.com/easy-team/egg-vue 专题。
 
 ## 系统功能
