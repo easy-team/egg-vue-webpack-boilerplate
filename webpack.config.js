@@ -3,5 +3,8 @@
 module.exports = {
   plugins: {
     imagemini: false
+  },
+  deploy: {
+    source: ['blog.json'],
   }
 };

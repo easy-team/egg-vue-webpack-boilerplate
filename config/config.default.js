@@ -12,7 +12,15 @@ module.exports = app => {
     layout: path.join(app.baseDir, 'app/web/view/layout.html'),
     renderOptions: {
       basedir: path.join(app.baseDir, 'app/view')
-    }
+    },
+    injectRes:[
+      {
+        url: 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css'
+      },
+      {
+        url: 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js'
+      }
+    ]
   };
 
   exports.logger = {
