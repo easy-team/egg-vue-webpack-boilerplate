@@ -1,6 +1,6 @@
 # egg-vue-asset-boilerplate
 
-基于 Egg + Vue + Webpack 前端 asset 工程项目，开发前请阅读[asset渲染模式](https://www.yuque.com/easy-team/egg-vue/asset)
+基于 Egg + Vue + Webpack 纯HTML前端工程项目，开发前请阅读[HTML渲染模式](https://www.yuque.com/easy-team/egg-vue/html)
 
 ## 功能
 

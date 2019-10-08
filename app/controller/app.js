@@ -2,7 +2,8 @@
 const egg = require('egg');
 module.exports = class AdminController extends egg.Controller {
   async home(ctx) {
-    await ctx.renderAsset('index.js', { title: 'egg-vue-asset', url: ctx.path });
+    const { locale = 'cn' } = ctx.query;
+    await ctx.render('app.tpl', { title: '基于 Egg + Vue + Webpack 纯HTML前端工程项目', url: ctx.path, locale });
   }
   async list(ctx) {
     this.ctx.body = ctx.service.article.getArtilceList(ctx.request.body);

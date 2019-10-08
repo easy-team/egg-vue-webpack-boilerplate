@@ -1,5 +1,5 @@
 'use strict';
-import App from 'framework/app';
+import App from '../../framework/app';
 import createStore from './store/index';
 import createRouter from './router/index';
 import createI18n from './i18n/index';

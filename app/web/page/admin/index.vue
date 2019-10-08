@@ -10,7 +10,7 @@ import Vue from 'vue';
 import ElementUI from 'element-ui';
 import VueI18n from 'vue-i18n';
 import 'element-ui/lib/theme-chalk/index.css';
-import layout from 'component/layout/admin/index.vue';
+import layout from './component/layout/index.vue';
 
 Vue.use(VueI18n);
 Vue.use(ElementUI);

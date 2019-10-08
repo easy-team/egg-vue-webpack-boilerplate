@@ -1,7 +1,7 @@
 {
-  "name": "egg-vue-asset-boilerplate",
-  "version": "2.0.0",
-  "description": "egg + vue asset 前端渲染骨架项目",
+  "name": "egg-vue-html-boilerplate",
+  "version": "1.0.0",
+  "description": "egg + vue HTML 纯前端项目骨架",
   "scripts": {
     "dev": "egg-bin dev",
     "start": "egg-scripts start",
@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "axios": "^0.17.1",
-    "cross-env": "^5.0.0",
     "egg": "^2.1.0",
     "egg-bin": "^4.3.7",
     "egg-cors": "^2.0.0",
@@ -23,7 +22,6 @@
     "egg-scripts": "^2.5.1",
     "egg-validate": "^1.0.0",
     "egg-view-nunjucks": "^2.2.0",
-    "egg-view-vue-ssr": "^3.0.5",
     "element-ui": "^2.0.8",
     "extend": "~3.0.0",
     "font-awesome": "^4.7.0",

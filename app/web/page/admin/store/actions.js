@@ -3,7 +3,7 @@
 import * as Type from './mutation-type';
 import Vue from 'vue';
 import Vuex from 'vuex';
-import request from 'framework/network/request';
+import request from '../../../framework/request';
 
 Vue.use(Vuex);
 
