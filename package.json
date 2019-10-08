@@ -1,6 +1,6 @@
 {
   "name": "egg-vue-asset-boilerplate",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "egg + vue asset 前端渲染骨架项目",
   "scripts": {
     "dev": "egg-bin dev",
@@ -10,6 +10,7 @@
     "build": "easy build",
     "lint": "eslint .",
     "fix": "eslint --fix .",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "ii": "npm install --registry https://registry.npm.taobao.org"
   },
   "dependencies": {
@@ -44,21 +45,22 @@
   },
   "devDependencies": {
     "autod-egg": "^1.0.0",
-    "easywebpack-cli": "^4.0.0",
-    "easywebpack-vue": "^4.2.0",
+    "@easy-team/easywebpack-cli": "^4.0.0",
+    "@easy-team/easywebpack-vue": "^4.0.0",
     "egg-logview": "^1.0.0",
     "egg-webpack": "^4.4.1",
     "egg-webpack-vue": "^2.0.0",
     "eslint": "^4.19.1",
     "eslint-config-egg": "^5.0.0",
     "eslint-plugin-vue": "^4.4.0",
+    "imagemin-webpack-plugin": "^2.0.0",
     "ip": "^1.1.5"
   },
   "engines": {
     "node": ">=8.0.0"
   },
   "ci": {
-    "version": "8, 10"
+    "version": "8, 10, 12"
   },
   "repository": {
     "type": "git",

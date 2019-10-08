@@ -2,7 +2,7 @@
 const egg = require('egg');
 module.exports = class AdminController extends egg.Controller {
   async home(ctx) {
-    await ctx.renderAsset('admin.js', { title: 'egg-vue-asset', url: ctx.path });
+    await ctx.renderAsset('index.js', { title: 'egg-vue-asset', url: ctx.path });
   }
   async list(ctx) {
     this.ctx.body = ctx.service.article.getArtilceList(ctx.request.body);

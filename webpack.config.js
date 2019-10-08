@@ -3,10 +3,6 @@
 module.exports = {
   target: 'web',
   entry: {
-    admin: 'app/web/page/admin/index.js'
-  },
-  plugins: {
-    extract: true,
-    imagemini: false
+    index: 'app/web/page/admin/index.js'
   }
 };
