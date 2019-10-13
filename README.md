@@ -98,7 +98,7 @@
 #### 3.1 安装cli(非必需)
 
 ```bash
-npm install easywebpack-cli -g
+npm install @easy-team/easywebpack-cli -g
 ```
 
 ^3.5.0 开始， `easywebpack-cli` 已内置 `devDependencies` 中, 无需安装。如果你需要在命令行使用 `easy` 命令, 可以单独全局安装。
