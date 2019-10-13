@@ -1,3 +1,22 @@
+# [4.6.0](https://github.com/easy-team/egg-vue-webpack-boilerplate/compare/4.4.6...4.6.0) (2019-10-13)
+
+
+### Bug Fixes
+
+* server side render hydrate not effective ([8ef6aa8](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/8ef6aa8))
+* server side render hydrate not effective ([7f1192f](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/7f1192f))
+
+
+### Features
+
+* add inject css and js demo ([11b6083](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/11b6083))
+* inject script tag demoe ([713fb43](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/713fb43))
+* load component on demand ([c95aecd](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/c95aecd))
+* set title ([fb99718](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/fb99718))
+* use easy-team mode ([36d74e3](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/36d74e3))
+
+
+
 # [4.5.0](https://github.com/easy-team/egg-vue-webpack-boilerplate/compare/4.4.6...4.5.0) (2019-08-02)
 
 
