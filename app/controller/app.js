@@ -1,8 +1,13 @@
 const Model = require('../mocks/article/list');
 const Controller = require('egg').Controller;
 class AppController extends Controller {
-  async index() {
-    await this.ctx.render('app.js', { url: this.ctx.url });
+  async index(ctx) {
+    const { mode } = ctx.query;
+    if (mode === 'csr') {
+      await this.ctx.renderClient('app.js', { url: this.ctx.url });
+    } else  {
+      await this.ctx.render('app.js', { url: this.ctx.url });
+    }
   }
 
   async list() {

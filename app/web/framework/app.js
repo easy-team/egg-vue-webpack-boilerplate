@@ -31,14 +31,29 @@ export default class App {
   client() {
     Vue.prototype.$http = require('axios');
     const options = this.create(window.__INITIAL_STATE__);
+    const { router, store } = options;
+    router.beforeEach((route, redirec, next) => {
+      next();
+    });
+    router.afterEach((route, redirec) => {
+      console.log('>>afterEach', route);
+      if (route.matched && route.matched.length) {
+        const asyncData = route.matched[0].components.default.asyncData;
+        if (asyncData) {
+          asyncData(store);
+        }
+      }
+    });
     const app = new Vue(options);
-    app.$mount('#app');
+    const root = document.getElementById('app');
+    const hydrate = root.childNodes.length > 0;
+    app.$mount('#app', hydrate);
     return app;
   }
 
   server() {
     return context => {
-      const options = this.create();
+      const options = this.create(context.state);
       const { store, router } = options;
       router.push(context.state.url);
       return new Promise((resolve, reject) => {
@@ -49,8 +64,8 @@ export default class App {
           }
           return Promise.all(
             matchedComponents.map(component => {
-              if (component.preFetch) {
-                return component.preFetch(store);
+              if (component.asyncData) {
+                return component.asyncData(store);
               }
               return null;
             })

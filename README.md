@@ -11,9 +11,10 @@
 
 ## 1.特性
 
-- 支持 server 和 client 端代码修改, webpack 时时编译和热更新, `npm start` 一键启动应用
 
 - 基于 vue + vuex + vue-router + axios 单页面服务器客户端同构实现
+
+- 支持 server 和 client 端代码修改, webpack 时时编译和热更新, `npm start` 一键启动应用
 
 - 支持开发环境, 测试环境，正式环境 webpack 编译
  

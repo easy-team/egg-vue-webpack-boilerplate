@@ -49,15 +49,8 @@
         return this.$store.state.articleList;
       }
     },
-    preFetch ({ state, dispatch, commit }) {
-      return Promise.all([
-        dispatch('FETCH_ARTICLE_LIST')
-      ])
-    },
-    beforeMount() {
-      return Promise.all([
-        this.$store.dispatch('FETCH_ARTICLE_LIST')
-      ]);
+    asyncData ({ state, dispatch, commit }) {
+      return dispatch('FETCH_ARTICLE_LIST')
     }
   }
 </script>

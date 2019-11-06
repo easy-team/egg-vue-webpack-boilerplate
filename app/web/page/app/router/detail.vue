@@ -14,17 +14,9 @@
         return this.$store.state.article;
       }
     },
-    preFetch({ state, dispatch, commit }) {
+    asyncData({ state, dispatch, commit }) {
       const { id } = state.route.params;
-      return Promise.all([
-        dispatch('FETCH_ARTICLE_DETAIL', { id })
-      ]);
-    },
-    beforeMount() {
-      const { id } = this.$store.state.route.params;
-      return Promise.all([
-        this.$store.dispatch('FETCH_ARTICLE_DETAIL', { id })
-      ]);
+      return dispatch('FETCH_ARTICLE_DETAIL', { id })
     }
   }
 </script>

@@ -10,10 +10,10 @@
       <link href="/public/asset/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
-      <div id="app"><div><MainLayout><div slot="main"><slot></slot></div></MainLayout></div></div>    
+      <div id="app"><MainLayout><div slot="main"><slot></slot></div></MainLayout></div>    
     </body>
   </html>
-  <div v-else-if="!isNode"><MainLayout><div slot="main"><slot></slot></div></MainLayout></div>
+  <div v-else-if="!isNode" id="app"><MainLayout><div slot="main"><slot></slot></div></MainLayout></div>
 </template>
 <style>
   @import "./app.css";

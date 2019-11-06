@@ -7,31 +7,24 @@ import axios from 'axios';
 
 Vue.use(Vuex);
 
-const host = 'http://127.0.0.1:7001';
-
 const actions = {
 
   FETCH_ARTICLE_LIST: ({ commit, dispatch, state }) => {
     if (!state.articleList.length) {
-      return axios.get(`${host}/api/article/list`)
+      return axios.get(`${state.origin}/api/article/list`)
         .then(response => {
-          const data = response.data.list;
-          commit(Type.SET_ARTICLE_LIST, data);
-          return data;
+          commit(Type.SET_ARTICLE_LIST, response.data.list);
         });
     }
-    return Promise.resolve();
   },
 
   FETCH_ARTICLE_DETAIL: ({ commit, dispatch, state }, { id }) => {
     if (state.article.id !== Number(id)) {
-      return axios.get(`${host}/api/article/${id}`)
+      return axios.get(`${state.origin}/api/article/${id}`)
         .then(response => {
-          const data = response.data;
-          commit(Type.SET_ARTICLE_DETAIL, data);
+          commit(Type.SET_ARTICLE_DETAIL, response.data);
         });
     }
-    return Promise.resolve();
   }
 };
 

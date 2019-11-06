@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header1">
     <div class="container"><h1>
       <a href="" class="router-link-active">Egg + Vue</a></h1>
       <ul class="nav">
