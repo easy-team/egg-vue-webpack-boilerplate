@@ -7,7 +7,7 @@ import ArticleList from '../view/list.vue';
 Vue.use(VueRouter);
 
 export default function createRouter() {
-  return new VueRouter({
+  const router = new VueRouter({
     mode: 'history',
     base: '/admin/',
     routes: [
@@ -32,4 +32,20 @@ export default function createRouter() {
       }
     ]
   });
+
+  router.beforeEach((route, redirec, next) => {
+    next();
+  });
+
+  router.afterEach((route, redirec) => {
+    if (EASY_ENV_IS_BROWSER && route.matched && route.matched.length) {
+      const asyncData = route.matched[0].components.default.asyncData;
+      if (asyncData) {
+        console.log('router afterEach trigger asyncData', route);
+        asyncData(router.app.$store, route);
+      }
+    }
+  });
+
+  return router;
 }

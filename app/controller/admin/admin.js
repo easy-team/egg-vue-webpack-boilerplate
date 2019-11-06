@@ -20,6 +20,6 @@ module.exports = class AdminController extends egg.Controller {
   }
   async detail(ctx) {
     const id = ctx.query.id;
-    ctx.body = {};
+    ctx.body = this.service.article.getArticle(Number(id));
   }
 };

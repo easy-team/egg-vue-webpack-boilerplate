@@ -14,9 +14,9 @@ const actions = {
       store.commit(Type.SET_ARTICLE_LIST, response.data);
     });
   },
-  SET_ARTICLE_DETAIL: (store, { id }) => {
+  SET_ARTICLE_DETAIL: (store, json) => {
     const { commit, dispatch, state } = store;
-    return request.get(`/admin/api/article/${id}`, store)
+    return request.get(`/admin/api/article/${json.id}`, store)
       .then(response => {
         commit(Type.SET_ARTICLE_DETAIL, response.data);
       });

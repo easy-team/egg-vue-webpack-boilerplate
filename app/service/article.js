@@ -18,6 +18,9 @@ module.exports = class ArticeService extends egg.Service {
     query.pageSize = pageSize;
     return this.colllection.getPager(query);
   }
+  getArticle(id) {
+    return this.colllection.getById({ id });
+  }
   saveArticle(json) {
     if (json.id) {
       return this.colllection.update({ id: json.id }, json);

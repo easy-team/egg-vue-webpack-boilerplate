@@ -7,6 +7,9 @@ module.exports = class Collection {
   get() {
     return this.db.get(this.name);
   }
+  getById(id) {
+    return this.db.get(this.name, { id });
+  }
   add(json) {
     return this.db.add(this.name, json);
   }

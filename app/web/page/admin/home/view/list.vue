@@ -181,10 +181,15 @@ export default {
       return this.$store.state.articleList;
     }
   },
-  beforeMount() {
-    if (!(this.articleList && this.articleList.length > 0)) {
-      this.fetchApi(this.$store, this.q);
-    }
-  }
+
+  asyncData(store, route) {
+    store.dispatch(SET_ARTICLE_LIST, {});
+  },
+
+  // beforeMount() {
+  //   if (!(this.articleList && this.articleList.length > 0)) {
+  //     this.fetchApi(this.$store, this.q);
+  //   }
+  // }
 };
 </script>

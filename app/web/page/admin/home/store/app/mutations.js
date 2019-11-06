@@ -13,7 +13,11 @@ const mutations = {
     state.articleList = list;
   },
   [SET_ARTICLE_DETAIL](state, data) {
-    state.article = data;
+    if (Array.isArray(data) && data.length) {
+      state.article = data[0];
+    } else {
+      state.article = data;
+    }
   },
   [SET_SAVE_ARTICLE](state, data) {
     state.articleTotal += 1;

@@ -1,23 +1,23 @@
 <template>
   <div style="font-size: 24px; text-align: center">
-    vue-server-render detail <router-link to="/article/add">Add</router-link>
-    <img src="../../../../asset/images/egg-vue-webpack-dev.png"/>
+    <h1>{{article.title}}</h1>
+    <iframe :src="article.url" frameborder="0" width="100%" height="600"></iframe>
   </div>
 </template>
 <style>
-
 </style>
 <script type="text/babel">
-  export default {
-    methods: {
-      fetchApi({ state, dispatch, commit }) {
-        const { id } = state.route.params;
-        return dispatch('FETCH_ARTICLE_DETAIL', { id })
-      },
+import { SET_ARTICLE_DETAIL } from '../store/app/mutation-type';
+  export default{
+    computed: {
+      article() {
+        return this.$store.state.article;
+      }
     },
-    beforeMount() {
-      const { id } = state.route.params;
-      this.fetchApi(this.$sotre, { id });
+    asyncData(store, route) {
+      console.log('detail', store, route);
+      const id = route.params.id;
+      return store.dispatch(SET_ARTICLE_DETAIL, { id })
     }
   }
 </script>
