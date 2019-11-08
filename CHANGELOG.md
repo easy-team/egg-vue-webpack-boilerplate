@@ -1,3 +1,13 @@
+# [4.8.0](https://github.com/easy-team/egg-vue-webpack-boilerplate/compare/4.6.0...4.8.0) (2019-11-08)
+
+
+### Features
+
+* ssr asyncData ([21e5b62](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/21e5b62))
+* use easy-team mode ([473617a](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/473617a))
+
+
+
 # [4.7.0](https://github.com/easy-team/egg-vue-webpack-boilerplate/compare/4.6.0...4.7.0) (2019-10-13)
 
 
