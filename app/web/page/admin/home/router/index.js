@@ -39,7 +39,8 @@ export default function createRouter() {
 
   router.afterEach((route, redirec) => {
     if (EASY_ENV_IS_BROWSER && route.matched && route.matched.length) {
-      const asyncData = route.matched[0].components.default.asyncData;
+      const matchComponent = route.matched[0].components.default;
+      const asyncData = matchComponent.methods && matchComponent.methods.fetchApi;
       if (asyncData) {
         console.log('router afterEach trigger asyncData', route);
         asyncData(router.app.$store, route);

@@ -19,7 +19,7 @@ module.exports = class ArticeService extends egg.Service {
     return this.colllection.getPager(query);
   }
   getArticle(id) {
-    return this.colllection.getById({ id });
+    return this.colllection.getByWhere({ id });
   }
   saveArticle(json) {
     if (json.id) {

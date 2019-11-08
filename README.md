@@ -3,7 +3,7 @@
 > 功能性需求或者Bug问题, 欢迎大家 PR 完善, 如果你需要了解更多信息，请加QQ群: 433207205(备注：Node.js).
 
 
-基于 Egg + Vue + Webpack 服务端渲染工程骨架项目，包括前台系统(SSR)和后台管理系统(SPA)。 如果要深入了解，建议请先阅读 https://www.yuque.com/easy-team/egg-vue 专题。
+基于 Egg + Vue + Webpack SSR 服务端渲染工程骨架项目，包括前台系统(SSR MPA)和后台管理系统(SSR SPA)。 如果要深入了解，建议请先阅读 https://www.yuque.com/easy-team/egg-vue 专题。
 
 ## 系统功能
 
@@ -61,13 +61,11 @@
 
 ## 1.特性
 
-- 支持服务端渲染(Server Side Render), 前端渲染, 静态页面渲染三种方式,
+- 支持服务端渲染SSR(Server Side Render), 前端渲染CSR(Client Side Render) 方式
 
-- 支持单页面(SPA), 多页面服务端渲染, 前端渲染模式
+- 支持 Node 和 前端代码修改, Webpack 自动编译和热更新, `npm run dev` 一键启动应用
 
-- 支持 server 和 client 端代码修改, webpack 时时编译和热更新, `npm run dev` 一键启动应用
-
-- 基于 vue + axios 多页面服务端渲染, 客户端渲染同构实现
+- 基于 vue + axios 多页面服务端渲染, 客户端渲染同构实现, 支持 asyncData 渲染
 
 - 基于 vue + vuex + vue-router + axios 单页面服务器客户端同构实现
 
@@ -75,13 +73,13 @@
 
 - 支持根据 .vue 文件自动创建 Webpack Entry 入口文件
 
-- 开始支持多进程和缓存编译， 支持 webpack dll 自动化构建, 与多进程编译结合，构建速度减少 2/3
+- 开始支持多进程和缓存编译， 支持 Webpack dll 自动化构建, 与多进程编译结合，构建速度减少 2/3
 
 - 支持 Vue 组件 import 异步加载, 具体实例请看[app/web/page/dynamic](app/web/page/dynamic)
 
-- 支持服务端渲染失败时，自动降级为前端渲染模式
+- 支持服务端渲染(SSR)失败时，自动降级为前端渲染(CSR)模式
 
-- 提供 i18n 多语言支持方案
+- 提供 国际化 i18n 多语言支持方案
 
 
 ## 2.依赖
@@ -101,7 +99,7 @@
 npm install @easy-team/easywebpack-cli -g
 ```
 
-^3.5.0 开始， `easywebpack-cli` 已内置 `devDependencies` 中, 无需安装。如果你需要在命令行使用 `easy` 命令, 可以单独全局安装。
+`easywebpack-cli` 已内置 `devDependencies` 中, 无需安装。如果你需要在命令行使用 `easy` 命令, 可以单独全局安装。
 
 #### 3.2 安装依赖
 
@@ -144,7 +142,7 @@ npm start
 
 ```js
 `config/config.local.js` 
-const EasyWebpack = require('easywebpack-vue');
+const EasyWebpack = require('@easy-team/easywebpack-vue');
 exports.webpack = {
   webpackConfigList:EasyWebpack.getWebpackConfig() 
 };

@@ -6,10 +6,10 @@
   </AdminLayout>
 </template>
 <script type="text/babel">
+import 'element-ui/lib/theme-chalk/index.css';
 import Vue from 'vue';
 import ElementUI from 'element-ui';
 import VueI18n from 'vue-i18n';
-import 'element-ui/lib/theme-chalk/index.css';
 import createI18n from 'framework/i18n/admin';
 import store from './store/app';
 import router from './router';

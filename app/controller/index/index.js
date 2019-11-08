@@ -1,12 +1,13 @@
 'usestrict';
 const egg = require('egg');
 module.exports = class IndexController extends egg.Controller {
-  async index() {
+  
+  async ssr() {
     const result = this.service.article.getArtilceList();
     await this.ctx.render('index/index.js', result);
   }
 
-  async client() {
+  async csr() {
     const result = this.service.article.getArtilceList();
     await this.ctx.renderClient('index/index.js', result);
   }

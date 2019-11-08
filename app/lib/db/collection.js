@@ -7,8 +7,8 @@ module.exports = class Collection {
   get() {
     return this.db.get(this.name);
   }
-  getById(id) {
-    return this.db.get(this.name, { id });
+  getByWhere(json) {
+    return this.db.get(this.name).find(json);
   }
   add(json) {
     return this.db.add(this.name, json);

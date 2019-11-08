@@ -14,10 +14,11 @@ import { SET_ARTICLE_DETAIL } from '../store/app/mutation-type';
         return this.$store.state.article;
       }
     },
-    asyncData(store, route) {
-      console.log('detail', store, route);
-      const id = route.params.id;
-      return store.dispatch(SET_ARTICLE_DETAIL, { id })
-    }
+    methods: {
+      fetchApi(store, route) {
+        const id = route.params.id;
+        return store.dispatch(SET_ARTICLE_DETAIL, { id })
+      }    
+    },
   }
 </script>

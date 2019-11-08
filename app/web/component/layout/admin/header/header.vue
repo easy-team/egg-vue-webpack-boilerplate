@@ -1,35 +1,34 @@
 <template>
   <div style="height:100%">
-     <header class="header">
-      <div class="logo">
-          <span class="big">{{ site.name }}</span>
-          <span class="min">{{ site.description }}</span>
+     <header class="admin-header">
+      <div class="admin-logo">
+          <span v-bind:class="{'admin-big': !collapse, 'admin-min': collapse }">{{ collapse ? site.name : site.description }}</span>
         </div>
-        <span class="header-btn" @click="sidebarToggle"><i class="el-icon-menu"></i></span>
+        <span class="admin-header-btn" @click="sidebarToggle"><i class="el-icon-menu"></i></span>
        
         <div class="right">
-          <span class="header-btn">
+          <span class="admin-header-btn">
             <a v-bind:href="$t('lang.href')"><i class="el-icon-message"></i></a>
           </span>
           <el-dropdown>
-              <span class="header-btn">
+              <span class="admin-header-btn">
                   {{$t('lang.text')}}<i class="el-icon-arrow-down el-icon--right"></i>
               </span>
             <el-dropdown-menu slot="dropdown">
-              <el-dropdown-item @click.native="switchLang('en')">英文</el-dropdown-item>
+              <el-dropdown-item @click.native="switchLang('en')">English</el-dropdown-item>
               <el-dropdown-item @click.native="switchLang('cn')">中文</el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
-          <span class="header-btn">
+          <span class="admin-header-btn">
               <el-badge :value="2" class="badge">
                   <i class="el-icon-message"></i>
               </el-badge>
           </span>
-          <span class="header-btn">
+          <span class="admin-header-btn">
             <i class="el-icon-bell"></i>
           </span>
           <el-dropdown>
-                      <span class="header-btn">
+                      <span class="admin-header-btn">
                           Admin<i class="el-icon-arrow-down el-icon--right"></i>
                       </span>
             <el-dropdown-menu slot="dropdown">
@@ -42,19 +41,6 @@
     <LeftMenu :collapse="collapse"></LeftMenu>
   </div>
 </template>
-<style>
-.logo .big {
-  display: none;
-  width: 64px;
-}
-.logo .min {
-  display: block;
-  width: 64px;
-}
-.app-body {
-  margin-left: 80px;
-}
-</style>
 <script type="babel">
 import "./header.css";
 import LeftMenu from "../menu/index.vue";
@@ -66,8 +52,8 @@ export default {
     return {
       collapse: false,
       site: {
-        name: "We-Blog",
-        description: "IBlog"
+        name: "Egg",
+        description: "Egg Vue"
       }
     };
   },
@@ -77,7 +63,7 @@ export default {
       e.preventDefault();
       if (this.collapse) {
         document.body.classList.remove("sidebar-hidden");
-        this.siteName = "IBlog";
+        this.siteName = "Egg";
         this.collapse = false;
       } else {
         document.body.classList.add("sidebar-hidden");
@@ -89,14 +75,6 @@ export default {
     },
     switchLang(lang) {
       window.location.href = `/admin?locale=${lang}`;
-    }
-  },
-  mounted: function() {
-    if (!this.collapse) {
-      document.body.classList.remove("sidebar-hidden");
-      this.siteName = "IBlog";
-    } else {
-      document.body.classList.add("sidebar-hidden");
     }
   }
 };

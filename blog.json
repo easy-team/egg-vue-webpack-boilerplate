@@ -15,7 +15,7 @@
     },
     {
       "id": 2,
-      "title": "webpack配置官方文档",
+      "title": "Webpack 配置官方文档",
       "summary": "webpack is a module bundler for modern JavaScript applications.",
       "hits": 550,
       "url": "https://webpack.js.org/configuration/",

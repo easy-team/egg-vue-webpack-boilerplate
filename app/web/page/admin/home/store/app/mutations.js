@@ -13,6 +13,7 @@ const mutations = {
     state.articleList = list;
   },
   [SET_ARTICLE_DETAIL](state, data) {
+    console.log('>>>data', data);
     if (Array.isArray(data) && data.length) {
       state.article = data[0];
     } else {
