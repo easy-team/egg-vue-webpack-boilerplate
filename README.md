@@ -1,6 +1,6 @@
 # egg-vue-webpack-boilerplate
 
-基于 Egg + Vue + Webpack 单页面服务端渲染同构工程骨架项目
+基于 Egg + Vue + Webpack 单页面服务端渲染(SSR)同构工程骨架项目
 
 ## 文档
 

@@ -1,6 +1,6 @@
 {
   "name": "egg-vue-webpack-spa-boilerplate",
-  "version": "4.3.0",
+  "version": "4.0.0",
   "description": "Egg Vue SSR/CSR 服务端/客户端渲染单页面工程骨架项目",
   "scripts": {
     "debug": "egg-bin debug",
@@ -40,7 +40,7 @@
     "egg-webpack-vue": "^2.0.0",
     "eslint": "^4.3.0",
     "eslint-plugin-vue": "^2.0.1",
-    "imagemin-webpack-plugin": "^1.5.2"
+    "imagemin-webpack-plugin": "^2.0.0"
   },
   "engines": {
     "node": ">=8.0.0"
