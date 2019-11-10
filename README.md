@@ -27,7 +27,18 @@
 - Markdown
 - 文章管理
 
-## 纯净版
+## 骨架
+
+### 常用功能
+
+常用 Example 实现见 [awesome](https://github.com/easy-team/egg-vue-webpack-boilerplate/tree/awesome) 分支代码。
+
+- Sass/Less/Stylus 功能
+- Dynamic Component Load
+- Element-UI 集成
+- Single Page Application
+
+### 纯净分支
 
 因该项目包含了多种实现, 提供多种例子实现，为防干扰, 特提供了两个纯净版本分支用于实际项目开发, 请自行选用。
 
@@ -55,6 +66,8 @@
 
 ## 文档
 
+- http://easyjs.cn/egg-vue
+- https://easy-team.github.io/egg-vue
 - https://www.yuque.com/easy-team/egg-vue
 - https://zhuanlan.zhihu.com/easywebpack
 
@@ -75,7 +88,7 @@
 
 - 开始支持多进程和缓存编译， 支持 Webpack dll 自动化构建, 与多进程编译结合，构建速度减少 2/3
 
-- 支持 Vue 组件 import 异步加载, 具体实例请看[app/web/page/dynamic](app/web/page/dynamic)
+- 支持 Vue 组件 import 异步加载, 具体实例请看[app/web/page/dynamic](https://github.com/easy-team/egg-vue-webpack-boilerplate/tree/awesome/app/web/page/dynamic)
 
 - 支持服务端渲染(SSR)失败时，自动降级为前端渲染(CSR)模式
 
