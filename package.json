@@ -4,11 +4,11 @@
   "description": "基于 easywebpack-vue 和 egg-view-vue-ssr 插件的 egg + vue 服务端渲染同构工程骨架项目",
   "scripts": {
     "debug": "egg-bin debug",
-    "build": "cross-env easywebpack build prod",
-    "build:dev": "cross-env easywebpack build dev",
-    "build:test": "cross-env easywebpack build test",
-    "build:prod": "cross-env easywebpack build prod",
-    "dll": "cross-env easywebpack build dev -f webpack.dll.js",
+    "build": "cross-env easy build prod",
+    "build:dev": "cross-env easy build dev",
+    "build:test": "cross-env easy build test",
+    "build:prod": "cross-env easy build prod",
+    "dll": "cross-env easy build dev -f webpack.dll.js",
     "dev": "cross-env WORKERS=1 node index.js",
     "start": "cross-env EGG_SERVER_ENV=prod NODE_ENV=production node index.js",
     "kill": "pkill --signal SIGINT egg-vue-webpack-boilerplate",
@@ -39,15 +39,8 @@
   },
   "devDependencies": {
     "autod-egg": "^1.0.0",
-    "autoprefixer": "^7.1.4",
-    "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-plugin-syntax-dynamic-import": "^6.18.0",
-    "babel-plugin-transform-object-assign": "^6.22.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-plugin-transform-runtime": "^6.15.0",
-    "babel-preset-env": "^1.6.0",
-    "easywebpack-cli": "^3.8.0",
-    "easywebpack-vue": "^4.0.0",
+    "@easy-team/easywebpack-cli": "^4.0.0",
+    "@easy-team/easywebpack-vue": "^4.0.0",
     "egg-bin": "^4.3.7",
     "egg-logview": "^1.0.0",
     "egg-webpack": "^4.0.1",
@@ -62,10 +55,10 @@
     "sass-loader": "^6.0.6"
   },
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=8.0.0"
   },
   "ci": {
-    "version": "6, 8, 9"
+    "version": "8, 10, 12"
   },
   "repository": {
     "type": "git",

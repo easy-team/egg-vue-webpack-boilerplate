@@ -1,12 +1,12 @@
 # egg-vue-webpack-boilerplate
 
-基于 Egg + Vue + Webpack4 多页面和单页面服务端客户端渲染同构工程骨架项目.
+基于 Egg + Vue + Webpack 多页面和单页面服务端客户端渲染同构工程骨架项目.
 
 ## 纯净版
 
 因该项目包含了多种实现, 提供多种例子实现，为防干扰, 特提供了两个纯净版本分支用于实际项目开发, 请自行选用。
 
-- Egg2 + Vue2 + Axios 多页面服务端渲染分支 [feature/green/multi](https://github.com/hubcarl/egg-vue-webpack-boilerplate/tree/feature/green/multi)
+- Egg + Vue + Axios 多页面服务端渲染分支 [feature/green/multi](https://github.com/hubcarl/egg-vue-webpack-boilerplate/tree/feature/green/multi)
 - Egg2 + Vue2 + vue-router + vuex + axios 单页面服务端渲染分支 [feature/green/spa](https://github.com/hubcarl/egg-vue-webpack-boilerplate/tree/feature/green/spa)
 
 
