@@ -58,6 +58,7 @@
 ## 文档
 
 - http://easyjs.cn/egg-vue
+- http://easyjs.cn/easywebpack
 - https://easy-team.github.io/egg-vue
 - https://www.yuque.com/easy-team/egg-vue
 - https://zhuanlan.zhihu.com/easywebpack
@@ -124,7 +125,7 @@ npm run dev
 
 ![npm start启动](https://github.com/hubcarl/egg-vue-webpack-boilerplate/blob/master/docs/images/webpack-build.png)
 
-- 本地开发启动 Webpack 构建, 默认配置文件为项目根目录 `webpack.config.js` 文件。 SSR 需要配置两份 Webpack 配置，所以构建会同时启动两个 Webpack 构建服务。web 表示构建 JSBundle 给前端用，构建后文件目录 `public`，默认端口9000; node 表示构建 JSBundle 给前端用，构建后文件目录 `app/view`, 默认端口9001.
+- 本地开发启动 Webpack 构建, 默认配置文件为项目根目录 `webpack.config.js` 文件。 SSR 需要配置两份 Webpack 配置，所以构建会同时启动两个 Webpack 构建服务。web 表示构建 JSBundle 给前端用，构建后文件目录 `public`, 默认端口 9000; node 表示构建 JSBundle 给前端用，构建后文件目录 `app/view`, 默认端口 9001.
 
 - 本地构建是 Webpack 内存构建，文件不落地磁盘，所以 `app/view` 和 `public` 在本地开发时，是看不到文件的。 只有发布模式(npm run build)才能在这两个目录中看到构建后的内容。
 
@@ -147,7 +148,8 @@ npm start
 
 #### 构建配置
 
-> Webpack 配置构建是通过 easywebpack 实现的，具体见 https://www.yuque.com/easy-team/egg-vue/qpeiow 和 https://github.com/easy-team/easywebpack-cli
+webpack 配置构建是通过 easywebpack 实现的，具体见 https://www.yuque.com/easy-team/egg-vue/qpeiow 和 https://github.com/easy-team/easywebpack-cli
+
 
 - Egg Webpack 配置代码调用入口
 
@@ -159,6 +161,7 @@ exports.webpack = { // 默认是如下配置，可不配置
 };
 ```
 
+- 运行 `npm run build` 可以进行 Webpack 项目构建
 - 通过 `easy print` 可以打印 Webpack 原生配置
 
 
@@ -410,7 +413,7 @@ exports.index = function* (ctx) {
 
 ## 文章
 
-> https://www.yuque.com/easy-team/egg-vue
+> [https://www.yuque.com/easy-team/egg-vue](https://www.yuque.com/easy-team/egg-vue)
 
 - 渲染模式细节请阅读：https://www.yuque.com/easy-team/egg-vue/node
 - 启动构建细节请阅读：https://www.yuque.com/easy-team/egg-vue/build
@@ -419,7 +422,7 @@ exports.index = function* (ctx) {
 
 ## 交流
 
-> 功能性需求或者Bug问题, 欢迎大家 PR 完善, 如果你需要了解更多信息，请加QQ群: 433207205(备注：easyjs).
+> 功能性需求或者Bug问题, 欢迎大家 PR 完善, 如果你需要了解更多信息，请加 QQ 群: 433207205 (备注：easyjs)
 
 ## License
 
