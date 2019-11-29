@@ -1,10 +1,6 @@
 # egg-vue-webpack-boilerplate
 
-> 功能性需求或者Bug问题, 欢迎大家 PR 完善, 如果你需要了解更多信息，请加QQ群: 433207205(备注：Node.js).
-
-
-基于 Egg + Vue + Webpack SSR 服务端渲染工程骨架项目，包括前台系统(SSR MPA)和后台管理系统(SSR SPA)。 如果要深入了解，建议请先阅读 https://www.yuque.com/easy-team/egg-vue 专题。
-
+基于 Egg + Vue + Webpack SSR 服务端渲染工程骨架项目，包括前台系统(SSR MPA)和后台管理系统(SSR SPA)。 如果要深入了解，建议请先阅读 https://www.yuque.com/easy-team/egg-vue 专题, 非常重要!
 ## 系统功能
 
 ### 前台博客系统 http://localhost:7001
@@ -27,7 +23,7 @@
 - Markdown
 - 文章管理
 
-## 骨架
+## 骨架介绍
 
 ### 常用功能
 
@@ -55,14 +51,9 @@
 - Egg 版本： ^2.x.x
 - Node 版本: ^8.x.x+
 - Vue 版本: ^2.5.0
-- Webpack 版本: ^4.x.x, 对应 `easywebpack-vue` 版本为 ^4.x.x; Webpack3 版本项目骨架请见 `webpack3` 分支, 对应 `easywebpack-react` 版本为 3.x.x
+- Webpack 版本: ^4.x.x, 对应 `easywebpack-vue` 版本为 ^4.x.x
+- Webpack3 版本项目骨架请见 `webpack3` 分支, 对应 `easywebpack-react` 版本为 3.x.x
 
-## 说明 
-
-- 项目开发之前, 请阅读[Egg + Vue 解决方案](https://www.yuque.com/easy-team/egg-vue)
-- 如果你需要了解 Egg+ Vue + Webpack 项目更多信息，请扫以下二维码加好友，请备注：Node.js。 骨架功能性需求或者 Bug 问题, 欢迎大家 PR 完善。
-
-![hubcarl](https://avatars3.githubusercontent.com/u/4983042?v=4&u=0befb64a57a7911c630b7f97df5632385b08da2a&s=250)
 
 ## 文档
 
@@ -72,7 +63,7 @@
 - https://zhuanlan.zhihu.com/easywebpack
 
 
-## 1.特性
+## 特性
 
 - 支持服务端渲染SSR(Server Side Render), 前端渲染CSR(Client Side Render) 方式
 
@@ -95,7 +86,7 @@
 - 提供 国际化 i18n 多语言支持方案
 
 
-## 2.依赖
+## 插件
 
 - [easywebpack](https://github.com/easy-team/easywebpack) ^4.x.x
 - [easywebpack-vue](https://github.com/easy-team/easywebpack) ^4.x.x
@@ -104,9 +95,9 @@
 - [egg-webpack-vue](https://github.com/easy-team/egg-webpack-vue) ^2.x.x
 
 
-## 3. 使用
+## 使用
 
-#### 3.1 安装cli(非必需)
+#### 安装cli(非必需)
 
 ```bash
 npm install @easy-team/easywebpack-cli -g
@@ -114,14 +105,16 @@ npm install @easy-team/easywebpack-cli -g
 
 `easywebpack-cli` 已内置 `devDependencies` 中, 无需安装。如果你需要在命令行使用 `easy` 命令, 可以单独全局安装。
 
-#### 3.2 安装依赖
+#### 安装依赖
 
 ```bash
 npm install
 ```
 
 
-#### 3.3 本地开发启动应用
+#### 本地开发
+
+> 启动构建细节请阅读：https://www.yuque.com/easy-team/egg-vue/build
 
 ```bash
 npm run dev
@@ -131,58 +124,46 @@ npm run dev
 
 ![npm start启动](https://github.com/hubcarl/egg-vue-webpack-boilerplate/blob/master/docs/images/webpack-build.png)
 
+- 本地开发启动 Webpack 构建, 默认配置文件为项目根目录 `webpack.config.js` 文件。 SSR 需要配置两份 Webpack 配置，所以构建会同时启动两个 Webpack 构建服务。web 表示构建 JSBundle 给前端用，构建后文件目录 `public`，默认端口9000; node 表示构建 JSBundle 给前端用，构建后文件目录 `app/view`, 默认端口9001.
 
-#### 3.4 发布模式启动应用
+- 本地构建是 Webpack 内存构建，文件不落地磁盘，所以 `app/view` 和 `public` 在本地开发时，是看不到文件的。 只有发布模式(npm run build)才能在这两个目录中看到构建后的内容。
 
-- 首先在本地或者ci构建好jsbundle文件
+
+#### 线上部署
+
+> 部署细节请阅读：https://www.yuque.com/easy-team/egg-vue/online
+
+- 首先在本地或者 ci 进行项目构建
 
 ```bash
 npm run build 
 ```
 
-- 然后,启动应用
+- 上传源代码以及构建的相关文件到服务器，然后启动应用
 
 ```bash
 npm start 
 ```
 
+#### 构建配置
 
-详细打包部署请见： http://hubcarl.github.io/easywebpack/vue/dev/
+> Webpack 配置构建是通过 easywebpack 实现的，具体见 https://www.yuque.com/easy-team/egg-vue/qpeiow 和 https://github.com/easy-team/easywebpack-cli
 
-## 4. 配置说明(支持三种方式)
-
-#### 4.1 方式一: `easywebpack-cli` 根据  `webpack.config.js` 自动创建Webpack Config 
+- Egg Webpack 配置代码调用入口
 
 ```js
-`config/config.local.js` 
-const EasyWebpack = require('@easy-team/easywebpack-vue');
-exports.webpack = {
-  webpackConfigList:EasyWebpack.getWebpackConfig() 
+// ${root}/config/config.local.js
+exports.webpack = { // 默认是如下配置，可不配置
+  // browser: 'http://localhost:7001', // 配置 false 可以关闭自动打开浏览器
+  // webpackConfigList: require('@easy-team/easywebpack-vue').getWebpackConfig()
 };
 ```
 
-#### 4.2 方式二: 自己编写Webpack配置
-
-编写配置请见 tag `1.0.0`  build目录代码实现
-
-```js
-`config/config.local.js` 
-exports.webpack = {
-  webpackConfigList: [
-    require(path.join(app.baseDir, 'build/client')), // http://127.0.0.1:9000
-  ]
-};
-```
-
-#### 4.3 方式三: 开启多进程编译
-
-[egg npm start 启动开启多进程编译](http://hubcarl.github.io/easywebpack/vue/version/)
+- 通过 `easy print` 可以打印 Webpack 原生配置
 
 
-构建会同时启动两个 webpack 构建服务, 客户端js构建(build/client), 服务端构建(build/server), 默认端口9000,  webpackConfigList 端口依次递增. 
 
-
-## 5. 项目结构和基本规范
+## 项目结构
 
     ├── app
     │   ├── controller
@@ -195,12 +176,8 @@ exports.webpack = {
     │   ├── proxy
     │   ├── router.js
     │   ├── view
-    │   │   ├── about                         // 服务器编译的jsbundle文件
-    │   │   │   └── about.js
     │   │   ├── home
-    │   │   │     └── home.js                 // 服务器编译的jsbundle文件
-    │   │   └── layout                        // 用于根据指定的layout生成对应的html页面, 用于服务器渲染失败时,采用客户端渲染
-    │   │       └── layout.html
+    │   │   │     └── home.js                 // Webpack 服务器编译的jsbundle文件, 对应 app/web/page/home/home.vue
     │   └── web                               // 前端工程目录
     │       ├── asset                         // 存放公共js,css资源
     │       ├── framework                     // 前端公共库和第三方库
@@ -258,6 +235,7 @@ exports.webpack = {
     │   │    └── index.js
     │   └── index.js
     ├── config
+    │   ├── manifest.json                      // webpack 构建的资源依赖依赖表
     │   ├── config.default.js
     │   ├── config.local.js
     │   ├── config.prod.js
@@ -265,8 +243,7 @@ exports.webpack = {
     │   └── plugin.js
     ├── doc
     ├── index.js
-    ├── public                                 // webpack编译目录结构, render文件查找目录
-    │   ├── manifest.json                      // 资源依赖表
+    ├── public                                 // webpack 编译的前端静态资源存入目录
     │   ├── static
     │   │   ├── css
     │   │   │   ├── home
@@ -281,14 +258,11 @@ exports.webpack = {
     │   └── vendor.js                         // 生成的公共打包库
 
 
-## 6. 功能实现
+## 功能实现
 
-支持多页面/单页面服务端渲染, 前端渲染, 静态页面三种方式.
+### 多页面服务端渲染/前端渲染同构实现
 
-
-### 6.1 多页面服务端渲染/前端渲染同构实现
-
-#### 6.1.1 多页面前端页面实现
+#### 多页面前端页面实现
 
 在app/web/page 目录下面创建home目录, home.vue 文件, Webpack自动根据.vue文件创建entry入口, 具体实现请见[webpack.config.js](webpack.config.js)
 
@@ -323,13 +297,14 @@ exports.webpack = {
 ```
 
 
-#### 6.1.2 多页面后端渲染实现, 通过 `egg-view-vue-ssr` 插件 `render` 方法实现
+#### 多页面后端渲染实现, 通过 `egg-view-vue-ssr` 插件 `render` 方法实现
   
 - 创建controller文件home.js
 
 ```javascript
 exports.index = function* (ctx) {
-  yield ctx.render('home/home.js', { message: 'vue server side render!' });
+  // index/index.js 是 app/web/page/index/index.vue 构建后的服务端页面渲染的 JSBundle 文件。
+  yield ctx.render('index/index.js', { message: 'vue server side render!' });
 };
 ```
 
@@ -339,13 +314,13 @@ exports.index = function* (ctx) {
 app.get('/home', app.controller.home.home.index);
 ```
 
-#### 6.1.3 多页面走前端渲染(后端路由)实现, 通过 `egg-view-vue-ssr` 插件 `renderClient` 方法实现  
+#### 多页面走前端渲染(后端路由)实现, 通过 `egg-view-vue-ssr` 插件 `renderClient` 方法实现  
 
 - 创建controller文件home.js
 
 ```javascript
 exports.client = function* (ctx) {
-  yield ctx.renderClient('home/home.js', { message: 'vue server side render!' });
+  yield ctx.renderClient('index/index.js', { message: 'vue client side render!' });
 };
 ```
 
@@ -355,16 +330,16 @@ exports.client = function* (ctx) {
 app.get('/client', app.controller.home.home.client);
 ```
 
-#### 6.1.4 HTML静态页面前端渲染
+#### HTML静态页面前端渲染
 
 - 直接有easywebpack构建出静态HTML文件, 请见 `webpack.config.js` 配置和 `app/web/page/html`代码实现
 
 - 通过 `egg-static` 静态文件访问HTML文件
 
 
-### 6.2 单页面服务器渲染同构实现
+### 单页面服务器渲染同构实现
 
-#### 6.2.1 单页面前端实现
+#### 单页面前端实现
 
 在app/web/page 目录下面创建app目录, app.vue, app.js 文件.
 
@@ -416,12 +391,13 @@ export default App.init({
 
 ```
 
-#### 6.2.2 单页面后端实现
+#### 单页面后端实现
 
 - 创建controller文件app.js
 
 ```javascript
 exports.index = function* (ctx) {
+  // app/app.js 是 app/web/page/app/app.js 构建后的服务端页面渲染的 JSBundle 文件。
   yield ctx.render('app/app.js', { url: this.url.replace(/\/app/, '') });
 };
 ```
@@ -432,6 +408,18 @@ exports.index = function* (ctx) {
   app.get('/app(/.+)?', app.controller.app.app.index);
 ```
 
+## 文章
+
+> https://www.yuque.com/easy-team/egg-vue
+
+- 渲染模式细节请阅读：https://www.yuque.com/easy-team/egg-vue/node
+- 启动构建细节请阅读：https://www.yuque.com/easy-team/egg-vue/build
+- 线上部署细节请阅读：https://www.yuque.com/easy-team/egg-vue/online
+- Webpack 入口配置：https://www.yuque.com/easy-team/egg-vue/qpeiow
+
+## 交流
+
+> 功能性需求或者Bug问题, 欢迎大家 PR 完善, 如果你需要了解更多信息，请加QQ群: 433207205(备注：easyjs).
 
 ## License
 
