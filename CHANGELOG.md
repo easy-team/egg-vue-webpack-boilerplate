@@ -1,3 +1,7 @@
+## [4.8.1](https://github.com/easy-team/egg-vue-webpack-boilerplate/compare/4.8.0...4.8.1) (2019-12-08)
+
+
+
 # [4.8.0](https://github.com/easy-team/egg-vue-webpack-boilerplate/compare/4.6.0...4.8.0) (2019-11-08)
 
 
