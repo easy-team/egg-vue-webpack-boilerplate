@@ -9,7 +9,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">IBlog</a>
+                <a class="navbar-brand" href="/">easyjs</a>
             </div>
             <div class="collapse navbar-collapse" :class="{ 'collapse in': collapsed }" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
@@ -18,6 +18,9 @@
                     </li>
                     <li>
                         <a href="/category">{{$t('menu.category')}}</a>
+                    </li>
+                    <li>
+                        <a href="/admin">{{$t('menu.admin')}}</a>
                     </li>
                 </ul>
             </div>
@@ -28,12 +31,12 @@
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-                        <div>
-                            <img src="../../../../asset/images/loading.gif" width="80px" height="80px" style="display: inline">
-                        </div>
-                        <h1>博客</h1>
+                       <!-- <div>
+                            <img src="../../../../asset/images/logo.png" style="display: inline">
+                        </div> -->
+                        <h1>Egg Vue</h1>
                         <hr class="large">
-                        <span class="subheading">IBlog</span>
+                        <span class="subheading">Egg + Vue 工程化方案</span>
                     </div>
                 </div>
             </div>

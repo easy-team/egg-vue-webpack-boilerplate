@@ -3,6 +3,7 @@ export default {
     home: 'Home',
     category: 'Catetory',
     about: 'About',
+    admin: 'Admin'
   },
   lang: {
     href: '/?locale=cn',
