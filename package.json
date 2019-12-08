@@ -9,6 +9,7 @@
     "build": "easy build prod",
     "start": "egg-scripts start --port 7001 --workers 4",
     "backend": "nohup egg-scripts start --port 7001 --workers 4 &",
+    "stop": "egg-scripts stop",
     "lint": "eslint .",
     "fix": "eslint --fix .",
     "ii": "npm install --registry https://registry.npm.taobao.org",
