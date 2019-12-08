@@ -1,6 +1,9 @@
 # egg-vue-webpack-boilerplate
 
-基于 Egg + Vue + Webpack SSR 服务端渲染和 CSR 前端渲染工程骨架项目，包括前台系统(SSR MPA)和后台管理系统(SSR SPA)。 如果要深入了解，建议请先阅读 https://www.yuque.com/easy-team/egg-vue 专题, 非常重要!
+基于 Egg + Vue + Webpack SSR 服务端渲染和 CSR 前端渲染工程骨架项目，包括前台系统(SSR MPA)和后台管理系统(SSR SPA)。
+
+- 线上访问: http://49.233.172.37:7002
+- 工程文档：https://www.yuque.com/easy-team/egg-vue
 
 ## 系统功能
 
