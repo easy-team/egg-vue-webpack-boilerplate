@@ -63,7 +63,6 @@
 
 - https://easyjs.cn/egg-vue
 - https://easyjs.cn/easywebpack
-- https://easy-team.github.io/egg-vue
 - https://www.yuque.com/easy-team/egg-vue
 - https://zhuanlan.zhihu.com/easywebpack
 
