@@ -1,4 +1,6 @@
 import Vue from 'vue';
+import inlineCode from 'raw-loader!./inline.js';
+
 export default function createLayout(name, components, tpl) {
   return {
     name,
@@ -16,6 +18,12 @@ export default function createLayout(name, components, tpl) {
       },
       baseClass() {
         return this.$root.baseClass;
+      },
+      inlineScript() {
+        return '<script>console.log("inline js code");</script>';
+      },
+      inlineJSFileScript() {
+        return `<script>${inlineCode}</script>`;
       }
     },
     template: EASY_ENV_IS_BROWSER ? tpl : `<!DOCTYPE html>
@@ -38,6 +46,8 @@ export default function createLayout(name, components, tpl) {
                       <link rel="apple-touch-icon" href="/logo.png">
                       <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
                       <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+                      <template v-html="inlineScript"></template>
+                      <template v-html="inlineJSFileScript"></template>
                     </head>
                     <body :class="baseClass">
                       ${tpl}
