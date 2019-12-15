@@ -3,7 +3,7 @@
     <div class="login-form">
       <div class="login-header">
         <img src="../../../asset/images/logo.png" height="100" alt="">
-        <p>IBlog</p>
+        <p>easyjs</p>
       </div>
       <div class="login-info">
         <el-input
