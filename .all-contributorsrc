@@ -1,0 +1,75 @@
+{
+  "projectName": "egg-vue-webpack-boilerplate",
+  "projectOwner": "hubcarl",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "angular",
+  "contributors": [
+     {
+      "login": "hubcarl",
+      "name": "sky",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/4983042?v=4",
+      "profile": "https://easyjs.cn",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    },
+    {
+      "login": "jasonjcpeng",
+      "name": "jasonjcpeng",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/13363216?v=4",
+      "profile": "https://github.com/jasonjcpeng",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    },
+    {
+      "login": "willworks",
+      "name": "Kevin Zhong",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/5542777?v=4",
+      "profile": "https://github.com/willworks",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    },
+    {
+      "login": "HiuYanChong",
+      "name": "HiuYanChong",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/15319816?v=4",
+      "profile": "https://github.com/HiuYanChong",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    },
+    {
+      "login": "thonatos",
+      "name": "Suyi",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/958063?v=4",
+      "profile": "https://www.thonatos.com",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    },
+    {
+      "login": "geekdada",
+      "name": "Roy Li",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/3274850?v=4",
+      "profile": "https://blog.dada.li",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}
