@@ -445,6 +445,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://blog.dada.li"><img src="https://avatars0.githubusercontent.com/u/3274850?v=4" width="100px;" alt=""/><br /><sub><b>Roy Li</b></sub></a><br /><a href="https://github.com/hubcarl/egg-vue-webpack-boilerplate/commits?author=geekdada" title="Code">💻</a> <a href="https://github.com/hubcarl/egg-vue-webpack-boilerplate/commits?author=geekdada" title="Documentation">📖</a></td>
     <td align="center"><a href="https://wanghx.cn/"><img src="https://avatars0.githubusercontent.com/u/5856440?v=4" width="100px;" alt=""/><br /><sub><b>吖猩</b></sub></a><br /><a href="https://github.com/hubcarl/egg-vue-webpack-boilerplate/commits?author=whxaxes" title="Code">💻</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/beliefgp"><img src="https://avatars1.githubusercontent.com/u/12657964?v=4" width="100px;" alt=""/><br /><sub><b>Peng Gao</b></sub></a><br /><a href="https://github.com/hubcarl/egg-vue-webpack-boilerplate/commits?author=beliefgp" title="Code">💻</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-enable -->
