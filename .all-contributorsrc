@@ -10,7 +10,7 @@
   "commit": true,
   "commitConvention": "angular",
   "contributors": [
-     {
+    {
       "login": "hubcarl",
       "name": "sky",
       "avatar_url": "https://avatars2.githubusercontent.com/u/4983042?v=4",
@@ -68,6 +68,15 @@
       "contributions": [
         "code",
         "doc"
+      ]
+    },
+    {
+      "login": "whxaxes",
+      "name": "吖猩",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/5856440?v=4",
+      "profile": "https://wanghx.cn/",
+      "contributions": [
+        "code"
       ]
     }
   ],
