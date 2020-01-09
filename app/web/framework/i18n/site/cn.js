@@ -4,7 +4,8 @@ export default {
     home: '首页',
     category: '分类',
     about: '关于',
-    admin: '管理'
+    admin: '管理',
+    test: 'easyjs'
   },
   lang: {
     href: '/?locale=en',

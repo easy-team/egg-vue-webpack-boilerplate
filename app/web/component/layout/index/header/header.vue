@@ -22,6 +22,9 @@
                     <li>
                         <a href="/admin">{{$t('menu.admin')}}</a>
                     </li>
+                    <li>
+                        <a href="/test">{{$t('menu.test')}}</a>
+                    </li>
                 </ul>
             </div>
         </div>

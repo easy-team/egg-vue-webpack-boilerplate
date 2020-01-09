@@ -8,6 +8,7 @@ module.exports = {
     'about/about': 'app/web/page/about/about.vue',
     'admin/home/home': 'app/web/page/admin/home/home.vue',
     'admin/login/login': 'app/web/page/admin/login/login.vue',
+    'test': 'app/web/page/test/test.vue'
   },
   plugins: [
     { imagemini: false }

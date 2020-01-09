@@ -3,7 +3,8 @@ export default {
     home: 'Home',
     category: 'Catetory',
     about: 'About',
-    admin: 'Admin'
+    admin: 'Admin',
+    test: 'easyjs'
   },
   lang: {
     href: '/?locale=cn',

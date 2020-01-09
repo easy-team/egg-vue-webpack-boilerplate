@@ -8,6 +8,7 @@ module.exports = app => {
   router.get('/category', controller.category.category.index);
   router.get('/login', controller.admin.admin.login);
   router.get('/about', controller.admin.admin.login);
+  router.get('/test', controller.test.index);
   router.post('/admin/api/article/list', controller.admin.admin.list);
   router.post('/admin/api/article/add', controller.admin.admin.add);
   router.get('/admin/api/article/del/:id', controller.admin.admin.del);
