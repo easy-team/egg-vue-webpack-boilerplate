@@ -25,8 +25,10 @@ export default function render(options) {
     };
   }
   return context => {
-    const VueApp = Vue.extend(options);
-    const app = new VueApp({ data: context.state });
+    const app = new Vue({ 
+      data: context.state,
+      render: h => h(options)
+    });
     return new Promise(resolve => {
       resolve(app);
     });
