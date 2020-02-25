@@ -22,7 +22,10 @@ module.exports = {
     vue: 'vue/dist/vue.js'
   },
   dll: ['vue', 'axios', 'vue-router', 'vuex', 'vuex-router-sync'],
-  loaders: {},
+  loaders: {
+    scss: true,
+    less: true
+  },
   plugins: {
     serviceworker: true
   },
