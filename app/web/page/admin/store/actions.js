@@ -9,25 +9,25 @@ Vue.use(Vuex);
 
 const actions = {
 
-  SET_ARTICLE_LIST: (store, json) => {
+  SET_ARTICLE_LIST: async (store, json) => {
     return request.post('/admin/api/article/list', json, store).then(response => {
       store.commit(Type.SET_ARTICLE_LIST, response.data);
     });
   },
-  SET_ARTICLE_DETAIL: (store, { id }) => {
+  SET_ARTICLE_DETAIL: async (store, { id }) => {
     const { commit, dispatch, state } = store;
     return request.get(`/admin/api/article/${id}`)
       .then(response => {
         commit(Type.SET_ARTICLE_DETAIL, response.data);
       });
   },
-  SET_SAVE_ARTICLE: (store, json) => {
+  SET_SAVE_ARTICLE: async (store, json) => {
     const { commit, dispatch, state } = store;
     return request.post('/admin/api/article/add', json, store).then(response => {
       commit(Type.SET_SAVE_ARTICLE, json);
     });
   },
-  DELETE_ARTICLE: (store, { id }) => {
+  DELETE_ARTICLE: async (store, { id }) => {
     // 鉴权 TODO
     const { commit, dispatch, state } = store;
     return request.get(`/admin/api/article/del/${id}`, store)

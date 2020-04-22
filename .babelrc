@@ -8,7 +8,10 @@
   "plugins": [
     "transform-object-rest-spread",
     "syntax-dynamic-import",
-    "transform-object-assign"
+    "transform-object-assign",
+    ["transform-runtime", {
+      "regenerator": true
+    }]
   ],
   "comments":false
 }
