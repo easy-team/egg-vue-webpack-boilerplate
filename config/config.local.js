@@ -25,7 +25,8 @@ module.exports = app => {
   };
 
   exports.webpack = {
-    webpackConfigList: require('easywebpack-vue').getWebpackConfig()
+    browser: false, // 是否自动打开浏览器
+    webpackConfigList: require('@easy-team/easywebpack-vue').getWebpackConfig()
   };
 
   const localIP = ip.address();
