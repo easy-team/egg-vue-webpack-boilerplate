@@ -67,6 +67,7 @@
     "eslint-plugin-vue": "^4.4.0",
     "husky": "^4.2.5",
     "ip": "^1.1.5",
+    "lint-staged": "^10.2.2",
     "raw-loader": "^3.0.0"
   },
   "engines": {
