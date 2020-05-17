@@ -13,7 +13,6 @@ artifacts.json
 *tmp
 _site
 logs
-.vscode
 config/buildConfig.json
 config/manifest.json
 config/manifest-dll.json

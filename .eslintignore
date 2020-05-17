@@ -9,9 +9,9 @@ run/
 public/
 node_modules/
 app/mocks
-app/web/store
+app/web
 plugins/
 app/web/asset/
 app/view/
 test.js
-script/webpack4/
+script/webpack4/.eslintrc
