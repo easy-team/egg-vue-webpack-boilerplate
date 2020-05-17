@@ -61,8 +61,8 @@
 
 ## 文档
 
-- https://www.easyjs.cn/egg-vue
-- https://www.easyjs.cn/easywebpack
+- https://easyjs.cn/egg-vue
+- https://easyjs.cn/easywebpack
 - https://www.yuque.com/easy-team/egg-vue
 - https://zhuanlan.zhihu.com/easywebpack
 
