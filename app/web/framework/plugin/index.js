@@ -9,6 +9,7 @@ export default {
     if (!Vue.prototype.hasOwnProperty('$request')) {
       Vue.prototype.$request = request;
     }
+    // 自定义 hook 钩子，vue-entry-loader 自动加载
     if (!Vue.hook) {
       Vue.use(VueI18n);
       Vue.hook = {
