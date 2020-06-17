@@ -1,13 +1,23 @@
+'use strict';
+// https://github.com/vuejs/eslint-plugin-vue/issues/186#issuecomment-329426553
 module.exports = {
-  parser: 'babel-eslint',
+  plugins: ["html", "vue"],
+  extends: [
+    'eslint:recommended',
+    'plugin:vue/recommended'
+  ],
   parserOptions: {
+    parser: 'babel-eslint',
     ecmaVersion: 6,
     sourceType: 'module',
   },
   rules: {
     indent: ['error', 2, { SwitchCase: 1 }],
     quotes: ['error', 'single'],
-    "comma-dangle": [2, "never"],
+    'vue/require-prop-types': 0,
+    'vue/require-default-prop': 0,
+    'no-console': 0,
+    'comma-dangle': [2, "never"],
     'valid-jsdoc': 'off',
     'eol-last': 'off',
     'array-bracket-spacing': 'off',

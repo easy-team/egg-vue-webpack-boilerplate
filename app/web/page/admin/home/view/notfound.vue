@@ -7,6 +7,6 @@
 
 </style>
 <script type="babel">
-  export default {
-  }
+export default {
+}
 </script>

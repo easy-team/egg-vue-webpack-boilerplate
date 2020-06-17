@@ -1,9 +1,19 @@
 <template>
-  <el-row class="panel-group" :gutter="40">
-    <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
-      <div class='card-panel' @click="handleSetLineChartData('newVisitis')">
+  <el-row 
+    :gutter="40" 
+    class="panel-group">
+    <el-col 
+      :xs="12" 
+      :sm="12" 
+      :lg="6" 
+      class="card-panel-col">
+      <div 
+        class="card-panel" 
+        @click="handleSetLineChartData('newVisitis')">
         <div class="card-panel-icon-wrapper icon-people">
-          <div icon-class="peoples" class-name="card-panel-icon"></div>
+          <div 
+            icon-class="peoples" 
+            class-name="card-panel-icon"/>
         </div>
         <div class="card-panel-description">
           <div class="card-panel-text">New Visits</div>
@@ -11,10 +21,18 @@
         </div>
       </div>
     </el-col>
-    <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
-      <div class="card-panel" @click="handleSetLineChartData('messages')">
+    <el-col 
+      :xs="12" 
+      :sm="12" 
+      :lg="6" 
+      class="card-panel-col">
+      <div 
+        class="card-panel" 
+        @click="handleSetLineChartData('messages')">
         <div class="card-panel-icon-wrapper icon-message">
-          <div icon-class="message" class-name="card-panel-icon" ></div>
+          <div 
+            icon-class="message" 
+            class-name="card-panel-icon" />
         </div>
         <div class="card-panel-description">
           <div class="card-panel-text">Messages</div>
@@ -22,10 +40,18 @@
         </div>
       </div>
     </el-col>
-    <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
-      <div class="card-panel" @click="handleSetLineChartData('purchases')">
+    <el-col 
+      :xs="12" 
+      :sm="12" 
+      :lg="6" 
+      class="card-panel-col">
+      <div 
+        class="card-panel" 
+        @click="handleSetLineChartData('purchases')">
         <div class="card-panel-icon-wrapper icon-money">
-          <div icon-class="money" class-name="card-panel-icon" ></div>
+          <div 
+            icon-class="money" 
+            class-name="card-panel-icon" />
         </div>
         <div class="card-panel-description">
           <div class="card-panel-text">Purchases</div>
@@ -33,10 +59,18 @@
         </div>
       </div>
     </el-col>
-    <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
-      <div class="card-panel" @click="handleSetLineChartData('shoppings')">
+    <el-col 
+      :xs="12" 
+      :sm="12" 
+      :lg="6" 
+      class="card-panel-col">
+      <div 
+        class="card-panel" 
+        @click="handleSetLineChartData('shoppings')">
         <div class="card-panel-icon-wrapper icon-shoppingCard">
-          <div icon-class="shoppingCard" class-name="card-panel-icon" ></div>
+          <div 
+            icon-class="shoppingCard" 
+            class-name="card-panel-icon" />
         </div>
         <div class="card-panel-description">
           <div class="card-panel-text">Shoppings</div>
@@ -52,7 +86,7 @@ export default {
   components: {},
   methods: {
     handleSetLineChartData(type) {
-      this.$emit("handleSetLineChartData", type);
+      this.$emit('handleSetLineChartData', type);
     }
   }
 };

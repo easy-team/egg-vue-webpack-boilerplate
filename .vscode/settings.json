@@ -6,7 +6,6 @@
   },
   "eslint.validate": [
     "javascript",
-    "vue-html",
     {
       "language": "vue",
       "autoFix": true

@@ -1,7 +1,8 @@
 <template>
-  <div class="simplemde-container" :style="{height:height+'px',zIndex:zIndex}">
-    <textarea :id="id">
-    </textarea>
+  <div 
+    :style="{height:height+'px',zIndex:zIndex}" 
+    class="simplemde-container">
+    <textarea :id="id"/>
   </div>
 </template>
 
@@ -11,7 +12,7 @@ import 'simplemde/dist/simplemde.min.css'
 import SimpleMDE from 'simplemde'
 
 export default {
-  name: 'simplemde-md',
+  name: 'SimplemdeMd',
   props: {
     value: String,
     id: {

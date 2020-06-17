@@ -2,7 +2,6 @@
 
 module.exports = class Model {
   constructor() {
-    super();
     this.id = void 0;
     this.title = undefined;
     this.summary = undefined;
