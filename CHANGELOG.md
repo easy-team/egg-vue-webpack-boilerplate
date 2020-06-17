@@ -1,7 +1,18 @@
+<a name="4.9.0"></a>
+# [4.9.0](https://github.com/easy-team/egg-vue-webpack-boilerplate/compare/4.8.1...4.9.0) (2020-11-29)
+
+
+### Features
+
+* use lerna manage proejct ([182be50](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/182be50))
+
+
+<a name="4.8.1"></a>
 ## [4.8.1](https://github.com/easy-team/egg-vue-webpack-boilerplate/compare/4.8.0...4.8.1) (2019-12-08)
 
 
 
+<a name="4.8.0"></a>
 # [4.8.0](https://github.com/easy-team/egg-vue-webpack-boilerplate/compare/4.6.0...4.8.0) (2019-11-08)
 
 
@@ -12,15 +23,7 @@
 
 
 
-# [4.7.0](https://github.com/easy-team/egg-vue-webpack-boilerplate/compare/4.6.0...4.7.0) (2019-10-13)
-
-
-### Features
-
-* use easy-team mode ([473617a](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/473617a))
-
-
-
+<a name="4.6.0"></a>
 # [4.6.0](https://github.com/easy-team/egg-vue-webpack-boilerplate/compare/4.4.6...4.6.0) (2019-10-13)
 
 
@@ -40,20 +43,7 @@
 
 
 
-# [4.5.0](https://github.com/easy-team/egg-vue-webpack-boilerplate/compare/4.4.6...4.5.0) (2019-08-02)
-
-
-### Bug Fixes
-
-* server side render hydrate not effective ([8ef6aa8](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/8ef6aa8))
-
-
-### Features
-
-* set title ([fb99718](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/fb99718))
-
-
-
+<a name="4.4.6"></a>
 ## [4.4.6](https://github.com/easy-team/egg-vue-webpack-boilerplate/compare/4.4.5...4.4.6) (2018-12-12)
 
 
@@ -63,6 +53,7 @@
 
 
 
+<a name="4.4.5"></a>
 ## [4.4.5](https://github.com/easy-team/egg-vue-webpack-boilerplate/compare/4.4.2...4.4.5) (2018-11-06)
 
 
@@ -77,6 +68,19 @@
 
 * add link asset file example ([cb81976](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/cb81976))
 
+
+
+<a name="4.4.2"></a>
+## [4.4.2](https://github.com/easy-team/egg-vue-webpack-boilerplate/compare/4.4.1...4.4.2) (2018-10-11)
+
+
+
+<a name="4.4.1"></a>
+## [4.4.1](https://github.com/easy-team/egg-vue-webpack-boilerplate/compare/4.4.0...4.4.1) (2018-10-11)
+
+
+
+<a name="4.4.0"></a>
 # [4.4.0](https://github.com/easy-team/egg-vue-webpack-boilerplate/compare/4.3.0...4.4.0) (2018-10-09)
 
 
@@ -88,10 +92,12 @@
 ### Features
 
 * simplified configuration ([1854282](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/1854282))
-* webpack zero config implement ([16ea32e](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/16ea32e))
+* zero config ([67d14ef](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/67d14ef))
+* 零配置实现 ([16ea32e](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/16ea32e))
 
 
 
+<a name="4.3.0"></a>
 # [4.3.0](https://github.com/easy-team/egg-vue-webpack-boilerplate/compare/4.0.0...4.3.0) (2018-09-11)
 
 
@@ -108,10 +114,11 @@
 
 ### Features
 
-* add component async load demo ([b8b3eaf](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/b8b3eaf))
+* add component load demo ([b8b3eaf](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/b8b3eaf))
 * add i18n menu ([b7f65b0](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/b7f65b0))
 * add npm clean command ([be4177d](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/be4177d))
 * admin dashboard ([e63dc83](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/e63dc83))
+* site and admin running ([c01254f](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/c01254f))
 * support i18n ([752baad](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/752baad))
 * use egg-bin and egg-scripts ([cf85319](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/cf85319))
 
@@ -122,6 +129,7 @@
 
 
 
+<a name="4.0.0"></a>
 # [4.0.0](https://github.com/easy-team/egg-vue-webpack-boilerplate/compare/3.5.0...4.0.0) (2018-03-07)
 
 
@@ -138,6 +146,8 @@
 * add dynamic vue componnet demo ([1768ee0](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/1768ee0))
 * dll ([f5c5679](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/f5c5679))
 * dll and lib support ([bf0019c](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/bf0019c))
+* dll support ([01393ef](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/01393ef))
+* dll support ([4ce6b01](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/4ce6b01))
 * spa dynamic import vue component ([a95b75f](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/a95b75f))
 * spa use loader template ([09ea960](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/09ea960))
 * support cli build dll and auto check dll file ([2f7e61a](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/2f7e61a))
@@ -152,6 +162,7 @@
 
 
 
+<a name="3.2.2"></a>
 ## [3.2.2](https://github.com/easy-team/egg-vue-webpack-boilerplate/compare/v3.0.3...3.2.2) (2017-11-29)
 
 
@@ -166,14 +177,17 @@
 
 
 
+<a name="3.0.3"></a>
 ## [3.0.3](https://github.com/easy-team/egg-vue-webpack-boilerplate/compare/v3.0.2...v3.0.3) (2017-10-26)
 
 
 
+<a name="3.0.2"></a>
 ## [3.0.2](https://github.com/easy-team/egg-vue-webpack-boilerplate/compare/v3.0.1...v3.0.2) (2017-10-26)
 
 
 
+<a name="3.0.1"></a>
 ## [3.0.1](https://github.com/easy-team/egg-vue-webpack-boilerplate/compare/3.0.0...v3.0.1) (2017-10-26)
 
 
@@ -183,10 +197,12 @@
 
 
 
+<a name="3.0.0"></a>
 # [3.0.0](https://github.com/easy-team/egg-vue-webpack-boilerplate/compare/1.3.1...3.0.0) (2017-09-13)
 
 
 
+<a name="1.3.1"></a>
 ## [1.3.1](https://github.com/easy-team/egg-vue-webpack-boilerplate/compare/1.2.0...1.3.1) (2017-08-29)
 
 
@@ -196,13 +212,42 @@
 
 
 
+<a name="1.2.0"></a>
 # [1.2.0](https://github.com/easy-team/egg-vue-webpack-boilerplate/compare/1.0.0...1.2.0) (2017-08-21)
 
 
 
-# [1.0.0](https://github.com/easy-team/egg-vue-webpack-boilerplate/compare/0.6.0...1.0.0) (2017-05-25)
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/easy-team/egg-vue-webpack-boilerplate/compare/0.6.0...1.0.0) (2017-07-18)
 
 
+
+<a name="0.6.0"></a>
+# [0.6.0](https://github.com/easy-team/egg-vue-webpack-boilerplate/compare/1.0.0-stage...0.6.0) (2017-07-05)
+
+
+
+<a name="1.0.0-stage"></a>
+# [1.0.0-stage](https://github.com/easy-team/egg-vue-webpack-boilerplate/compare/0.2.0...1.0.0-stage) (2017-06-07)
+
+
+
+<a name="0.2.0"></a>
+# [0.2.0](https://github.com/easy-team/egg-vue-webpack-boilerplate/compare/0.1.4...0.2.0) (2017-06-07)
+
+
+
+<a name="0.1.4"></a>
+## [0.1.4](https://github.com/easy-team/egg-vue-webpack-boilerplate/compare/0.1.3...0.1.4) (2017-05-25)
+
+
+
+<a name="0.1.3"></a>
+## [0.1.3](https://github.com/easy-team/egg-vue-webpack-boilerplate/compare/0.0.1...0.1.3) (2017-05-25)
+
+
+
+<a name="0.0.1"></a>
 ## 0.0.1 (2017-04-24)
 
 

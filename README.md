@@ -2,8 +2,9 @@
 
 基于 Egg + Vue + Webpack SSR 服务端渲染和 CSR 前端渲染工程骨架项目，包括前台系统(SSR MPA)和后台管理系统(SSR SPA)。
 
-- 线上访问: http://49.233.172.37:7002
-- 工程文档：https://www.yuque.com/easy-team/egg-vue
+## 文档
+
+https://www.yuque.com/easy-team/egg-vue
 
 ## 系统功能
 
@@ -21,7 +22,7 @@
 
 **采用 Egg + Vue + Vue-Router + Element 单页面服务端同构渲染**
 
-![](https://github.com/hubcarl/egg-vue-webpack-boilerplate/blob/master/docs/images/admin.png?raw=true)
+![](https://github.com/easy-team/egg-vue-webpack-boilerplate/tree/master/docs/images/admin.png?raw=true)
 
 - Dashboard
 - Markdown
@@ -31,24 +32,24 @@
 
 ### 常用功能
 
-常用 Example 实现见 [awesome](https://github.com/easy-team/egg-vue-webpack-boilerplate/tree/awesome) 分支代码。
+常用 Example 实现见 [awesome](./tree/awesome) 分支代码。
 
 - Sass/Less/Stylus 功能
 - Dynamic Component Load
 - Element-UI 集成
 - Single Page Application
 
-### 纯净分支
+### 骨架模板
 
-因该项目包含了多种实现, 提供多种例子实现，为防干扰, 特提供了两个纯净版本分支用于实际项目开发, 请自行选用。
+- [egg-vue-webpack-boilerplate](https://github.com/easy-team/egg-vue-webpack-boilerplate/tree/master/egg-vue-webpack-boilerplate) Egg + Vue 多种特性功能模板。
+- [egg-vue-webpack-mpa-boilerplate](https://github.com/easy-team/egg-vue-webpack-boilerplate/tree/master/egg-vue-webpack-mpa-boilerplate)  Egg + Vue 多页渲染模板。
+- [egg-vue-webpack-spa-boilerplate](https://github.com/easy-team/egg-vue-webpack-boilerplate/tree/master/egg-vue-webpack-spa-boilerplate) Egg + Vue + Vue-Router + Vuex 单页面服务端渲染模板。
+- [egg-vue-webpack-asset-boilerplate](https://github.com/easy-team/egg-vue-webpack-boilerplate/tree/master/egg-vue-webpack-asset-boilerplate) Egg + Vue 前端 asset 渲染方案。
+- [egg-vue-webpack-html-boilerplate](https://github.com/easy-team/egg-vue-webpack-boilerplate/tree/master/egg-vue-webpack-html-boilerplate) Egg + Vue 静态 HTML 渲染方案。
+- [egg-vue-typescript-boilerplate](https://github.com/easy-team/egg-vue-typescript-boilerplate) Egg + Vue + TypeScript 项目。
+- [ves-admin](https://github.com/easy-team/ves-admin) Egg + Vue 上层框架解决方案。
 
-- Egg + Vue + Axios 多页面服务端渲染分支 [feature/green/multi](https://github.com/easy-team/egg-vue-webpack-boilerplate/tree/feature/green/multi)
-- Egg + Vue + vue-router + vuex + axios 单页面服务端渲染分支 [feature/green/spa](https://github.com/easy-team/egg-vue-webpack-boilerplate/tree/feature/green/spa)
-- Egg + Vue + vue-router + vuex + axios 前端渲染 asset 方案 [feature/green/asset](https://github.com/easy-team/egg-vue-webpack-boilerplate/tree/feature/green/asset)
-- Egg + Vue + vue-router + vuex + axios 前端渲染一体化方案 [element-admin](https://github.com/easy-team/egg-vue-webpack-boilerplate/tree/element-admin)
-- Egg + Vue + TypeScript 项目，请见项目 [egg-vue-typescript-boilerplate](https://github.com/easy-team/egg-vue-typescript-boilerplate) 和 [ves-admin](https://github.com/easy-team/ves-admin) 
-
-以上项目，你可以通过 [easywebpack-cli](https://github.com/easy-team/easywebpack-cli) 初始化
+以上项目，你可以通过 [easywebpack-cli](https://github.com/easy-team/easywebpack-cli) 初始化。
 
 ## 版本
 
@@ -58,14 +59,12 @@
 - Webpack 版本: ^4.x.x, 对应 `easywebpack-vue` 版本为 ^4.x.x
 - Webpack3 版本项目骨架请见 `webpack3` 分支, 对应 `easywebpack-react` 版本为 3.x.x
 
-
 ## 文档
 
 - https://easyjs.cn/egg-vue
 - https://easyjs.cn/easywebpack
 - https://www.yuque.com/easy-team/egg-vue
 - https://zhuanlan.zhihu.com/easywebpack
-
 
 ## 特性
 
@@ -89,7 +88,6 @@
 
 - 提供 国际化 i18n 多语言支持方案
 
-
 ## 插件
 
 - [easywebpack](https://github.com/easy-team/easywebpack) ^4.x.x
@@ -97,7 +95,6 @@
 - [egg-view-vue-ssr](https://github.com/easy-team/egg-view-vue-ssr) ^3.x.x
 - [egg-webpack](https://github.com/easy-team/egg-webpack) ^4.x.x
 - [egg-webpack-vue](https://github.com/easy-team/egg-webpack-vue) ^2.x.x
-
 
 ## 使用
 
@@ -115,7 +112,6 @@ npm install @easy-team/easywebpack-cli -g
 npm install
 ```
 
-
 #### 本地开发
 
 > 启动构建细节请阅读：https://www.yuque.com/easy-team/egg-vue/build
@@ -131,7 +127,6 @@ npm run dev
 - 本地开发启动 Webpack 构建, 默认配置文件为项目根目录 `webpack.config.js` 文件。 SSR 需要配置两份 Webpack 配置，所以构建会同时启动两个 Webpack 构建服务。web 表示构建 JSBundle 给前端用，构建后文件目录 `public`, 默认端口 9000; node 表示构建 JSBundle 给前端用，构建后文件目录 `app/view`, 默认端口 9001.
 
 - 本地构建是 Webpack 内存构建，文件不落地磁盘，所以 `app/view` 和 `public` 在本地开发时，是看不到文件的。 只有发布模式(npm run build)才能在这两个目录中看到构建后的内容。
-
 
 #### 线上部署
 
@@ -153,7 +148,6 @@ npm start
 
 webpack 配置构建是通过 easywebpack 实现的，具体见 https://www.yuque.com/easy-team/egg-vue/qpeiow 和 https://github.com/easy-team/easywebpack-cli
 
-
 - Egg Webpack 配置代码调用入口
 
 ```js
@@ -166,8 +160,6 @@ exports.webpack = { // 默认是如下配置，可不配置
 
 - 运行 `npm run build` 可以进行 Webpack 项目构建
 - 通过 `easy print` 可以打印 Webpack 原生配置
-
-
 
 ## 项目结构
 
@@ -263,7 +255,6 @@ exports.webpack = { // 默认是如下配置，可不配置
     │   │   └── test.js
     │   └── vendor.js                         // 生成的公共打包库
 
-
 ## 功能实现
 
 ### 多页面服务端渲染/前端渲染同构实现
@@ -301,7 +292,6 @@ exports.webpack = { // 默认是如下配置，可不配置
   }
 </script>
 ```
-
 
 #### 多页面后端渲染实现, 通过 `egg-view-vue-ssr` 插件 `render` 方法实现
   
@@ -341,7 +331,6 @@ app.get('/client', app.controller.home.home.client);
 - 直接有easywebpack构建出静态HTML文件, 请见 `webpack.config.js` 配置和 `app/web/page/html`代码实现
 
 - 通过 `egg-static` 静态文件访问HTML文件
-
 
 ### 单页面服务器渲染同构实现
 
@@ -455,7 +444,6 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
-
 
 ## License
 

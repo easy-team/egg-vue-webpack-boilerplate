@@ -1,0 +1,63 @@
+.admin-header {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  height: 50px;
+  background-color: #3c8dbc;
+  z-index: 10;
+}
+.admin-header .admin-logo {
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  background-color: #367fa9;
+  -webkit-transition: width 0.35s;
+  transition: width 0.35s;
+}
+
+.admin-header .admin-logo .admin-big {
+  width: 230px;
+  display: block;
+}
+.admin-header .admin-logo .admin-min {
+  width: 64px;
+  display: block;
+}
+.admin-header .right {
+  position: absolute;
+  right: 0;
+}
+
+.admin-header .admin-header-btn {
+  overflow: hidden;
+  height: 50px;
+  display: inline-block;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  padding: 0 14px;
+  color: #fff;
+}
+
+.admin-header .admin-header-btn:hover {
+  background-color: #367fa9
+}
+
+.admin-header .admin-header-btn .el-badge__content {
+  top: 14px;
+  right: 7px;
+  text-align: center;
+  font-size: 9px;
+  padding: 0 3px;
+  background-color: #00a65a;
+  color: #fff;
+  border: none;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+}
+
+.admin-menu {
+  border-right: none;
+}

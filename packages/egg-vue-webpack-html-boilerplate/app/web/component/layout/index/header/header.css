@@ -1,0 +1,54 @@
+.header {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  height: 50px;
+  background-color: #3c8dbc;
+  z-index: 10;
+}
+.header .logo {
+  width: 230px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  background-color: #367fa9;
+  -webkit-transition: width 0.35s;
+  transition: width 0.35s;
+}
+.header .logo .min {
+  display: none;
+}
+.header .right {
+  position: absolute;
+  right: 0;
+}
+.header .header-btn {
+  overflow: hidden;
+  height: 50px;
+  display: inline-block;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  padding: 0 14px;
+  color: #fff;
+}
+.header .header-btn .el-badge__content {
+  top: 14px;
+  right: 7px;
+  text-align: center;
+  font-size: 9px;
+  padding: 0 3px;
+  background-color: #00a65a;
+  color: #fff;
+  border: none;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+}
+.header .header-btn:hover {
+  background-color: #367fa9;
+}
+.menu {
+  border-right: none;
+}

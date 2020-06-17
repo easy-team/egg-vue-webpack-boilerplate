@@ -1,0 +1,12 @@
+test/fixtures
+test/benchmark
+test/client
+
+coverage/
+private/
+run/
+
+public/
+node_modules/
+app/web/asset/
+app/view/

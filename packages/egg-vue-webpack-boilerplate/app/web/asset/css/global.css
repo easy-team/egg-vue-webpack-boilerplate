@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+html, body{
+  height: 100%;
+}
+
+a {
+  color: #3c8dbc;
+  text-decoration: none;
+}
+
+-webkit-scrollbar {
+  width: 4px;
+  background-color: #F5F5F5;
+}
+
+-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+}
+
+-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: #3e8dbb;
+}
