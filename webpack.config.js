@@ -23,7 +23,7 @@ module.exports = {
   },
   dll: ['vue', 'axios', 'vue-router', 'vuex', 'vuex-router-sync'],
   module: {
-    rules:[
+    rules: [
       { scss: true },
       { less: true }
     ]
@@ -32,5 +32,5 @@ module.exports = {
     serviceworker: true
   }],
   optimization: {},
-  done() {}
+  done() { }
 };
