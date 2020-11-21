@@ -1,0 +1,28 @@
+.admin .search {
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+.admin label {
+  padding-left: 8px;
+  padding-right: 8px;
+  color: #878d99
+}
+
+.admin .search-input{
+  max-width: 200px;
+}
+.admin .search-button{
+  margin-left: 16px;
+}
+.admin .add-button{
+  float:right;
+  margin-right: 16px;
+}
+
+.admin .long-input {
+  max-width: 75%;
+}
+
+.admin .top16 {
+  margin-top: 16px;
+}

@@ -1,0 +1,76 @@
+'use strict';
+
+const { create } = require('./shell');
+
+const common_files = [
+  "app/extend",
+  'app/service',
+  'app/middleware', 
+  'app/model', 
+  'app/lib',
+  'app/web/asset',
+  'app/web/component',
+  'app/web/framework',
+  'babel.config.js',
+  '.eslintrc.js',
+  '.eslintignore',
+  '.gitignore',
+  'LICENSE'
+];
+
+const scopeMapping = {
+  'egg-vue-webpack-spa-boilerplate': {
+    files:[
+      'app/controller/spa',
+      'app/web/page/spa',
+      'app/web/view/layout.html',
+      'app/view',
+      'config',
+      "test/utils",
+      "test/controller/spa.test.js"
+    ]
+  },
+  'egg-vue-webpack-mpa-boilerplate': {
+    files:[
+      'app/controller/blog',
+      'app/web/page/blog',
+      'app/web/view/layout.html',
+      'app/view',
+      'config',
+      "test/utils",
+      "test/controller/blog.test.js"
+    ]
+  },
+  'egg-vue-webpack-asset-boilerplate': {
+    files:[
+      'app/controller/asset',
+      'app/web/page/asset',
+      'app/web/view',
+      'app/view',
+      'config',
+      "test/utils",
+      "test/controller/asset.test.js"
+    ]
+  },
+  'egg-vue-webpack-html-boilerplate': {
+    files:[
+      'app/controller/html',
+      'app/web/page/html',
+      'app/web/view/layout.tpl',
+      'app/view',
+      'config',
+      "test/utils",
+      "test/controller/html.test.js"
+    ]
+  }
+};
+
+if (process.argv.length === 4 && process.argv[2] === '--scope') {
+  const scope = process.argv[3];
+  const { files: scopeFiles } = scopeMapping[scope];
+  const files = [...common_files, ...scopeFiles];
+  create(files, {
+    sourceName: 'egg-vue-webpack-boilerplate',
+    targetName: scope
+  });
+}

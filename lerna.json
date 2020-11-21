@@ -1,0 +1,16 @@
+{
+  "packages": [
+    "packages/*"
+  ],
+  "version": "5.0.0",
+  "command": {
+    "bootstrap": {
+      "hoist": false,
+      "npmClientArgs": [
+        "--no-package-lock",
+        "--registry=https://registry.npm.taobao.org"
+      ]
+    }
+  },
+  "npmClient": "yarn"
+}

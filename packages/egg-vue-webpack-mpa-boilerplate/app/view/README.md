@@ -1,0 +1,1 @@
+## egg规范view目录, 保证view文件夹存在, 否则app.config.view.root为空, 编译服务器文件会存放到该目录.

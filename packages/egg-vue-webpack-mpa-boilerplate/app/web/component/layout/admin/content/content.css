@@ -1,0 +1,155 @@
+.main{
+  margin-top: -80px;
+  padding: 80px 0 120px;
+  box-sizing: border-box;
+}
+.page-container{
+  width: 1140px;
+  padding: 0 30px;
+  margin: 36 auto;
+}
+.page-component {
+  padding-bottom: 95px;
+  box-sizing: border-box
+}
+
+.page-component .content {
+  margin-left: -1px
+}
+
+.page-component .content > h3 {
+  margin: 45px 0 15px
+}
+
+.page-component .content > table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #fff;
+  color: #5e6d82;
+  font-size: 14px;
+  margin-bottom: 45px
+}
+
+.page-component .content > table strong {
+  font-weight: 400
+}
+
+.page-component .content > table th {
+  text-align: left;
+  border-top: 1px solid #eaeefb;
+  background-color: #eff2f7;
+  white-space: nowrap
+}
+
+.page-component .content > table td, .page-component .content > table th {
+  border-bottom: 1px solid #eaeefb;
+  padding: 10px;
+  max-width: 250px
+}
+
+.page-component .content > table td:first-child, .page-component .content > table th:first-child {
+  padding-left: 10px
+}
+
+.page-component .page-component-up {
+  background-color: #58b7ff;
+  position: fixed;
+  right: 100px;
+  bottom: 150px;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  cursor: pointer;
+  opacity: .4;
+  transition: .3s
+}
+
+.page-component .page-component-up i {
+  color: #fff;
+  display: block;
+  line-height: 50px;
+  text-align: center;
+  font-size: 22px
+}
+
+.page-component .page-component-up.hover {
+  opacity: 1
+}
+
+.page-component .back-top-fade-enter, .page-component .back-top-fade-leave-active {
+  transform: translateY(-30px);
+  opacity: 0
+}
+
+.page-component {
+  padding-bottom: 95px;
+  box-sizing: border-box
+}
+
+.page-component .content {
+  margin-left: -1px
+}
+
+.page-component .content > h3 {
+  margin: 45px 0 15px
+}
+
+.page-component .content > table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #fff;
+  color: #5e6d82;
+  font-size: 14px;
+  margin-bottom: 45px
+}
+
+.page-component .content > table strong {
+  font-weight: 400
+}
+
+.page-component .content > table th {
+  text-align: left;
+  border-top: 1px solid #eaeefb;
+  background-color: #eff2f7;
+  white-space: nowrap
+}
+
+.page-component .content > table td, .page-component .content > table th {
+  border-bottom: 1px solid #eaeefb;
+  padding: 10px;
+  max-width: 250px
+}
+
+.page-component .content > table td:first-child, .page-component .content > table th:first-child {
+  padding-left: 10px
+}
+
+.page-component .page-component-up {
+  background-color: #58b7ff;
+  position: fixed;
+  right: 100px;
+  bottom: 150px;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  cursor: pointer;
+  opacity: .4;
+  transition: .3s
+}
+
+.page-component .page-component-up i {
+  color: #fff;
+  display: block;
+  line-height: 50px;
+  text-align: center;
+  font-size: 22px
+}
+
+.page-component .page-component-up.hover {
+  opacity: 1
+}
+
+.page-component .back-top-fade-enter, .page-component .back-top-fade-leave-active {
+  transform: translateY(-30px);
+  opacity: 0
+}
