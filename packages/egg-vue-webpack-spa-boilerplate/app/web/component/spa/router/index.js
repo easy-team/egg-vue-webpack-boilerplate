@@ -6,10 +6,11 @@ import ListView from './list';
 
 Vue.use(VueRouter);
 
-export default function createRouter() {
+export default function createRouter(initState, options) {
+  const { base } = options;
   return new VueRouter({
     mode: 'history',
-    base: '/spa',
+    base,
     routes: [
       {
         path: '/',
@@ -26,4 +27,3 @@ export default function createRouter() {
     ]
   });
 }
-

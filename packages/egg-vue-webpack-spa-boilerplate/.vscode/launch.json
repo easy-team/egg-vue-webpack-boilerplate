@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "configurations": [
+    {
+      "name": "Launch Egg Vue",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceRoot}",
+      "runtimeExecutable": "npm",
+      "windows": { "runtimeExecutable": "npm.cmd" },
+      "runtimeArgs": [ "run", "debug" ],
+      "console": "integratedTerminal",
+      "protocol": "auto",
+      "restart": true,
+      "port": 9229,
+      "autoAttachChildProcesses": true
+    }
+  ]
+}

@@ -12,12 +12,12 @@ module.exports = {
   },
   plugins: [
     { imagemini: false },
-    // new HtmlWebpackPlugin({
-    //   alwaysWriteToDisk: true,
-    //   chunks: ['runtime','common', 'html/spa'],
-    //   filename: '../view/spa.tpl',
-    //   template: './app/web/view/layout.tpl'
-    // }),
+    new HtmlWebpackPlugin({
+      alwaysWriteToDisk: true,
+      chunks: ['runtime','common', 'html/spa'],
+      filename: '../view/spa.tpl',
+      template: './app/web/view/layout.tpl'
+    }),
     new HtmlWebpackPlugin({
       alwaysWriteToDisk: true,
       chunks: ['runtime','common', 'html/simple'],

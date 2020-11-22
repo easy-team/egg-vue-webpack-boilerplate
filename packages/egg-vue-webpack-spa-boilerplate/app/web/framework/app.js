@@ -15,8 +15,8 @@ export default class App {
 
   create(initState) {
     const { index, options, createStore, createRouter } = this.config;
-    const store = createStore(initState);
-    const router = createRouter();
+    const store = createStore(initState, options);
+    const router = createRouter(initState, options);
     sync(store, router);
     return {
       ...index,
@@ -38,7 +38,7 @@ export default class App {
       if (route.matched && route.matched.length) {
         const asyncData = route.matched[0].components.default.asyncData;
         if (asyncData) {
-          asyncData(store);
+          asyncData(store, route);
         }
       }
     });
@@ -63,7 +63,7 @@ export default class App {
           return Promise.all(
             matchedComponents.map(component => {
               if (component.asyncData) {
-                return component.asyncData(store);
+                return component.asyncData(store, store.state.route);
               }
               return null;
             })

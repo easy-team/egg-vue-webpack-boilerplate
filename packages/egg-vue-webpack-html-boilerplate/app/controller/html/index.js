@@ -4,23 +4,19 @@ module.exports = (app) => {
   return class AppController extends app.Controller {
     async spa() {
       const { ctx } = this;
-      const list = ctx.service.mock.getArticleList();
-      await ctx.render('spa.tpl', {
-        prefix: '/html',
-        url: ctx.path,
-        list
-      });
+      await ctx.render('spa.tpl', { state: { ...ctx.locals} });
     }
 
     async simple() {
       const { ctx } = this;
-      const data = {
+      const state = {
+        ...ctx.locals,
         site: {
           name: 'Egg Vue HTML Render',
           url: 'https://easyjs.cn' 
         }
       };
-      await ctx.render('simple.tpl', data);
+      await ctx.render('simple.tpl', { state });
     }
   };
 };

@@ -4,5 +4,5 @@ module.exports = app => {
   router.redirect('/', '/asset');
   // Asset Render
   router.get('/asset/simple', controller.asset.index.simple);
-  // router.get('/asset(/.*)?', controller.asset.index.spa);
+  router.get('/asset(/.*)?', controller.asset.index.spa);
 };

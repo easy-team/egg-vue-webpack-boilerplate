@@ -16,20 +16,20 @@ module.exports = {
     spa: 'app/web/page/spa/index.js',
     // html 前端渲染 https://www.yuque.com/easy-team/egg-react/html
     'html/simple': 'app/web/page/html/simple.vue',
-    'html/spa': 'app/web/page/html/spa.vue',
+    'html/spa': 'app/web/page/html/spa.js',
     // asset 前端渲染 https://www.yuque.com/easy-team/egg-react/asset
     'asset/simple': 'app/web/page/asset/simple.vue',
-    'asset/spa': 'app/web/page/asset/spa.vue',
+    'asset/spa': 'app/web/page/asset/spa.js',
     'test': 'app/web/page/test/test.vue'
   },
   plugins: [
     { imagemini: false },
-    // new HtmlWebpackPlugin({
-    //   alwaysWriteToDisk: true,
-    //   chunks: ['runtime','common', 'html/spa'],
-    //   filename: '../view/spa.tpl',
-    //   template: './app/web/view/layout.tpl'
-    // }),
+    new HtmlWebpackPlugin({
+      alwaysWriteToDisk: true,
+      chunks: ['runtime','common', 'html/spa'],
+      filename: '../view/spa.tpl',
+      template: './app/web/view/layout.tpl'
+    }),
     new HtmlWebpackPlugin({
       alwaysWriteToDisk: true,
       chunks: ['runtime','common', 'html/simple'],

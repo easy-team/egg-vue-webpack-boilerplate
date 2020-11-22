@@ -1,44 +1,54 @@
 'use strict';
 const mm = require('egg-mock');
-const { 
-  webpackReady, 
+const {
+  webpackReady,
   assertCSR,
-  assertDevResource
+  assertSSR,
+  assertDevJSResource,
 } = require('../utils/helper');
 
 describe('test/controller/spa.test.js', () => {
-  describe('GET /', () => {
-    let app;
-    before(async () => {
-      mm.env('local');
-      app = mm.app();
-      await app.ready();
-      await webpackReady(app);
-    });
+  let app;
+  before(async () => {
+    mm.env('local');
+    app = mm.app();
+    await app.ready();
+    await webpackReady(app);
+  });
 
-    afterEach(mm.restore);
-    after(() => app.close());
+  afterEach(mm.restore);
+  after(() => app.close());
 
-    it('should work when spa index', async () => {
-      await app
-        .httpRequest()
-        .get('/spa')
-        .expect(200)
-        .expect(res => {
-          assertCSR(res);
-          assertDevResource(res, 'common');
-        });
-    });
+  it('should work when spa ssr', async () => {
+    await app
+      .httpRequest()
+      .get('/spa')
+      .expect(200)
+      .expect((res) => {
+        assertSSR(res);
+        assertDevJSResource(res, 'spa');
+      });
+  });
 
-    it('should work when spa about', async () => {
-      await app
-        .httpRequest()
-        .get('/spa/about')
-        .expect(200)
-        .expect(res => {
-          assertCSR(res);
-          assertDevResource(res, 'common');
-        });
-    });
+  it('should work when spa csr', async () => {
+    await app
+      .httpRequest()
+      .get('/spa?mode=csr')
+      .expect(200)
+      .expect((res) => {
+        assertCSR(res);
+        assertDevJSResource(res, 'spa');
+      });
+  });
+
+  it('should work when spa about', async () => {
+    await app
+      .httpRequest()
+      .get('/spa/detail/946940')
+      .expect(200)
+      .expect((res) => {
+        assertCSR(res);
+        assertDevJSResource(res, 'spa');
+      });
   });
 });

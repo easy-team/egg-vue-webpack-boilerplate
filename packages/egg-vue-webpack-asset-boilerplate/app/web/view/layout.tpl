@@ -11,7 +11,7 @@
 <body>
   <div id="app"></div>
   <script type="text/javascript">
-    window.__INITIAL_STATE__ = { prefix: '{{ prefix }}', url: '{{ url }}', site: {{ site | dump | safe }}};
+    window.__INITIAL_STATE__ = {{ state | dump | safe }};
   </script>
 </body>
 </html>

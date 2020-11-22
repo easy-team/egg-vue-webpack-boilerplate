@@ -2,6 +2,7 @@
 module.exports = app => {
   const { router, controller } = app;
   router.get('/', controller.blog.home.ssr);
+  router.get('/blog', controller.blog.home.ssr);
   router.get('/blog/csr', controller.blog.home.csr);
   router.get('/blog/list', controller.blog.home.list);
   router.get('/blog/about', controller.blog.home.about);
@@ -12,11 +13,11 @@ module.exports = app => {
   router.get('/test/csr', controller.test.csr);
   // Asset Render
   router.get('/asset/simple', controller.asset.index.simple);
-  // router.get('/asset(/.*)?', controller.asset.index.spa);
+  router.get('/asset(/.*)?', controller.asset.index.spa);
 
   // HTML Render
   router.get('/html/simple', controller.html.index.simple);
-  // router.get('/html(/.*)?', controller.html.index.spa);
+  router.get('/html(/.*)?', controller.html.index.spa);
  
   // SPA Normal
   router.get('/spa/api/article/list', app.controller.spa.index.list);

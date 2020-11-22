@@ -6,8 +6,7 @@ module.exports = app => {
   return class AppController extends app.Controller {
     async spa() {
       const { ctx } = this;
-      const list = ctx.service.mock.getArticleList(); 
-      await ctx.renderAsset('asset/spa.js', { prefix: '/asset', url: '/asset', list }, { layout });
+      await ctx.renderAsset('asset/spa.js', {}, { layout });
     }
     async simple() {
       const { ctx } = this;

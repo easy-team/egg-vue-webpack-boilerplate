@@ -1,6 +1,6 @@
 {
   "name": "egg-vue-webpack-spa-boilerplate",
-  "version": "4.8.1",
+  "version": "4.9.0",
   "description": "基于 easywebpack-vue 和 egg-view-vue-ssr 插件的 Egg + Vue SSR 服务端渲染同构工程骨架项目",
   "scripts": {
     "dev": "egg-bin dev",

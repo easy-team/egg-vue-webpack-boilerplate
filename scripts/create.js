@@ -10,8 +10,8 @@ const common_files = [
   'app/lib',
   'app/web/asset',
   'app/web/component',
-  'app/web/framework',
   'babel.config.js',
+  '.vscode',
   '.eslintrc.js',
   '.eslintignore',
   '.gitignore',
@@ -22,6 +22,8 @@ const scopeMapping = {
   'egg-vue-webpack-spa-boilerplate': {
     files:[
       'app/controller/spa',
+      'app/web/framework/app.js',
+      'app/web/framework/request.js',
       'app/web/page/spa',
       'app/web/view/layout.html',
       'app/view',
@@ -33,6 +35,9 @@ const scopeMapping = {
   'egg-vue-webpack-mpa-boilerplate': {
     files:[
       'app/controller/blog',
+      'app/web/framework/entry',
+      'app/web/framework/i18n',
+      'app/web/framework/plugin',
       'app/web/page/blog',
       'app/web/view/layout.html',
       'app/view',
@@ -44,6 +49,8 @@ const scopeMapping = {
   'egg-vue-webpack-asset-boilerplate': {
     files:[
       'app/controller/asset',
+      'app/web/framework/app.js',
+      'app/web/framework/request.js',
       'app/web/page/asset',
       'app/web/view',
       'app/view',
@@ -55,6 +62,8 @@ const scopeMapping = {
   'egg-vue-webpack-html-boilerplate': {
     files:[
       'app/controller/html',
+      'app/web/framework/app.js',
+      'app/web/framework/request.js',
       'app/web/page/html',
       'app/web/view/layout.tpl',
       'app/view',
