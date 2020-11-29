@@ -28,17 +28,6 @@ https://www.yuque.com/easy-team/egg-vue
 - Markdown
 - 文章管理
 
-## 骨架介绍
-
-### 常用功能
-
-常用 Example 实现见 [awesome](./tree/awesome) 分支代码。
-
-- Sass/Less/Stylus 功能
-- Dynamic Component Load
-- Element-UI 集成
-- Single Page Application
-
 ### 骨架模板
 
 - [egg-vue-webpack-boilerplate](https://github.com/easy-team/egg-vue-webpack-boilerplate/tree/master/egg-vue-webpack-boilerplate) Egg + Vue 多种特性功能模板。
