@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
-    "test": "egg-bin test",
+    "test": "egg-bin test test/controller/blog.test.js",
     "clean": "easy clean all",
     "build": "easy build prod",
     "start": "egg-scripts start --port 7001 --workers 4",
