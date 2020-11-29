@@ -2,18 +2,9 @@
 # [4.9.0](https://github.com/easy-team/egg-vue-webpack-boilerplate/compare/4.8.1...4.9.0) (2020-11-29)
 
 
-### Bug Fixes
-
-* test running ([329f5b2](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/329f5b2))
-
-
 ### Features
 
-* add js inline demo ([91190e3](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/91190e3))
-* add renderClient seo set ([b5d6d6e](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/b5d6d6e))
-* add simple layout example ([4f1d9e2](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/4f1d9e2))
-* implement html and asset render example ([dee8368](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/dee8368))
-
+* use lerna manage proejct ([182be50](https://github.com/easy-team/egg-vue-webpack-boilerplate/commit/182be50))
 
 
 <a name="4.8.1"></a>
