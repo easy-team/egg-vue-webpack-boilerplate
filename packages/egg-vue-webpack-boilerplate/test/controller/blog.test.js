@@ -5,7 +5,7 @@ const {
   assertText,
   assertSSR,
   assertCSR,
-  assertDevResource
+  assertDevJSResource
 } = require('../utils/helper');
 
 describe('test/controller/blog.test.js', () => {
@@ -26,40 +26,30 @@ describe('test/controller/blog.test.js', () => {
       .get('/')
       .expect(200)
       .expect(res => {
-        assertText(res, '<h1>Egg Vue 工程方案</h1>');
-        assertText(res, '<a href="/detail/1">Egg React 服务端渲染(SSR)之快速开始</a>');
+        assertText(res, '<h1>Egg Vue</h1>');
         assertSSR(res);
-        assertDevResource(res, 'blog');
+        assertDevJSResource(res, 'blog/home');
       });
   });
-  it('should work when jsx ssr', async () => {
-    await app
-      .httpRequest()
-      .get('/about')
-      .expect(200)
-      .expect((res) => {
-        assertSSR(res);
-        assertDevResource(res, 'blog');
-      });
-  });
+
   it('should work when ssr spa route about', async () => {
     await app
       .httpRequest()
-      .get('/about')
+      .get('/blog/about')
       .expect(200)
       .expect((res) => {
         assertSSR(res);
-        assertDevResource(res, 'blog');
+        assertDevJSResource(res, 'blog/about');
       });
   });
   it('should work when csr', async () => {
     await app
       .httpRequest()
-      .get('/csr')
+      .get('/blog/csr')
       .expect(200)
       .expect((res) => {
         assertCSR(res);
-        assertDevResource(res, 'blog');
+        assertDevJSResource(res, 'blog/home');
       });
   });
 });

@@ -25,7 +25,7 @@ describe('test/controller/html.test.js', () => {
       .expect(200)
       .expect((res) => {
         assertCSR(res);
-        assertDevJSResource(res, 'simple');
+        assertDevJSResource(res, 'html/simple');
       });
   });
 
@@ -36,7 +36,7 @@ describe('test/controller/html.test.js', () => {
       .expect(200)
       .expect((res) => {
         assertCSR(res);
-        assertDevJSResource(res, 'asset/spa');
+        assertDevJSResource(res, 'html/spa');
       });
   });
 });

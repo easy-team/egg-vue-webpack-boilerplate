@@ -47,7 +47,7 @@ describe('test/controller/spa.test.js', () => {
       .get('/spa/detail/946940')
       .expect(200)
       .expect((res) => {
-        assertCSR(res);
+        assertSSR(res);
         assertDevJSResource(res, 'spa');
       });
   });

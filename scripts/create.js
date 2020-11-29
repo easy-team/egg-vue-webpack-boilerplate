@@ -38,6 +38,7 @@ const scopeMapping = {
       'app/web/framework/entry',
       'app/web/framework/i18n',
       'app/web/framework/plugin',
+      'app/web/framework/request.js',
       'app/web/page/blog',
       'app/web/view/layout.html',
       'app/view',

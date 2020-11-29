@@ -34,8 +34,8 @@ exports.assertDevCssResource = function (res, entry) {
 
 exports.assertDevJSResource = function (res, entry) {
   exports.assertText(res, '<script( type="text/javascript")? src="/public/js/runtime.js"( type="text/javascript")?></script>');
-  exports.assertText(res, '<script( type="text/javascript")? src="/public/js/common.js"( type="text/javascript")?></script>');
-  exports.assertText(res, `<script( type="text/javascript")? src="/public/js/${entry}.js"( type="text/javascript")?></script>`);
+  exports.assertText(res, '<script( type="text/javascript")? src="/public/js/chunk/common.js"( type="text/javascript")?></script>');
+  exports.assertText(res, `<script( type="text/javascript")? src="/public/js/chunk/${entry}.js"( type="text/javascript")?></script>`);
   exports.assertText(res, 'window.__INITIAL_STATE__');
 }
 

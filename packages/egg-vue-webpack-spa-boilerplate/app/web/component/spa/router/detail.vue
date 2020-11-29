@@ -19,7 +19,7 @@ export default {
     },
   },
   asyncData({ state, dispatch, commit }, route) {
-    console.log('>>state route', state, route); 
+    // console.log('>>state route', state, route); 
     const { id } = route.params;
     return dispatch('FETCH_ARTICLE_DETAIL', { id });
   },
