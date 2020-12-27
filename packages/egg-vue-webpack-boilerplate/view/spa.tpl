@@ -1,17 +1,1 @@
-<!DOCTYPE html>
-<html lang='en'>
-<head>
-  <title>{{title}}</title>
-  <meta name='keywords'>
-  <meta name='description'>
-  <meta http-equiv='content-type' content='text/html;charset=utf-8'>
-  <meta name='viewport' content='initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui'>
-  <link rel='shortcut icon' href='/favicon.ico' type='image/x-icon' />
-</head>
-<body>
-  <div id="app"></div>
-  <script type="text/javascript">
-    window.__INITIAL_STATE__ = {{ state | dump | safe }};
-  </script>
-<script type="text/javascript" src="/public/js/runtime.js"></script><script type="text/javascript" src="/public/js/chunk/common.js"></script><script type="text/javascript" src="/public/js/chunk/html/spa.js"></script></body>
-</html>
+<!doctype html><html lang="en"><head><title>{{title}}</title><meta name="keywords"><meta name="description"><meta http-equiv="content-type" content="text/html;charset=utf-8"><meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui"><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/><link href="/public/css/common.e9f1f986.css" rel="stylesheet"><link href="/public/css/html/spa.6858c0a0.css" rel="stylesheet"></head><body><div id="app"></div><script>window.__INITIAL_STATE__ = {{ state | dump | safe }};</script><script src="/public/js/runtime.10967f2d.js"></script><script src="/public/js/common.0557cc97.js"></script><script src="/public/js/html/spa.c44fef12.js"></script></body></html>

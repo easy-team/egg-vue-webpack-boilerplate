@@ -1,6 +1,6 @@
 {
   "name": "egg-vue-webpack-boilerplate",
-  "version": "4.9.0",
+  "version": "5.0.0",
   "description": "基于 easywebpack-vue 和 egg-view-vue-ssr 插件的 Egg + Vue SSR 服务端渲染同构工程骨架项目",
   "dependencies": {
     "runscript": "^1.5.0"

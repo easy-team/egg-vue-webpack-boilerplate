@@ -6,7 +6,7 @@ import ListView from './list';
 
 Vue.use(VueRouter);
 
-export default function createRouter(initState, options) {
+export default function createRouter(initState = {}, options = { base: '/spa' }) {
   const { base } = options;
   return new VueRouter({
     mode: 'history',

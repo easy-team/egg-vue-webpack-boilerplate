@@ -104,7 +104,7 @@
 #### 安装cli(非必需)
 
 ```bash
-npm install @easy-team/easywebpack-cli -g
+npm install easywebpack-cli -g
 ```
 
 `easywebpack-cli` 已内置 `devDependencies` 中, 无需安装。如果你需要在命令行使用 `easy` 命令, 可以单独全局安装。
@@ -160,7 +160,7 @@ webpack 配置构建是通过 easywebpack 实现的，具体见 https://www.yuqu
 // ${root}/config/config.local.js
 exports.webpack = { // 默认是如下配置，可不配置
   // browser: 'http://localhost:7001', // 配置 false 可以关闭自动打开浏览器
-  // webpackConfigList: require('@easy-team/easywebpack-vue').getWebpackConfig()
+  // webpackConfigList: require('easywebpack-vue').getWebpackConfig()
 };
 ```
 

@@ -1,6 +1,6 @@
 {
   "name": "egg-vue-webpack-asset-boilerplate",
-  "version": "4.9.0",
+  "version": "5.0.0",
   "description": "基于 easywebpack-vue 和 egg-view-vue-ssr 插件的 Egg + Vue SSR 服务端渲染同构工程骨架项目",
   "scripts": {
     "dev": "egg-bin dev",
@@ -33,7 +33,6 @@
     "egg": "^2.1.0",
     "egg-bin": "^4.3.7",
     "egg-cors": "^2.0.0",
-    "egg-logger": "^1.5.0",
     "egg-scripts": "^2.5.1",
     "egg-validate": "^1.0.0",
     "egg-view-nunjucks": "^2.2.0",
@@ -58,12 +57,11 @@
     "vuex-router-sync": "^5.0.0"
   },
   "devDependencies": {
-    "@easy-team/easywebpack-cli": "^4.0.0",
-    "@easy-team/easywebpack-vue": "^4.0.0",
-    "babel-plugin-component": "^1.1.1",
+    "easywebpack-cli": "^5.0.0",
+    "easywebpack-vue": "^5.0.0",
     "egg-logview": "^1.0.0",
     "egg-mock": "^4.0.1",
-    "egg-webpack": "^4.4.1",
+    "egg-webpack": "^5.0.0",
     "egg-webpack-vue": "^2.0.0",
     "eslint": "^4.19.1",
     "eslint-config-egg": "^5.0.0",
@@ -76,10 +74,10 @@
     "raw-loader": "^3.0.0"
   },
   "engines": {
-    "node": ">=10.0.0"
+    "node": ">=12"
   },
   "ci": {
-    "version": "10, 12, 14"
+    "version": "12, 14"
   },
   "repository": {
     "type": "git",

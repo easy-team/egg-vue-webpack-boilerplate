@@ -5,6 +5,5 @@
 module.exports = {
   entry: {
     spa: 'app/web/page/spa/index.js',
-  },
-  plugins: [{ imagemini: false }],
+  }
 };

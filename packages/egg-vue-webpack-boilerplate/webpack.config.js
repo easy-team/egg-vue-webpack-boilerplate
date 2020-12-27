@@ -23,7 +23,6 @@ module.exports = {
     'test': 'app/web/page/test/test.vue'
   },
   plugins: [
-    { imagemini: false },
     new HtmlWebpackPlugin({
       alwaysWriteToDisk: true,
       chunks: ['runtime','common', 'html/spa'],

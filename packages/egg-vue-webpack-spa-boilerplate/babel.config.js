@@ -13,13 +13,6 @@ module.exports = {
         ],
       ],
       plugins: [
-        [
-          'component',
-          {
-            libraryName: 'element-ui',
-            styleLibraryName: 'theme-chalk',
-          },
-        ],
         '@babel/plugin-syntax-dynamic-import',
       ],
     },
@@ -30,22 +23,14 @@ module.exports = {
           {
             modules: false,
             targets: {
-              browsers: ['last 2 versions', 'safari >= 7'],
+              browsers: ['last 2 versions'],
             },
           },
         ],
       ],
       plugins: [
-        [
-          'component',
-          {
-            libraryName: 'element-ui',
-            styleLibraryName: 'theme-chalk',
-          },
-        ],
         '@babel/plugin-proposal-object-rest-spread',
         '@babel/plugin-syntax-dynamic-import',
-        '@babel/plugin-transform-object-assign',
       ],
     },
   },

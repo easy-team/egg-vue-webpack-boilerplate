@@ -4,11 +4,9 @@
 const path = require('path');
 
 module.exports = {
+  target: 'web',
   entry: {
     'asset/simple': 'app/web/page/asset/simple.vue',
-    'asset/spa': 'app/web/page/asset/spa.vue'  
-  },
-  plugins: [
-    { imagemini: false }
-  ]
+    'asset/spa': 'app/web/page/asset/spa.js'  
+  }
 };

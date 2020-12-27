@@ -10,7 +10,6 @@ const common_files = [
   'app/lib',
   'app/web/asset',
   'app/web/component',
-  'babel.config.js',
   '.vscode',
   '.eslintrc.js',
   '.eslintignore',

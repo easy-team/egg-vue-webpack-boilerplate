@@ -22,7 +22,7 @@ module.exports = app => {
 
   exports.webpack = {
     browser: false,
-    webpackConfigList: require('@easy-team/easywebpack-vue').getWebpackConfig()
+    webpackConfigList: require('easywebpack-vue').getWebpackConfig()
   };
 
   const localIP = ip.address();

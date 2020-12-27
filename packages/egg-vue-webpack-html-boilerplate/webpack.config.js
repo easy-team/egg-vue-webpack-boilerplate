@@ -6,6 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackHardiskPlugin = require('html-webpack-harddisk-plugin');
 
 module.exports = {
+  target: 'web',
   entry: {
     'html/simple': 'app/web/page/html/simple.vue',
     'html/spa': 'app/web/page/html/spa.js'

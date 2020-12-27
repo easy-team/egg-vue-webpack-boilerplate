@@ -21,5 +21,14 @@ module.exports = app => {
       };
       await ctx.renderAsset('asset/simple.js', data, options);
     }
+
+    async list() {
+      this.ctx.body = this.ctx.service.article.getArtilceList(this.ctx.query);
+    }
+  
+    async detail() {
+      const id = Number(this.ctx.params.id);
+      this.ctx.body = this.ctx.service.article.getArticle(id);
+    }
   };
 };

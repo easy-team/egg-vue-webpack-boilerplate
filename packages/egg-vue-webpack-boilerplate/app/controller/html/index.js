@@ -18,5 +18,14 @@ module.exports = (app) => {
       };
       await ctx.render('simple.tpl', { state });
     }
+
+    async list() {
+      this.ctx.body = this.ctx.service.article.getArtilceList(this.ctx.query);
+    }
+  
+    async detail() {
+      const id = Number(this.ctx.params.id);
+      this.ctx.body = this.ctx.service.article.getArticle(id);
+    }
   };
 };

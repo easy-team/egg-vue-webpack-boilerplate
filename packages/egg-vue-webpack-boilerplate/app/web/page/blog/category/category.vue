@@ -13,27 +13,13 @@
 </style>
 <script type='babel'>
 import Vue from 'vue';
+import 'element-ui/lib/theme-chalk/index.css';
 import { Button, Select } from 'element-ui';
 Vue.use(Button);
 export default {
-  components: {
-
-  },
-  data(){
-    return {
-    }
-  },
-  computed: {
-      
-  },
-  mounted() {
-    if('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/public/sw-category.js');
-    }
-  },
-  methods: {
-      
-  },
+  components: {},
+  computed: {},
+  methods: {},
 }
 </script>
 

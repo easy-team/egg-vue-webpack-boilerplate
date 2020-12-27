@@ -20,9 +20,13 @@ module.exports = app => {
     dir: path.join(app.baseDir, 'logs')
   };
 
+  exports.vuessr = {
+    injectCss: true
+  };
+
   exports.webpack = {
     browser: false,
-    webpackConfigList: require('@easy-team/easywebpack-vue').getWebpackConfig()
+    webpackConfigList: require('easywebpack-vue').getWebpackConfig()
   };
 
   const localIP = ip.address();
