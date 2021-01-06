@@ -28,7 +28,7 @@
     ]
   },
   "dependencies": {
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "cross-env": "^5.0.0",
     "egg": "^2.1.0",
     "egg-bin": "^4.3.7",
