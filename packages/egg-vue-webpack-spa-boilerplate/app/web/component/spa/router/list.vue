@@ -3,6 +3,7 @@
     <div 
       v-for="item in articleList" 
       :key="item.id" 
+      @click="test"
       class="row">
       <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
         <div class="post-preview">
@@ -26,6 +27,11 @@
 </style>
 <script type="text/babel">
 export default {
+  methods: {
+    test() {
+      console.log(23333)
+    }
+  },
   computed: {
     isLoading() {
       return false;
