@@ -45,7 +45,7 @@
     "lodash-id": "^0.14.0",
     "lowdb": "^1.0.0",
     "mockjs": "^1.0.1-beta3",
-    "moment": "^2.17.1",
+    "moment": "^2.29.4",
     "shortid": "^2.2.8",
     "showdown": "^1.8.6",
     "simplemde": "^1.11.2",
