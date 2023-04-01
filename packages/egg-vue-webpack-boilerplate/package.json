@@ -13,7 +13,7 @@
     "stop": "egg-scripts stop",
     "lint": "eslint . --ext .js",
     "fix": "eslint --fix . --ext .js",
-    "ii": "yarn --registry https://registry.npm.taobao.org",
+    "ii": "yarn --registry https://registry.npmmirror.com",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "husky": {
